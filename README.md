@@ -22,7 +22,7 @@ Table of Contents:
 		i) Clone the repository in your home folder using 
 			"git clone https://github.com/samarshailendra/OICNSIM.git"
 		ii) Create "o-icn" folder under the ~ns3.24/src/
-		iii) Move the contents of OICNSIM folder to o-icn folder.		
+		iii) Move the contents of <HOME>/OICNSIM/ folder to ~/ns3.24/src/o-icn/ folder.		
 		
 
 	2.2) From the root folder of ns-3, run the following to clean any previous builds.
