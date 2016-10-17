@@ -46,3 +46,10 @@ Table of Contents:
 
 	3.2) Execute the following to run the example. 
 		./waf --run oicn-example 
+
+=================================================================
+Developed by: Suvrat Agrawal, Anirudh M, Samar Shailendra
+=================================================================
+
+Please dont forget to cite us if you are using this simulator !
+
