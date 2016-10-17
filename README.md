@@ -2,7 +2,7 @@
 Overlay ICN (O-ICN) Simulator
 -------------------------------
 
-OICNSIM is a simulator to simulate Information Centric Networking (ICN) based network using ns3. OICNSIM is based on Overlay ICN (O-ICN) architecture proposed in the literature. O-ICN architecture is an overlay architecture which is backward compatible and can coexist with the current Internet. The data exchange in this architectrue can happen though the traditional routers as well which enables O-ICN backward compatible and incrementally deployable.
+OICNSIM is a simulator to simulate Information Centric Networking (ICN) based network using ns3. OICNSIM is based on Overlay ICN (O-ICN) architecture proposed in the literature. O-ICN architecture is an overlay architecture which is backward compatible and can coexist with the current Internet. The data exchange in this architectrue can happen though the traditional routers as well which makes O-ICN both backward compatible and incrementally deployable.
  
 Table of Contents:
 ------------------
