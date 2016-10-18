@@ -19,7 +19,7 @@ Table of Contents:
 --------------------
 	2.1) Clone the OICNSIM repository to your local system as follows:
 		i) Clone the repository in your home folder using 
-			"git clone https://github.com/samarshailendra/OICNSIM.git"
+			"git clone https://github.com/TCS-Research/OICNSIM.git"
 		ii) Create "o-icn" folder under the ~ns3.24/src/
 		iii) Move the contents of <HOME>/OICNSIM/ folder to ~/ns3.24/src/o-icn/ folder.		
 		
