@@ -47,7 +47,7 @@ Table of Contents:
 		./waf --run oicn-example 
 
 
-Developed by: Suvrat Agrawal, Anirudh M, Samar Shailendra
+Supported by: TCS Research & Innovation
 -----------------------------------------------------------------
 Please do remember to cite us !
 
