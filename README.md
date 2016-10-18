@@ -35,7 +35,7 @@ Table of Contents:
 	2.4) Run the following to configure ns3	
 		./waf configure --enable-sudo
 
-	2.5) Rebuild ns3.
+	2.5) Rebuild ns3.(Install boost libraries, if it is not already installed.)
 		./waf build
 
 3) Running OICNSIM:
