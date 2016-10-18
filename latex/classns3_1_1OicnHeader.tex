@@ -1,0 +1,220 @@
+\hypertarget{classns3_1_1OicnHeader}{\section{ns3\-:\-:Oicn\-Header Class Reference}
+\label{classns3_1_1OicnHeader}\index{ns3\-::\-Oicn\-Header@{ns3\-::\-Oicn\-Header}}
+}
+
+
+Class for Creating and Appending O-\/\-I\-C\-N Sublayer to a Packet.  
+
+
+
+
+{\ttfamily \#include $<$oicn-\/header.\-h$>$}
+
+Inheritance diagram for ns3\-:\-:Oicn\-Header\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classns3_1_1OicnHeader}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classns3_1_1OicnHeader_a496135b4907b91cabe5387a4917994a5}{Oicn\-Header} ()
+\item 
+\hyperlink{classns3_1_1OicnHeader_af7ce0b989e6cd7123b984bcfb205150d}{$\sim$\-Oicn\-Header} ()
+\item 
+virtual Type\-Id \hyperlink{classns3_1_1OicnHeader_a39c2a2431d2aef132ac52e1d1ab1e892}{Get\-Instance\-Type\-Id} (void) const 
+\item 
+virtual uint32\-\_\-t \hyperlink{classns3_1_1OicnHeader_a4b0ba5fa4fe164e9e42a23a9a7b43268}{Get\-Serialized\-Size} (void) const 
+\item 
+virtual void \hyperlink{classns3_1_1OicnHeader_a427490fecb88ecfdb3576ab39ed31f5e}{Serialize} (Buffer\-::\-Iterator start) const 
+\item 
+virtual uint32\-\_\-t \hyperlink{classns3_1_1OicnHeader_af16eaf62f9048fe56e714f44459f754d}{Deserialize} (Buffer\-::\-Iterator start)
+\item 
+virtual void \hyperlink{classns3_1_1OicnHeader_ac5b6b41e69772b2c018adc0c313fc315}{Print} (std\-::ostream \&os) const 
+\item 
+void \hyperlink{classns3_1_1OicnHeader_afd6c18de6e052e61ed4de112c5724a18}{Set\-Name} (std\-::string name)
+\item 
+std\-::string \hyperlink{classns3_1_1OicnHeader_a00f48c0a31a66618f6c92431520801c3}{Get\-Name} (void)
+\item 
+void \hyperlink{classns3_1_1OicnHeader_ad49869449f12e894cc2dfb193d1a0181}{Set\-Request} (void)
+\item 
+void \hyperlink{classns3_1_1OicnHeader_a08a99a9ac99df2fca8af740137d47992}{Set\-Cachable} (void)
+\item 
+void \hyperlink{classns3_1_1OicnHeader_aa1e7e27b1b855587f0bf855c77b1ad64}{Set\-Non\-Cachable} (void)
+\item 
+uint32\-\_\-t \hyperlink{classns3_1_1OicnHeader_a9b5651fe0d172672e3e020c5df84a1c1}{Get\-First4\-Bytes} (void)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static Type\-Id \hyperlink{classns3_1_1OicnHeader_a275c1bad03b9f9ec4f11346a93061ac6}{Get\-Type\-Id} (void)
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classns3_1_1OicnHeader_a6d775da4ae5ddd0b71f478422add3d68}{Set\-First4\-Bytes} (uint32\-\_\-t Header\-Length, bool reply, bool cachable)
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\-::string \hyperlink{classns3_1_1OicnHeader_a4ec6866334efab8674e2b0d96837a4ae}{m\-\_\-name}
+\item 
+uint32\-\_\-t \hyperlink{classns3_1_1OicnHeader_a4992cefc6d31c27977363db61c068111}{header\-\_\-length}
+\item 
+uint32\-\_\-t \hyperlink{classns3_1_1OicnHeader_ac4f7599f027c10e4433efdcb8541ef38}{first4bytes}
+\end{DoxyCompactItemize}
+\subsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const uint32\-\_\-t \hyperlink{classns3_1_1OicnHeader_af3b93655facbb38e13c98576c4454ec2}{cachable\-\_\-start} = 4026531840
+\item 
+static const uint32\-\_\-t \hyperlink{classns3_1_1OicnHeader_a822030e2b6549b78e31c440f4fe1f458}{non\-\_\-cachable\-\_\-start} = 2952790016
+\item 
+static const uint32\-\_\-t \hyperlink{classns3_1_1OicnHeader_a9fa69f9639455b3ed94cbb616e2809c0}{request\-\_\-start} = 805306368
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class for Creating and Appending O-\/\-I\-C\-N Sublayer to a Packet. 
+
+This class has fields corresponding to those in a network U\-D\-P header (port numbers, payload size, checksum) as well as methods for serialization to and deserialization from a byte buffer. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classns3_1_1OicnHeader_a496135b4907b91cabe5387a4917994a5}{\index{ns3\-::\-Oicn\-Header@{ns3\-::\-Oicn\-Header}!Oicn\-Header@{Oicn\-Header}}
+\index{Oicn\-Header@{Oicn\-Header}!ns3::OicnHeader@{ns3\-::\-Oicn\-Header}}
+\subsubsection[{Oicn\-Header}]{\setlength{\rightskip}{0pt plus 5cm}ns3\-::\-Oicn\-Header\-::\-Oicn\-Header (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classns3_1_1OicnHeader_a496135b4907b91cabe5387a4917994a5}
+\hypertarget{classns3_1_1OicnHeader_af7ce0b989e6cd7123b984bcfb205150d}{\index{ns3\-::\-Oicn\-Header@{ns3\-::\-Oicn\-Header}!$\sim$\-Oicn\-Header@{$\sim$\-Oicn\-Header}}
+\index{$\sim$\-Oicn\-Header@{$\sim$\-Oicn\-Header}!ns3::OicnHeader@{ns3\-::\-Oicn\-Header}}
+\subsubsection[{$\sim$\-Oicn\-Header}]{\setlength{\rightskip}{0pt plus 5cm}ns3\-::\-Oicn\-Header\-::$\sim$\-Oicn\-Header (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classns3_1_1OicnHeader_af7ce0b989e6cd7123b984bcfb205150d}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classns3_1_1OicnHeader_af16eaf62f9048fe56e714f44459f754d}{\index{ns3\-::\-Oicn\-Header@{ns3\-::\-Oicn\-Header}!Deserialize@{Deserialize}}
+\index{Deserialize@{Deserialize}!ns3::OicnHeader@{ns3\-::\-Oicn\-Header}}
+\subsubsection[{Deserialize}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t ns3\-::\-Oicn\-Header\-::\-Deserialize (
+\begin{DoxyParamCaption}
+\item[{Buffer\-::\-Iterator}]{start}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classns3_1_1OicnHeader_af16eaf62f9048fe56e714f44459f754d}
+\hypertarget{classns3_1_1OicnHeader_a9b5651fe0d172672e3e020c5df84a1c1}{\index{ns3\-::\-Oicn\-Header@{ns3\-::\-Oicn\-Header}!Get\-First4\-Bytes@{Get\-First4\-Bytes}}
+\index{Get\-First4\-Bytes@{Get\-First4\-Bytes}!ns3::OicnHeader@{ns3\-::\-Oicn\-Header}}
+\subsubsection[{Get\-First4\-Bytes}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t ns3\-::\-Oicn\-Header\-::\-Get\-First4\-Bytes (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{classns3_1_1OicnHeader_a9b5651fe0d172672e3e020c5df84a1c1}
+\hypertarget{classns3_1_1OicnHeader_a39c2a2431d2aef132ac52e1d1ab1e892}{\index{ns3\-::\-Oicn\-Header@{ns3\-::\-Oicn\-Header}!Get\-Instance\-Type\-Id@{Get\-Instance\-Type\-Id}}
+\index{Get\-Instance\-Type\-Id@{Get\-Instance\-Type\-Id}!ns3::OicnHeader@{ns3\-::\-Oicn\-Header}}
+\subsubsection[{Get\-Instance\-Type\-Id}]{\setlength{\rightskip}{0pt plus 5cm}Type\-Id ns3\-::\-Oicn\-Header\-::\-Get\-Instance\-Type\-Id (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classns3_1_1OicnHeader_a39c2a2431d2aef132ac52e1d1ab1e892}
+\hypertarget{classns3_1_1OicnHeader_a00f48c0a31a66618f6c92431520801c3}{\index{ns3\-::\-Oicn\-Header@{ns3\-::\-Oicn\-Header}!Get\-Name@{Get\-Name}}
+\index{Get\-Name@{Get\-Name}!ns3::OicnHeader@{ns3\-::\-Oicn\-Header}}
+\subsubsection[{Get\-Name}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string ns3\-::\-Oicn\-Header\-::\-Get\-Name (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{classns3_1_1OicnHeader_a00f48c0a31a66618f6c92431520801c3}
+\hypertarget{classns3_1_1OicnHeader_a4b0ba5fa4fe164e9e42a23a9a7b43268}{\index{ns3\-::\-Oicn\-Header@{ns3\-::\-Oicn\-Header}!Get\-Serialized\-Size@{Get\-Serialized\-Size}}
+\index{Get\-Serialized\-Size@{Get\-Serialized\-Size}!ns3::OicnHeader@{ns3\-::\-Oicn\-Header}}
+\subsubsection[{Get\-Serialized\-Size}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t ns3\-::\-Oicn\-Header\-::\-Get\-Serialized\-Size (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classns3_1_1OicnHeader_a4b0ba5fa4fe164e9e42a23a9a7b43268}
+\hypertarget{classns3_1_1OicnHeader_a275c1bad03b9f9ec4f11346a93061ac6}{\index{ns3\-::\-Oicn\-Header@{ns3\-::\-Oicn\-Header}!Get\-Type\-Id@{Get\-Type\-Id}}
+\index{Get\-Type\-Id@{Get\-Type\-Id}!ns3::OicnHeader@{ns3\-::\-Oicn\-Header}}
+\subsubsection[{Get\-Type\-Id}]{\setlength{\rightskip}{0pt plus 5cm}Type\-Id ns3\-::\-Oicn\-Header\-::\-Get\-Type\-Id (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classns3_1_1OicnHeader_a275c1bad03b9f9ec4f11346a93061ac6}
+\hypertarget{classns3_1_1OicnHeader_ac5b6b41e69772b2c018adc0c313fc315}{\index{ns3\-::\-Oicn\-Header@{ns3\-::\-Oicn\-Header}!Print@{Print}}
+\index{Print@{Print}!ns3::OicnHeader@{ns3\-::\-Oicn\-Header}}
+\subsubsection[{Print}]{\setlength{\rightskip}{0pt plus 5cm}void ns3\-::\-Oicn\-Header\-::\-Print (
+\begin{DoxyParamCaption}
+\item[{std\-::ostream \&}]{os}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classns3_1_1OicnHeader_ac5b6b41e69772b2c018adc0c313fc315}
+\hypertarget{classns3_1_1OicnHeader_a427490fecb88ecfdb3576ab39ed31f5e}{\index{ns3\-::\-Oicn\-Header@{ns3\-::\-Oicn\-Header}!Serialize@{Serialize}}
+\index{Serialize@{Serialize}!ns3::OicnHeader@{ns3\-::\-Oicn\-Header}}
+\subsubsection[{Serialize}]{\setlength{\rightskip}{0pt plus 5cm}void ns3\-::\-Oicn\-Header\-::\-Serialize (
+\begin{DoxyParamCaption}
+\item[{Buffer\-::\-Iterator}]{start}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classns3_1_1OicnHeader_a427490fecb88ecfdb3576ab39ed31f5e}
+\hypertarget{classns3_1_1OicnHeader_a08a99a9ac99df2fca8af740137d47992}{\index{ns3\-::\-Oicn\-Header@{ns3\-::\-Oicn\-Header}!Set\-Cachable@{Set\-Cachable}}
+\index{Set\-Cachable@{Set\-Cachable}!ns3::OicnHeader@{ns3\-::\-Oicn\-Header}}
+\subsubsection[{Set\-Cachable}]{\setlength{\rightskip}{0pt plus 5cm}void ns3\-::\-Oicn\-Header\-::\-Set\-Cachable (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{classns3_1_1OicnHeader_a08a99a9ac99df2fca8af740137d47992}
+\hypertarget{classns3_1_1OicnHeader_a6d775da4ae5ddd0b71f478422add3d68}{\index{ns3\-::\-Oicn\-Header@{ns3\-::\-Oicn\-Header}!Set\-First4\-Bytes@{Set\-First4\-Bytes}}
+\index{Set\-First4\-Bytes@{Set\-First4\-Bytes}!ns3::OicnHeader@{ns3\-::\-Oicn\-Header}}
+\subsubsection[{Set\-First4\-Bytes}]{\setlength{\rightskip}{0pt plus 5cm}void ns3\-::\-Oicn\-Header\-::\-Set\-First4\-Bytes (
+\begin{DoxyParamCaption}
+\item[{uint32\-\_\-t}]{Header\-Length, }
+\item[{bool}]{reply, }
+\item[{bool}]{cachable}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classns3_1_1OicnHeader_a6d775da4ae5ddd0b71f478422add3d68}
+\hypertarget{classns3_1_1OicnHeader_afd6c18de6e052e61ed4de112c5724a18}{\index{ns3\-::\-Oicn\-Header@{ns3\-::\-Oicn\-Header}!Set\-Name@{Set\-Name}}
+\index{Set\-Name@{Set\-Name}!ns3::OicnHeader@{ns3\-::\-Oicn\-Header}}
+\subsubsection[{Set\-Name}]{\setlength{\rightskip}{0pt plus 5cm}void ns3\-::\-Oicn\-Header\-::\-Set\-Name (
+\begin{DoxyParamCaption}
+\item[{std\-::string}]{name}
+\end{DoxyParamCaption}
+)}}\label{classns3_1_1OicnHeader_afd6c18de6e052e61ed4de112c5724a18}
+\hypertarget{classns3_1_1OicnHeader_aa1e7e27b1b855587f0bf855c77b1ad64}{\index{ns3\-::\-Oicn\-Header@{ns3\-::\-Oicn\-Header}!Set\-Non\-Cachable@{Set\-Non\-Cachable}}
+\index{Set\-Non\-Cachable@{Set\-Non\-Cachable}!ns3::OicnHeader@{ns3\-::\-Oicn\-Header}}
+\subsubsection[{Set\-Non\-Cachable}]{\setlength{\rightskip}{0pt plus 5cm}void ns3\-::\-Oicn\-Header\-::\-Set\-Non\-Cachable (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{classns3_1_1OicnHeader_aa1e7e27b1b855587f0bf855c77b1ad64}
+\hypertarget{classns3_1_1OicnHeader_ad49869449f12e894cc2dfb193d1a0181}{\index{ns3\-::\-Oicn\-Header@{ns3\-::\-Oicn\-Header}!Set\-Request@{Set\-Request}}
+\index{Set\-Request@{Set\-Request}!ns3::OicnHeader@{ns3\-::\-Oicn\-Header}}
+\subsubsection[{Set\-Request}]{\setlength{\rightskip}{0pt plus 5cm}void ns3\-::\-Oicn\-Header\-::\-Set\-Request (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{classns3_1_1OicnHeader_ad49869449f12e894cc2dfb193d1a0181}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classns3_1_1OicnHeader_af3b93655facbb38e13c98576c4454ec2}{\index{ns3\-::\-Oicn\-Header@{ns3\-::\-Oicn\-Header}!cachable\-\_\-start@{cachable\-\_\-start}}
+\index{cachable\-\_\-start@{cachable\-\_\-start}!ns3::OicnHeader@{ns3\-::\-Oicn\-Header}}
+\subsubsection[{cachable\-\_\-start}]{\setlength{\rightskip}{0pt plus 5cm}const uint32\-\_\-t ns3\-::\-Oicn\-Header\-::cachable\-\_\-start = 4026531840\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}}\label{classns3_1_1OicnHeader_af3b93655facbb38e13c98576c4454ec2}
+\hypertarget{classns3_1_1OicnHeader_ac4f7599f027c10e4433efdcb8541ef38}{\index{ns3\-::\-Oicn\-Header@{ns3\-::\-Oicn\-Header}!first4bytes@{first4bytes}}
+\index{first4bytes@{first4bytes}!ns3::OicnHeader@{ns3\-::\-Oicn\-Header}}
+\subsubsection[{first4bytes}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t ns3\-::\-Oicn\-Header\-::first4bytes\hspace{0.3cm}{\ttfamily [private]}}}\label{classns3_1_1OicnHeader_ac4f7599f027c10e4433efdcb8541ef38}
+\hypertarget{classns3_1_1OicnHeader_a4992cefc6d31c27977363db61c068111}{\index{ns3\-::\-Oicn\-Header@{ns3\-::\-Oicn\-Header}!header\-\_\-length@{header\-\_\-length}}
+\index{header\-\_\-length@{header\-\_\-length}!ns3::OicnHeader@{ns3\-::\-Oicn\-Header}}
+\subsubsection[{header\-\_\-length}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t ns3\-::\-Oicn\-Header\-::header\-\_\-length\hspace{0.3cm}{\ttfamily [private]}}}\label{classns3_1_1OicnHeader_a4992cefc6d31c27977363db61c068111}
+\hypertarget{classns3_1_1OicnHeader_a4ec6866334efab8674e2b0d96837a4ae}{\index{ns3\-::\-Oicn\-Header@{ns3\-::\-Oicn\-Header}!m\-\_\-name@{m\-\_\-name}}
+\index{m\-\_\-name@{m\-\_\-name}!ns3::OicnHeader@{ns3\-::\-Oicn\-Header}}
+\subsubsection[{m\-\_\-name}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string ns3\-::\-Oicn\-Header\-::m\-\_\-name\hspace{0.3cm}{\ttfamily [private]}}}\label{classns3_1_1OicnHeader_a4ec6866334efab8674e2b0d96837a4ae}
+\hypertarget{classns3_1_1OicnHeader_a822030e2b6549b78e31c440f4fe1f458}{\index{ns3\-::\-Oicn\-Header@{ns3\-::\-Oicn\-Header}!non\-\_\-cachable\-\_\-start@{non\-\_\-cachable\-\_\-start}}
+\index{non\-\_\-cachable\-\_\-start@{non\-\_\-cachable\-\_\-start}!ns3::OicnHeader@{ns3\-::\-Oicn\-Header}}
+\subsubsection[{non\-\_\-cachable\-\_\-start}]{\setlength{\rightskip}{0pt plus 5cm}const uint32\-\_\-t ns3\-::\-Oicn\-Header\-::non\-\_\-cachable\-\_\-start = 2952790016\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}}\label{classns3_1_1OicnHeader_a822030e2b6549b78e31c440f4fe1f458}
+\hypertarget{classns3_1_1OicnHeader_a9fa69f9639455b3ed94cbb616e2809c0}{\index{ns3\-::\-Oicn\-Header@{ns3\-::\-Oicn\-Header}!request\-\_\-start@{request\-\_\-start}}
+\index{request\-\_\-start@{request\-\_\-start}!ns3::OicnHeader@{ns3\-::\-Oicn\-Header}}
+\subsubsection[{request\-\_\-start}]{\setlength{\rightskip}{0pt plus 5cm}const uint32\-\_\-t ns3\-::\-Oicn\-Header\-::request\-\_\-start = 805306368\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}}\label{classns3_1_1OicnHeader_a9fa69f9639455b3ed94cbb616e2809c0}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+model/\hyperlink{oicn-header_8h}{oicn-\/header.\-h}\item 
+model/\hyperlink{oicn-header_8cc}{oicn-\/header.\-cc}\end{DoxyCompactItemize}

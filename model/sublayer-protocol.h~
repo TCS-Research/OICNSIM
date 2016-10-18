@@ -1,0 +1,47 @@
+#ifndef SUBLAYER_PROTOCOL_H
+#define SUBLAYER_PROTOCOL_H
+
+#include "ns3/ptr.h"
+#include "ns3/packet.h"
+#include "ns3/udp-header.h"
+#include "oicn-header.h"
+#include "ns3/type-name.h"
+#include "ns3/type-id.h"
+#include "ns3/ipv4-header.h"
+#include "ns3/socket.h"
+
+#include <stdint.h>
+
+namespace ns3{
+namespace oicn{
+
+class SublayerProtocol
+{
+public:
+
+	SublayerProtocol();
+	virtual ~SublayerProtocol();
+	static TypeId GetTypeId (void);
+	inline void SetHostAddress(uint32_t address);
+	inline uint32_t GetHostAddress(void);
+	Ptr<Packet> OICNSublayerCheck (Ptr<Packet> packet, Ipv4Header ipheader);
+	bool HasSublayer(Ptr<Packet> packet, Ipv4Header ipheader);
+	inline bool isUdp (Ipv4Header ipheader);
+	Ptr<Packet> Receive (Ptr<Packet> packet1, uint8_t Name, Ipv4Header ipheader);
+	void ConstructPacket (Ptr<Packet> packet, uint8_t Name, uint32_t DestinationAddress, uint32_t PortNumber);
+	void ConstructSublayer (Ptr<Packet> packet, uint8_t Name);
+	inline void SetUdpHeader (UdpHeader header);
+	inline void SetOICNHeader (OICNHeader header);
+	inline UdpHeader GetUdpHeader ();
+	inline OICNHeader GetOICNHeader ();
+	
+private:
+	
+	uint32_t host_address;
+	UdpHeader udp_header;
+	OICNHeader oicn_header;
+	Ptr<Socket> m_socket;
+};
+}
+}
+#endif

@@ -1,0 +1,82 @@
+\hypertarget{router-stack-helper_8cc}{\section{helper/router-\/stack-\/helper.cc File Reference}
+\label{router-stack-helper_8cc}\index{helper/router-\/stack-\/helper.\-cc@{helper/router-\/stack-\/helper.\-cc}}
+}
+{\ttfamily \#include \char`\"{}ns3/assert.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}ns3/log.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}ns3/object.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}ns3/names.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}ns3/ipv4.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}ns3/packet-\/socket-\/factory.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}ns3/config.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}ns3/simulator.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}ns3/string.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}ns3/net-\/device.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}ns3/callback.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}ns3/node.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}ns3/node-\/list.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}ns3/core-\/config.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}ns3/arp-\/l3-\/protocol.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}ns3/named-\/content-\/cache.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}router-\/stack-\/helper.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}ns3/sublayer-\/protocol.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}ns3/ipv4-\/global-\/routing.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}ns3/ipv4-\/list-\/routing-\/helper.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}ns3/ipv4-\/static-\/routing-\/helper.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}ns3/ipv4-\/global-\/routing-\/helper.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}ns3/global-\/router-\/interface.\-h\char`\"{}}\\*
+{\ttfamily \#include $<$limits$>$}\\*
+{\ttfamily \#include $<$map$>$}\\*
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{namespacens3}{ns3}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{router-stack-helper_8cc_a7db88cb02fe5c738db27431496b7131e}{I\-N\-T\-E\-R\-F\-A\-C\-E\-\_\-\-C\-O\-N\-T\-E\-X\-T}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef std\-::pair$<$ Ptr$<$ Ipv4 $>$\\*
+, uint32\-\_\-t $>$ \hyperlink{namespacens3_a83e2603870381affabd5ca766d17daff}{ns3\-::\-Interface\-Pair\-Ipv4}
+\item 
+typedef std\-::map\\*
+$<$ Interface\-Pair\-Ipv4, Ptr\\*
+$<$ Pcap\-File\-Wrapper $>$ $>$ \hyperlink{namespacens3_ab14a5629528234e6f76ad3bb180022fe}{ns3\-::\-Interface\-File\-Map\-Ipv4}
+\item 
+typedef std\-::map\\*
+$<$ Interface\-Pair\-Ipv4, Ptr\\*
+$<$ Output\-Stream\-Wrapper $>$ $>$ \hyperlink{namespacens3_a5634ac4e27d952132fba4cd906d4ebd3}{ns3\-::\-Interface\-Stream\-Map\-Ipv4}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{router-stack-helper_8cc_ab2435b2b13a2f2a29451f2630b953daf}{N\-S\-\_\-\-L\-O\-G\-\_\-\-C\-O\-M\-P\-O\-N\-E\-N\-T\-\_\-\-D\-E\-F\-I\-N\-E} (\char`\"{}Router\-Stack\-Helper\char`\"{})
+\item 
+static void \hyperlink{namespacens3_acde124208ae741ae241b61b9a22ead8d}{ns3\-::\-Ipv4\-Router\-L3\-Protocol\-Rx\-Tx\-Sink} (Ptr$<$ const Packet $>$ p, Ptr$<$ Ipv4 $>$ ipv4, uint32\-\_\-t interface)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+static Interface\-File\-Map\-Ipv4 \hyperlink{namespacens3_ac1df4c15ca334fd8713f6600d097c1a6}{ns3\-::g\-\_\-interface\-File\-Map\-Ipv4}
+\item 
+static Interface\-Stream\-Map\-Ipv4 \hyperlink{namespacens3_ad7720e08dcb21331d85c00128abc175a}{ns3\-::g\-\_\-interface\-Stream\-Map\-Ipv4}
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{router-stack-helper_8cc_a7db88cb02fe5c738db27431496b7131e}{\index{router-\/stack-\/helper.\-cc@{router-\/stack-\/helper.\-cc}!I\-N\-T\-E\-R\-F\-A\-C\-E\-\_\-\-C\-O\-N\-T\-E\-X\-T@{I\-N\-T\-E\-R\-F\-A\-C\-E\-\_\-\-C\-O\-N\-T\-E\-X\-T}}
+\index{I\-N\-T\-E\-R\-F\-A\-C\-E\-\_\-\-C\-O\-N\-T\-E\-X\-T@{I\-N\-T\-E\-R\-F\-A\-C\-E\-\_\-\-C\-O\-N\-T\-E\-X\-T}!router-stack-helper.cc@{router-\/stack-\/helper.\-cc}}
+\subsubsection[{I\-N\-T\-E\-R\-F\-A\-C\-E\-\_\-\-C\-O\-N\-T\-E\-X\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\-N\-T\-E\-R\-F\-A\-C\-E\-\_\-\-C\-O\-N\-T\-E\-X\-T}}\label{router-stack-helper_8cc_a7db88cb02fe5c738db27431496b7131e}
+
+
+\subsection{Function Documentation}
+\hypertarget{router-stack-helper_8cc_ab2435b2b13a2f2a29451f2630b953daf}{\index{router-\/stack-\/helper.\-cc@{router-\/stack-\/helper.\-cc}!N\-S\-\_\-\-L\-O\-G\-\_\-\-C\-O\-M\-P\-O\-N\-E\-N\-T\-\_\-\-D\-E\-F\-I\-N\-E@{N\-S\-\_\-\-L\-O\-G\-\_\-\-C\-O\-M\-P\-O\-N\-E\-N\-T\-\_\-\-D\-E\-F\-I\-N\-E}}
+\index{N\-S\-\_\-\-L\-O\-G\-\_\-\-C\-O\-M\-P\-O\-N\-E\-N\-T\-\_\-\-D\-E\-F\-I\-N\-E@{N\-S\-\_\-\-L\-O\-G\-\_\-\-C\-O\-M\-P\-O\-N\-E\-N\-T\-\_\-\-D\-E\-F\-I\-N\-E}!router-stack-helper.cc@{router-\/stack-\/helper.\-cc}}
+\subsubsection[{N\-S\-\_\-\-L\-O\-G\-\_\-\-C\-O\-M\-P\-O\-N\-E\-N\-T\-\_\-\-D\-E\-F\-I\-N\-E}]{\setlength{\rightskip}{0pt plus 5cm}N\-S\-\_\-\-L\-O\-G\-\_\-\-C\-O\-M\-P\-O\-N\-E\-N\-T\-\_\-\-D\-E\-F\-I\-N\-E (
+\begin{DoxyParamCaption}
+\item[{\char`\"{}Router\-Stack\-Helper\char`\"{}}]{}
+\end{DoxyParamCaption}
+)}}\label{router-stack-helper_8cc_ab2435b2b13a2f2a29451f2630b953daf}

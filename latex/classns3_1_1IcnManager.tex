@@ -1,0 +1,406 @@
+\hypertarget{classns3_1_1IcnManager}{\section{ns3\-:\-:Icn\-Manager Class Reference}
+\label{classns3_1_1IcnManager}\index{ns3\-::\-Icn\-Manager@{ns3\-::\-Icn\-Manager}}
+}
+
+
+It resolves the name requested by the client and direct the source (server or cached source(router)) to send the requested content back to client.  
+
+
+
+
+{\ttfamily \#include $<$icn-\/manager.\-h$>$}
+
+Inheritance diagram for ns3\-:\-:Icn\-Manager\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classns3_1_1IcnManager}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classns3_1_1IcnManager_a1f48e87348770a7857f1dbbf4279b169}{Icn\-Manager} ()
+\item 
+void \hyperlink{classns3_1_1IcnManager_af448a19c4cbb801cc0e794a680c95e7a}{Read\-Packet} (Ptr$<$ Packet $>$ packet, Ipv4\-Address client\-Address, uint16\-\_\-t client\-Port)
+\begin{DoxyCompactList}\small\item\em Read the packet received. If packet received is content query packet from O\-I\-C\-N Client, it call Name\-Resolution function to know the source of the content. Further if name resolution is successful, it sends A\-C\-K to client, otherwise it sends N\-A\-C\-K to client. \end{DoxyCompactList}\item 
+Ipv4\-Address const $\ast$ \hyperlink{classns3_1_1IcnManager_a305b143330eaf36bba91e86eba4619fd}{Name\-Resolution} (std\-::string name, bool \&flag)
+\begin{DoxyCompactList}\small\item\em Search the name in Cached\-Router\-Table or name\-Server\-Table. \end{DoxyCompactList}\item 
+void \hyperlink{classns3_1_1IcnManager_acc48cc930981a8e45d440559139b9c1f}{Name\-Registeration} (std\-::vector$<$ std\-::vector$<$ int $>$$>$ name\-Index, std\-::vector$<$ Ipv4\-Address $>$ server\-Address)
+\begin{DoxyCompactList}\small\item\em Initialise name\-Server\-Table with name and corresponding server ipv4 address. \end{DoxyCompactList}\item 
+void \hyperlink{classns3_1_1IcnManager_a7152eb46e71b0e33cbb6ccd23cbe6266}{Send\-Ack\-To\-Client} (Ipv4\-Address client\-Ipv4\-Address, uint16\-\_\-t client\-Port, \hyperlink{classns3_1_1DnsPlusQuestionHeader}{Dns\-Plus\-Question\-Header} dns\-Plus\-Question\-Header, \hyperlink{classns3_1_1DnsPlusHeader}{Dns\-Plus\-Header} dns\-Plus\-Header, \hyperlink{classns3_1_1OicnHeader}{Oicn\-Header} oicn\-Header, bool \&flag)
+\begin{DoxyCompactList}\small\item\em Send A\-C\-K/\-N\-A\-C\-K to client depending upon I\-C\-N Manager has able to resolve name or not. \end{DoxyCompactList}\item 
+void \hyperlink{classns3_1_1IcnManager_af503cd858bfb757c2eb55b25876d9cb2}{Send\-To\-Source} (Ipv4\-Address source\-Ip\-Address, Ipv4\-Address client\-Ipv4\-Address, \hyperlink{classns3_1_1DnsPlusQuestionHeader}{Dns\-Plus\-Question\-Header} dns\-Plus\-Question\-Header, \hyperlink{classns3_1_1DnsPlusHeader}{Dns\-Plus\-Header} dns\-Plus\-Header, \hyperlink{classns3_1_1OicnHeader}{Oicn\-Header} oicn\-Header)
+\begin{DoxyCompactList}\small\item\em Send Reply packet (with dns\-Plus Answer section) to source of content. dns\-Plus Answer section contains client ipv4 address. It directs the source of content to send the content at mentioned client address. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static Type\-Id \hyperlink{classns3_1_1IcnManager_afbbd24928df50c3489f381f1848dddf1}{Get\-Type\-Id} (void)
+\begin{DoxyCompactList}\small\item\em Get the type I\-D. \end{DoxyCompactList}\item 
+static void \hyperlink{classns3_1_1IcnManager_a799aa85b5dbecb91214d0e6c52fc697c}{Set\-Cached\-Router\-Entry} (Ipv4\-Address router\-Ipv4\-Address, std\-::string name)
+\begin{DoxyCompactList}\small\item\em Enter the name of the content and ipv4 address of corresponding router into Cached\-Router\-Table. \end{DoxyCompactList}\item 
+static void \hyperlink{classns3_1_1IcnManager_a61f9b8234e2f57bcc5d4d410423dfda6}{Evict\-Cached\-Router\-Entry} (Ipv4\-Address router\-Ipv4\-Address, std\-::string name)
+\begin{DoxyCompactList}\small\item\em Evict the name of the content and ipv4 address of corresponding router from Cached\-Router\-Table. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{classns3_1_1IcnManager_ad7e1a50c5d1411ae7e73a489be9c1503}{Do\-Dispose} (void)
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classns3_1_1IcnManager_a34f69ccb754cb9d10f1020d1058e49fa}{Handle\-Read\-Client} (Ptr$<$ Socket $>$ socket)
+\begin{DoxyCompactList}\small\item\em Handle a packet reception from client port (26). This function is called by lower layers. \end{DoxyCompactList}\item 
+void \hyperlink{classns3_1_1IcnManager_aa22b16c46e5f98443973564a875a6f58}{Handle\-Read\-Source} (Ptr$<$ Socket $>$ socket)
+\begin{DoxyCompactList}\small\item\em Handle a packet reception from source port (both server source and cached source(icn router) port 89). This function is called by lower layers. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classns3_1_1IcnManager_ab65232c50cfdee86da1edbe3bb92c644}{Start\-Application} (void)
+\item 
+virtual void \hyperlink{classns3_1_1IcnManager_a609f7f582c1ffe00d45fd1ce3dbf27f2}{Stop\-Application} (void)
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+uint32\-\_\-t \hyperlink{classns3_1_1IcnManager_a43c8815cc7e2746f7c96e8e847ee6c03}{m\-\_\-count}
+\begin{DoxyCompactList}\small\item\em maximum number of packets the application will send \end{DoxyCompactList}\item 
+Time \hyperlink{classns3_1_1IcnManager_a4064521e1b0c672c5cf34ae49a7a97c7}{m\-\_\-interval}
+\begin{DoxyCompactList}\small\item\em packet inter-\/send time \end{DoxyCompactList}\item 
+uint32\-\_\-t \hyperlink{classns3_1_1IcnManager_a5b544ba6282f0ac718ae203380ed5f3a}{m\-\_\-size}
+\begin{DoxyCompactList}\small\item\em size of the sent packet \end{DoxyCompactList}\item 
+Ptr$<$ Socket $>$ \hyperlink{classns3_1_1IcnManager_a24764426c0a4f06ccfc560cf333641b9}{m\-\_\-socket\-Client}
+\begin{DoxyCompactList}\small\item\em socket connected to client port 26 \end{DoxyCompactList}\item 
+Ptr$<$ Socket $>$ \hyperlink{classns3_1_1IcnManager_a6ed2472d0ef144df7ae0349c7faefc12}{m\-\_\-socket\-Source}
+\begin{DoxyCompactList}\small\item\em socket connected to source port 89 \end{DoxyCompactList}\item 
+uint16\-\_\-t \hyperlink{classns3_1_1IcnManager_a02128bc30bd364361da442f6bd799c4b}{m\-\_\-port}
+\begin{DoxyCompactList}\small\item\em port at which client will listen to the request, here port defined as 36 \end{DoxyCompactList}\item 
+uint16\-\_\-t \hyperlink{classns3_1_1IcnManager_a93399455541c4a44cf75cbbbc0b5c56d}{m\-\_\-source\-Port}
+\begin{DoxyCompactList}\small\item\em port at which source (server or cached router) will listen to the request, here source port defined as 89 \end{DoxyCompactList}\item 
+uint16\-\_\-t \hyperlink{classns3_1_1IcnManager_a704ea4271e14eb01e05318496c2b5d72}{m\-\_\-client\-Port}
+\begin{DoxyCompactList}\small\item\em port at which client will listen to the request, here client port defined as 26 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{namespacens3_a30b2bc59285e3015fedd6268c6f77947}{Name\-Server\-Table} \hyperlink{classns3_1_1IcnManager_afdafc5390fdc600ab83393fd1778ddd9}{name\-Server\-Table}
+\begin{DoxyCompactList}\small\item\em Container to store mapping of name and corresponding ip address of the server. \end{DoxyCompactList}\item 
+static \hyperlink{namespacens3_a6e64320f2e97002ba6cd340bbfb76767}{Cached\-Router\-Table} \hyperlink{classns3_1_1IcnManager_a6a90793d420035b591ca0f79299612c7}{cached\-Router\-Table}
+\begin{DoxyCompactList}\small\item\em Container to store mapping of name and corresponding ip address of the cached router. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+It resolves the name requested by the client and direct the source (server or cached source(router)) to send the requested content back to client. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classns3_1_1IcnManager_a1f48e87348770a7857f1dbbf4279b169}{\index{ns3\-::\-Icn\-Manager@{ns3\-::\-Icn\-Manager}!Icn\-Manager@{Icn\-Manager}}
+\index{Icn\-Manager@{Icn\-Manager}!ns3::IcnManager@{ns3\-::\-Icn\-Manager}}
+\subsubsection[{Icn\-Manager}]{\setlength{\rightskip}{0pt plus 5cm}ns3\-::\-Icn\-Manager\-::\-Icn\-Manager (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classns3_1_1IcnManager_a1f48e87348770a7857f1dbbf4279b169}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classns3_1_1IcnManager_ad7e1a50c5d1411ae7e73a489be9c1503}{\index{ns3\-::\-Icn\-Manager@{ns3\-::\-Icn\-Manager}!Do\-Dispose@{Do\-Dispose}}
+\index{Do\-Dispose@{Do\-Dispose}!ns3::IcnManager@{ns3\-::\-Icn\-Manager}}
+\subsubsection[{Do\-Dispose}]{\setlength{\rightskip}{0pt plus 5cm}void ns3\-::\-Icn\-Manager\-::\-Do\-Dispose (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}}\label{classns3_1_1IcnManager_ad7e1a50c5d1411ae7e73a489be9c1503}
+\hypertarget{classns3_1_1IcnManager_a61f9b8234e2f57bcc5d4d410423dfda6}{\index{ns3\-::\-Icn\-Manager@{ns3\-::\-Icn\-Manager}!Evict\-Cached\-Router\-Entry@{Evict\-Cached\-Router\-Entry}}
+\index{Evict\-Cached\-Router\-Entry@{Evict\-Cached\-Router\-Entry}!ns3::IcnManager@{ns3\-::\-Icn\-Manager}}
+\subsubsection[{Evict\-Cached\-Router\-Entry}]{\setlength{\rightskip}{0pt plus 5cm}void ns3\-::\-Icn\-Manager\-::\-Evict\-Cached\-Router\-Entry (
+\begin{DoxyParamCaption}
+\item[{Ipv4\-Address}]{router\-Ipv4\-Address, }
+\item[{std\-::string}]{name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classns3_1_1IcnManager_a61f9b8234e2f57bcc5d4d410423dfda6}
+
+
+Evict the name of the content and ipv4 address of corresponding router from Cached\-Router\-Table. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em router\-Ipv4\-Address} & ipv4 address of router at which content is store \\
+\hline
+{\em name} & name of the content \\
+\hline
+\end{DoxyParams}
+\hypertarget{classns3_1_1IcnManager_afbbd24928df50c3489f381f1848dddf1}{\index{ns3\-::\-Icn\-Manager@{ns3\-::\-Icn\-Manager}!Get\-Type\-Id@{Get\-Type\-Id}}
+\index{Get\-Type\-Id@{Get\-Type\-Id}!ns3::IcnManager@{ns3\-::\-Icn\-Manager}}
+\subsubsection[{Get\-Type\-Id}]{\setlength{\rightskip}{0pt plus 5cm}Type\-Id ns3\-::\-Icn\-Manager\-::\-Get\-Type\-Id (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classns3_1_1IcnManager_afbbd24928df50c3489f381f1848dddf1}
+
+
+Get the type I\-D. 
+
+\begin{DoxyReturn}{Returns}
+the object Type\-Id 
+\end{DoxyReturn}
+\hypertarget{classns3_1_1IcnManager_a34f69ccb754cb9d10f1020d1058e49fa}{\index{ns3\-::\-Icn\-Manager@{ns3\-::\-Icn\-Manager}!Handle\-Read\-Client@{Handle\-Read\-Client}}
+\index{Handle\-Read\-Client@{Handle\-Read\-Client}!ns3::IcnManager@{ns3\-::\-Icn\-Manager}}
+\subsubsection[{Handle\-Read\-Client}]{\setlength{\rightskip}{0pt plus 5cm}void ns3\-::\-Icn\-Manager\-::\-Handle\-Read\-Client (
+\begin{DoxyParamCaption}
+\item[{Ptr$<$ Socket $>$}]{socket}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classns3_1_1IcnManager_a34f69ccb754cb9d10f1020d1058e49fa}
+
+
+Handle a packet reception from client port (26). This function is called by lower layers. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em socket} & the socket the packet was received to \\
+\hline
+\end{DoxyParams}
+\hypertarget{classns3_1_1IcnManager_aa22b16c46e5f98443973564a875a6f58}{\index{ns3\-::\-Icn\-Manager@{ns3\-::\-Icn\-Manager}!Handle\-Read\-Source@{Handle\-Read\-Source}}
+\index{Handle\-Read\-Source@{Handle\-Read\-Source}!ns3::IcnManager@{ns3\-::\-Icn\-Manager}}
+\subsubsection[{Handle\-Read\-Source}]{\setlength{\rightskip}{0pt plus 5cm}void ns3\-::\-Icn\-Manager\-::\-Handle\-Read\-Source (
+\begin{DoxyParamCaption}
+\item[{Ptr$<$ Socket $>$}]{socket}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classns3_1_1IcnManager_aa22b16c46e5f98443973564a875a6f58}
+
+
+Handle a packet reception from source port (both server source and cached source(icn router) port 89). This function is called by lower layers. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em socket} & the socket the packet was received to \\
+\hline
+\end{DoxyParams}
+\hypertarget{classns3_1_1IcnManager_acc48cc930981a8e45d440559139b9c1f}{\index{ns3\-::\-Icn\-Manager@{ns3\-::\-Icn\-Manager}!Name\-Registeration@{Name\-Registeration}}
+\index{Name\-Registeration@{Name\-Registeration}!ns3::IcnManager@{ns3\-::\-Icn\-Manager}}
+\subsubsection[{Name\-Registeration}]{\setlength{\rightskip}{0pt plus 5cm}void ns3\-::\-Icn\-Manager\-::\-Name\-Registeration (
+\begin{DoxyParamCaption}
+\item[{std\-::vector$<$ std\-::vector$<$ int $>$$>$}]{name\-Index, }
+\item[{std\-::vector$<$ Ipv4\-Address $>$}]{server\-Address}
+\end{DoxyParamCaption}
+)}}\label{classns3_1_1IcnManager_acc48cc930981a8e45d440559139b9c1f}
+
+
+Initialise name\-Server\-Table with name and corresponding server ipv4 address. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name\-Index} & it is index of content that is stored at particular server \\
+\hline
+{\em server\-Address} & address of the server containing the content (here content is identified by name. Name are defined on the basis of indices of name\-Index) \\
+\hline
+\end{DoxyParams}
+\hypertarget{classns3_1_1IcnManager_a305b143330eaf36bba91e86eba4619fd}{\index{ns3\-::\-Icn\-Manager@{ns3\-::\-Icn\-Manager}!Name\-Resolution@{Name\-Resolution}}
+\index{Name\-Resolution@{Name\-Resolution}!ns3::IcnManager@{ns3\-::\-Icn\-Manager}}
+\subsubsection[{Name\-Resolution}]{\setlength{\rightskip}{0pt plus 5cm}Ipv4\-Address const $\ast$ ns3\-::\-Icn\-Manager\-::\-Name\-Resolution (
+\begin{DoxyParamCaption}
+\item[{std\-::string}]{name, }
+\item[{bool \&}]{flag}
+\end{DoxyParamCaption}
+)}}\label{classns3_1_1IcnManager_a305b143330eaf36bba91e86eba4619fd}
+
+
+Search the name in Cached\-Router\-Table or name\-Server\-Table. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & content name to be searched \\
+\hline
+{\em flag} & true value represent content found and false value represent content not found \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+ipv4 address of the source of the content 
+\end{DoxyReturn}
+\hypertarget{classns3_1_1IcnManager_af448a19c4cbb801cc0e794a680c95e7a}{\index{ns3\-::\-Icn\-Manager@{ns3\-::\-Icn\-Manager}!Read\-Packet@{Read\-Packet}}
+\index{Read\-Packet@{Read\-Packet}!ns3::IcnManager@{ns3\-::\-Icn\-Manager}}
+\subsubsection[{Read\-Packet}]{\setlength{\rightskip}{0pt plus 5cm}void ns3\-::\-Icn\-Manager\-::\-Read\-Packet (
+\begin{DoxyParamCaption}
+\item[{Ptr$<$ Packet $>$}]{packet, }
+\item[{Ipv4\-Address}]{client\-Address, }
+\item[{uint16\-\_\-t}]{client\-Port}
+\end{DoxyParamCaption}
+)}}\label{classns3_1_1IcnManager_af448a19c4cbb801cc0e794a680c95e7a}
+
+
+Read the packet received. If packet received is content query packet from O\-I\-C\-N Client, it call Name\-Resolution function to know the source of the content. Further if name resolution is successful, it sends A\-C\-K to client, otherwise it sends N\-A\-C\-K to client. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em packet} & packet received \\
+\hline
+{\em client\-Address} & ipv4 address of the client \\
+\hline
+{\em client\-Port} & port of the client \\
+\hline
+\end{DoxyParams}
+\hypertarget{classns3_1_1IcnManager_a7152eb46e71b0e33cbb6ccd23cbe6266}{\index{ns3\-::\-Icn\-Manager@{ns3\-::\-Icn\-Manager}!Send\-Ack\-To\-Client@{Send\-Ack\-To\-Client}}
+\index{Send\-Ack\-To\-Client@{Send\-Ack\-To\-Client}!ns3::IcnManager@{ns3\-::\-Icn\-Manager}}
+\subsubsection[{Send\-Ack\-To\-Client}]{\setlength{\rightskip}{0pt plus 5cm}void ns3\-::\-Icn\-Manager\-::\-Send\-Ack\-To\-Client (
+\begin{DoxyParamCaption}
+\item[{Ipv4\-Address}]{client\-Ipv4\-Address, }
+\item[{uint16\-\_\-t}]{client\-Port, }
+\item[{{\bf Dns\-Plus\-Question\-Header}}]{dns\-Plus\-Question\-Header, }
+\item[{{\bf Dns\-Plus\-Header}}]{dns\-Plus\-Header, }
+\item[{{\bf Oicn\-Header}}]{oicn\-Header, }
+\item[{bool \&}]{flag}
+\end{DoxyParamCaption}
+)}}\label{classns3_1_1IcnManager_a7152eb46e71b0e33cbb6ccd23cbe6266}
+
+
+Send A\-C\-K/\-N\-A\-C\-K to client depending upon I\-C\-N Manager has able to resolve name or not. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em client\-Ipv4\-Address} & client ipv4 address to which A\-C\-K has to be sent \\
+\hline
+{\em client\-Port} & client port to which A\-C\-K has to be sent \\
+\hline
+{\em dns\-Plus\-Question\-Header} & dns\-Plus Question header section of the packet \\
+\hline
+{\em dns\-Plus\-Header} & dns\-Plus header section of the packet \\
+\hline
+{\em oicn\-Header} & oicn header section of the packet \\
+\hline
+{\em flag} & if true shows A\-C\-K has to be sent otherwise N\-A\-C\-K \\
+\hline
+\end{DoxyParams}
+\hypertarget{classns3_1_1IcnManager_af503cd858bfb757c2eb55b25876d9cb2}{\index{ns3\-::\-Icn\-Manager@{ns3\-::\-Icn\-Manager}!Send\-To\-Source@{Send\-To\-Source}}
+\index{Send\-To\-Source@{Send\-To\-Source}!ns3::IcnManager@{ns3\-::\-Icn\-Manager}}
+\subsubsection[{Send\-To\-Source}]{\setlength{\rightskip}{0pt plus 5cm}void ns3\-::\-Icn\-Manager\-::\-Send\-To\-Source (
+\begin{DoxyParamCaption}
+\item[{Ipv4\-Address}]{source\-Ip\-Address, }
+\item[{Ipv4\-Address}]{client\-Ipv4\-Address, }
+\item[{{\bf Dns\-Plus\-Question\-Header}}]{dns\-Plus\-Question\-Header, }
+\item[{{\bf Dns\-Plus\-Header}}]{dns\-Plus\-Header, }
+\item[{{\bf Oicn\-Header}}]{oicn\-Header}
+\end{DoxyParamCaption}
+)}}\label{classns3_1_1IcnManager_af503cd858bfb757c2eb55b25876d9cb2}
+
+
+Send Reply packet (with dns\-Plus Answer section) to source of content. dns\-Plus Answer section contains client ipv4 address. It directs the source of content to send the content at mentioned client address. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em source\-Ip\-Address} & ipv4 address of source to which packet has to be sent \\
+\hline
+{\em client\-Ipv4\-Address} & ipv4 address of source to which packet has to be sent \\
+\hline
+{\em dns\-Plus\-Question\-Header} & dns\-Plus Question header section of the packet \\
+\hline
+{\em dns\-Plus\-Header} & dns\-Plus header section of the packet \\
+\hline
+{\em oicn\-Header} & oicn header section of the packet \\
+\hline
+\end{DoxyParams}
+\hypertarget{classns3_1_1IcnManager_a799aa85b5dbecb91214d0e6c52fc697c}{\index{ns3\-::\-Icn\-Manager@{ns3\-::\-Icn\-Manager}!Set\-Cached\-Router\-Entry@{Set\-Cached\-Router\-Entry}}
+\index{Set\-Cached\-Router\-Entry@{Set\-Cached\-Router\-Entry}!ns3::IcnManager@{ns3\-::\-Icn\-Manager}}
+\subsubsection[{Set\-Cached\-Router\-Entry}]{\setlength{\rightskip}{0pt plus 5cm}void ns3\-::\-Icn\-Manager\-::\-Set\-Cached\-Router\-Entry (
+\begin{DoxyParamCaption}
+\item[{Ipv4\-Address}]{router\-Ipv4\-Address, }
+\item[{std\-::string}]{name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classns3_1_1IcnManager_a799aa85b5dbecb91214d0e6c52fc697c}
+
+
+Enter the name of the content and ipv4 address of corresponding router into Cached\-Router\-Table. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em router\-Ipv4\-Address} & ipv4 address of router at which content is store \\
+\hline
+{\em name} & name of the content \\
+\hline
+\end{DoxyParams}
+\hypertarget{classns3_1_1IcnManager_ab65232c50cfdee86da1edbe3bb92c644}{\index{ns3\-::\-Icn\-Manager@{ns3\-::\-Icn\-Manager}!Start\-Application@{Start\-Application}}
+\index{Start\-Application@{Start\-Application}!ns3::IcnManager@{ns3\-::\-Icn\-Manager}}
+\subsubsection[{Start\-Application}]{\setlength{\rightskip}{0pt plus 5cm}void ns3\-::\-Icn\-Manager\-::\-Start\-Application (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [virtual]}}}\label{classns3_1_1IcnManager_ab65232c50cfdee86da1edbe3bb92c644}
+\hypertarget{classns3_1_1IcnManager_a609f7f582c1ffe00d45fd1ce3dbf27f2}{\index{ns3\-::\-Icn\-Manager@{ns3\-::\-Icn\-Manager}!Stop\-Application@{Stop\-Application}}
+\index{Stop\-Application@{Stop\-Application}!ns3::IcnManager@{ns3\-::\-Icn\-Manager}}
+\subsubsection[{Stop\-Application}]{\setlength{\rightskip}{0pt plus 5cm}void ns3\-::\-Icn\-Manager\-::\-Stop\-Application (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [virtual]}}}\label{classns3_1_1IcnManager_a609f7f582c1ffe00d45fd1ce3dbf27f2}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classns3_1_1IcnManager_a6a90793d420035b591ca0f79299612c7}{\index{ns3\-::\-Icn\-Manager@{ns3\-::\-Icn\-Manager}!cached\-Router\-Table@{cached\-Router\-Table}}
+\index{cached\-Router\-Table@{cached\-Router\-Table}!ns3::IcnManager@{ns3\-::\-Icn\-Manager}}
+\subsubsection[{cached\-Router\-Table}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Cached\-Router\-Table} ns3\-::\-Icn\-Manager\-::cached\-Router\-Table\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}}\label{classns3_1_1IcnManager_a6a90793d420035b591ca0f79299612c7}
+
+
+Container to store mapping of name and corresponding ip address of the cached router. 
+
+\hypertarget{classns3_1_1IcnManager_a704ea4271e14eb01e05318496c2b5d72}{\index{ns3\-::\-Icn\-Manager@{ns3\-::\-Icn\-Manager}!m\-\_\-client\-Port@{m\-\_\-client\-Port}}
+\index{m\-\_\-client\-Port@{m\-\_\-client\-Port}!ns3::IcnManager@{ns3\-::\-Icn\-Manager}}
+\subsubsection[{m\-\_\-client\-Port}]{\setlength{\rightskip}{0pt plus 5cm}uint16\-\_\-t ns3\-::\-Icn\-Manager\-::m\-\_\-client\-Port\hspace{0.3cm}{\ttfamily [private]}}}\label{classns3_1_1IcnManager_a704ea4271e14eb01e05318496c2b5d72}
+
+
+port at which client will listen to the request, here client port defined as 26 
+
+\hypertarget{classns3_1_1IcnManager_a43c8815cc7e2746f7c96e8e847ee6c03}{\index{ns3\-::\-Icn\-Manager@{ns3\-::\-Icn\-Manager}!m\-\_\-count@{m\-\_\-count}}
+\index{m\-\_\-count@{m\-\_\-count}!ns3::IcnManager@{ns3\-::\-Icn\-Manager}}
+\subsubsection[{m\-\_\-count}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t ns3\-::\-Icn\-Manager\-::m\-\_\-count\hspace{0.3cm}{\ttfamily [private]}}}\label{classns3_1_1IcnManager_a43c8815cc7e2746f7c96e8e847ee6c03}
+
+
+maximum number of packets the application will send 
+
+\hypertarget{classns3_1_1IcnManager_a4064521e1b0c672c5cf34ae49a7a97c7}{\index{ns3\-::\-Icn\-Manager@{ns3\-::\-Icn\-Manager}!m\-\_\-interval@{m\-\_\-interval}}
+\index{m\-\_\-interval@{m\-\_\-interval}!ns3::IcnManager@{ns3\-::\-Icn\-Manager}}
+\subsubsection[{m\-\_\-interval}]{\setlength{\rightskip}{0pt plus 5cm}Time ns3\-::\-Icn\-Manager\-::m\-\_\-interval\hspace{0.3cm}{\ttfamily [private]}}}\label{classns3_1_1IcnManager_a4064521e1b0c672c5cf34ae49a7a97c7}
+
+
+packet inter-\/send time 
+
+\hypertarget{classns3_1_1IcnManager_a02128bc30bd364361da442f6bd799c4b}{\index{ns3\-::\-Icn\-Manager@{ns3\-::\-Icn\-Manager}!m\-\_\-port@{m\-\_\-port}}
+\index{m\-\_\-port@{m\-\_\-port}!ns3::IcnManager@{ns3\-::\-Icn\-Manager}}
+\subsubsection[{m\-\_\-port}]{\setlength{\rightskip}{0pt plus 5cm}uint16\-\_\-t ns3\-::\-Icn\-Manager\-::m\-\_\-port\hspace{0.3cm}{\ttfamily [private]}}}\label{classns3_1_1IcnManager_a02128bc30bd364361da442f6bd799c4b}
+
+
+port at which client will listen to the request, here port defined as 36 
+
+\hypertarget{classns3_1_1IcnManager_a5b544ba6282f0ac718ae203380ed5f3a}{\index{ns3\-::\-Icn\-Manager@{ns3\-::\-Icn\-Manager}!m\-\_\-size@{m\-\_\-size}}
+\index{m\-\_\-size@{m\-\_\-size}!ns3::IcnManager@{ns3\-::\-Icn\-Manager}}
+\subsubsection[{m\-\_\-size}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t ns3\-::\-Icn\-Manager\-::m\-\_\-size\hspace{0.3cm}{\ttfamily [private]}}}\label{classns3_1_1IcnManager_a5b544ba6282f0ac718ae203380ed5f3a}
+
+
+size of the sent packet 
+
+\hypertarget{classns3_1_1IcnManager_a24764426c0a4f06ccfc560cf333641b9}{\index{ns3\-::\-Icn\-Manager@{ns3\-::\-Icn\-Manager}!m\-\_\-socket\-Client@{m\-\_\-socket\-Client}}
+\index{m\-\_\-socket\-Client@{m\-\_\-socket\-Client}!ns3::IcnManager@{ns3\-::\-Icn\-Manager}}
+\subsubsection[{m\-\_\-socket\-Client}]{\setlength{\rightskip}{0pt plus 5cm}Ptr$<$Socket$>$ ns3\-::\-Icn\-Manager\-::m\-\_\-socket\-Client\hspace{0.3cm}{\ttfamily [private]}}}\label{classns3_1_1IcnManager_a24764426c0a4f06ccfc560cf333641b9}
+
+
+socket connected to client port 26 
+
+\hypertarget{classns3_1_1IcnManager_a6ed2472d0ef144df7ae0349c7faefc12}{\index{ns3\-::\-Icn\-Manager@{ns3\-::\-Icn\-Manager}!m\-\_\-socket\-Source@{m\-\_\-socket\-Source}}
+\index{m\-\_\-socket\-Source@{m\-\_\-socket\-Source}!ns3::IcnManager@{ns3\-::\-Icn\-Manager}}
+\subsubsection[{m\-\_\-socket\-Source}]{\setlength{\rightskip}{0pt plus 5cm}Ptr$<$Socket$>$ ns3\-::\-Icn\-Manager\-::m\-\_\-socket\-Source\hspace{0.3cm}{\ttfamily [private]}}}\label{classns3_1_1IcnManager_a6ed2472d0ef144df7ae0349c7faefc12}
+
+
+socket connected to source port 89 
+
+\hypertarget{classns3_1_1IcnManager_a93399455541c4a44cf75cbbbc0b5c56d}{\index{ns3\-::\-Icn\-Manager@{ns3\-::\-Icn\-Manager}!m\-\_\-source\-Port@{m\-\_\-source\-Port}}
+\index{m\-\_\-source\-Port@{m\-\_\-source\-Port}!ns3::IcnManager@{ns3\-::\-Icn\-Manager}}
+\subsubsection[{m\-\_\-source\-Port}]{\setlength{\rightskip}{0pt plus 5cm}uint16\-\_\-t ns3\-::\-Icn\-Manager\-::m\-\_\-source\-Port\hspace{0.3cm}{\ttfamily [private]}}}\label{classns3_1_1IcnManager_a93399455541c4a44cf75cbbbc0b5c56d}
+
+
+port at which source (server or cached router) will listen to the request, here source port defined as 89 
+
+\hypertarget{classns3_1_1IcnManager_afdafc5390fdc600ab83393fd1778ddd9}{\index{ns3\-::\-Icn\-Manager@{ns3\-::\-Icn\-Manager}!name\-Server\-Table@{name\-Server\-Table}}
+\index{name\-Server\-Table@{name\-Server\-Table}!ns3::IcnManager@{ns3\-::\-Icn\-Manager}}
+\subsubsection[{name\-Server\-Table}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Name\-Server\-Table} ns3\-::\-Icn\-Manager\-::name\-Server\-Table\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}}\label{classns3_1_1IcnManager_afdafc5390fdc600ab83393fd1778ddd9}
+
+
+Container to store mapping of name and corresponding ip address of the server. 
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+model/\hyperlink{icn-manager_8h}{icn-\/manager.\-h}\item 
+model/\hyperlink{icn-manager_8cc}{icn-\/manager.\-cc}\end{DoxyCompactItemize}

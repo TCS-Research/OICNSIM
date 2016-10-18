@@ -27,8 +27,13 @@
 #include <boost/bimap/unordered_set_of.hpp>
 
 namespace ns3{
-//namespace oicn{
-
+/**
+ * \brief This class implements the Universal caching policy.
+ *
+ *	For more details of universal caching please refer :
+ *	B. Panigrahi, S. Shailendra, H. K. Rath, and A. Simha, “Universal Caching Model and Markov-based Cache Analysis for Information Centric Networks,” Springer Photonic Network Communication Journal (PNET-2015)
+ *
+ **/
 class SimpleUniversalCaching : public NamedContentCache
 {
 public:
@@ -54,8 +59,8 @@ public:
   
   private:
 
-   uint32_t cache_size;//!< Size of the Cache
-   Cache cache;//!< The main cache container which stores the name and corresponding content
+   uint32_t cache_size;//!< size of the Cache
+   Cache cache;//!< the main cache container which stores the name and corresponding content
    PolicyIndex policyindex;//!< policy indexed container, containing index and content name
    uint64_t freshness_time;//!< time after which the cache should be evicted
 };

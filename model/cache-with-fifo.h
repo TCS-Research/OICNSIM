@@ -28,7 +28,7 @@
 
 namespace ns3{
 /**
- * \brief This class implements the First in first out caching policy.
+ * \brief This class implements the first in first out caching policy.
  *
  **/
 class CacheWithFifo : public NamedContentCache
@@ -56,8 +56,8 @@ public:
   
   private:
 
-   uint32_t cache_size;//!< Size of the Cache
-   Cache cache;//!< The main cache container which stores the name and corresponding content
+   uint32_t cache_size;//!< size of the Cache
+   Cache cache;//!< the main cache container which stores the name and corresponding content
    PolicyIndex policyindex;//!< policy indexed container, containing index and content name
 
 };

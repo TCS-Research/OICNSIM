@@ -130,7 +130,7 @@ void OicnServer::SendToClient (uint32_t ClientAddress, std::string Name)
 
 Ptr<Packet> OicnServer::ConstructSublayer (Ptr<Packet> packet, std::string Name)
 {
-	OICNHeader oicnheader;
+	OicnHeader oicnheader;
 	oicnheader.SetName (Name);
 	oicnheader.SetCachable();
 	packet->AddHeader(oicnheader);
@@ -155,7 +155,7 @@ OicnServer::HandleReadIcnManger (Ptr<Socket> socket)
 
 void OicnServer::ReadPacket(Ptr<Packet> packet, Ipv4Address senderIpv4Address, uint16_t senderPort)
 {
-	OICNHeader oicnHeader;
+	OicnHeader oicnHeader;
 	packet->RemoveHeader(oicnHeader);
 	DnsPlusHeader dnsPlusHeader;
 	packet->RemoveHeader(dnsPlusHeader);
@@ -209,7 +209,7 @@ void OicnServer::ReadPacket(Ptr<Packet> packet, Ipv4Address senderIpv4Address, u
 }
 
 
-void OicnServer::SendAckToIcnManager(Ipv4Address icnManagerIpv4Address, uint16_t icnManagerPort, DnsPlusQuestionHeader dnsPlusQuestionHeader, DnsPlusHeader dnsPlusHeader,OICNHeader oicnHeader)
+void OicnServer::SendAckToIcnManager(Ipv4Address icnManagerIpv4Address, uint16_t icnManagerPort, DnsPlusQuestionHeader dnsPlusQuestionHeader, DnsPlusHeader dnsPlusHeader,OicnHeader oicnHeader)
 {
 
 	Ptr<Packet> packet = Create<Packet>();

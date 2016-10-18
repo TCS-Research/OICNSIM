@@ -1,0 +1,1227 @@
+\hypertarget{classns3_1_1Ipv4RouterL3Protocol}{\section{ns3\-:\-:Ipv4\-Router\-L3\-Protocol Class Reference}
+\label{classns3_1_1Ipv4RouterL3Protocol}\index{ns3\-::\-Ipv4\-Router\-L3\-Protocol@{ns3\-::\-Ipv4\-Router\-L3\-Protocol}}
+}
+
+
+Implement the Ipv4 layer in an I\-C\-N Router.  
+
+
+
+
+{\ttfamily \#include $<$ipv4-\/router-\/l3-\/protocol.\-h$>$}
+
+Inheritance diagram for ns3\-:\-:Ipv4\-Router\-L3\-Protocol\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classns3_1_1Ipv4RouterL3Protocol}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classns3_1_1Ipv4RouterL3Protocol_1_1Fragments}{Fragments}
+\begin{DoxyCompactList}\small\item\em A Set of Fragment belonging to the same packet (src, dst, identification and proto) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{classns3_1_1Ipv4RouterL3Protocol_a050d08aa42fe2c3f9c133a263e121fcd}{Drop\-Reason} \{ \\*
+\hyperlink{classns3_1_1Ipv4RouterL3Protocol_a050d08aa42fe2c3f9c133a263e121fcdaa4940eaf513382cd5e6d580a12610c21}{D\-R\-O\-P\-\_\-\-T\-T\-L\-\_\-\-E\-X\-P\-I\-R\-E\-D} = 1, 
+\hyperlink{classns3_1_1Ipv4RouterL3Protocol_a050d08aa42fe2c3f9c133a263e121fcdaed5a0bb11a898cfc1050d9087a5030dc}{D\-R\-O\-P\-\_\-\-N\-O\-\_\-\-R\-O\-U\-T\-E}, 
+\hyperlink{classns3_1_1Ipv4RouterL3Protocol_a050d08aa42fe2c3f9c133a263e121fcdaa7a09de0c3a08a72d5e443151d0d9f95}{D\-R\-O\-P\-\_\-\-B\-A\-D\-\_\-\-C\-H\-E\-C\-K\-S\-U\-M}, 
+\hyperlink{classns3_1_1Ipv4RouterL3Protocol_a050d08aa42fe2c3f9c133a263e121fcdab55f6d41f00ca4c6ab4a2211ec9ee1f2}{D\-R\-O\-P\-\_\-\-I\-N\-T\-E\-R\-F\-A\-C\-E\-\_\-\-D\-O\-W\-N}, 
+\\*
+\hyperlink{classns3_1_1Ipv4RouterL3Protocol_a050d08aa42fe2c3f9c133a263e121fcda9543ec21a03e3ee4a394152ca8f15a95}{D\-R\-O\-P\-\_\-\-R\-O\-U\-T\-E\-\_\-\-E\-R\-R\-O\-R}, 
+\hyperlink{classns3_1_1Ipv4RouterL3Protocol_a050d08aa42fe2c3f9c133a263e121fcda5616817187e3e89a1e76e65d30293abe}{D\-R\-O\-P\-\_\-\-F\-R\-A\-G\-M\-E\-N\-T\-\_\-\-T\-I\-M\-E\-O\-U\-T}
+ \}
+\begin{DoxyCompactList}\small\item\em Reason why a packet has been dropped. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classns3_1_1Ipv4RouterL3Protocol_a91b2d31fa02934b841bbe50f218c4981}{Ipv4\-Router\-L3\-Protocol} ()
+\item 
+virtual \hyperlink{classns3_1_1Ipv4RouterL3Protocol_ab3ce503154a7dc7ed8f0f78dc42f6554}{$\sim$\-Ipv4\-Router\-L3\-Protocol} ()
+\item 
+void \hyperlink{classns3_1_1Ipv4RouterL3Protocol_ac5411f9b064b86f0975582571cd0b6de}{Set\-Node} (Ptr$<$ Node $>$ node)
+\begin{DoxyCompactList}\small\item\em Set node associated with this stack. \end{DoxyCompactList}\item 
+void \hyperlink{classns3_1_1Ipv4RouterL3Protocol_adf92410e6c028eaf5f70e3c704009680}{Set\-Routing\-Protocol} (Ptr$<$ Ipv4\-Routing\-Protocol $>$ routing\-Protocol)
+\item 
+Ptr$<$ Ipv4\-Routing\-Protocol $>$ \hyperlink{classns3_1_1Ipv4RouterL3Protocol_a2ed4d1c2d32115e0346bebef4b9de285}{Get\-Routing\-Protocol} (void) const 
+\item 
+Ptr$<$ Socket $>$ \hyperlink{classns3_1_1Ipv4RouterL3Protocol_aaa5ba602f884d731b2a8b69a3827b8a6}{Create\-Raw\-Socket} (void)
+\item 
+void \hyperlink{classns3_1_1Ipv4RouterL3Protocol_ac15242f30514a7656194efd4736d54e5}{Delete\-Raw\-Socket} (Ptr$<$ Socket $>$ socket)
+\item 
+void \hyperlink{classns3_1_1Ipv4RouterL3Protocol_aadadfecb7f1ad23a55f2faabb67efc37}{Insert} (Ptr$<$ Ip\-L4\-Protocol $>$ protocol)
+\item 
+virtual Ptr$<$ Ip\-L4\-Protocol $>$ \hyperlink{classns3_1_1Ipv4RouterL3Protocol_a117b7e10f49fa524ac465d3d9a41d990}{Get\-Protocol} (int protocol\-Number) const 
+\item 
+void \hyperlink{classns3_1_1Ipv4RouterL3Protocol_a8102bc7eb7d7267472b73bb10ef13d06}{Remove} (Ptr$<$ Ip\-L4\-Protocol $>$ protocol)
+\item 
+void \hyperlink{classns3_1_1Ipv4RouterL3Protocol_a6c1add6164864dceeb83d5fa8bbdd59a}{Set\-Default\-Ttl} (uint8\-\_\-t ttl)
+\item 
+void \hyperlink{classns3_1_1Ipv4RouterL3Protocol_a30dd164d51b321d117bd06cfedd6e1f5}{Receive} (Ptr$<$ Net\-Device $>$ device, Ptr$<$ const Packet $>$ p, uint16\-\_\-t protocol, const Address \&from, const Address \&to, Net\-Device\-::\-Packet\-Type packet\-Type)
+\item 
+void \hyperlink{classns3_1_1Ipv4RouterL3Protocol_a70f114cbb01fb2e2fbb21448355f75ff}{Send} (Ptr$<$ Packet $>$ packet, Ipv4\-Address source, Ipv4\-Address destination, uint8\-\_\-t protocol, Ptr$<$ Ipv4\-Route $>$ route)
+\item 
+void \hyperlink{classns3_1_1Ipv4RouterL3Protocol_a14b4a2978628ddebefbf5c32e3519c6a}{Send\-With\-Header} (Ptr$<$ Packet $>$ packet, Ipv4\-Header ip\-Header, Ptr$<$ Ipv4\-Route $>$ route)
+\item 
+uint32\-\_\-t \hyperlink{classns3_1_1Ipv4RouterL3Protocol_acb5095a80758a3ea89e8c8098e547ba4}{Add\-Interface} (Ptr$<$ Net\-Device $>$ device)
+\item 
+Ptr$<$ Ipv4\-Interface $>$ \hyperlink{classns3_1_1Ipv4RouterL3Protocol_a055c2bacc5bfda60b1a3b62d5233a048}{Get\-Interface} (uint32\-\_\-t i) const 
+\begin{DoxyCompactList}\small\item\em Get an interface. \end{DoxyCompactList}\item 
+uint32\-\_\-t \hyperlink{classns3_1_1Ipv4RouterL3Protocol_a1af4b8ab112a41d2c9c5caf45af6ba09}{Get\-N\-Interfaces} (void) const 
+\item 
+int32\-\_\-t \hyperlink{classns3_1_1Ipv4RouterL3Protocol_a811c4a2df331f426ac54eefd888f4b7a}{Get\-Interface\-For\-Address} (Ipv4\-Address addr) const 
+\item 
+int32\-\_\-t \hyperlink{classns3_1_1Ipv4RouterL3Protocol_a2c0e4620075ca23dc5290af5f18803b8}{Get\-Interface\-For\-Prefix} (Ipv4\-Address addr, Ipv4\-Mask mask) const 
+\item 
+int32\-\_\-t \hyperlink{classns3_1_1Ipv4RouterL3Protocol_abb943336599855e99db9a170783001c0}{Get\-Interface\-For\-Device} (Ptr$<$ const Net\-Device $>$ device) const 
+\item 
+bool \hyperlink{classns3_1_1Ipv4RouterL3Protocol_a5d1404a95b8f2ec49aaf4b4b603f9e21}{Is\-Destination\-Address} (Ipv4\-Address address, uint32\-\_\-t iif) const 
+\item 
+bool \hyperlink{classns3_1_1Ipv4RouterL3Protocol_ae78b4bd47fe0e723207a78d9ea4709b4}{Add\-Address} (uint32\-\_\-t i, Ipv4\-Interface\-Address address)
+\item 
+Ipv4\-Interface\-Address \hyperlink{classns3_1_1Ipv4RouterL3Protocol_a2eae427d44acd2cfb2954089ce89211d}{Get\-Address} (uint32\-\_\-t interface\-Index, uint32\-\_\-t address\-Index) const 
+\item 
+uint32\-\_\-t \hyperlink{classns3_1_1Ipv4RouterL3Protocol_a34f9fa2ed643bf8f7c13bddf1461a1b9}{Get\-N\-Addresses} (uint32\-\_\-t interface) const 
+\item 
+bool \hyperlink{classns3_1_1Ipv4RouterL3Protocol_a78a2d198be0f25c16037f98323b45ea2}{Remove\-Address} (uint32\-\_\-t interface\-Index, uint32\-\_\-t address\-Index)
+\item 
+bool \hyperlink{classns3_1_1Ipv4RouterL3Protocol_a81bad2ef6599a38a7b35fe8b0ce8d30f}{Remove\-Address} (uint32\-\_\-t interface, Ipv4\-Address address)
+\item 
+Ipv4\-Address \hyperlink{classns3_1_1Ipv4RouterL3Protocol_ad7287d5d0a844bb61fd72476ad8e9ee7}{Select\-Source\-Address} (Ptr$<$ const Net\-Device $>$ device, Ipv4\-Address dst, Ipv4\-Interface\-Address\-::\-Interface\-Address\-Scope\-\_\-e scope)
+\item 
+void \hyperlink{classns3_1_1Ipv4RouterL3Protocol_a5bbc44739ecc7fe8e995e5f5dcd9ce89}{Set\-Metric} (uint32\-\_\-t i, uint16\-\_\-t metric)
+\item 
+uint16\-\_\-t \hyperlink{classns3_1_1Ipv4RouterL3Protocol_a046d9e4b77a15e4d3bee2e415c8070c3}{Get\-Metric} (uint32\-\_\-t i) const 
+\item 
+uint16\-\_\-t \hyperlink{classns3_1_1Ipv4RouterL3Protocol_a9624b73c4e19e1a4c4155c2b6f35c76d}{Get\-Mtu} (uint32\-\_\-t i) const 
+\item 
+bool \hyperlink{classns3_1_1Ipv4RouterL3Protocol_a046298cf4c213797e047e7344701c8f5}{Is\-Up} (uint32\-\_\-t i) const 
+\item 
+void \hyperlink{classns3_1_1Ipv4RouterL3Protocol_a3352a473d2724c3e90f13e7116be3b5c}{Set\-Up} (uint32\-\_\-t i)
+\item 
+void \hyperlink{classns3_1_1Ipv4RouterL3Protocol_a88b0686519678bbe3e3a10aa82bf5cea}{Set\-Down} (uint32\-\_\-t i)
+\item 
+bool \hyperlink{classns3_1_1Ipv4RouterL3Protocol_a3a0efdbc3ff924c388a0db9bd8387aea}{Is\-Forwarding} (uint32\-\_\-t i) const 
+\item 
+void \hyperlink{classns3_1_1Ipv4RouterL3Protocol_aba2f18e349db994598b8b715e0557ac9}{Set\-Forwarding} (uint32\-\_\-t i, bool val)
+\item 
+Ptr$<$ Net\-Device $>$ \hyperlink{classns3_1_1Ipv4RouterL3Protocol_a6e4db6eb5d22d3ef5f9fba31c347ba00}{Get\-Net\-Device} (uint32\-\_\-t i)
+\item 
+bool \hyperlink{classns3_1_1Ipv4RouterL3Protocol_af45da819ef800c1fa6652ff38acd0abe}{Is\-Unicast} (Ipv4\-Address ad) const 
+\begin{DoxyCompactList}\small\item\em Check if an I\-Pv4 address is unicast according to the node. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static Type\-Id \hyperlink{classns3_1_1Ipv4RouterL3Protocol_a71648ed3ff5bcca634fe8ad5bfaed3f4}{Get\-Type\-Id} (void)
+\begin{DoxyCompactList}\small\item\em Get the type I\-D. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const uint16\-\_\-t \hyperlink{classns3_1_1Ipv4RouterL3Protocol_a2fdda6f3cb6e421706acf29bf38e8cd4}{P\-R\-O\-T\-\_\-\-N\-U\-M\-B\-E\-R} = 0x0800
+\begin{DoxyCompactList}\small\item\em Protocol number (0x0800) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{classns3_1_1Ipv4RouterL3Protocol_ab4177a69c5d6de8f7453a59edcfafe41}{Do\-Dispose} (void)
+\item 
+virtual void \hyperlink{classns3_1_1Ipv4RouterL3Protocol_a37e6bad738c75f2ab56badba0e544d73}{Notify\-New\-Aggregate} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef std\-::vector$<$ Ptr\\*
+$<$ Ipv4\-Interface $>$ $>$ \hyperlink{classns3_1_1Ipv4RouterL3Protocol_a5756b4cefb3bc08242fcc25ce0694adb}{Ipv4\-Interface\-List}
+\begin{DoxyCompactList}\small\item\em Container of the I\-Pv4 Interfaces. \end{DoxyCompactList}\item 
+typedef std\-::list$<$ Ptr\\*
+$<$ Ipv4\-Raw\-Socket\-Impl $>$ $>$ \hyperlink{classns3_1_1Ipv4RouterL3Protocol_aeaeda330ab6a6f6d7cf4392024f4dc8e}{Socket\-List}
+\begin{DoxyCompactList}\small\item\em Container of the I\-Pv4 Raw Sockets. \end{DoxyCompactList}\item 
+typedef std\-::list$<$ Ptr\\*
+$<$ Ip\-L4\-Protocol $>$ $>$ \hyperlink{classns3_1_1Ipv4RouterL3Protocol_adec096bbe99d3a07e5007ce510a9ca20}{L4\-List\-\_\-t}
+\begin{DoxyCompactList}\small\item\em Container of the I\-Pv4 L4 instances. \end{DoxyCompactList}\item 
+typedef std\-::map$<$ std\-::pair\\*
+$<$ uint64\-\_\-t, uint32\-\_\-t $>$, Ptr\\*
+$<$ \hyperlink{classns3_1_1Ipv4RouterL3Protocol_1_1Fragments}{Fragments} $>$ $>$ \hyperlink{classns3_1_1Ipv4RouterL3Protocol_ad13f1d7a6fde1bccea2a986f095bbf9e}{Map\-Fragments\-\_\-t}
+\begin{DoxyCompactList}\small\item\em Container of fragments, stored as pairs(src+dst addr, src+dst port) / fragment. \end{DoxyCompactList}\item 
+typedef std\-::map$<$ std\-::pair\\*
+$<$ uint64\-\_\-t, uint32\-\_\-t $>$\\*
+, Event\-Id $>$ \hyperlink{classns3_1_1Ipv4RouterL3Protocol_a1b7e366a2a7bbb1336aacaca4af8997b}{Map\-Fragments\-Timers\-\_\-t}
+\begin{DoxyCompactList}\small\item\em Container of fragment timeout event, stored as pairs(src+dst addr, src+dst port) / Event\-Id. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classns3_1_1Ipv4RouterL3Protocol_a018ab17a0a3160669b90ee6171c86aca}{Ipv4\-Router\-L3\-Protocol} (const \hyperlink{classns3_1_1Ipv4RouterL3Protocol}{Ipv4\-Router\-L3\-Protocol} \&)
+\begin{DoxyCompactList}\small\item\em Copy constructor. \end{DoxyCompactList}\item 
+\hyperlink{classns3_1_1Ipv4RouterL3Protocol}{Ipv4\-Router\-L3\-Protocol} \& \hyperlink{classns3_1_1Ipv4RouterL3Protocol_aa40baa411eeb3351bc5a2b5e0e1e9a5f}{operator=} (const \hyperlink{classns3_1_1Ipv4RouterL3Protocol}{Ipv4\-Router\-L3\-Protocol} \&)
+\begin{DoxyCompactList}\small\item\em Copy constructor. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classns3_1_1Ipv4RouterL3Protocol_afea7958043ce0d38eb31f4440ea77abf}{Set\-Ip\-Forward} (bool forward)
+\item 
+virtual bool \hyperlink{classns3_1_1Ipv4RouterL3Protocol_a9402a1e20d4654777690f3325160045f}{Get\-Ip\-Forward} (void) const 
+\item 
+virtual void \hyperlink{classns3_1_1Ipv4RouterL3Protocol_a5d0537c163f0a6f04c2f0c5601075d2d}{Set\-Weak\-Es\-Model} (bool model)
+\item 
+virtual bool \hyperlink{classns3_1_1Ipv4RouterL3Protocol_a8023a88747b29737972a1d803daf9dcb}{Get\-Weak\-Es\-Model} (void) const 
+\item 
+Ipv4\-Header \hyperlink{classns3_1_1Ipv4RouterL3Protocol_a45fa0dd63568af0c2d0c4a7142072631}{Build\-Header} (Ipv4\-Address source, Ipv4\-Address destination, uint8\-\_\-t protocol, uint16\-\_\-t payload\-Size, uint8\-\_\-t ttl, uint8\-\_\-t tos, bool may\-Fragment)
+\begin{DoxyCompactList}\small\item\em Construct an I\-Pv4 header. \end{DoxyCompactList}\item 
+void \hyperlink{classns3_1_1Ipv4RouterL3Protocol_a35646708634f0d7008322bb34a4dc799}{Send\-Real\-Out} (Ptr$<$ Ipv4\-Route $>$ route, Ptr$<$ Packet $>$ packet, Ipv4\-Header const \&ip\-Header)
+\begin{DoxyCompactList}\small\item\em Send packet with route. \end{DoxyCompactList}\item 
+void \hyperlink{classns3_1_1Ipv4RouterL3Protocol_a85559a2c92f1c2ff3d80a1228ca6b634}{Ip\-Forward} (Ptr$<$ Ipv4\-Route $>$ rtentry, Ptr$<$ const Packet $>$ p, const Ipv4\-Header \&header)
+\begin{DoxyCompactList}\small\item\em Forward a packet. \end{DoxyCompactList}\item 
+void \hyperlink{classns3_1_1Ipv4RouterL3Protocol_a7cfc75feda36ad3c0c11cd5bf92e63f2}{Ip\-Multicast\-Forward} (Ptr$<$ Ipv4\-Multicast\-Route $>$ mrtentry, Ptr$<$ const Packet $>$ p, const Ipv4\-Header \&header)
+\begin{DoxyCompactList}\small\item\em Forward a multicast packet. \end{DoxyCompactList}\item 
+void \hyperlink{classns3_1_1Ipv4RouterL3Protocol_a89499fe56b8b356bb2190d311cf2a43c}{Local\-Deliver} (Ptr$<$ const Packet $>$ p, Ipv4\-Header const \&ip, uint32\-\_\-t iif)
+\begin{DoxyCompactList}\small\item\em Deliver a packet. \end{DoxyCompactList}\item 
+void \hyperlink{classns3_1_1Ipv4RouterL3Protocol_a96be298c33d8b9ebc2696d24b953cf4b}{Route\-Input\-Error} (Ptr$<$ const Packet $>$ p, const Ipv4\-Header \&ip\-Header, Socket\-::\-Socket\-Errno sock\-Errno)
+\begin{DoxyCompactList}\small\item\em Fallback when no route is found. \end{DoxyCompactList}\item 
+uint32\-\_\-t \hyperlink{classns3_1_1Ipv4RouterL3Protocol_a52bc289137d131894c462f1ea4089a36}{Add\-Ipv4\-Interface} (Ptr$<$ Ipv4\-Interface $>$ interface)
+\begin{DoxyCompactList}\small\item\em Add an I\-Pv4 interface to the stack. \end{DoxyCompactList}\item 
+void \hyperlink{classns3_1_1Ipv4RouterL3Protocol_ae038fa89483a01c2a8d1adc3d54dede6}{Setup\-Loopback} (void)
+\begin{DoxyCompactList}\small\item\em Setup loopback interface. \end{DoxyCompactList}\item 
+Ptr$<$ Icmpv4\-L4\-Protocol $>$ \hyperlink{classns3_1_1Ipv4RouterL3Protocol_aa8e6f15b2933344444970aed21d8641b}{Get\-Icmp} (void) const 
+\begin{DoxyCompactList}\small\item\em Get I\-C\-M\-Pv4 protocol. \end{DoxyCompactList}\item 
+bool \hyperlink{classns3_1_1Ipv4RouterL3Protocol_a94898bc72665a0aa0f03d8ff15abd398}{Is\-Unicast} (Ipv4\-Address ad, Ipv4\-Mask interface\-Mask) const 
+\begin{DoxyCompactList}\small\item\em Check if an I\-Pv4 address is unicast. \end{DoxyCompactList}\item 
+void \hyperlink{classns3_1_1Ipv4RouterL3Protocol_aeefc9ca2a1cbc6fbd8a676f1bab18313}{Do\-Fragmentation} (Ptr$<$ Packet $>$ packet, uint32\-\_\-t out\-Iface\-Mtu, std\-::list$<$ Ptr$<$ Packet $>$ $>$ \&list\-Fragments)
+\begin{DoxyCompactList}\small\item\em Fragment a packet. \end{DoxyCompactList}\item 
+bool \hyperlink{classns3_1_1Ipv4RouterL3Protocol_a859787bf309c07234ea58e62d26634a0}{Process\-Fragment} (Ptr$<$ Packet $>$ \&packet, Ipv4\-Header \&ip\-Header, uint32\-\_\-t iif)
+\begin{DoxyCompactList}\small\item\em Process a packet fragment. \end{DoxyCompactList}\item 
+void \hyperlink{classns3_1_1Ipv4RouterL3Protocol_ac4719458e3fdcd9d7d696a070c479747}{Handle\-Fragments\-Timeout} (std\-::pair$<$ uint64\-\_\-t, uint32\-\_\-t $>$ key, Ipv4\-Header \&ip\-Header, uint32\-\_\-t iif)
+\begin{DoxyCompactList}\small\item\em Process the timeout for packet fragments. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{classns3_1_1Ipv4RouterL3Protocol_a912127799da7f6a52a5f4e467af543d4}{m\-\_\-ip\-Forward}
+\begin{DoxyCompactList}\small\item\em Forwarding packets (i.\-e. router mode) state. \end{DoxyCompactList}\item 
+bool \hyperlink{classns3_1_1Ipv4RouterL3Protocol_aa2364dafdd7d767041db38411457bd0c}{m\-\_\-weak\-Es\-Model}
+\begin{DoxyCompactList}\small\item\em Weak E\-S model state. \end{DoxyCompactList}\item 
+\hyperlink{classns3_1_1Ipv4RouterL3Protocol_adec096bbe99d3a07e5007ce510a9ca20}{L4\-List\-\_\-t} \hyperlink{classns3_1_1Ipv4RouterL3Protocol_ad714caec33f35a317af6fd596c6ff1f0}{m\-\_\-protocols}
+\begin{DoxyCompactList}\small\item\em List of transport protocol. \end{DoxyCompactList}\item 
+\hyperlink{classns3_1_1Ipv4RouterL3Protocol_a5756b4cefb3bc08242fcc25ce0694adb}{Ipv4\-Interface\-List} \hyperlink{classns3_1_1Ipv4RouterL3Protocol_a326e61efb33f76e57a147714e47b7e11}{m\-\_\-interfaces}
+\begin{DoxyCompactList}\small\item\em List of I\-Pv4 interfaces. \end{DoxyCompactList}\item 
+uint8\-\_\-t \hyperlink{classns3_1_1Ipv4RouterL3Protocol_a413b9a63b0966fb5ac97df317569a56f}{m\-\_\-default\-Tos}
+\begin{DoxyCompactList}\small\item\em Default T\-O\-S. \end{DoxyCompactList}\item 
+uint8\-\_\-t \hyperlink{classns3_1_1Ipv4RouterL3Protocol_adb12b01444eefa31adaf30ed6397cc52}{m\-\_\-default\-Ttl}
+\begin{DoxyCompactList}\small\item\em Default T\-T\-L. \end{DoxyCompactList}\item 
+std\-::map$<$ std\-::pair$<$ uint64\-\_\-t, \\*
+uint8\-\_\-t $>$, uint16\-\_\-t $>$ \hyperlink{classns3_1_1Ipv4RouterL3Protocol_ab2a9c6993c29edc51d8b474e48abebc0}{m\-\_\-identification}
+\begin{DoxyCompactList}\small\item\em Identification (for each \{src, dst, proto\} tuple) \end{DoxyCompactList}\item 
+Ptr$<$ Node $>$ \hyperlink{classns3_1_1Ipv4RouterL3Protocol_ab30fadcb1d2a60537c41092b9f722bab}{m\-\_\-node}
+\begin{DoxyCompactList}\small\item\em Node attached to stack. \end{DoxyCompactList}\item 
+Traced\-Callback$<$ const \\*
+Ipv4\-Header \&, Ptr$<$ const \\*
+Packet $>$, uint32\-\_\-t $>$ \hyperlink{classns3_1_1Ipv4RouterL3Protocol_a43fe32063af9622684b6567a6319ac73}{m\-\_\-send\-Outgoing\-Trace}
+\begin{DoxyCompactList}\small\item\em Trace of sent packets. \end{DoxyCompactList}\item 
+Traced\-Callback$<$ const \\*
+Ipv4\-Header \&, Ptr$<$ const \\*
+Packet $>$, uint32\-\_\-t $>$ \hyperlink{classns3_1_1Ipv4RouterL3Protocol_aa4866fa965886a7eebb4a8c3d3ca06f6}{m\-\_\-unicast\-Forward\-Trace}
+\begin{DoxyCompactList}\small\item\em Trace of unicast forwarded packets. \end{DoxyCompactList}\item 
+Traced\-Callback$<$ const \\*
+Ipv4\-Header \&, Ptr$<$ const \\*
+Packet $>$, uint32\-\_\-t $>$ \hyperlink{classns3_1_1Ipv4RouterL3Protocol_a3bc277d7e84b260398a08beef734ef8e}{m\-\_\-local\-Deliver\-Trace}
+\begin{DoxyCompactList}\small\item\em Trace of locally delivered packets. \end{DoxyCompactList}\item 
+Traced\-Callback$<$ Ptr$<$ const \\*
+Packet $>$, Ptr$<$ Ipv4 $>$\\*
+, uint32\-\_\-t $>$ \hyperlink{classns3_1_1Ipv4RouterL3Protocol_a4d2088884f46909d02a7d0afc97df51f}{m\-\_\-tx\-Trace}
+\begin{DoxyCompactList}\small\item\em Trace of transmitted packets. \end{DoxyCompactList}\item 
+Traced\-Callback$<$ Ptr$<$ const \\*
+Packet $>$, Ptr$<$ Ipv4 $>$\\*
+, uint32\-\_\-t $>$ \hyperlink{classns3_1_1Ipv4RouterL3Protocol_a8f30202038799f4581a8339378012995}{m\-\_\-rx\-Trace}
+\begin{DoxyCompactList}\small\item\em Trace of received packets. \end{DoxyCompactList}\item 
+Traced\-Callback$<$ const \\*
+Ipv4\-Header \&, Ptr$<$ const \\*
+Packet $>$, \hyperlink{classns3_1_1Ipv4RouterL3Protocol_a050d08aa42fe2c3f9c133a263e121fcd}{Drop\-Reason}, Ptr\\*
+$<$ Ipv4 $>$, uint32\-\_\-t $>$ \hyperlink{classns3_1_1Ipv4RouterL3Protocol_ab598d069af6668c2d60e77965463f75e}{m\-\_\-drop\-Trace}
+\begin{DoxyCompactList}\small\item\em Trace of dropped packets. \end{DoxyCompactList}\item 
+Ptr$<$ Ipv4\-Routing\-Protocol $>$ \hyperlink{classns3_1_1Ipv4RouterL3Protocol_a06835e8c56b7c1ab3efce79e6fb6a10a}{m\-\_\-routing\-Protocol}
+\begin{DoxyCompactList}\small\item\em Routing protocol associated with the stack. \end{DoxyCompactList}\item 
+\hyperlink{classns3_1_1Ipv4RouterL3Protocol_aeaeda330ab6a6f6d7cf4392024f4dc8e}{Socket\-List} \hyperlink{classns3_1_1Ipv4RouterL3Protocol_aa0d8fc6efa8a5785ec656e2ecb5c2489}{m\-\_\-sockets}
+\begin{DoxyCompactList}\small\item\em List of I\-Pv4 raw sockets. \end{DoxyCompactList}\item 
+\hyperlink{classns3_1_1Ipv4RouterL3Protocol_ad13f1d7a6fde1bccea2a986f095bbf9e}{Map\-Fragments\-\_\-t} \hyperlink{classns3_1_1Ipv4RouterL3Protocol_a60a936fabd02114e24cf81433659e575}{m\-\_\-fragments}
+\begin{DoxyCompactList}\small\item\em Fragmented packets. \end{DoxyCompactList}\item 
+Time \hyperlink{classns3_1_1Ipv4RouterL3Protocol_ab643fecf4d7c8882c84ae9a028de4a43}{m\-\_\-fragment\-Expiration\-Timeout}
+\begin{DoxyCompactList}\small\item\em Expiration timeout. \end{DoxyCompactList}\item 
+\hyperlink{classns3_1_1Ipv4RouterL3Protocol_a1b7e366a2a7bbb1336aacaca4af8997b}{Map\-Fragments\-Timers\-\_\-t} \hyperlink{classns3_1_1Ipv4RouterL3Protocol_a684a2c09b96a0ae76b75d6e2dfc75caa}{m\-\_\-fragments\-Timers}
+\begin{DoxyCompactList}\small\item\em Expiration events. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classns3_1_1Ipv4RouterL3Protocol_a93f31871d44e5e2ec659210d100d874f}{\-::\-Ipv4\-Router\-L3\-Protocol\-Test\-Case}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Implement the Ipv4 layer in an I\-C\-N Router. 
+
+This is exactly the same as the Ipv4\-L3\-Protocol of \hyperlink{namespacens3}{ns3}. The only slight difference being that the Receive A\-P\-I in this class calls the \hyperlink{classns3_1_1SublayerProtocol}{Sublayer\-Protocol} A\-P\-Is to do an additional check on whether the received packet is O\-I\-C\-N packet or not. This is what makes the I\-C\-N Router stand-\/out from a regular router, and enables overlay of O\-I\-C\-N Architecture with regular internet architecture. Please refer to the Ipv4\-L3\-Protocol class in \hyperlink{namespacens3}{ns3} for further information on implementation of Ipv4 layer. 
+
+\subsection{Member Typedef Documentation}
+\hypertarget{classns3_1_1Ipv4RouterL3Protocol_a5756b4cefb3bc08242fcc25ce0694adb}{\index{ns3\-::\-Ipv4\-Router\-L3\-Protocol@{ns3\-::\-Ipv4\-Router\-L3\-Protocol}!Ipv4\-Interface\-List@{Ipv4\-Interface\-List}}
+\index{Ipv4\-Interface\-List@{Ipv4\-Interface\-List}!ns3::Ipv4RouterL3Protocol@{ns3\-::\-Ipv4\-Router\-L3\-Protocol}}
+\subsubsection[{Ipv4\-Interface\-List}]{\setlength{\rightskip}{0pt plus 5cm}typedef std\-::vector$<$Ptr$<$Ipv4\-Interface$>$ $>$ {\bf ns3\-::\-Ipv4\-Router\-L3\-Protocol\-::\-Ipv4\-Interface\-List}\hspace{0.3cm}{\ttfamily [private]}}}\label{classns3_1_1Ipv4RouterL3Protocol_a5756b4cefb3bc08242fcc25ce0694adb}
+
+
+Container of the I\-Pv4 Interfaces. 
+
+\hypertarget{classns3_1_1Ipv4RouterL3Protocol_adec096bbe99d3a07e5007ce510a9ca20}{\index{ns3\-::\-Ipv4\-Router\-L3\-Protocol@{ns3\-::\-Ipv4\-Router\-L3\-Protocol}!L4\-List\-\_\-t@{L4\-List\-\_\-t}}
+\index{L4\-List\-\_\-t@{L4\-List\-\_\-t}!ns3::Ipv4RouterL3Protocol@{ns3\-::\-Ipv4\-Router\-L3\-Protocol}}
+\subsubsection[{L4\-List\-\_\-t}]{\setlength{\rightskip}{0pt plus 5cm}typedef std\-::list$<$Ptr$<$Ip\-L4\-Protocol$>$ $>$ {\bf ns3\-::\-Ipv4\-Router\-L3\-Protocol\-::\-L4\-List\-\_\-t}\hspace{0.3cm}{\ttfamily [private]}}}\label{classns3_1_1Ipv4RouterL3Protocol_adec096bbe99d3a07e5007ce510a9ca20}
+
+
+Container of the I\-Pv4 L4 instances. 
+
+\hypertarget{classns3_1_1Ipv4RouterL3Protocol_ad13f1d7a6fde1bccea2a986f095bbf9e}{\index{ns3\-::\-Ipv4\-Router\-L3\-Protocol@{ns3\-::\-Ipv4\-Router\-L3\-Protocol}!Map\-Fragments\-\_\-t@{Map\-Fragments\-\_\-t}}
+\index{Map\-Fragments\-\_\-t@{Map\-Fragments\-\_\-t}!ns3::Ipv4RouterL3Protocol@{ns3\-::\-Ipv4\-Router\-L3\-Protocol}}
+\subsubsection[{Map\-Fragments\-\_\-t}]{\setlength{\rightskip}{0pt plus 5cm}typedef std\-::map$<$ std\-::pair$<$uint64\-\_\-t, uint32\-\_\-t$>$, Ptr$<${\bf Fragments}$>$ $>$ {\bf ns3\-::\-Ipv4\-Router\-L3\-Protocol\-::\-Map\-Fragments\-\_\-t}\hspace{0.3cm}{\ttfamily [private]}}}\label{classns3_1_1Ipv4RouterL3Protocol_ad13f1d7a6fde1bccea2a986f095bbf9e}
+
+
+Container of fragments, stored as pairs(src+dst addr, src+dst port) / fragment. 
+
+\hypertarget{classns3_1_1Ipv4RouterL3Protocol_a1b7e366a2a7bbb1336aacaca4af8997b}{\index{ns3\-::\-Ipv4\-Router\-L3\-Protocol@{ns3\-::\-Ipv4\-Router\-L3\-Protocol}!Map\-Fragments\-Timers\-\_\-t@{Map\-Fragments\-Timers\-\_\-t}}
+\index{Map\-Fragments\-Timers\-\_\-t@{Map\-Fragments\-Timers\-\_\-t}!ns3::Ipv4RouterL3Protocol@{ns3\-::\-Ipv4\-Router\-L3\-Protocol}}
+\subsubsection[{Map\-Fragments\-Timers\-\_\-t}]{\setlength{\rightskip}{0pt plus 5cm}typedef std\-::map$<$ std\-::pair$<$uint64\-\_\-t, uint32\-\_\-t$>$, Event\-Id $>$ {\bf ns3\-::\-Ipv4\-Router\-L3\-Protocol\-::\-Map\-Fragments\-Timers\-\_\-t}\hspace{0.3cm}{\ttfamily [private]}}}\label{classns3_1_1Ipv4RouterL3Protocol_a1b7e366a2a7bbb1336aacaca4af8997b}
+
+
+Container of fragment timeout event, stored as pairs(src+dst addr, src+dst port) / Event\-Id. 
+
+\hypertarget{classns3_1_1Ipv4RouterL3Protocol_aeaeda330ab6a6f6d7cf4392024f4dc8e}{\index{ns3\-::\-Ipv4\-Router\-L3\-Protocol@{ns3\-::\-Ipv4\-Router\-L3\-Protocol}!Socket\-List@{Socket\-List}}
+\index{Socket\-List@{Socket\-List}!ns3::Ipv4RouterL3Protocol@{ns3\-::\-Ipv4\-Router\-L3\-Protocol}}
+\subsubsection[{Socket\-List}]{\setlength{\rightskip}{0pt plus 5cm}typedef std\-::list$<$Ptr$<$Ipv4\-Raw\-Socket\-Impl$>$ $>$ {\bf ns3\-::\-Ipv4\-Router\-L3\-Protocol\-::\-Socket\-List}\hspace{0.3cm}{\ttfamily [private]}}}\label{classns3_1_1Ipv4RouterL3Protocol_aeaeda330ab6a6f6d7cf4392024f4dc8e}
+
+
+Container of the I\-Pv4 Raw Sockets. 
+
+
+
+\subsection{Member Enumeration Documentation}
+\hypertarget{classns3_1_1Ipv4RouterL3Protocol_a050d08aa42fe2c3f9c133a263e121fcd}{\index{ns3\-::\-Ipv4\-Router\-L3\-Protocol@{ns3\-::\-Ipv4\-Router\-L3\-Protocol}!Drop\-Reason@{Drop\-Reason}}
+\index{Drop\-Reason@{Drop\-Reason}!ns3::Ipv4RouterL3Protocol@{ns3\-::\-Ipv4\-Router\-L3\-Protocol}}
+\subsubsection[{Drop\-Reason}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf ns3\-::\-Ipv4\-Router\-L3\-Protocol\-::\-Drop\-Reason}}}\label{classns3_1_1Ipv4RouterL3Protocol_a050d08aa42fe2c3f9c133a263e121fcd}
+
+
+Reason why a packet has been dropped. 
+
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{D\-R\-O\-P\-\_\-\-T\-T\-L\-\_\-\-E\-X\-P\-I\-R\-E\-D@{D\-R\-O\-P\-\_\-\-T\-T\-L\-\_\-\-E\-X\-P\-I\-R\-E\-D}!ns3\-::\-Ipv4\-Router\-L3\-Protocol@{ns3\-::\-Ipv4\-Router\-L3\-Protocol}}\index{ns3\-::\-Ipv4\-Router\-L3\-Protocol@{ns3\-::\-Ipv4\-Router\-L3\-Protocol}!D\-R\-O\-P\-\_\-\-T\-T\-L\-\_\-\-E\-X\-P\-I\-R\-E\-D@{D\-R\-O\-P\-\_\-\-T\-T\-L\-\_\-\-E\-X\-P\-I\-R\-E\-D}}\item[{\em 
+\hypertarget{classns3_1_1Ipv4RouterL3Protocol_a050d08aa42fe2c3f9c133a263e121fcdaa4940eaf513382cd5e6d580a12610c21}{D\-R\-O\-P\-\_\-\-T\-T\-L\-\_\-\-E\-X\-P\-I\-R\-E\-D}\label{classns3_1_1Ipv4RouterL3Protocol_a050d08aa42fe2c3f9c133a263e121fcdaa4940eaf513382cd5e6d580a12610c21}
+}]Packet T\-T\-L has expired \index{D\-R\-O\-P\-\_\-\-N\-O\-\_\-\-R\-O\-U\-T\-E@{D\-R\-O\-P\-\_\-\-N\-O\-\_\-\-R\-O\-U\-T\-E}!ns3\-::\-Ipv4\-Router\-L3\-Protocol@{ns3\-::\-Ipv4\-Router\-L3\-Protocol}}\index{ns3\-::\-Ipv4\-Router\-L3\-Protocol@{ns3\-::\-Ipv4\-Router\-L3\-Protocol}!D\-R\-O\-P\-\_\-\-N\-O\-\_\-\-R\-O\-U\-T\-E@{D\-R\-O\-P\-\_\-\-N\-O\-\_\-\-R\-O\-U\-T\-E}}\item[{\em 
+\hypertarget{classns3_1_1Ipv4RouterL3Protocol_a050d08aa42fe2c3f9c133a263e121fcdaed5a0bb11a898cfc1050d9087a5030dc}{D\-R\-O\-P\-\_\-\-N\-O\-\_\-\-R\-O\-U\-T\-E}\label{classns3_1_1Ipv4RouterL3Protocol_a050d08aa42fe2c3f9c133a263e121fcdaed5a0bb11a898cfc1050d9087a5030dc}
+}]No route to host \index{D\-R\-O\-P\-\_\-\-B\-A\-D\-\_\-\-C\-H\-E\-C\-K\-S\-U\-M@{D\-R\-O\-P\-\_\-\-B\-A\-D\-\_\-\-C\-H\-E\-C\-K\-S\-U\-M}!ns3\-::\-Ipv4\-Router\-L3\-Protocol@{ns3\-::\-Ipv4\-Router\-L3\-Protocol}}\index{ns3\-::\-Ipv4\-Router\-L3\-Protocol@{ns3\-::\-Ipv4\-Router\-L3\-Protocol}!D\-R\-O\-P\-\_\-\-B\-A\-D\-\_\-\-C\-H\-E\-C\-K\-S\-U\-M@{D\-R\-O\-P\-\_\-\-B\-A\-D\-\_\-\-C\-H\-E\-C\-K\-S\-U\-M}}\item[{\em 
+\hypertarget{classns3_1_1Ipv4RouterL3Protocol_a050d08aa42fe2c3f9c133a263e121fcdaa7a09de0c3a08a72d5e443151d0d9f95}{D\-R\-O\-P\-\_\-\-B\-A\-D\-\_\-\-C\-H\-E\-C\-K\-S\-U\-M}\label{classns3_1_1Ipv4RouterL3Protocol_a050d08aa42fe2c3f9c133a263e121fcdaa7a09de0c3a08a72d5e443151d0d9f95}
+}]Bad checksum \index{D\-R\-O\-P\-\_\-\-I\-N\-T\-E\-R\-F\-A\-C\-E\-\_\-\-D\-O\-W\-N@{D\-R\-O\-P\-\_\-\-I\-N\-T\-E\-R\-F\-A\-C\-E\-\_\-\-D\-O\-W\-N}!ns3\-::\-Ipv4\-Router\-L3\-Protocol@{ns3\-::\-Ipv4\-Router\-L3\-Protocol}}\index{ns3\-::\-Ipv4\-Router\-L3\-Protocol@{ns3\-::\-Ipv4\-Router\-L3\-Protocol}!D\-R\-O\-P\-\_\-\-I\-N\-T\-E\-R\-F\-A\-C\-E\-\_\-\-D\-O\-W\-N@{D\-R\-O\-P\-\_\-\-I\-N\-T\-E\-R\-F\-A\-C\-E\-\_\-\-D\-O\-W\-N}}\item[{\em 
+\hypertarget{classns3_1_1Ipv4RouterL3Protocol_a050d08aa42fe2c3f9c133a263e121fcdab55f6d41f00ca4c6ab4a2211ec9ee1f2}{D\-R\-O\-P\-\_\-\-I\-N\-T\-E\-R\-F\-A\-C\-E\-\_\-\-D\-O\-W\-N}\label{classns3_1_1Ipv4RouterL3Protocol_a050d08aa42fe2c3f9c133a263e121fcdab55f6d41f00ca4c6ab4a2211ec9ee1f2}
+}]Interface is down so can not send packet \index{D\-R\-O\-P\-\_\-\-R\-O\-U\-T\-E\-\_\-\-E\-R\-R\-O\-R@{D\-R\-O\-P\-\_\-\-R\-O\-U\-T\-E\-\_\-\-E\-R\-R\-O\-R}!ns3\-::\-Ipv4\-Router\-L3\-Protocol@{ns3\-::\-Ipv4\-Router\-L3\-Protocol}}\index{ns3\-::\-Ipv4\-Router\-L3\-Protocol@{ns3\-::\-Ipv4\-Router\-L3\-Protocol}!D\-R\-O\-P\-\_\-\-R\-O\-U\-T\-E\-\_\-\-E\-R\-R\-O\-R@{D\-R\-O\-P\-\_\-\-R\-O\-U\-T\-E\-\_\-\-E\-R\-R\-O\-R}}\item[{\em 
+\hypertarget{classns3_1_1Ipv4RouterL3Protocol_a050d08aa42fe2c3f9c133a263e121fcda9543ec21a03e3ee4a394152ca8f15a95}{D\-R\-O\-P\-\_\-\-R\-O\-U\-T\-E\-\_\-\-E\-R\-R\-O\-R}\label{classns3_1_1Ipv4RouterL3Protocol_a050d08aa42fe2c3f9c133a263e121fcda9543ec21a03e3ee4a394152ca8f15a95}
+}]Route error \index{D\-R\-O\-P\-\_\-\-F\-R\-A\-G\-M\-E\-N\-T\-\_\-\-T\-I\-M\-E\-O\-U\-T@{D\-R\-O\-P\-\_\-\-F\-R\-A\-G\-M\-E\-N\-T\-\_\-\-T\-I\-M\-E\-O\-U\-T}!ns3\-::\-Ipv4\-Router\-L3\-Protocol@{ns3\-::\-Ipv4\-Router\-L3\-Protocol}}\index{ns3\-::\-Ipv4\-Router\-L3\-Protocol@{ns3\-::\-Ipv4\-Router\-L3\-Protocol}!D\-R\-O\-P\-\_\-\-F\-R\-A\-G\-M\-E\-N\-T\-\_\-\-T\-I\-M\-E\-O\-U\-T@{D\-R\-O\-P\-\_\-\-F\-R\-A\-G\-M\-E\-N\-T\-\_\-\-T\-I\-M\-E\-O\-U\-T}}\item[{\em 
+\hypertarget{classns3_1_1Ipv4RouterL3Protocol_a050d08aa42fe2c3f9c133a263e121fcda5616817187e3e89a1e76e65d30293abe}{D\-R\-O\-P\-\_\-\-F\-R\-A\-G\-M\-E\-N\-T\-\_\-\-T\-I\-M\-E\-O\-U\-T}\label{classns3_1_1Ipv4RouterL3Protocol_a050d08aa42fe2c3f9c133a263e121fcda5616817187e3e89a1e76e65d30293abe}
+}]Fragment timeout exceeded \end{description}
+\end{Desc}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classns3_1_1Ipv4RouterL3Protocol_a91b2d31fa02934b841bbe50f218c4981}{\index{ns3\-::\-Ipv4\-Router\-L3\-Protocol@{ns3\-::\-Ipv4\-Router\-L3\-Protocol}!Ipv4\-Router\-L3\-Protocol@{Ipv4\-Router\-L3\-Protocol}}
+\index{Ipv4\-Router\-L3\-Protocol@{Ipv4\-Router\-L3\-Protocol}!ns3::Ipv4RouterL3Protocol@{ns3\-::\-Ipv4\-Router\-L3\-Protocol}}
+\subsubsection[{Ipv4\-Router\-L3\-Protocol}]{\setlength{\rightskip}{0pt plus 5cm}ns3\-::\-Ipv4\-Router\-L3\-Protocol\-::\-Ipv4\-Router\-L3\-Protocol (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classns3_1_1Ipv4RouterL3Protocol_a91b2d31fa02934b841bbe50f218c4981}
+\hypertarget{classns3_1_1Ipv4RouterL3Protocol_ab3ce503154a7dc7ed8f0f78dc42f6554}{\index{ns3\-::\-Ipv4\-Router\-L3\-Protocol@{ns3\-::\-Ipv4\-Router\-L3\-Protocol}!$\sim$\-Ipv4\-Router\-L3\-Protocol@{$\sim$\-Ipv4\-Router\-L3\-Protocol}}
+\index{$\sim$\-Ipv4\-Router\-L3\-Protocol@{$\sim$\-Ipv4\-Router\-L3\-Protocol}!ns3::Ipv4RouterL3Protocol@{ns3\-::\-Ipv4\-Router\-L3\-Protocol}}
+\subsubsection[{$\sim$\-Ipv4\-Router\-L3\-Protocol}]{\setlength{\rightskip}{0pt plus 5cm}ns3\-::\-Ipv4\-Router\-L3\-Protocol\-::$\sim$\-Ipv4\-Router\-L3\-Protocol (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classns3_1_1Ipv4RouterL3Protocol_ab3ce503154a7dc7ed8f0f78dc42f6554}
+\hypertarget{classns3_1_1Ipv4RouterL3Protocol_a018ab17a0a3160669b90ee6171c86aca}{\index{ns3\-::\-Ipv4\-Router\-L3\-Protocol@{ns3\-::\-Ipv4\-Router\-L3\-Protocol}!Ipv4\-Router\-L3\-Protocol@{Ipv4\-Router\-L3\-Protocol}}
+\index{Ipv4\-Router\-L3\-Protocol@{Ipv4\-Router\-L3\-Protocol}!ns3::Ipv4RouterL3Protocol@{ns3\-::\-Ipv4\-Router\-L3\-Protocol}}
+\subsubsection[{Ipv4\-Router\-L3\-Protocol}]{\setlength{\rightskip}{0pt plus 5cm}ns3\-::\-Ipv4\-Router\-L3\-Protocol\-::\-Ipv4\-Router\-L3\-Protocol (
+\begin{DoxyParamCaption}
+\item[{const {\bf Ipv4\-Router\-L3\-Protocol} \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classns3_1_1Ipv4RouterL3Protocol_a018ab17a0a3160669b90ee6171c86aca}
+
+
+Copy constructor. 
+
+Defined but not implemented to avoid misuse 
+
+\subsection{Member Function Documentation}
+\hypertarget{classns3_1_1Ipv4RouterL3Protocol_ae78b4bd47fe0e723207a78d9ea4709b4}{\index{ns3\-::\-Ipv4\-Router\-L3\-Protocol@{ns3\-::\-Ipv4\-Router\-L3\-Protocol}!Add\-Address@{Add\-Address}}
+\index{Add\-Address@{Add\-Address}!ns3::Ipv4RouterL3Protocol@{ns3\-::\-Ipv4\-Router\-L3\-Protocol}}
+\subsubsection[{Add\-Address}]{\setlength{\rightskip}{0pt plus 5cm}bool ns3\-::\-Ipv4\-Router\-L3\-Protocol\-::\-Add\-Address (
+\begin{DoxyParamCaption}
+\item[{uint32\-\_\-t}]{i, }
+\item[{Ipv4\-Interface\-Address}]{address}
+\end{DoxyParamCaption}
+)}}\label{classns3_1_1Ipv4RouterL3Protocol_ae78b4bd47fe0e723207a78d9ea4709b4}
+\hypertarget{classns3_1_1Ipv4RouterL3Protocol_acb5095a80758a3ea89e8c8098e547ba4}{\index{ns3\-::\-Ipv4\-Router\-L3\-Protocol@{ns3\-::\-Ipv4\-Router\-L3\-Protocol}!Add\-Interface@{Add\-Interface}}
+\index{Add\-Interface@{Add\-Interface}!ns3::Ipv4RouterL3Protocol@{ns3\-::\-Ipv4\-Router\-L3\-Protocol}}
+\subsubsection[{Add\-Interface}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t ns3\-::\-Ipv4\-Router\-L3\-Protocol\-::\-Add\-Interface (
+\begin{DoxyParamCaption}
+\item[{Ptr$<$ Net\-Device $>$}]{device}
+\end{DoxyParamCaption}
+)}}\label{classns3_1_1Ipv4RouterL3Protocol_acb5095a80758a3ea89e8c8098e547ba4}
+\hypertarget{classns3_1_1Ipv4RouterL3Protocol_a52bc289137d131894c462f1ea4089a36}{\index{ns3\-::\-Ipv4\-Router\-L3\-Protocol@{ns3\-::\-Ipv4\-Router\-L3\-Protocol}!Add\-Ipv4\-Interface@{Add\-Ipv4\-Interface}}
+\index{Add\-Ipv4\-Interface@{Add\-Ipv4\-Interface}!ns3::Ipv4RouterL3Protocol@{ns3\-::\-Ipv4\-Router\-L3\-Protocol}}
+\subsubsection[{Add\-Ipv4\-Interface}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t ns3\-::\-Ipv4\-Router\-L3\-Protocol\-::\-Add\-Ipv4\-Interface (
+\begin{DoxyParamCaption}
+\item[{Ptr$<$ Ipv4\-Interface $>$}]{interface}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classns3_1_1Ipv4RouterL3Protocol_a52bc289137d131894c462f1ea4089a36}
+
+
+Add an I\-Pv4 interface to the stack. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em interface} & interface to add \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+index of newly added interface 
+\end{DoxyReturn}
+\hypertarget{classns3_1_1Ipv4RouterL3Protocol_a45fa0dd63568af0c2d0c4a7142072631}{\index{ns3\-::\-Ipv4\-Router\-L3\-Protocol@{ns3\-::\-Ipv4\-Router\-L3\-Protocol}!Build\-Header@{Build\-Header}}
+\index{Build\-Header@{Build\-Header}!ns3::Ipv4RouterL3Protocol@{ns3\-::\-Ipv4\-Router\-L3\-Protocol}}
+\subsubsection[{Build\-Header}]{\setlength{\rightskip}{0pt plus 5cm}Ipv4\-Header ns3\-::\-Ipv4\-Router\-L3\-Protocol\-::\-Build\-Header (
+\begin{DoxyParamCaption}
+\item[{Ipv4\-Address}]{source, }
+\item[{Ipv4\-Address}]{destination, }
+\item[{uint8\-\_\-t}]{protocol, }
+\item[{uint16\-\_\-t}]{payload\-Size, }
+\item[{uint8\-\_\-t}]{ttl, }
+\item[{uint8\-\_\-t}]{tos, }
+\item[{bool}]{may\-Fragment}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classns3_1_1Ipv4RouterL3Protocol_a45fa0dd63568af0c2d0c4a7142072631}
+
+
+Construct an I\-Pv4 header. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em source} & source I\-Pv4 address \\
+\hline
+{\em destination} & destination I\-Pv4 address \\
+\hline
+{\em protocol} & L4 protocol \\
+\hline
+{\em payload\-Size} & payload size \\
+\hline
+{\em ttl} & Time to Live \\
+\hline
+{\em tos} & Type of Service \\
+\hline
+{\em may\-Fragment} & true if the packet can be fragmented \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+newly created I\-Pv4 header 
+\end{DoxyReturn}
+\hypertarget{classns3_1_1Ipv4RouterL3Protocol_aaa5ba602f884d731b2a8b69a3827b8a6}{\index{ns3\-::\-Ipv4\-Router\-L3\-Protocol@{ns3\-::\-Ipv4\-Router\-L3\-Protocol}!Create\-Raw\-Socket@{Create\-Raw\-Socket}}
+\index{Create\-Raw\-Socket@{Create\-Raw\-Socket}!ns3::Ipv4RouterL3Protocol@{ns3\-::\-Ipv4\-Router\-L3\-Protocol}}
+\subsubsection[{Create\-Raw\-Socket}]{\setlength{\rightskip}{0pt plus 5cm}Ptr$<$ Socket $>$ ns3\-::\-Ipv4\-Router\-L3\-Protocol\-::\-Create\-Raw\-Socket (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{classns3_1_1Ipv4RouterL3Protocol_aaa5ba602f884d731b2a8b69a3827b8a6}
+\hypertarget{classns3_1_1Ipv4RouterL3Protocol_ac15242f30514a7656194efd4736d54e5}{\index{ns3\-::\-Ipv4\-Router\-L3\-Protocol@{ns3\-::\-Ipv4\-Router\-L3\-Protocol}!Delete\-Raw\-Socket@{Delete\-Raw\-Socket}}
+\index{Delete\-Raw\-Socket@{Delete\-Raw\-Socket}!ns3::Ipv4RouterL3Protocol@{ns3\-::\-Ipv4\-Router\-L3\-Protocol}}
+\subsubsection[{Delete\-Raw\-Socket}]{\setlength{\rightskip}{0pt plus 5cm}void ns3\-::\-Ipv4\-Router\-L3\-Protocol\-::\-Delete\-Raw\-Socket (
+\begin{DoxyParamCaption}
+\item[{Ptr$<$ Socket $>$}]{socket}
+\end{DoxyParamCaption}
+)}}\label{classns3_1_1Ipv4RouterL3Protocol_ac15242f30514a7656194efd4736d54e5}
+\hypertarget{classns3_1_1Ipv4RouterL3Protocol_ab4177a69c5d6de8f7453a59edcfafe41}{\index{ns3\-::\-Ipv4\-Router\-L3\-Protocol@{ns3\-::\-Ipv4\-Router\-L3\-Protocol}!Do\-Dispose@{Do\-Dispose}}
+\index{Do\-Dispose@{Do\-Dispose}!ns3::Ipv4RouterL3Protocol@{ns3\-::\-Ipv4\-Router\-L3\-Protocol}}
+\subsubsection[{Do\-Dispose}]{\setlength{\rightskip}{0pt plus 5cm}void ns3\-::\-Ipv4\-Router\-L3\-Protocol\-::\-Do\-Dispose (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}}\label{classns3_1_1Ipv4RouterL3Protocol_ab4177a69c5d6de8f7453a59edcfafe41}
+\hypertarget{classns3_1_1Ipv4RouterL3Protocol_aeefc9ca2a1cbc6fbd8a676f1bab18313}{\index{ns3\-::\-Ipv4\-Router\-L3\-Protocol@{ns3\-::\-Ipv4\-Router\-L3\-Protocol}!Do\-Fragmentation@{Do\-Fragmentation}}
+\index{Do\-Fragmentation@{Do\-Fragmentation}!ns3::Ipv4RouterL3Protocol@{ns3\-::\-Ipv4\-Router\-L3\-Protocol}}
+\subsubsection[{Do\-Fragmentation}]{\setlength{\rightskip}{0pt plus 5cm}void ns3\-::\-Ipv4\-Router\-L3\-Protocol\-::\-Do\-Fragmentation (
+\begin{DoxyParamCaption}
+\item[{Ptr$<$ Packet $>$}]{packet, }
+\item[{uint32\-\_\-t}]{out\-Iface\-Mtu, }
+\item[{std\-::list$<$ Ptr$<$ Packet $>$ $>$ \&}]{list\-Fragments}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classns3_1_1Ipv4RouterL3Protocol_aeefc9ca2a1cbc6fbd8a676f1bab18313}
+
+
+Fragment a packet. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em packet} & the packet \\
+\hline
+{\em out\-Iface\-Mtu} & the M\-T\-U of the interface \\
+\hline
+{\em list\-Fragments} & the list of fragments \\
+\hline
+\end{DoxyParams}
+\hypertarget{classns3_1_1Ipv4RouterL3Protocol_a2eae427d44acd2cfb2954089ce89211d}{\index{ns3\-::\-Ipv4\-Router\-L3\-Protocol@{ns3\-::\-Ipv4\-Router\-L3\-Protocol}!Get\-Address@{Get\-Address}}
+\index{Get\-Address@{Get\-Address}!ns3::Ipv4RouterL3Protocol@{ns3\-::\-Ipv4\-Router\-L3\-Protocol}}
+\subsubsection[{Get\-Address}]{\setlength{\rightskip}{0pt plus 5cm}Ipv4\-Interface\-Address ns3\-::\-Ipv4\-Router\-L3\-Protocol\-::\-Get\-Address (
+\begin{DoxyParamCaption}
+\item[{uint32\-\_\-t}]{interface\-Index, }
+\item[{uint32\-\_\-t}]{address\-Index}
+\end{DoxyParamCaption}
+) const}}\label{classns3_1_1Ipv4RouterL3Protocol_a2eae427d44acd2cfb2954089ce89211d}
+\hypertarget{classns3_1_1Ipv4RouterL3Protocol_aa8e6f15b2933344444970aed21d8641b}{\index{ns3\-::\-Ipv4\-Router\-L3\-Protocol@{ns3\-::\-Ipv4\-Router\-L3\-Protocol}!Get\-Icmp@{Get\-Icmp}}
+\index{Get\-Icmp@{Get\-Icmp}!ns3::Ipv4RouterL3Protocol@{ns3\-::\-Ipv4\-Router\-L3\-Protocol}}
+\subsubsection[{Get\-Icmp}]{\setlength{\rightskip}{0pt plus 5cm}Ptr$<$ Icmpv4\-L4\-Protocol $>$ ns3\-::\-Ipv4\-Router\-L3\-Protocol\-::\-Get\-Icmp (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [private]}}}\label{classns3_1_1Ipv4RouterL3Protocol_aa8e6f15b2933344444970aed21d8641b}
+
+
+Get I\-C\-M\-Pv4 protocol. 
+
+\begin{DoxyReturn}{Returns}
+Icmpv4\-L4\-Protocol pointer 
+\end{DoxyReturn}
+\hypertarget{classns3_1_1Ipv4RouterL3Protocol_a055c2bacc5bfda60b1a3b62d5233a048}{\index{ns3\-::\-Ipv4\-Router\-L3\-Protocol@{ns3\-::\-Ipv4\-Router\-L3\-Protocol}!Get\-Interface@{Get\-Interface}}
+\index{Get\-Interface@{Get\-Interface}!ns3::Ipv4RouterL3Protocol@{ns3\-::\-Ipv4\-Router\-L3\-Protocol}}
+\subsubsection[{Get\-Interface}]{\setlength{\rightskip}{0pt plus 5cm}Ptr$<$ Ipv4\-Interface $>$ ns3\-::\-Ipv4\-Router\-L3\-Protocol\-::\-Get\-Interface (
+\begin{DoxyParamCaption}
+\item[{uint32\-\_\-t}]{i}
+\end{DoxyParamCaption}
+) const}}\label{classns3_1_1Ipv4RouterL3Protocol_a055c2bacc5bfda60b1a3b62d5233a048}
+
+
+Get an interface. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em i} & interface index \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+I\-Pv4 interface pointer 
+\end{DoxyReturn}
+\hypertarget{classns3_1_1Ipv4RouterL3Protocol_a811c4a2df331f426ac54eefd888f4b7a}{\index{ns3\-::\-Ipv4\-Router\-L3\-Protocol@{ns3\-::\-Ipv4\-Router\-L3\-Protocol}!Get\-Interface\-For\-Address@{Get\-Interface\-For\-Address}}
+\index{Get\-Interface\-For\-Address@{Get\-Interface\-For\-Address}!ns3::Ipv4RouterL3Protocol@{ns3\-::\-Ipv4\-Router\-L3\-Protocol}}
+\subsubsection[{Get\-Interface\-For\-Address}]{\setlength{\rightskip}{0pt plus 5cm}int32\-\_\-t ns3\-::\-Ipv4\-Router\-L3\-Protocol\-::\-Get\-Interface\-For\-Address (
+\begin{DoxyParamCaption}
+\item[{Ipv4\-Address}]{addr}
+\end{DoxyParamCaption}
+) const}}\label{classns3_1_1Ipv4RouterL3Protocol_a811c4a2df331f426ac54eefd888f4b7a}
+\hypertarget{classns3_1_1Ipv4RouterL3Protocol_abb943336599855e99db9a170783001c0}{\index{ns3\-::\-Ipv4\-Router\-L3\-Protocol@{ns3\-::\-Ipv4\-Router\-L3\-Protocol}!Get\-Interface\-For\-Device@{Get\-Interface\-For\-Device}}
+\index{Get\-Interface\-For\-Device@{Get\-Interface\-For\-Device}!ns3::Ipv4RouterL3Protocol@{ns3\-::\-Ipv4\-Router\-L3\-Protocol}}
+\subsubsection[{Get\-Interface\-For\-Device}]{\setlength{\rightskip}{0pt plus 5cm}int32\-\_\-t ns3\-::\-Ipv4\-Router\-L3\-Protocol\-::\-Get\-Interface\-For\-Device (
+\begin{DoxyParamCaption}
+\item[{Ptr$<$ const Net\-Device $>$}]{device}
+\end{DoxyParamCaption}
+) const}}\label{classns3_1_1Ipv4RouterL3Protocol_abb943336599855e99db9a170783001c0}
+\hypertarget{classns3_1_1Ipv4RouterL3Protocol_a2c0e4620075ca23dc5290af5f18803b8}{\index{ns3\-::\-Ipv4\-Router\-L3\-Protocol@{ns3\-::\-Ipv4\-Router\-L3\-Protocol}!Get\-Interface\-For\-Prefix@{Get\-Interface\-For\-Prefix}}
+\index{Get\-Interface\-For\-Prefix@{Get\-Interface\-For\-Prefix}!ns3::Ipv4RouterL3Protocol@{ns3\-::\-Ipv4\-Router\-L3\-Protocol}}
+\subsubsection[{Get\-Interface\-For\-Prefix}]{\setlength{\rightskip}{0pt plus 5cm}int32\-\_\-t ns3\-::\-Ipv4\-Router\-L3\-Protocol\-::\-Get\-Interface\-For\-Prefix (
+\begin{DoxyParamCaption}
+\item[{Ipv4\-Address}]{addr, }
+\item[{Ipv4\-Mask}]{mask}
+\end{DoxyParamCaption}
+) const}}\label{classns3_1_1Ipv4RouterL3Protocol_a2c0e4620075ca23dc5290af5f18803b8}
+\hypertarget{classns3_1_1Ipv4RouterL3Protocol_a9402a1e20d4654777690f3325160045f}{\index{ns3\-::\-Ipv4\-Router\-L3\-Protocol@{ns3\-::\-Ipv4\-Router\-L3\-Protocol}!Get\-Ip\-Forward@{Get\-Ip\-Forward}}
+\index{Get\-Ip\-Forward@{Get\-Ip\-Forward}!ns3::Ipv4RouterL3Protocol@{ns3\-::\-Ipv4\-Router\-L3\-Protocol}}
+\subsubsection[{Get\-Ip\-Forward}]{\setlength{\rightskip}{0pt plus 5cm}bool ns3\-::\-Ipv4\-Router\-L3\-Protocol\-::\-Get\-Ip\-Forward (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [virtual]}}}\label{classns3_1_1Ipv4RouterL3Protocol_a9402a1e20d4654777690f3325160045f}
+\hypertarget{classns3_1_1Ipv4RouterL3Protocol_a046d9e4b77a15e4d3bee2e415c8070c3}{\index{ns3\-::\-Ipv4\-Router\-L3\-Protocol@{ns3\-::\-Ipv4\-Router\-L3\-Protocol}!Get\-Metric@{Get\-Metric}}
+\index{Get\-Metric@{Get\-Metric}!ns3::Ipv4RouterL3Protocol@{ns3\-::\-Ipv4\-Router\-L3\-Protocol}}
+\subsubsection[{Get\-Metric}]{\setlength{\rightskip}{0pt plus 5cm}uint16\-\_\-t ns3\-::\-Ipv4\-Router\-L3\-Protocol\-::\-Get\-Metric (
+\begin{DoxyParamCaption}
+\item[{uint32\-\_\-t}]{i}
+\end{DoxyParamCaption}
+) const}}\label{classns3_1_1Ipv4RouterL3Protocol_a046d9e4b77a15e4d3bee2e415c8070c3}
+\hypertarget{classns3_1_1Ipv4RouterL3Protocol_a9624b73c4e19e1a4c4155c2b6f35c76d}{\index{ns3\-::\-Ipv4\-Router\-L3\-Protocol@{ns3\-::\-Ipv4\-Router\-L3\-Protocol}!Get\-Mtu@{Get\-Mtu}}
+\index{Get\-Mtu@{Get\-Mtu}!ns3::Ipv4RouterL3Protocol@{ns3\-::\-Ipv4\-Router\-L3\-Protocol}}
+\subsubsection[{Get\-Mtu}]{\setlength{\rightskip}{0pt plus 5cm}uint16\-\_\-t ns3\-::\-Ipv4\-Router\-L3\-Protocol\-::\-Get\-Mtu (
+\begin{DoxyParamCaption}
+\item[{uint32\-\_\-t}]{i}
+\end{DoxyParamCaption}
+) const}}\label{classns3_1_1Ipv4RouterL3Protocol_a9624b73c4e19e1a4c4155c2b6f35c76d}
+\hypertarget{classns3_1_1Ipv4RouterL3Protocol_a34f9fa2ed643bf8f7c13bddf1461a1b9}{\index{ns3\-::\-Ipv4\-Router\-L3\-Protocol@{ns3\-::\-Ipv4\-Router\-L3\-Protocol}!Get\-N\-Addresses@{Get\-N\-Addresses}}
+\index{Get\-N\-Addresses@{Get\-N\-Addresses}!ns3::Ipv4RouterL3Protocol@{ns3\-::\-Ipv4\-Router\-L3\-Protocol}}
+\subsubsection[{Get\-N\-Addresses}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t ns3\-::\-Ipv4\-Router\-L3\-Protocol\-::\-Get\-N\-Addresses (
+\begin{DoxyParamCaption}
+\item[{uint32\-\_\-t}]{interface}
+\end{DoxyParamCaption}
+) const}}\label{classns3_1_1Ipv4RouterL3Protocol_a34f9fa2ed643bf8f7c13bddf1461a1b9}
+\hypertarget{classns3_1_1Ipv4RouterL3Protocol_a6e4db6eb5d22d3ef5f9fba31c347ba00}{\index{ns3\-::\-Ipv4\-Router\-L3\-Protocol@{ns3\-::\-Ipv4\-Router\-L3\-Protocol}!Get\-Net\-Device@{Get\-Net\-Device}}
+\index{Get\-Net\-Device@{Get\-Net\-Device}!ns3::Ipv4RouterL3Protocol@{ns3\-::\-Ipv4\-Router\-L3\-Protocol}}
+\subsubsection[{Get\-Net\-Device}]{\setlength{\rightskip}{0pt plus 5cm}Ptr$<$ Net\-Device $>$ ns3\-::\-Ipv4\-Router\-L3\-Protocol\-::\-Get\-Net\-Device (
+\begin{DoxyParamCaption}
+\item[{uint32\-\_\-t}]{i}
+\end{DoxyParamCaption}
+)}}\label{classns3_1_1Ipv4RouterL3Protocol_a6e4db6eb5d22d3ef5f9fba31c347ba00}
+\hypertarget{classns3_1_1Ipv4RouterL3Protocol_a1af4b8ab112a41d2c9c5caf45af6ba09}{\index{ns3\-::\-Ipv4\-Router\-L3\-Protocol@{ns3\-::\-Ipv4\-Router\-L3\-Protocol}!Get\-N\-Interfaces@{Get\-N\-Interfaces}}
+\index{Get\-N\-Interfaces@{Get\-N\-Interfaces}!ns3::Ipv4RouterL3Protocol@{ns3\-::\-Ipv4\-Router\-L3\-Protocol}}
+\subsubsection[{Get\-N\-Interfaces}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t ns3\-::\-Ipv4\-Router\-L3\-Protocol\-::\-Get\-N\-Interfaces (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const}}\label{classns3_1_1Ipv4RouterL3Protocol_a1af4b8ab112a41d2c9c5caf45af6ba09}
+\hypertarget{classns3_1_1Ipv4RouterL3Protocol_a117b7e10f49fa524ac465d3d9a41d990}{\index{ns3\-::\-Ipv4\-Router\-L3\-Protocol@{ns3\-::\-Ipv4\-Router\-L3\-Protocol}!Get\-Protocol@{Get\-Protocol}}
+\index{Get\-Protocol@{Get\-Protocol}!ns3::Ipv4RouterL3Protocol@{ns3\-::\-Ipv4\-Router\-L3\-Protocol}}
+\subsubsection[{Get\-Protocol}]{\setlength{\rightskip}{0pt plus 5cm}Ptr$<$ Ip\-L4\-Protocol $>$ ns3\-::\-Ipv4\-Router\-L3\-Protocol\-::\-Get\-Protocol (
+\begin{DoxyParamCaption}
+\item[{int}]{protocol\-Number}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classns3_1_1Ipv4RouterL3Protocol_a117b7e10f49fa524ac465d3d9a41d990}
+
+\begin{DoxyParams}{Parameters}
+{\em protocol\-Number} & number of protocol to lookup in this L4 Demux \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a matching L4 Protocol
+\end{DoxyReturn}
+This method is typically called by lower layers to forward packets up the stack to the right protocol. \hypertarget{classns3_1_1Ipv4RouterL3Protocol_a2ed4d1c2d32115e0346bebef4b9de285}{\index{ns3\-::\-Ipv4\-Router\-L3\-Protocol@{ns3\-::\-Ipv4\-Router\-L3\-Protocol}!Get\-Routing\-Protocol@{Get\-Routing\-Protocol}}
+\index{Get\-Routing\-Protocol@{Get\-Routing\-Protocol}!ns3::Ipv4RouterL3Protocol@{ns3\-::\-Ipv4\-Router\-L3\-Protocol}}
+\subsubsection[{Get\-Routing\-Protocol}]{\setlength{\rightskip}{0pt plus 5cm}Ptr$<$ Ipv4\-Routing\-Protocol $>$ ns3\-::\-Ipv4\-Router\-L3\-Protocol\-::\-Get\-Routing\-Protocol (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const}}\label{classns3_1_1Ipv4RouterL3Protocol_a2ed4d1c2d32115e0346bebef4b9de285}
+\hypertarget{classns3_1_1Ipv4RouterL3Protocol_a71648ed3ff5bcca634fe8ad5bfaed3f4}{\index{ns3\-::\-Ipv4\-Router\-L3\-Protocol@{ns3\-::\-Ipv4\-Router\-L3\-Protocol}!Get\-Type\-Id@{Get\-Type\-Id}}
+\index{Get\-Type\-Id@{Get\-Type\-Id}!ns3::Ipv4RouterL3Protocol@{ns3\-::\-Ipv4\-Router\-L3\-Protocol}}
+\subsubsection[{Get\-Type\-Id}]{\setlength{\rightskip}{0pt plus 5cm}Type\-Id ns3\-::\-Ipv4\-Router\-L3\-Protocol\-::\-Get\-Type\-Id (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classns3_1_1Ipv4RouterL3Protocol_a71648ed3ff5bcca634fe8ad5bfaed3f4}
+
+
+Get the type I\-D. 
+
+\begin{DoxyReturn}{Returns}
+the object Type\-Id 
+\end{DoxyReturn}
+\hypertarget{classns3_1_1Ipv4RouterL3Protocol_a8023a88747b29737972a1d803daf9dcb}{\index{ns3\-::\-Ipv4\-Router\-L3\-Protocol@{ns3\-::\-Ipv4\-Router\-L3\-Protocol}!Get\-Weak\-Es\-Model@{Get\-Weak\-Es\-Model}}
+\index{Get\-Weak\-Es\-Model@{Get\-Weak\-Es\-Model}!ns3::Ipv4RouterL3Protocol@{ns3\-::\-Ipv4\-Router\-L3\-Protocol}}
+\subsubsection[{Get\-Weak\-Es\-Model}]{\setlength{\rightskip}{0pt plus 5cm}bool ns3\-::\-Ipv4\-Router\-L3\-Protocol\-::\-Get\-Weak\-Es\-Model (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [virtual]}}}\label{classns3_1_1Ipv4RouterL3Protocol_a8023a88747b29737972a1d803daf9dcb}
+\hypertarget{classns3_1_1Ipv4RouterL3Protocol_ac4719458e3fdcd9d7d696a070c479747}{\index{ns3\-::\-Ipv4\-Router\-L3\-Protocol@{ns3\-::\-Ipv4\-Router\-L3\-Protocol}!Handle\-Fragments\-Timeout@{Handle\-Fragments\-Timeout}}
+\index{Handle\-Fragments\-Timeout@{Handle\-Fragments\-Timeout}!ns3::Ipv4RouterL3Protocol@{ns3\-::\-Ipv4\-Router\-L3\-Protocol}}
+\subsubsection[{Handle\-Fragments\-Timeout}]{\setlength{\rightskip}{0pt plus 5cm}void ns3\-::\-Ipv4\-Router\-L3\-Protocol\-::\-Handle\-Fragments\-Timeout (
+\begin{DoxyParamCaption}
+\item[{std\-::pair$<$ uint64\-\_\-t, uint32\-\_\-t $>$}]{key, }
+\item[{Ipv4\-Header \&}]{ip\-Header, }
+\item[{uint32\-\_\-t}]{iif}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classns3_1_1Ipv4RouterL3Protocol_ac4719458e3fdcd9d7d696a070c479747}
+
+
+Process the timeout for packet fragments. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & representing the packet fragments \\
+\hline
+{\em ip\-Header} & the I\-P header of the original packet \\
+\hline
+{\em iif} & Input Interface \\
+\hline
+\end{DoxyParams}
+\hypertarget{classns3_1_1Ipv4RouterL3Protocol_aadadfecb7f1ad23a55f2faabb67efc37}{\index{ns3\-::\-Ipv4\-Router\-L3\-Protocol@{ns3\-::\-Ipv4\-Router\-L3\-Protocol}!Insert@{Insert}}
+\index{Insert@{Insert}!ns3::Ipv4RouterL3Protocol@{ns3\-::\-Ipv4\-Router\-L3\-Protocol}}
+\subsubsection[{Insert}]{\setlength{\rightskip}{0pt plus 5cm}void ns3\-::\-Ipv4\-Router\-L3\-Protocol\-::\-Insert (
+\begin{DoxyParamCaption}
+\item[{Ptr$<$ Ip\-L4\-Protocol $>$}]{protocol}
+\end{DoxyParamCaption}
+)}}\label{classns3_1_1Ipv4RouterL3Protocol_aadadfecb7f1ad23a55f2faabb67efc37}
+
+\begin{DoxyParams}{Parameters}
+{\em protocol} & a template for the protocol to add to this L4 Demux. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the L4\-Protocol effectively added.
+\end{DoxyReturn}
+Invoke Copy on the input template to get a copy of the input protocol which can be used on the Node on which this L4 Demux is running. The new L4\-Protocol is registered internally as a working L4 Protocol and returned from this method. The caller does not get ownership of the returned pointer. \hypertarget{classns3_1_1Ipv4RouterL3Protocol_a85559a2c92f1c2ff3d80a1228ca6b634}{\index{ns3\-::\-Ipv4\-Router\-L3\-Protocol@{ns3\-::\-Ipv4\-Router\-L3\-Protocol}!Ip\-Forward@{Ip\-Forward}}
+\index{Ip\-Forward@{Ip\-Forward}!ns3::Ipv4RouterL3Protocol@{ns3\-::\-Ipv4\-Router\-L3\-Protocol}}
+\subsubsection[{Ip\-Forward}]{\setlength{\rightskip}{0pt plus 5cm}void ns3\-::\-Ipv4\-Router\-L3\-Protocol\-::\-Ip\-Forward (
+\begin{DoxyParamCaption}
+\item[{Ptr$<$ Ipv4\-Route $>$}]{rtentry, }
+\item[{Ptr$<$ const Packet $>$}]{p, }
+\item[{const Ipv4\-Header \&}]{header}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classns3_1_1Ipv4RouterL3Protocol_a85559a2c92f1c2ff3d80a1228ca6b634}
+
+
+Forward a packet. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rtentry} & route \\
+\hline
+{\em p} & packet to forward \\
+\hline
+{\em header} & I\-Pv4 header to add to the packet \\
+\hline
+\end{DoxyParams}
+\hypertarget{classns3_1_1Ipv4RouterL3Protocol_a7cfc75feda36ad3c0c11cd5bf92e63f2}{\index{ns3\-::\-Ipv4\-Router\-L3\-Protocol@{ns3\-::\-Ipv4\-Router\-L3\-Protocol}!Ip\-Multicast\-Forward@{Ip\-Multicast\-Forward}}
+\index{Ip\-Multicast\-Forward@{Ip\-Multicast\-Forward}!ns3::Ipv4RouterL3Protocol@{ns3\-::\-Ipv4\-Router\-L3\-Protocol}}
+\subsubsection[{Ip\-Multicast\-Forward}]{\setlength{\rightskip}{0pt plus 5cm}void ns3\-::\-Ipv4\-Router\-L3\-Protocol\-::\-Ip\-Multicast\-Forward (
+\begin{DoxyParamCaption}
+\item[{Ptr$<$ Ipv4\-Multicast\-Route $>$}]{mrtentry, }
+\item[{Ptr$<$ const Packet $>$}]{p, }
+\item[{const Ipv4\-Header \&}]{header}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classns3_1_1Ipv4RouterL3Protocol_a7cfc75feda36ad3c0c11cd5bf92e63f2}
+
+
+Forward a multicast packet. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mrtentry} & route \\
+\hline
+{\em p} & packet to forward \\
+\hline
+{\em header} & I\-Pv6 header to add to the packet \\
+\hline
+\end{DoxyParams}
+\hypertarget{classns3_1_1Ipv4RouterL3Protocol_a5d1404a95b8f2ec49aaf4b4b603f9e21}{\index{ns3\-::\-Ipv4\-Router\-L3\-Protocol@{ns3\-::\-Ipv4\-Router\-L3\-Protocol}!Is\-Destination\-Address@{Is\-Destination\-Address}}
+\index{Is\-Destination\-Address@{Is\-Destination\-Address}!ns3::Ipv4RouterL3Protocol@{ns3\-::\-Ipv4\-Router\-L3\-Protocol}}
+\subsubsection[{Is\-Destination\-Address}]{\setlength{\rightskip}{0pt plus 5cm}bool ns3\-::\-Ipv4\-Router\-L3\-Protocol\-::\-Is\-Destination\-Address (
+\begin{DoxyParamCaption}
+\item[{Ipv4\-Address}]{address, }
+\item[{uint32\-\_\-t}]{iif}
+\end{DoxyParamCaption}
+) const}}\label{classns3_1_1Ipv4RouterL3Protocol_a5d1404a95b8f2ec49aaf4b4b603f9e21}
+\hypertarget{classns3_1_1Ipv4RouterL3Protocol_a3a0efdbc3ff924c388a0db9bd8387aea}{\index{ns3\-::\-Ipv4\-Router\-L3\-Protocol@{ns3\-::\-Ipv4\-Router\-L3\-Protocol}!Is\-Forwarding@{Is\-Forwarding}}
+\index{Is\-Forwarding@{Is\-Forwarding}!ns3::Ipv4RouterL3Protocol@{ns3\-::\-Ipv4\-Router\-L3\-Protocol}}
+\subsubsection[{Is\-Forwarding}]{\setlength{\rightskip}{0pt plus 5cm}bool ns3\-::\-Ipv4\-Router\-L3\-Protocol\-::\-Is\-Forwarding (
+\begin{DoxyParamCaption}
+\item[{uint32\-\_\-t}]{i}
+\end{DoxyParamCaption}
+) const}}\label{classns3_1_1Ipv4RouterL3Protocol_a3a0efdbc3ff924c388a0db9bd8387aea}
+\hypertarget{classns3_1_1Ipv4RouterL3Protocol_af45da819ef800c1fa6652ff38acd0abe}{\index{ns3\-::\-Ipv4\-Router\-L3\-Protocol@{ns3\-::\-Ipv4\-Router\-L3\-Protocol}!Is\-Unicast@{Is\-Unicast}}
+\index{Is\-Unicast@{Is\-Unicast}!ns3::Ipv4RouterL3Protocol@{ns3\-::\-Ipv4\-Router\-L3\-Protocol}}
+\subsubsection[{Is\-Unicast}]{\setlength{\rightskip}{0pt plus 5cm}bool ns3\-::\-Ipv4\-Router\-L3\-Protocol\-::\-Is\-Unicast (
+\begin{DoxyParamCaption}
+\item[{Ipv4\-Address}]{ad}
+\end{DoxyParamCaption}
+) const}}\label{classns3_1_1Ipv4RouterL3Protocol_af45da819ef800c1fa6652ff38acd0abe}
+
+
+Check if an I\-Pv4 address is unicast according to the node. 
+
+This function checks all the node's interfaces and the respective subnet masks. An address is considered unicast if it's not broadcast, subnet-\/broadcast or multicast.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ad} & address\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the address is unicast 
+\end{DoxyReturn}
+\hypertarget{classns3_1_1Ipv4RouterL3Protocol_a94898bc72665a0aa0f03d8ff15abd398}{\index{ns3\-::\-Ipv4\-Router\-L3\-Protocol@{ns3\-::\-Ipv4\-Router\-L3\-Protocol}!Is\-Unicast@{Is\-Unicast}}
+\index{Is\-Unicast@{Is\-Unicast}!ns3::Ipv4RouterL3Protocol@{ns3\-::\-Ipv4\-Router\-L3\-Protocol}}
+\subsubsection[{Is\-Unicast}]{\setlength{\rightskip}{0pt plus 5cm}bool ns3\-::\-Ipv4\-Router\-L3\-Protocol\-::\-Is\-Unicast (
+\begin{DoxyParamCaption}
+\item[{Ipv4\-Address}]{ad, }
+\item[{Ipv4\-Mask}]{interface\-Mask}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [private]}}}\label{classns3_1_1Ipv4RouterL3Protocol_a94898bc72665a0aa0f03d8ff15abd398}
+
+
+Check if an I\-Pv4 address is unicast. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ad} & address \\
+\hline
+{\em interface\-Mask} & the network mask \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the address is unicast 
+\end{DoxyReturn}
+\hypertarget{classns3_1_1Ipv4RouterL3Protocol_a046298cf4c213797e047e7344701c8f5}{\index{ns3\-::\-Ipv4\-Router\-L3\-Protocol@{ns3\-::\-Ipv4\-Router\-L3\-Protocol}!Is\-Up@{Is\-Up}}
+\index{Is\-Up@{Is\-Up}!ns3::Ipv4RouterL3Protocol@{ns3\-::\-Ipv4\-Router\-L3\-Protocol}}
+\subsubsection[{Is\-Up}]{\setlength{\rightskip}{0pt plus 5cm}bool ns3\-::\-Ipv4\-Router\-L3\-Protocol\-::\-Is\-Up (
+\begin{DoxyParamCaption}
+\item[{uint32\-\_\-t}]{i}
+\end{DoxyParamCaption}
+) const}}\label{classns3_1_1Ipv4RouterL3Protocol_a046298cf4c213797e047e7344701c8f5}
+\hypertarget{classns3_1_1Ipv4RouterL3Protocol_a89499fe56b8b356bb2190d311cf2a43c}{\index{ns3\-::\-Ipv4\-Router\-L3\-Protocol@{ns3\-::\-Ipv4\-Router\-L3\-Protocol}!Local\-Deliver@{Local\-Deliver}}
+\index{Local\-Deliver@{Local\-Deliver}!ns3::Ipv4RouterL3Protocol@{ns3\-::\-Ipv4\-Router\-L3\-Protocol}}
+\subsubsection[{Local\-Deliver}]{\setlength{\rightskip}{0pt plus 5cm}void ns3\-::\-Ipv4\-Router\-L3\-Protocol\-::\-Local\-Deliver (
+\begin{DoxyParamCaption}
+\item[{Ptr$<$ const Packet $>$}]{p, }
+\item[{Ipv4\-Header const \&}]{ip, }
+\item[{uint32\-\_\-t}]{iif}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classns3_1_1Ipv4RouterL3Protocol_a89499fe56b8b356bb2190d311cf2a43c}
+
+
+Deliver a packet. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & packet delivered \\
+\hline
+{\em ip} & I\-Pv4 header \\
+\hline
+{\em iif} & input interface packet was received \\
+\hline
+\end{DoxyParams}
+\hypertarget{classns3_1_1Ipv4RouterL3Protocol_a37e6bad738c75f2ab56badba0e544d73}{\index{ns3\-::\-Ipv4\-Router\-L3\-Protocol@{ns3\-::\-Ipv4\-Router\-L3\-Protocol}!Notify\-New\-Aggregate@{Notify\-New\-Aggregate}}
+\index{Notify\-New\-Aggregate@{Notify\-New\-Aggregate}!ns3::Ipv4RouterL3Protocol@{ns3\-::\-Ipv4\-Router\-L3\-Protocol}}
+\subsubsection[{Notify\-New\-Aggregate}]{\setlength{\rightskip}{0pt plus 5cm}void ns3\-::\-Ipv4\-Router\-L3\-Protocol\-::\-Notify\-New\-Aggregate (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}}\label{classns3_1_1Ipv4RouterL3Protocol_a37e6bad738c75f2ab56badba0e544d73}
+This function will notify other components connected to the node that a new stack member is now connected This will be used to notify Layer 3 protocol of layer 4 protocol stack to connect them together. \hypertarget{classns3_1_1Ipv4RouterL3Protocol_aa40baa411eeb3351bc5a2b5e0e1e9a5f}{\index{ns3\-::\-Ipv4\-Router\-L3\-Protocol@{ns3\-::\-Ipv4\-Router\-L3\-Protocol}!operator=@{operator=}}
+\index{operator=@{operator=}!ns3::Ipv4RouterL3Protocol@{ns3\-::\-Ipv4\-Router\-L3\-Protocol}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Ipv4\-Router\-L3\-Protocol}\& ns3\-::\-Ipv4\-Router\-L3\-Protocol\-::operator= (
+\begin{DoxyParamCaption}
+\item[{const {\bf Ipv4\-Router\-L3\-Protocol} \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classns3_1_1Ipv4RouterL3Protocol_aa40baa411eeb3351bc5a2b5e0e1e9a5f}
+
+
+Copy constructor. 
+
+Defined but not implemented to avoid misuse \begin{DoxyReturn}{Returns}
+the copied object 
+\end{DoxyReturn}
+\hypertarget{classns3_1_1Ipv4RouterL3Protocol_a859787bf309c07234ea58e62d26634a0}{\index{ns3\-::\-Ipv4\-Router\-L3\-Protocol@{ns3\-::\-Ipv4\-Router\-L3\-Protocol}!Process\-Fragment@{Process\-Fragment}}
+\index{Process\-Fragment@{Process\-Fragment}!ns3::Ipv4RouterL3Protocol@{ns3\-::\-Ipv4\-Router\-L3\-Protocol}}
+\subsubsection[{Process\-Fragment}]{\setlength{\rightskip}{0pt plus 5cm}bool ns3\-::\-Ipv4\-Router\-L3\-Protocol\-::\-Process\-Fragment (
+\begin{DoxyParamCaption}
+\item[{Ptr$<$ Packet $>$ \&}]{packet, }
+\item[{Ipv4\-Header \&}]{ip\-Header, }
+\item[{uint32\-\_\-t}]{iif}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classns3_1_1Ipv4RouterL3Protocol_a859787bf309c07234ea58e62d26634a0}
+
+
+Process a packet fragment. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em packet} & the packet \\
+\hline
+{\em ip\-Header} & the I\-P header \\
+\hline
+{\em iif} & Input Interface \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true is the fragment completed the packet 
+\end{DoxyReturn}
+\hypertarget{classns3_1_1Ipv4RouterL3Protocol_a30dd164d51b321d117bd06cfedd6e1f5}{\index{ns3\-::\-Ipv4\-Router\-L3\-Protocol@{ns3\-::\-Ipv4\-Router\-L3\-Protocol}!Receive@{Receive}}
+\index{Receive@{Receive}!ns3::Ipv4RouterL3Protocol@{ns3\-::\-Ipv4\-Router\-L3\-Protocol}}
+\subsubsection[{Receive}]{\setlength{\rightskip}{0pt plus 5cm}void ns3\-::\-Ipv4\-Router\-L3\-Protocol\-::\-Receive (
+\begin{DoxyParamCaption}
+\item[{Ptr$<$ Net\-Device $>$}]{device, }
+\item[{Ptr$<$ const Packet $>$}]{p, }
+\item[{uint16\-\_\-t}]{protocol, }
+\item[{const Address \&}]{from, }
+\item[{const Address \&}]{to, }
+\item[{Net\-Device\-::\-Packet\-Type}]{packet\-Type}
+\end{DoxyParamCaption}
+)}}\label{classns3_1_1Ipv4RouterL3Protocol_a30dd164d51b321d117bd06cfedd6e1f5}
+Lower layer calls this method after calling L3\-Demux\-::\-Lookup The A\-R\-P subclass needs to know from which Net\-Device this packet is coming to\-:
+\begin{DoxyItemize}
+\item implement a per-\/\-Net\-Device A\-R\-P cache
+\item send back arp replies on the right device It also checks whether the packet is O\-I\-C\-N packet or not 
+\begin{DoxyParams}{Parameters}
+{\em device} & network device \\
+\hline
+{\em p} & the packet \\
+\hline
+{\em protocol} & protocol value \\
+\hline
+{\em from} & address of the correspondant \\
+\hline
+{\em to} & address of the destination \\
+\hline
+{\em packet\-Type} & type of the packet \\
+\hline
+\end{DoxyParams}
+
+\end{DoxyItemize}\hypertarget{classns3_1_1Ipv4RouterL3Protocol_a8102bc7eb7d7267472b73bb10ef13d06}{\index{ns3\-::\-Ipv4\-Router\-L3\-Protocol@{ns3\-::\-Ipv4\-Router\-L3\-Protocol}!Remove@{Remove}}
+\index{Remove@{Remove}!ns3::Ipv4RouterL3Protocol@{ns3\-::\-Ipv4\-Router\-L3\-Protocol}}
+\subsubsection[{Remove}]{\setlength{\rightskip}{0pt plus 5cm}void ns3\-::\-Ipv4\-Router\-L3\-Protocol\-::\-Remove (
+\begin{DoxyParamCaption}
+\item[{Ptr$<$ Ip\-L4\-Protocol $>$}]{protocol}
+\end{DoxyParamCaption}
+)}}\label{classns3_1_1Ipv4RouterL3Protocol_a8102bc7eb7d7267472b73bb10ef13d06}
+
+\begin{DoxyParams}{Parameters}
+{\em protocol} & protocol to remove from this demux.\\
+\hline
+\end{DoxyParams}
+The input value to this method should be the value returned from the Ipv4\-L4\-Protocol\-::\-Insert method. \hypertarget{classns3_1_1Ipv4RouterL3Protocol_a78a2d198be0f25c16037f98323b45ea2}{\index{ns3\-::\-Ipv4\-Router\-L3\-Protocol@{ns3\-::\-Ipv4\-Router\-L3\-Protocol}!Remove\-Address@{Remove\-Address}}
+\index{Remove\-Address@{Remove\-Address}!ns3::Ipv4RouterL3Protocol@{ns3\-::\-Ipv4\-Router\-L3\-Protocol}}
+\subsubsection[{Remove\-Address}]{\setlength{\rightskip}{0pt plus 5cm}bool ns3\-::\-Ipv4\-Router\-L3\-Protocol\-::\-Remove\-Address (
+\begin{DoxyParamCaption}
+\item[{uint32\-\_\-t}]{interface\-Index, }
+\item[{uint32\-\_\-t}]{address\-Index}
+\end{DoxyParamCaption}
+)}}\label{classns3_1_1Ipv4RouterL3Protocol_a78a2d198be0f25c16037f98323b45ea2}
+\hypertarget{classns3_1_1Ipv4RouterL3Protocol_a81bad2ef6599a38a7b35fe8b0ce8d30f}{\index{ns3\-::\-Ipv4\-Router\-L3\-Protocol@{ns3\-::\-Ipv4\-Router\-L3\-Protocol}!Remove\-Address@{Remove\-Address}}
+\index{Remove\-Address@{Remove\-Address}!ns3::Ipv4RouterL3Protocol@{ns3\-::\-Ipv4\-Router\-L3\-Protocol}}
+\subsubsection[{Remove\-Address}]{\setlength{\rightskip}{0pt plus 5cm}bool ns3\-::\-Ipv4\-Router\-L3\-Protocol\-::\-Remove\-Address (
+\begin{DoxyParamCaption}
+\item[{uint32\-\_\-t}]{interface, }
+\item[{Ipv4\-Address}]{address}
+\end{DoxyParamCaption}
+)}}\label{classns3_1_1Ipv4RouterL3Protocol_a81bad2ef6599a38a7b35fe8b0ce8d30f}
+\hypertarget{classns3_1_1Ipv4RouterL3Protocol_a96be298c33d8b9ebc2696d24b953cf4b}{\index{ns3\-::\-Ipv4\-Router\-L3\-Protocol@{ns3\-::\-Ipv4\-Router\-L3\-Protocol}!Route\-Input\-Error@{Route\-Input\-Error}}
+\index{Route\-Input\-Error@{Route\-Input\-Error}!ns3::Ipv4RouterL3Protocol@{ns3\-::\-Ipv4\-Router\-L3\-Protocol}}
+\subsubsection[{Route\-Input\-Error}]{\setlength{\rightskip}{0pt plus 5cm}void ns3\-::\-Ipv4\-Router\-L3\-Protocol\-::\-Route\-Input\-Error (
+\begin{DoxyParamCaption}
+\item[{Ptr$<$ const Packet $>$}]{p, }
+\item[{const Ipv4\-Header \&}]{ip\-Header, }
+\item[{Socket\-::\-Socket\-Errno}]{sock\-Errno}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classns3_1_1Ipv4RouterL3Protocol_a96be298c33d8b9ebc2696d24b953cf4b}
+
+
+Fallback when no route is found. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & packet \\
+\hline
+{\em ip\-Header} & I\-Pv4 header \\
+\hline
+{\em sock\-Errno} & error number \\
+\hline
+\end{DoxyParams}
+\hypertarget{classns3_1_1Ipv4RouterL3Protocol_ad7287d5d0a844bb61fd72476ad8e9ee7}{\index{ns3\-::\-Ipv4\-Router\-L3\-Protocol@{ns3\-::\-Ipv4\-Router\-L3\-Protocol}!Select\-Source\-Address@{Select\-Source\-Address}}
+\index{Select\-Source\-Address@{Select\-Source\-Address}!ns3::Ipv4RouterL3Protocol@{ns3\-::\-Ipv4\-Router\-L3\-Protocol}}
+\subsubsection[{Select\-Source\-Address}]{\setlength{\rightskip}{0pt plus 5cm}Ipv4\-Address ns3\-::\-Ipv4\-Router\-L3\-Protocol\-::\-Select\-Source\-Address (
+\begin{DoxyParamCaption}
+\item[{Ptr$<$ const Net\-Device $>$}]{device, }
+\item[{Ipv4\-Address}]{dst, }
+\item[{Ipv4\-Interface\-Address\-::\-Interface\-Address\-Scope\-\_\-e}]{scope}
+\end{DoxyParamCaption}
+)}}\label{classns3_1_1Ipv4RouterL3Protocol_ad7287d5d0a844bb61fd72476ad8e9ee7}
+\hypertarget{classns3_1_1Ipv4RouterL3Protocol_a70f114cbb01fb2e2fbb21448355f75ff}{\index{ns3\-::\-Ipv4\-Router\-L3\-Protocol@{ns3\-::\-Ipv4\-Router\-L3\-Protocol}!Send@{Send}}
+\index{Send@{Send}!ns3::Ipv4RouterL3Protocol@{ns3\-::\-Ipv4\-Router\-L3\-Protocol}}
+\subsubsection[{Send}]{\setlength{\rightskip}{0pt plus 5cm}void ns3\-::\-Ipv4\-Router\-L3\-Protocol\-::\-Send (
+\begin{DoxyParamCaption}
+\item[{Ptr$<$ Packet $>$}]{packet, }
+\item[{Ipv4\-Address}]{source, }
+\item[{Ipv4\-Address}]{destination, }
+\item[{uint8\-\_\-t}]{protocol, }
+\item[{Ptr$<$ Ipv4\-Route $>$}]{route}
+\end{DoxyParamCaption}
+)}}\label{classns3_1_1Ipv4RouterL3Protocol_a70f114cbb01fb2e2fbb21448355f75ff}
+
+\begin{DoxyParams}{Parameters}
+{\em packet} & packet to send \\
+\hline
+{\em source} & source address of packet \\
+\hline
+{\em destination} & address of packet \\
+\hline
+{\em protocol} & number of packet \\
+\hline
+{\em route} & route entry\\
+\hline
+\end{DoxyParams}
+Higher-\/level layers call this method to send a packet down the stack to the M\-A\-C and P\-H\-Y layers. \hypertarget{classns3_1_1Ipv4RouterL3Protocol_a35646708634f0d7008322bb34a4dc799}{\index{ns3\-::\-Ipv4\-Router\-L3\-Protocol@{ns3\-::\-Ipv4\-Router\-L3\-Protocol}!Send\-Real\-Out@{Send\-Real\-Out}}
+\index{Send\-Real\-Out@{Send\-Real\-Out}!ns3::Ipv4RouterL3Protocol@{ns3\-::\-Ipv4\-Router\-L3\-Protocol}}
+\subsubsection[{Send\-Real\-Out}]{\setlength{\rightskip}{0pt plus 5cm}void ns3\-::\-Ipv4\-Router\-L3\-Protocol\-::\-Send\-Real\-Out (
+\begin{DoxyParamCaption}
+\item[{Ptr$<$ Ipv4\-Route $>$}]{route, }
+\item[{Ptr$<$ Packet $>$}]{packet, }
+\item[{Ipv4\-Header const \&}]{ip\-Header}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classns3_1_1Ipv4RouterL3Protocol_a35646708634f0d7008322bb34a4dc799}
+
+
+Send packet with route. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em route} & route \\
+\hline
+{\em packet} & packet to send \\
+\hline
+{\em ip\-Header} & I\-Pv4 header to add to the packet \\
+\hline
+\end{DoxyParams}
+\hypertarget{classns3_1_1Ipv4RouterL3Protocol_a14b4a2978628ddebefbf5c32e3519c6a}{\index{ns3\-::\-Ipv4\-Router\-L3\-Protocol@{ns3\-::\-Ipv4\-Router\-L3\-Protocol}!Send\-With\-Header@{Send\-With\-Header}}
+\index{Send\-With\-Header@{Send\-With\-Header}!ns3::Ipv4RouterL3Protocol@{ns3\-::\-Ipv4\-Router\-L3\-Protocol}}
+\subsubsection[{Send\-With\-Header}]{\setlength{\rightskip}{0pt plus 5cm}void ns3\-::\-Ipv4\-Router\-L3\-Protocol\-::\-Send\-With\-Header (
+\begin{DoxyParamCaption}
+\item[{Ptr$<$ Packet $>$}]{packet, }
+\item[{Ipv4\-Header}]{ip\-Header, }
+\item[{Ptr$<$ Ipv4\-Route $>$}]{route}
+\end{DoxyParamCaption}
+)}}\label{classns3_1_1Ipv4RouterL3Protocol_a14b4a2978628ddebefbf5c32e3519c6a}
+
+\begin{DoxyParams}{Parameters}
+{\em packet} & packet to send \\
+\hline
+{\em ip\-Header} & I\-P Header \\
+\hline
+{\em route} & route entry\\
+\hline
+\end{DoxyParams}
+Higher-\/level layers call this method to send a packet with I\-Pv4 Header (Intend to be used with Ip\-Header\-Include attribute.) \hypertarget{classns3_1_1Ipv4RouterL3Protocol_a6c1add6164864dceeb83d5fa8bbdd59a}{\index{ns3\-::\-Ipv4\-Router\-L3\-Protocol@{ns3\-::\-Ipv4\-Router\-L3\-Protocol}!Set\-Default\-Ttl@{Set\-Default\-Ttl}}
+\index{Set\-Default\-Ttl@{Set\-Default\-Ttl}!ns3::Ipv4RouterL3Protocol@{ns3\-::\-Ipv4\-Router\-L3\-Protocol}}
+\subsubsection[{Set\-Default\-Ttl}]{\setlength{\rightskip}{0pt plus 5cm}void ns3\-::\-Ipv4\-Router\-L3\-Protocol\-::\-Set\-Default\-Ttl (
+\begin{DoxyParamCaption}
+\item[{uint8\-\_\-t}]{ttl}
+\end{DoxyParamCaption}
+)}}\label{classns3_1_1Ipv4RouterL3Protocol_a6c1add6164864dceeb83d5fa8bbdd59a}
+
+\begin{DoxyParams}{Parameters}
+{\em ttl} & default ttl to use\\
+\hline
+\end{DoxyParams}
+When we need to send an ipv4 packet, we use this default ttl value. \hypertarget{classns3_1_1Ipv4RouterL3Protocol_a88b0686519678bbe3e3a10aa82bf5cea}{\index{ns3\-::\-Ipv4\-Router\-L3\-Protocol@{ns3\-::\-Ipv4\-Router\-L3\-Protocol}!Set\-Down@{Set\-Down}}
+\index{Set\-Down@{Set\-Down}!ns3::Ipv4RouterL3Protocol@{ns3\-::\-Ipv4\-Router\-L3\-Protocol}}
+\subsubsection[{Set\-Down}]{\setlength{\rightskip}{0pt plus 5cm}void ns3\-::\-Ipv4\-Router\-L3\-Protocol\-::\-Set\-Down (
+\begin{DoxyParamCaption}
+\item[{uint32\-\_\-t}]{i}
+\end{DoxyParamCaption}
+)}}\label{classns3_1_1Ipv4RouterL3Protocol_a88b0686519678bbe3e3a10aa82bf5cea}
+\hypertarget{classns3_1_1Ipv4RouterL3Protocol_aba2f18e349db994598b8b715e0557ac9}{\index{ns3\-::\-Ipv4\-Router\-L3\-Protocol@{ns3\-::\-Ipv4\-Router\-L3\-Protocol}!Set\-Forwarding@{Set\-Forwarding}}
+\index{Set\-Forwarding@{Set\-Forwarding}!ns3::Ipv4RouterL3Protocol@{ns3\-::\-Ipv4\-Router\-L3\-Protocol}}
+\subsubsection[{Set\-Forwarding}]{\setlength{\rightskip}{0pt plus 5cm}void ns3\-::\-Ipv4\-Router\-L3\-Protocol\-::\-Set\-Forwarding (
+\begin{DoxyParamCaption}
+\item[{uint32\-\_\-t}]{i, }
+\item[{bool}]{val}
+\end{DoxyParamCaption}
+)}}\label{classns3_1_1Ipv4RouterL3Protocol_aba2f18e349db994598b8b715e0557ac9}
+\hypertarget{classns3_1_1Ipv4RouterL3Protocol_afea7958043ce0d38eb31f4440ea77abf}{\index{ns3\-::\-Ipv4\-Router\-L3\-Protocol@{ns3\-::\-Ipv4\-Router\-L3\-Protocol}!Set\-Ip\-Forward@{Set\-Ip\-Forward}}
+\index{Set\-Ip\-Forward@{Set\-Ip\-Forward}!ns3::Ipv4RouterL3Protocol@{ns3\-::\-Ipv4\-Router\-L3\-Protocol}}
+\subsubsection[{Set\-Ip\-Forward}]{\setlength{\rightskip}{0pt plus 5cm}void ns3\-::\-Ipv4\-Router\-L3\-Protocol\-::\-Set\-Ip\-Forward (
+\begin{DoxyParamCaption}
+\item[{bool}]{forward}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [virtual]}}}\label{classns3_1_1Ipv4RouterL3Protocol_afea7958043ce0d38eb31f4440ea77abf}
+\hypertarget{classns3_1_1Ipv4RouterL3Protocol_a5bbc44739ecc7fe8e995e5f5dcd9ce89}{\index{ns3\-::\-Ipv4\-Router\-L3\-Protocol@{ns3\-::\-Ipv4\-Router\-L3\-Protocol}!Set\-Metric@{Set\-Metric}}
+\index{Set\-Metric@{Set\-Metric}!ns3::Ipv4RouterL3Protocol@{ns3\-::\-Ipv4\-Router\-L3\-Protocol}}
+\subsubsection[{Set\-Metric}]{\setlength{\rightskip}{0pt plus 5cm}void ns3\-::\-Ipv4\-Router\-L3\-Protocol\-::\-Set\-Metric (
+\begin{DoxyParamCaption}
+\item[{uint32\-\_\-t}]{i, }
+\item[{uint16\-\_\-t}]{metric}
+\end{DoxyParamCaption}
+)}}\label{classns3_1_1Ipv4RouterL3Protocol_a5bbc44739ecc7fe8e995e5f5dcd9ce89}
+\hypertarget{classns3_1_1Ipv4RouterL3Protocol_ac5411f9b064b86f0975582571cd0b6de}{\index{ns3\-::\-Ipv4\-Router\-L3\-Protocol@{ns3\-::\-Ipv4\-Router\-L3\-Protocol}!Set\-Node@{Set\-Node}}
+\index{Set\-Node@{Set\-Node}!ns3::Ipv4RouterL3Protocol@{ns3\-::\-Ipv4\-Router\-L3\-Protocol}}
+\subsubsection[{Set\-Node}]{\setlength{\rightskip}{0pt plus 5cm}void ns3\-::\-Ipv4\-Router\-L3\-Protocol\-::\-Set\-Node (
+\begin{DoxyParamCaption}
+\item[{Ptr$<$ Node $>$}]{node}
+\end{DoxyParamCaption}
+)}}\label{classns3_1_1Ipv4RouterL3Protocol_ac5411f9b064b86f0975582571cd0b6de}
+
+
+Set node associated with this stack. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em node} & node to set \\
+\hline
+\end{DoxyParams}
+\hypertarget{classns3_1_1Ipv4RouterL3Protocol_adf92410e6c028eaf5f70e3c704009680}{\index{ns3\-::\-Ipv4\-Router\-L3\-Protocol@{ns3\-::\-Ipv4\-Router\-L3\-Protocol}!Set\-Routing\-Protocol@{Set\-Routing\-Protocol}}
+\index{Set\-Routing\-Protocol@{Set\-Routing\-Protocol}!ns3::Ipv4RouterL3Protocol@{ns3\-::\-Ipv4\-Router\-L3\-Protocol}}
+\subsubsection[{Set\-Routing\-Protocol}]{\setlength{\rightskip}{0pt plus 5cm}void ns3\-::\-Ipv4\-Router\-L3\-Protocol\-::\-Set\-Routing\-Protocol (
+\begin{DoxyParamCaption}
+\item[{Ptr$<$ Ipv4\-Routing\-Protocol $>$}]{routing\-Protocol}
+\end{DoxyParamCaption}
+)}}\label{classns3_1_1Ipv4RouterL3Protocol_adf92410e6c028eaf5f70e3c704009680}
+\hypertarget{classns3_1_1Ipv4RouterL3Protocol_a3352a473d2724c3e90f13e7116be3b5c}{\index{ns3\-::\-Ipv4\-Router\-L3\-Protocol@{ns3\-::\-Ipv4\-Router\-L3\-Protocol}!Set\-Up@{Set\-Up}}
+\index{Set\-Up@{Set\-Up}!ns3::Ipv4RouterL3Protocol@{ns3\-::\-Ipv4\-Router\-L3\-Protocol}}
+\subsubsection[{Set\-Up}]{\setlength{\rightskip}{0pt plus 5cm}void ns3\-::\-Ipv4\-Router\-L3\-Protocol\-::\-Set\-Up (
+\begin{DoxyParamCaption}
+\item[{uint32\-\_\-t}]{i}
+\end{DoxyParamCaption}
+)}}\label{classns3_1_1Ipv4RouterL3Protocol_a3352a473d2724c3e90f13e7116be3b5c}
+\hypertarget{classns3_1_1Ipv4RouterL3Protocol_ae038fa89483a01c2a8d1adc3d54dede6}{\index{ns3\-::\-Ipv4\-Router\-L3\-Protocol@{ns3\-::\-Ipv4\-Router\-L3\-Protocol}!Setup\-Loopback@{Setup\-Loopback}}
+\index{Setup\-Loopback@{Setup\-Loopback}!ns3::Ipv4RouterL3Protocol@{ns3\-::\-Ipv4\-Router\-L3\-Protocol}}
+\subsubsection[{Setup\-Loopback}]{\setlength{\rightskip}{0pt plus 5cm}void ns3\-::\-Ipv4\-Router\-L3\-Protocol\-::\-Setup\-Loopback (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classns3_1_1Ipv4RouterL3Protocol_ae038fa89483a01c2a8d1adc3d54dede6}
+
+
+Setup loopback interface. 
+
+\hypertarget{classns3_1_1Ipv4RouterL3Protocol_a5d0537c163f0a6f04c2f0c5601075d2d}{\index{ns3\-::\-Ipv4\-Router\-L3\-Protocol@{ns3\-::\-Ipv4\-Router\-L3\-Protocol}!Set\-Weak\-Es\-Model@{Set\-Weak\-Es\-Model}}
+\index{Set\-Weak\-Es\-Model@{Set\-Weak\-Es\-Model}!ns3::Ipv4RouterL3Protocol@{ns3\-::\-Ipv4\-Router\-L3\-Protocol}}
+\subsubsection[{Set\-Weak\-Es\-Model}]{\setlength{\rightskip}{0pt plus 5cm}void ns3\-::\-Ipv4\-Router\-L3\-Protocol\-::\-Set\-Weak\-Es\-Model (
+\begin{DoxyParamCaption}
+\item[{bool}]{model}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [virtual]}}}\label{classns3_1_1Ipv4RouterL3Protocol_a5d0537c163f0a6f04c2f0c5601075d2d}
+
+
+\subsection{Friends And Related Function Documentation}
+\hypertarget{classns3_1_1Ipv4RouterL3Protocol_a93f31871d44e5e2ec659210d100d874f}{\index{ns3\-::\-Ipv4\-Router\-L3\-Protocol@{ns3\-::\-Ipv4\-Router\-L3\-Protocol}!\-::\-Ipv4\-Router\-L3\-Protocol\-Test\-Case@{\-::\-Ipv4\-Router\-L3\-Protocol\-Test\-Case}}
+\index{\-::\-Ipv4\-Router\-L3\-Protocol\-Test\-Case@{\-::\-Ipv4\-Router\-L3\-Protocol\-Test\-Case}!ns3::Ipv4RouterL3Protocol@{ns3\-::\-Ipv4\-Router\-L3\-Protocol}}
+\subsubsection[{\-::\-Ipv4\-Router\-L3\-Protocol\-Test\-Case}]{\setlength{\rightskip}{0pt plus 5cm}friend class \-::Ipv4\-Router\-L3\-Protocol\-Test\-Case\hspace{0.3cm}{\ttfamily [friend]}}}\label{classns3_1_1Ipv4RouterL3Protocol_a93f31871d44e5e2ec659210d100d874f}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classns3_1_1Ipv4RouterL3Protocol_a413b9a63b0966fb5ac97df317569a56f}{\index{ns3\-::\-Ipv4\-Router\-L3\-Protocol@{ns3\-::\-Ipv4\-Router\-L3\-Protocol}!m\-\_\-default\-Tos@{m\-\_\-default\-Tos}}
+\index{m\-\_\-default\-Tos@{m\-\_\-default\-Tos}!ns3::Ipv4RouterL3Protocol@{ns3\-::\-Ipv4\-Router\-L3\-Protocol}}
+\subsubsection[{m\-\_\-default\-Tos}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t ns3\-::\-Ipv4\-Router\-L3\-Protocol\-::m\-\_\-default\-Tos\hspace{0.3cm}{\ttfamily [private]}}}\label{classns3_1_1Ipv4RouterL3Protocol_a413b9a63b0966fb5ac97df317569a56f}
+
+
+Default T\-O\-S. 
+
+\hypertarget{classns3_1_1Ipv4RouterL3Protocol_adb12b01444eefa31adaf30ed6397cc52}{\index{ns3\-::\-Ipv4\-Router\-L3\-Protocol@{ns3\-::\-Ipv4\-Router\-L3\-Protocol}!m\-\_\-default\-Ttl@{m\-\_\-default\-Ttl}}
+\index{m\-\_\-default\-Ttl@{m\-\_\-default\-Ttl}!ns3::Ipv4RouterL3Protocol@{ns3\-::\-Ipv4\-Router\-L3\-Protocol}}
+\subsubsection[{m\-\_\-default\-Ttl}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t ns3\-::\-Ipv4\-Router\-L3\-Protocol\-::m\-\_\-default\-Ttl\hspace{0.3cm}{\ttfamily [private]}}}\label{classns3_1_1Ipv4RouterL3Protocol_adb12b01444eefa31adaf30ed6397cc52}
+
+
+Default T\-T\-L. 
+
+\hypertarget{classns3_1_1Ipv4RouterL3Protocol_ab598d069af6668c2d60e77965463f75e}{\index{ns3\-::\-Ipv4\-Router\-L3\-Protocol@{ns3\-::\-Ipv4\-Router\-L3\-Protocol}!m\-\_\-drop\-Trace@{m\-\_\-drop\-Trace}}
+\index{m\-\_\-drop\-Trace@{m\-\_\-drop\-Trace}!ns3::Ipv4RouterL3Protocol@{ns3\-::\-Ipv4\-Router\-L3\-Protocol}}
+\subsubsection[{m\-\_\-drop\-Trace}]{\setlength{\rightskip}{0pt plus 5cm}Traced\-Callback$<$const Ipv4\-Header \&, Ptr$<$const Packet$>$, {\bf Drop\-Reason}, Ptr$<$Ipv4$>$, uint32\-\_\-t$>$ ns3\-::\-Ipv4\-Router\-L3\-Protocol\-::m\-\_\-drop\-Trace\hspace{0.3cm}{\ttfamily [private]}}}\label{classns3_1_1Ipv4RouterL3Protocol_ab598d069af6668c2d60e77965463f75e}
+
+
+Trace of dropped packets. 
+
+\hypertarget{classns3_1_1Ipv4RouterL3Protocol_ab643fecf4d7c8882c84ae9a028de4a43}{\index{ns3\-::\-Ipv4\-Router\-L3\-Protocol@{ns3\-::\-Ipv4\-Router\-L3\-Protocol}!m\-\_\-fragment\-Expiration\-Timeout@{m\-\_\-fragment\-Expiration\-Timeout}}
+\index{m\-\_\-fragment\-Expiration\-Timeout@{m\-\_\-fragment\-Expiration\-Timeout}!ns3::Ipv4RouterL3Protocol@{ns3\-::\-Ipv4\-Router\-L3\-Protocol}}
+\subsubsection[{m\-\_\-fragment\-Expiration\-Timeout}]{\setlength{\rightskip}{0pt plus 5cm}Time ns3\-::\-Ipv4\-Router\-L3\-Protocol\-::m\-\_\-fragment\-Expiration\-Timeout\hspace{0.3cm}{\ttfamily [private]}}}\label{classns3_1_1Ipv4RouterL3Protocol_ab643fecf4d7c8882c84ae9a028de4a43}
+
+
+Expiration timeout. 
+
+\hypertarget{classns3_1_1Ipv4RouterL3Protocol_a60a936fabd02114e24cf81433659e575}{\index{ns3\-::\-Ipv4\-Router\-L3\-Protocol@{ns3\-::\-Ipv4\-Router\-L3\-Protocol}!m\-\_\-fragments@{m\-\_\-fragments}}
+\index{m\-\_\-fragments@{m\-\_\-fragments}!ns3::Ipv4RouterL3Protocol@{ns3\-::\-Ipv4\-Router\-L3\-Protocol}}
+\subsubsection[{m\-\_\-fragments}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Map\-Fragments\-\_\-t} ns3\-::\-Ipv4\-Router\-L3\-Protocol\-::m\-\_\-fragments\hspace{0.3cm}{\ttfamily [private]}}}\label{classns3_1_1Ipv4RouterL3Protocol_a60a936fabd02114e24cf81433659e575}
+
+
+Fragmented packets. 
+
+\hypertarget{classns3_1_1Ipv4RouterL3Protocol_a684a2c09b96a0ae76b75d6e2dfc75caa}{\index{ns3\-::\-Ipv4\-Router\-L3\-Protocol@{ns3\-::\-Ipv4\-Router\-L3\-Protocol}!m\-\_\-fragments\-Timers@{m\-\_\-fragments\-Timers}}
+\index{m\-\_\-fragments\-Timers@{m\-\_\-fragments\-Timers}!ns3::Ipv4RouterL3Protocol@{ns3\-::\-Ipv4\-Router\-L3\-Protocol}}
+\subsubsection[{m\-\_\-fragments\-Timers}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Map\-Fragments\-Timers\-\_\-t} ns3\-::\-Ipv4\-Router\-L3\-Protocol\-::m\-\_\-fragments\-Timers\hspace{0.3cm}{\ttfamily [private]}}}\label{classns3_1_1Ipv4RouterL3Protocol_a684a2c09b96a0ae76b75d6e2dfc75caa}
+
+
+Expiration events. 
+
+\hypertarget{classns3_1_1Ipv4RouterL3Protocol_ab2a9c6993c29edc51d8b474e48abebc0}{\index{ns3\-::\-Ipv4\-Router\-L3\-Protocol@{ns3\-::\-Ipv4\-Router\-L3\-Protocol}!m\-\_\-identification@{m\-\_\-identification}}
+\index{m\-\_\-identification@{m\-\_\-identification}!ns3::Ipv4RouterL3Protocol@{ns3\-::\-Ipv4\-Router\-L3\-Protocol}}
+\subsubsection[{m\-\_\-identification}]{\setlength{\rightskip}{0pt plus 5cm}std\-::map$<$std\-::pair$<$uint64\-\_\-t, uint8\-\_\-t$>$, uint16\-\_\-t$>$ ns3\-::\-Ipv4\-Router\-L3\-Protocol\-::m\-\_\-identification\hspace{0.3cm}{\ttfamily [private]}}}\label{classns3_1_1Ipv4RouterL3Protocol_ab2a9c6993c29edc51d8b474e48abebc0}
+
+
+Identification (for each \{src, dst, proto\} tuple) 
+
+\hypertarget{classns3_1_1Ipv4RouterL3Protocol_a326e61efb33f76e57a147714e47b7e11}{\index{ns3\-::\-Ipv4\-Router\-L3\-Protocol@{ns3\-::\-Ipv4\-Router\-L3\-Protocol}!m\-\_\-interfaces@{m\-\_\-interfaces}}
+\index{m\-\_\-interfaces@{m\-\_\-interfaces}!ns3::Ipv4RouterL3Protocol@{ns3\-::\-Ipv4\-Router\-L3\-Protocol}}
+\subsubsection[{m\-\_\-interfaces}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Ipv4\-Interface\-List} ns3\-::\-Ipv4\-Router\-L3\-Protocol\-::m\-\_\-interfaces\hspace{0.3cm}{\ttfamily [private]}}}\label{classns3_1_1Ipv4RouterL3Protocol_a326e61efb33f76e57a147714e47b7e11}
+
+
+List of I\-Pv4 interfaces. 
+
+\hypertarget{classns3_1_1Ipv4RouterL3Protocol_a912127799da7f6a52a5f4e467af543d4}{\index{ns3\-::\-Ipv4\-Router\-L3\-Protocol@{ns3\-::\-Ipv4\-Router\-L3\-Protocol}!m\-\_\-ip\-Forward@{m\-\_\-ip\-Forward}}
+\index{m\-\_\-ip\-Forward@{m\-\_\-ip\-Forward}!ns3::Ipv4RouterL3Protocol@{ns3\-::\-Ipv4\-Router\-L3\-Protocol}}
+\subsubsection[{m\-\_\-ip\-Forward}]{\setlength{\rightskip}{0pt plus 5cm}bool ns3\-::\-Ipv4\-Router\-L3\-Protocol\-::m\-\_\-ip\-Forward\hspace{0.3cm}{\ttfamily [private]}}}\label{classns3_1_1Ipv4RouterL3Protocol_a912127799da7f6a52a5f4e467af543d4}
+
+
+Forwarding packets (i.\-e. router mode) state. 
+
+\hypertarget{classns3_1_1Ipv4RouterL3Protocol_a3bc277d7e84b260398a08beef734ef8e}{\index{ns3\-::\-Ipv4\-Router\-L3\-Protocol@{ns3\-::\-Ipv4\-Router\-L3\-Protocol}!m\-\_\-local\-Deliver\-Trace@{m\-\_\-local\-Deliver\-Trace}}
+\index{m\-\_\-local\-Deliver\-Trace@{m\-\_\-local\-Deliver\-Trace}!ns3::Ipv4RouterL3Protocol@{ns3\-::\-Ipv4\-Router\-L3\-Protocol}}
+\subsubsection[{m\-\_\-local\-Deliver\-Trace}]{\setlength{\rightskip}{0pt plus 5cm}Traced\-Callback$<$const Ipv4\-Header \&, Ptr$<$const Packet$>$, uint32\-\_\-t$>$ ns3\-::\-Ipv4\-Router\-L3\-Protocol\-::m\-\_\-local\-Deliver\-Trace\hspace{0.3cm}{\ttfamily [private]}}}\label{classns3_1_1Ipv4RouterL3Protocol_a3bc277d7e84b260398a08beef734ef8e}
+
+
+Trace of locally delivered packets. 
+
+\hypertarget{classns3_1_1Ipv4RouterL3Protocol_ab30fadcb1d2a60537c41092b9f722bab}{\index{ns3\-::\-Ipv4\-Router\-L3\-Protocol@{ns3\-::\-Ipv4\-Router\-L3\-Protocol}!m\-\_\-node@{m\-\_\-node}}
+\index{m\-\_\-node@{m\-\_\-node}!ns3::Ipv4RouterL3Protocol@{ns3\-::\-Ipv4\-Router\-L3\-Protocol}}
+\subsubsection[{m\-\_\-node}]{\setlength{\rightskip}{0pt plus 5cm}Ptr$<$Node$>$ ns3\-::\-Ipv4\-Router\-L3\-Protocol\-::m\-\_\-node\hspace{0.3cm}{\ttfamily [private]}}}\label{classns3_1_1Ipv4RouterL3Protocol_ab30fadcb1d2a60537c41092b9f722bab}
+
+
+Node attached to stack. 
+
+\hypertarget{classns3_1_1Ipv4RouterL3Protocol_ad714caec33f35a317af6fd596c6ff1f0}{\index{ns3\-::\-Ipv4\-Router\-L3\-Protocol@{ns3\-::\-Ipv4\-Router\-L3\-Protocol}!m\-\_\-protocols@{m\-\_\-protocols}}
+\index{m\-\_\-protocols@{m\-\_\-protocols}!ns3::Ipv4RouterL3Protocol@{ns3\-::\-Ipv4\-Router\-L3\-Protocol}}
+\subsubsection[{m\-\_\-protocols}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L4\-List\-\_\-t} ns3\-::\-Ipv4\-Router\-L3\-Protocol\-::m\-\_\-protocols\hspace{0.3cm}{\ttfamily [private]}}}\label{classns3_1_1Ipv4RouterL3Protocol_ad714caec33f35a317af6fd596c6ff1f0}
+
+
+List of transport protocol. 
+
+\hypertarget{classns3_1_1Ipv4RouterL3Protocol_a06835e8c56b7c1ab3efce79e6fb6a10a}{\index{ns3\-::\-Ipv4\-Router\-L3\-Protocol@{ns3\-::\-Ipv4\-Router\-L3\-Protocol}!m\-\_\-routing\-Protocol@{m\-\_\-routing\-Protocol}}
+\index{m\-\_\-routing\-Protocol@{m\-\_\-routing\-Protocol}!ns3::Ipv4RouterL3Protocol@{ns3\-::\-Ipv4\-Router\-L3\-Protocol}}
+\subsubsection[{m\-\_\-routing\-Protocol}]{\setlength{\rightskip}{0pt plus 5cm}Ptr$<$Ipv4\-Routing\-Protocol$>$ ns3\-::\-Ipv4\-Router\-L3\-Protocol\-::m\-\_\-routing\-Protocol\hspace{0.3cm}{\ttfamily [private]}}}\label{classns3_1_1Ipv4RouterL3Protocol_a06835e8c56b7c1ab3efce79e6fb6a10a}
+
+
+Routing protocol associated with the stack. 
+
+\hypertarget{classns3_1_1Ipv4RouterL3Protocol_a8f30202038799f4581a8339378012995}{\index{ns3\-::\-Ipv4\-Router\-L3\-Protocol@{ns3\-::\-Ipv4\-Router\-L3\-Protocol}!m\-\_\-rx\-Trace@{m\-\_\-rx\-Trace}}
+\index{m\-\_\-rx\-Trace@{m\-\_\-rx\-Trace}!ns3::Ipv4RouterL3Protocol@{ns3\-::\-Ipv4\-Router\-L3\-Protocol}}
+\subsubsection[{m\-\_\-rx\-Trace}]{\setlength{\rightskip}{0pt plus 5cm}Traced\-Callback$<$Ptr$<$const Packet$>$, Ptr$<$Ipv4$>$, uint32\-\_\-t$>$ ns3\-::\-Ipv4\-Router\-L3\-Protocol\-::m\-\_\-rx\-Trace\hspace{0.3cm}{\ttfamily [private]}}}\label{classns3_1_1Ipv4RouterL3Protocol_a8f30202038799f4581a8339378012995}
+
+
+Trace of received packets. 
+
+\hypertarget{classns3_1_1Ipv4RouterL3Protocol_a43fe32063af9622684b6567a6319ac73}{\index{ns3\-::\-Ipv4\-Router\-L3\-Protocol@{ns3\-::\-Ipv4\-Router\-L3\-Protocol}!m\-\_\-send\-Outgoing\-Trace@{m\-\_\-send\-Outgoing\-Trace}}
+\index{m\-\_\-send\-Outgoing\-Trace@{m\-\_\-send\-Outgoing\-Trace}!ns3::Ipv4RouterL3Protocol@{ns3\-::\-Ipv4\-Router\-L3\-Protocol}}
+\subsubsection[{m\-\_\-send\-Outgoing\-Trace}]{\setlength{\rightskip}{0pt plus 5cm}Traced\-Callback$<$const Ipv4\-Header \&, Ptr$<$const Packet$>$, uint32\-\_\-t$>$ ns3\-::\-Ipv4\-Router\-L3\-Protocol\-::m\-\_\-send\-Outgoing\-Trace\hspace{0.3cm}{\ttfamily [private]}}}\label{classns3_1_1Ipv4RouterL3Protocol_a43fe32063af9622684b6567a6319ac73}
+
+
+Trace of sent packets. 
+
+\hypertarget{classns3_1_1Ipv4RouterL3Protocol_aa0d8fc6efa8a5785ec656e2ecb5c2489}{\index{ns3\-::\-Ipv4\-Router\-L3\-Protocol@{ns3\-::\-Ipv4\-Router\-L3\-Protocol}!m\-\_\-sockets@{m\-\_\-sockets}}
+\index{m\-\_\-sockets@{m\-\_\-sockets}!ns3::Ipv4RouterL3Protocol@{ns3\-::\-Ipv4\-Router\-L3\-Protocol}}
+\subsubsection[{m\-\_\-sockets}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Socket\-List} ns3\-::\-Ipv4\-Router\-L3\-Protocol\-::m\-\_\-sockets\hspace{0.3cm}{\ttfamily [private]}}}\label{classns3_1_1Ipv4RouterL3Protocol_aa0d8fc6efa8a5785ec656e2ecb5c2489}
+
+
+List of I\-Pv4 raw sockets. 
+
+\hypertarget{classns3_1_1Ipv4RouterL3Protocol_a4d2088884f46909d02a7d0afc97df51f}{\index{ns3\-::\-Ipv4\-Router\-L3\-Protocol@{ns3\-::\-Ipv4\-Router\-L3\-Protocol}!m\-\_\-tx\-Trace@{m\-\_\-tx\-Trace}}
+\index{m\-\_\-tx\-Trace@{m\-\_\-tx\-Trace}!ns3::Ipv4RouterL3Protocol@{ns3\-::\-Ipv4\-Router\-L3\-Protocol}}
+\subsubsection[{m\-\_\-tx\-Trace}]{\setlength{\rightskip}{0pt plus 5cm}Traced\-Callback$<$Ptr$<$const Packet$>$, Ptr$<$Ipv4$>$, uint32\-\_\-t$>$ ns3\-::\-Ipv4\-Router\-L3\-Protocol\-::m\-\_\-tx\-Trace\hspace{0.3cm}{\ttfamily [private]}}}\label{classns3_1_1Ipv4RouterL3Protocol_a4d2088884f46909d02a7d0afc97df51f}
+
+
+Trace of transmitted packets. 
+
+\hypertarget{classns3_1_1Ipv4RouterL3Protocol_aa4866fa965886a7eebb4a8c3d3ca06f6}{\index{ns3\-::\-Ipv4\-Router\-L3\-Protocol@{ns3\-::\-Ipv4\-Router\-L3\-Protocol}!m\-\_\-unicast\-Forward\-Trace@{m\-\_\-unicast\-Forward\-Trace}}
+\index{m\-\_\-unicast\-Forward\-Trace@{m\-\_\-unicast\-Forward\-Trace}!ns3::Ipv4RouterL3Protocol@{ns3\-::\-Ipv4\-Router\-L3\-Protocol}}
+\subsubsection[{m\-\_\-unicast\-Forward\-Trace}]{\setlength{\rightskip}{0pt plus 5cm}Traced\-Callback$<$const Ipv4\-Header \&, Ptr$<$const Packet$>$, uint32\-\_\-t$>$ ns3\-::\-Ipv4\-Router\-L3\-Protocol\-::m\-\_\-unicast\-Forward\-Trace\hspace{0.3cm}{\ttfamily [private]}}}\label{classns3_1_1Ipv4RouterL3Protocol_aa4866fa965886a7eebb4a8c3d3ca06f6}
+
+
+Trace of unicast forwarded packets. 
+
+\hypertarget{classns3_1_1Ipv4RouterL3Protocol_aa2364dafdd7d767041db38411457bd0c}{\index{ns3\-::\-Ipv4\-Router\-L3\-Protocol@{ns3\-::\-Ipv4\-Router\-L3\-Protocol}!m\-\_\-weak\-Es\-Model@{m\-\_\-weak\-Es\-Model}}
+\index{m\-\_\-weak\-Es\-Model@{m\-\_\-weak\-Es\-Model}!ns3::Ipv4RouterL3Protocol@{ns3\-::\-Ipv4\-Router\-L3\-Protocol}}
+\subsubsection[{m\-\_\-weak\-Es\-Model}]{\setlength{\rightskip}{0pt plus 5cm}bool ns3\-::\-Ipv4\-Router\-L3\-Protocol\-::m\-\_\-weak\-Es\-Model\hspace{0.3cm}{\ttfamily [private]}}}\label{classns3_1_1Ipv4RouterL3Protocol_aa2364dafdd7d767041db38411457bd0c}
+
+
+Weak E\-S model state. 
+
+\hypertarget{classns3_1_1Ipv4RouterL3Protocol_a2fdda6f3cb6e421706acf29bf38e8cd4}{\index{ns3\-::\-Ipv4\-Router\-L3\-Protocol@{ns3\-::\-Ipv4\-Router\-L3\-Protocol}!P\-R\-O\-T\-\_\-\-N\-U\-M\-B\-E\-R@{P\-R\-O\-T\-\_\-\-N\-U\-M\-B\-E\-R}}
+\index{P\-R\-O\-T\-\_\-\-N\-U\-M\-B\-E\-R@{P\-R\-O\-T\-\_\-\-N\-U\-M\-B\-E\-R}!ns3::Ipv4RouterL3Protocol@{ns3\-::\-Ipv4\-Router\-L3\-Protocol}}
+\subsubsection[{P\-R\-O\-T\-\_\-\-N\-U\-M\-B\-E\-R}]{\setlength{\rightskip}{0pt plus 5cm}const uint16\-\_\-t ns3\-::\-Ipv4\-Router\-L3\-Protocol\-::\-P\-R\-O\-T\-\_\-\-N\-U\-M\-B\-E\-R = 0x0800\hspace{0.3cm}{\ttfamily [static]}}}\label{classns3_1_1Ipv4RouterL3Protocol_a2fdda6f3cb6e421706acf29bf38e8cd4}
+
+
+Protocol number (0x0800) 
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+model/\hyperlink{ipv4-router-l3-protocol_8h}{ipv4-\/router-\/l3-\/protocol.\-h}\item 
+model/\hyperlink{ipv4-router-l3-protocol_8cc}{ipv4-\/router-\/l3-\/protocol.\-cc}\end{DoxyCompactItemize}

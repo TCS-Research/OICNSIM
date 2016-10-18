@@ -89,7 +89,7 @@ public:
 	 * \param dnsPlusHeader dns Plus header section of the packet
 	 * \param oicnHeader oicn header section of the packet
 	 **/
-	void SendAckToIcnManager(Ipv4Address icnManagerIpv4Address, uint16_t icnManagerPort, DnsPlusQuestionHeader dnsPlusQuestionHeader, DnsPlusHeader dnsPlusHeader,OICNHeader oicnHeader);
+	void SendAckToIcnManager(Ipv4Address icnManagerIpv4Address, uint16_t icnManagerPort, DnsPlusQuestionHeader dnsPlusQuestionHeader, DnsPlusHeader dnsPlusHeader,OicnHeader oicnHeader);
 
 protected:
 	

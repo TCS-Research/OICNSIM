@@ -1,0 +1,51 @@
+#ifndef NAMED_CONTENT_CACHE_ENTRY_H
+#define NAMED_CONTENT_CACHE_ENTRY_H
+
+#include "ns3/type-name.h"
+#include "ns3/type-id.h"
+#include <stdint.h>
+
+namespace ns3{
+namespace oicn{
+
+/* This is a class that represents an entry to the named content cache. The entry contains the data 
+   buffer of the packet along with many parameters associated with it, such as packet size, TTL etc.
+   Currently we guarentee only these parameters. In future versions, we make this a template class 
+   to include variable number of parameters. There is an empty constructor, so that the user can assign 
+   values to only to the required parameters. */  
+
+class NamedContentCacheEntry
+
+{
+  private:
+  
+  uint8_t m_data;
+  uint32_t m_ttl;
+  uint32_t m_timestamp;
+  uint32_t m_frequency;
+  uint32_t m_sourceip;
+  uint32_t m_packetsize;
+  uint32_t m_id;
+  
+  public:
+   
+  NamedContentCacheEntry();
+  virtual ~NamedContentCacheEntry();
+  inline void SetData (uint8_t data);
+  inline uint8_t GetData ();
+  inline void SetTTL(uint32_t ttl);
+  inline uint32_t GetTTL();
+  inline void SetTimestamp(uint32_t timestamp);
+  inline uint32_t GetTimestamp();
+  inline void SetFrequency(uint32_t frequency);
+  inline uint32_t GetFrequency();
+  inline void SetSourceIP(uint32_t sourceip);
+  inline uint32_t GetSourceIP();
+  inline void SetPacketSize(uint32_t size);
+  inline uint32_t GetPacketSize();
+  inline void SetPacketID(uint32_t uid);
+  inline uint32_t GetPacketID();
+};
+} // end of namespace ns3
+} // end of namespace oicn
+#endif

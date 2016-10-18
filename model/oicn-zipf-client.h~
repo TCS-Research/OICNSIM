@@ -1,0 +1,58 @@
+#ifndef OICN_ZIPF_CLIENT_H
+#define OICN_ZIPF_CLIENT_H
+
+#include "ns3/application.h"
+#include "ns3/ipv4-address.h"
+#include <vector>
+#include <stdint.h>
+//#include <unordered_map>
+#include "ns3/random-variable-stream.h"
+#include "ns3/event-id.h"
+#include "ns3/type-name.h"
+#include "ns3/type-id.h"
+#include "ns3/socket.h"
+#include "ns3/ptr.h"
+#include "ns3/packet.h"
+#include "ns3/type-id.h"
+#include "ns3/node.h"
+
+namespace ns3{
+//namespace oicn{
+
+class OICNZipfClient : public Application
+{
+public:
+	
+	static TypeId GetTypeId (void);
+	OICNZipfClient ();
+	virtual ~OICNZipfClient (void);
+	void ContentQuery ();
+	void SetZipf (std::pair<int, int> range);
+	void HandleRead (Ptr<Socket> socket);
+	
+protected:
+	
+	virtual void DoDispose (void);
+	
+private:
+	
+	virtual void StartApplication (void);
+	virtual void StopApplication (void);
+	int GetNextContentIndex ();
+
+	//std::vector<int> m_index;
+	std::pair<int, int> m_range
+	int i, m_sent, m_count;
+	double m_q;                 // q in (k+q)^s
+	double m_s;                 // s in (k+q)^s
+	std::vector<double> m_Pcum; // cumulative probability
+	uint32_t m_N;
+	UniformRandomVariable m_SeqRng; // RNG
+	uint16_t m_port;
+	Ptr<Socket> m_socket;
+    EventId m_sendEvent;
+    Time m_interval;
+};
+//}
+}
+#endif

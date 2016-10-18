@@ -43,9 +43,9 @@ void print_map(const MapType & m)
 
 
 /**
- * \brief container to store mapping of name and corresponding ip address of the server.
- *it is used at ICN Manager to find ipv4 address of server at which the requested name is stored
- * */
+ * \brief Container to store mapping of name and corresponding ip address of the server.
+ *It is used at ICN Manager to find ipv4 address of server at which the requested name is stored.
+ **/
 
 typedef boost::unordered_multimap<std::string, Ipv4Address> NameServerTable;
 
@@ -135,7 +135,7 @@ public:
 	 * \param oicnHeader oicn header section of the packet
 	 * \param flag if true shows ACK has to be sent otherwise NACK
 	 */
-	void SendAckToClient(Ipv4Address  clientIpv4Address, uint16_t clientPort, DnsPlusQuestionHeader dnsPlusQuestionHeader, DnsPlusHeader dnsPlusHeader,OICNHeader oicnHeader,bool &flag);
+	void SendAckToClient(Ipv4Address  clientIpv4Address, uint16_t clientPort, DnsPlusQuestionHeader dnsPlusQuestionHeader, DnsPlusHeader dnsPlusHeader,OicnHeader oicnHeader,bool &flag);
 
 	/**
 	 * \brief Send Reply packet (with dnsPlus Answer section) to source of content.
@@ -147,7 +147,7 @@ public:
 	 * \param dnsPlusHeader dnsPlus header section of the packet
 	 * \param oicnHeader oicn header section of the packet
 	 */
-	void SendToSource(Ipv4Address sourceIpAddress, Ipv4Address clientIpv4Address,DnsPlusQuestionHeader dnsPlusQuestionHeader,DnsPlusHeader dnsPlusHeader,OICNHeader oicnHeader);
+	void SendToSource(Ipv4Address sourceIpAddress, Ipv4Address clientIpv4Address,DnsPlusQuestionHeader dnsPlusQuestionHeader,DnsPlusHeader dnsPlusHeader,OicnHeader oicnHeader);
 
 protected:
 
@@ -156,34 +156,40 @@ protected:
 private:
 
 	/**
-	 * \brief Handle a packet reception from client port(26).
+	 * \brief Handle a packet reception from client port (26).
 	 * This function is called by lower layers.
 	 * \param socket the socket the packet was received to
 	 */
 	void HandleReadClient (Ptr<Socket> socket);
 
 	/**
-	 * \brief Handle a packet reception from source port (both server source and cached source(router) port 89 ).
+	 * \brief Handle a packet reception from source port (both server source and cached source(icn router) port 89).
 	 * This function is called by lower layers.
 	 * \param socket the socket the packet was received to
 	 */
 
 	void HandleReadSource (Ptr<Socket> socket);
 
-	uint32_t m_count; //!< Maximum number of packets the application will send
-	Time m_interval; //!< Packet inter-send time
-	uint32_t m_size; //!< Size of the sent packet
+	uint32_t m_count; //!< maximum number of packets the application will send
+	Time m_interval; //!< packet inter-send time
+	uint32_t m_size; //!< size of the sent packet
 
 	virtual void StartApplication (void);
 	virtual void StopApplication (void);
-	Ptr<Socket> m_socketClient;//!<Socket connected to client port 26
-	Ptr<Socket> m_socketSource;//!<Socket connected to source port 89
-	uint16_t m_port; //!<Port at which client will listen to the request, here port defined as 36
-	uint16_t m_sourcePort;//!<Port at which source (server or cached router) will listen to the request, here source port defined as 89
-	uint16_t m_clientPort;//!<Port at which client will listen to the request, here client port defined as 26
+	Ptr<Socket> m_socketClient;//!<socket connected to client port 26
+	Ptr<Socket> m_socketSource;//!<socket connected to source port 89
+	uint16_t m_port; //!<port at which client will listen to the request, here port defined as 36
+	uint16_t m_sourcePort;//!<port at which source (server or cached router) will listen to the request, here source port defined as 89
+	uint16_t m_clientPort;//!<port at which client will listen to the request, here client port defined as 26
 
-	static NameServerTable nameServerTable;//<!Container to store mapping of name and corresponding ip address of the server.
-	static CachedRouterTable cachedRouterTable;//<!Container to store mapping of name and corresponding ip address of the cached router.
+	/**
+	 * \brief Container to store mapping of name and corresponding ip address of the server.
+	 */
+	static NameServerTable nameServerTable;
+	/**
+	 * \brief Container to store mapping of name and corresponding ip address of the cached router.
+	 */
+	static CachedRouterTable cachedRouterTable;
 };
 
 

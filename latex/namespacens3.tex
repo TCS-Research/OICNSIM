@@ -1,0 +1,328 @@
+\hypertarget{namespacens3}{\section{ns3 Namespace Reference}
+\label{namespacens3}\index{ns3@{ns3}}
+}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classns3_1_1OicnServerHelper}{Oicn\-Server\-Helper}
+\begin{DoxyCompactList}\small\item\em Create a O\-I\-C\-N Server application. I\-C\-N Manager direct O\-I\-C\-N server to send requested content to O\-I\-C\-N client. \end{DoxyCompactList}\item 
+class \hyperlink{classns3_1_1IcnManagerHelper}{Icn\-Manager\-Helper}
+\begin{DoxyCompactList}\small\item\em Create an application which resolve the name request (check whether content present at I\-C\-N router or server) and forward request to source of content (I\-C\-N router or server). \end{DoxyCompactList}\item 
+class \hyperlink{classns3_1_1OicnClientHelpher}{Oicn\-Client\-Helpher}
+\begin{DoxyCompactList}\small\item\em Create a O\-I\-C\-N Client application which send content name resolution request to I\-C\-N Manager. I\-C\-N Manager direct the content request to I\-C\-N source (O\-I\-C\-N server or I\-C\-N router) which reply to O\-I\-C\-N client with requested content. \end{DoxyCompactList}\item 
+class \hyperlink{classns3_1_1OicnZipfClientHelper}{Oicn\-Zipf\-Client\-Helper}
+\begin{DoxyCompactList}\small\item\em Create O\-I\-C\-N Zipf Client, it generates request for the contents following Zipf-\/\-Mandelbrot Distribution. Here is the explanation of Zipf-\/\-Mandelbrot Distribution\-: \href{http://en.wikipedia.org/wiki/Zipf%E2%80%93Mandelbrot_law}{\tt http\-://en.\-wikipedia.\-org/wiki/\-Zipf\%\-E2\%80\%93\-Mandelbrot\-\_\-law}. Client application send name resolution to I\-C\-N Manager. I\-C\-N Manager do the name resolution and direct source (I\-C\-N router or server) to send the content to the O\-I\-C\-N Zipf Client. \end{DoxyCompactList}\item 
+class \hyperlink{classns3_1_1IcnRouterHelpher}{Icn\-Router\-Helpher}
+\begin{DoxyCompactList}\small\item\em I\-C\-N Router has the capability to cache the contents. \end{DoxyCompactList}\item 
+class \hyperlink{classns3_1_1RouterStackHelper}{Router\-Stack\-Helper}
+\begin{DoxyCompactList}\small\item\em Aggregate I\-P/\-T\-C\-P/\-U\-D\-P and Caching functionality to only I\-C\-N Routers in the Network. \end{DoxyCompactList}\item 
+class \hyperlink{classns3_1_1CacheManager}{Cache\-Manager}
+\begin{DoxyCompactList}\small\item\em Manages the Named \hyperlink{classns3_1_1Content}{Content} Cache of an O\-I\-C\-N Router. \end{DoxyCompactList}\item 
+class \hyperlink{classns3_1_1CacheWithFifo}{Cache\-With\-Fifo}
+\begin{DoxyCompactList}\small\item\em This class implements the first in first out caching policy. \end{DoxyCompactList}\item 
+class \hyperlink{classns3_1_1CacheWithLFU}{Cache\-With\-L\-F\-U}
+\begin{DoxyCompactList}\small\item\em This class implements the Least Frequently Used caching policy. \end{DoxyCompactList}\item 
+class \hyperlink{classns3_1_1CacheWithLRU}{Cache\-With\-L\-R\-U}
+\begin{DoxyCompactList}\small\item\em This class implements the Least Recently Used caching policy. \end{DoxyCompactList}\item 
+class \hyperlink{classns3_1_1Content}{Content}
+\begin{DoxyCompactList}\small\item\em This class is used for creating different content name corresponding to index. To create different content name we have assume a content name will be a combination of a common string and corresponding index e.\-g. if index is 12, content name will be combination of common string oicn\-://content/category/subcategory and index 12 i.\-e. oicn\-://content/category/subcategory1/2. \end{DoxyCompactList}\item 
+class \hyperlink{classns3_1_1DnsPlusAnswerSection}{Dns\-Plus\-Answer\-Section}
+\begin{DoxyCompactList}\small\item\em It is similar to D\-N\-S Answer Section header. \end{DoxyCompactList}\item 
+class \hyperlink{classns3_1_1DnsPlusHeader}{Dns\-Plus\-Header}
+\begin{DoxyCompactList}\small\item\em It is similar to D\-N\-S header. It used for name resolution of the content. \end{DoxyCompactList}\item 
+class \hyperlink{classns3_1_1DnsPlusQuestionHeader}{Dns\-Plus\-Question\-Header}
+\begin{DoxyCompactList}\small\item\em It is similar to D\-N\-S Question Section header. It contains the name of the content to be queried. \end{DoxyCompactList}\item 
+class \hyperlink{classns3_1_1IcnManager}{Icn\-Manager}
+\begin{DoxyCompactList}\small\item\em It resolves the name requested by the client and direct the source (server or cached source(router)) to send the requested content back to client. \end{DoxyCompactList}\item 
+class \hyperlink{classns3_1_1IcnRouter}{Icn\-Router}
+\begin{DoxyCompactList}\small\item\em I\-C\-N Router has the capability to cache the contents. \end{DoxyCompactList}\item 
+class \hyperlink{classns3_1_1Ipv4RouterL3Protocol}{Ipv4\-Router\-L3\-Protocol}
+\begin{DoxyCompactList}\small\item\em Implement the Ipv4 layer in an I\-C\-N Router. \end{DoxyCompactList}\item 
+class \hyperlink{classns3_1_1NamedContentCacheEntry}{Named\-Content\-Cache\-Entry}
+\begin{DoxyCompactList}\small\item\em Entry class for \hyperlink{classns3_1_1NamedContentCache}{Named\-Content\-Cache} container of I\-C\-N Router. \end{DoxyCompactList}\item 
+class \hyperlink{classns3_1_1NamedContentCache}{Named\-Content\-Cache}
+\begin{DoxyCompactList}\small\item\em The base class for caching data at the I\-C\-N Router. \end{DoxyCompactList}\item 
+class \hyperlink{classns3_1_1OicnClient}{Oicn\-Client}
+\begin{DoxyCompactList}\small\item\em O\-I\-C\-N client application requests for content name resolution to I\-C\-N Manager. I\-C\-N Manager in turn resolve the name request and direct source of content (I\-C\-N router or server) to send the content to client. \end{DoxyCompactList}\item 
+class \hyperlink{classns3_1_1OicnHeader}{Oicn\-Header}
+\begin{DoxyCompactList}\small\item\em Class for Creating and Appending O-\/\-I\-C\-N Sublayer to a Packet. \end{DoxyCompactList}\item 
+class \hyperlink{classns3_1_1OicnServer}{Oicn\-Server}
+\begin{DoxyCompactList}\small\item\em O\-I\-C\-N Server Application, it accept request of content from I\-C\-N Manager and send to the client. \end{DoxyCompactList}\item 
+class \hyperlink{classns3_1_1OICNZipfClient}{O\-I\-C\-N\-Zipf\-Client}
+\begin{DoxyCompactList}\small\item\em O\-I\-C\-N Zipf Client application, it generates request for the contents following Zipf-\/\-Mandelbrot Distribution. Here is the explanation of Zipf-\/\-Mandelbrot Distribution\-: \href{http://en.wikipedia.org/wiki/Zipf%E2%80%93Mandelbrot_law}{\tt http\-://en.\-wikipedia.\-org/wiki/\-Zipf\%\-E2\%80\%93\-Mandelbrot\-\_\-law}. Client application send name resolution to I\-C\-N Manager. I\-C\-N Manager do the name resolution and direct source (I\-C\-N router or server) to send the content to the O\-I\-C\-N Zipf Client. \end{DoxyCompactList}\item 
+class \hyperlink{classns3_1_1SimpleUniversalCaching}{Simple\-Universal\-Caching}
+\begin{DoxyCompactList}\small\item\em This class implements the Universal caching policy. \end{DoxyCompactList}\item 
+class \hyperlink{classns3_1_1SublayerProtocol}{Sublayer\-Protocol}
+\begin{DoxyCompactList}\small\item\em Implements the O\-I\-C\-N Sublayer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef std\-::pair$<$ Ptr$<$ Ipv4 $>$\\*
+, uint32\-\_\-t $>$ \hyperlink{namespacens3_a83e2603870381affabd5ca766d17daff}{Interface\-Pair\-Ipv4}
+\item 
+typedef std\-::map\\*
+$<$ \hyperlink{namespacens3_a83e2603870381affabd5ca766d17daff}{Interface\-Pair\-Ipv4}, Ptr\\*
+$<$ Pcap\-File\-Wrapper $>$ $>$ \hyperlink{namespacens3_ab14a5629528234e6f76ad3bb180022fe}{Interface\-File\-Map\-Ipv4}
+\item 
+typedef std\-::map\\*
+$<$ \hyperlink{namespacens3_a83e2603870381affabd5ca766d17daff}{Interface\-Pair\-Ipv4}, Ptr\\*
+$<$ Output\-Stream\-Wrapper $>$ $>$ \hyperlink{namespacens3_a5634ac4e27d952132fba4cd906d4ebd3}{Interface\-Stream\-Map\-Ipv4}
+\item 
+typedef \\*
+boost\-::unordered\-\_\-multimap\\*
+$<$ std\-::string, Ipv4\-Address $>$ \hyperlink{namespacens3_a30b2bc59285e3015fedd6268c6f77947}{Name\-Server\-Table}
+\begin{DoxyCompactList}\small\item\em Container to store mapping of name and corresponding ip address of the server. It is used at I\-C\-N Manager to find ipv4 address of server at which the requested name is stored. \end{DoxyCompactList}\item 
+typedef \\*
+boost\-::unordered\-\_\-multimap\\*
+$<$ std\-::string, Ipv4\-Address $>$ \hyperlink{namespacens3_a6e64320f2e97002ba6cd340bbfb76767}{Cached\-Router\-Table}
+\begin{DoxyCompactList}\small\item\em container to store mapping of name and corresponding ip address of the cached router. \hyperlink{classns3_1_1Content}{Content} is cached at the router. It stores the name of the content and ip address of router where the content was cached. \end{DoxyCompactList}\item 
+typedef \\*
+Cached\-Router\-Table\-::const\-\_\-iterator \hyperlink{namespacens3_a0d17c0f2e1efb713fe4a62d283039f06}{cr\-Iterator}
+\begin{DoxyCompactList}\small\item\em Type Definition for the constant iterater of the Cached\-Router\-Table. \end{DoxyCompactList}\item 
+typedef \\*
+Name\-Server\-Table\-::const\-\_\-iterator \hyperlink{namespacens3_a81ca04d4bcf5358cad6f7b2d7fd0fe2a}{nsiterator}
+\begin{DoxyCompactList}\small\item\em Type Definition for the constant iterater of the Cached\-Router\-Table. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \hyperlink{namespacens3_acde124208ae741ae241b61b9a22ead8d}{Ipv4\-Router\-L3\-Protocol\-Rx\-Tx\-Sink} (Ptr$<$ const Packet $>$ p, Ptr$<$ Ipv4 $>$ ipv4, uint32\-\_\-t interface)
+\item 
+\hyperlink{namespacens3_a8da84469566489f34d19639bac5068a9}{N\-S\-\_\-\-O\-B\-J\-E\-C\-T\-\_\-\-E\-N\-S\-U\-R\-E\-\_\-\-R\-E\-G\-I\-S\-T\-E\-R\-E\-D} (\hyperlink{classns3_1_1CacheManager}{Cache\-Manager})
+\item 
+\hyperlink{namespacens3_aecd9f25af1b30fe642f6ecdfc1eac7fd}{N\-S\-\_\-\-O\-B\-J\-E\-C\-T\-\_\-\-E\-N\-S\-U\-R\-E\-\_\-\-R\-E\-G\-I\-S\-T\-E\-R\-E\-D} (\hyperlink{classns3_1_1CacheWithFifo}{Cache\-With\-Fifo})
+\item 
+\hyperlink{namespacens3_a704818cf1d1907da8696fd1ba465ec38}{N\-S\-\_\-\-O\-B\-J\-E\-C\-T\-\_\-\-E\-N\-S\-U\-R\-E\-\_\-\-R\-E\-G\-I\-S\-T\-E\-R\-E\-D} (\hyperlink{classns3_1_1CacheWithLFU}{Cache\-With\-L\-F\-U})
+\item 
+\hyperlink{namespacens3_a35f0a7af48a81b53a1ef5dc824e13802}{N\-S\-\_\-\-O\-B\-J\-E\-C\-T\-\_\-\-E\-N\-S\-U\-R\-E\-\_\-\-R\-E\-G\-I\-S\-T\-E\-R\-E\-D} (\hyperlink{classns3_1_1CacheWithLRU}{Cache\-With\-L\-R\-U})
+\item 
+\hyperlink{namespacens3_a3e3a498ea22985f2c7e32c84a98efe01}{N\-S\-\_\-\-O\-B\-J\-E\-C\-T\-\_\-\-E\-N\-S\-U\-R\-E\-\_\-\-R\-E\-G\-I\-S\-T\-E\-R\-E\-D} (\hyperlink{classns3_1_1DnsPlusAnswerSection}{Dns\-Plus\-Answer\-Section})
+\item 
+\hyperlink{namespacens3_a57376580499e06ddc7511faa940ee830}{N\-S\-\_\-\-O\-B\-J\-E\-C\-T\-\_\-\-E\-N\-S\-U\-R\-E\-\_\-\-R\-E\-G\-I\-S\-T\-E\-R\-E\-D} (\hyperlink{classns3_1_1DnsPlusHeader}{Dns\-Plus\-Header})
+\item 
+\hyperlink{namespacens3_a80d7142232aff7f2dc93bc1712e44175}{N\-S\-\_\-\-O\-B\-J\-E\-C\-T\-\_\-\-E\-N\-S\-U\-R\-E\-\_\-\-R\-E\-G\-I\-S\-T\-E\-R\-E\-D} (\hyperlink{classns3_1_1DnsPlusQuestionHeader}{Dns\-Plus\-Question\-Header})
+\item 
+\hyperlink{namespacens3_aeee9902c9606817f94af20038a756d49}{N\-S\-\_\-\-O\-B\-J\-E\-C\-T\-\_\-\-E\-N\-S\-U\-R\-E\-\_\-\-R\-E\-G\-I\-S\-T\-E\-R\-E\-D} (\hyperlink{classns3_1_1IcnManager}{Icn\-Manager})
+\item 
+{\footnotesize template$<$class Map\-Type $>$ }\\void \hyperlink{namespacens3_ab673fe087092e83ec770c736b6cb6c3f}{print\-\_\-map} (const Map\-Type \&m)
+\item 
+\hyperlink{namespacens3_acbb68d2034dc3902cee0df5508ca8e9b}{N\-S\-\_\-\-O\-B\-J\-E\-C\-T\-\_\-\-E\-N\-S\-U\-R\-E\-\_\-\-R\-E\-G\-I\-S\-T\-E\-R\-E\-D} (\hyperlink{classns3_1_1IcnRouter}{Icn\-Router})
+\item 
+\hyperlink{namespacens3_ae38be77e7e591e3f607c3adab9edbead}{N\-S\-\_\-\-O\-B\-J\-E\-C\-T\-\_\-\-E\-N\-S\-U\-R\-E\-\_\-\-R\-E\-G\-I\-S\-T\-E\-R\-E\-D} (\hyperlink{classns3_1_1Ipv4RouterL3Protocol}{Ipv4\-Router\-L3\-Protocol})
+\item 
+\hyperlink{namespacens3_aeef94ca03b6f6aedeb2e56a2a89dcfb3}{N\-S\-\_\-\-O\-B\-J\-E\-C\-T\-\_\-\-E\-N\-S\-U\-R\-E\-\_\-\-R\-E\-G\-I\-S\-T\-E\-R\-E\-D} (\hyperlink{classns3_1_1NamedContentCache}{Named\-Content\-Cache})
+\item 
+\hyperlink{namespacens3_a180cc56188c0e63295439f2f58246f48}{N\-S\-\_\-\-O\-B\-J\-E\-C\-T\-\_\-\-E\-N\-S\-U\-R\-E\-\_\-\-R\-E\-G\-I\-S\-T\-E\-R\-E\-D} (\hyperlink{classns3_1_1OicnClient}{Oicn\-Client})
+\item 
+\hyperlink{namespacens3_ad2212d0dcd1ccd20c6030d2c76e196c7}{N\-S\-\_\-\-O\-B\-J\-E\-C\-T\-\_\-\-E\-N\-S\-U\-R\-E\-\_\-\-R\-E\-G\-I\-S\-T\-E\-R\-E\-D} (\hyperlink{classns3_1_1OicnHeader}{Oicn\-Header})
+\item 
+\hyperlink{namespacens3_abb83fe630e3f65b883af1bcf508dac71}{N\-S\-\_\-\-O\-B\-J\-E\-C\-T\-\_\-\-E\-N\-S\-U\-R\-E\-\_\-\-R\-E\-G\-I\-S\-T\-E\-R\-E\-D} (\hyperlink{classns3_1_1OicnServer}{Oicn\-Server})
+\item 
+\hyperlink{namespacens3_a26e378a3dcc3dd94128b88d95d55f5d2}{N\-S\-\_\-\-O\-B\-J\-E\-C\-T\-\_\-\-E\-N\-S\-U\-R\-E\-\_\-\-R\-E\-G\-I\-S\-T\-E\-R\-E\-D} (\hyperlink{classns3_1_1OICNZipfClient}{O\-I\-C\-N\-Zipf\-Client})
+\item 
+\hyperlink{namespacens3_a2be7b55fe7376e277afb8f71327b9d05}{N\-S\-\_\-\-L\-O\-G\-\_\-\-C\-O\-M\-P\-O\-N\-E\-N\-T\-\_\-\-D\-E\-F\-I\-N\-E} (\char`\"{}O\-I\-C\-N\-Zipf\-Client\char`\"{})
+\item 
+\hyperlink{namespacens3_a11d4fd8e7336cda6fe2fb537c212ef34}{N\-S\-\_\-\-O\-B\-J\-E\-C\-T\-\_\-\-E\-N\-S\-U\-R\-E\-\_\-\-R\-E\-G\-I\-S\-T\-E\-R\-E\-D} (\hyperlink{classns3_1_1SimpleUniversalCaching}{Simple\-Universal\-Caching})
+\item 
+\hyperlink{namespacens3_a5b24363261fa57f25abe3ebab1c4f6e9}{N\-S\-\_\-\-O\-B\-J\-E\-C\-T\-\_\-\-E\-N\-S\-U\-R\-E\-\_\-\-R\-E\-G\-I\-S\-T\-E\-R\-E\-D} (\hyperlink{classns3_1_1SublayerProtocol}{Sublayer\-Protocol})
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{namespacens3_ab14a5629528234e6f76ad3bb180022fe}{Interface\-File\-Map\-Ipv4} \hyperlink{namespacens3_ac1df4c15ca334fd8713f6600d097c1a6}{g\-\_\-interface\-File\-Map\-Ipv4}
+\item 
+static \hyperlink{namespacens3_a5634ac4e27d952132fba4cd906d4ebd3}{Interface\-Stream\-Map\-Ipv4} \hyperlink{namespacens3_ad7720e08dcb21331d85c00128abc175a}{g\-\_\-interface\-Stream\-Map\-Ipv4}
+\end{DoxyCompactItemize}
+
+
+\subsection{Typedef Documentation}
+\hypertarget{namespacens3_a6e64320f2e97002ba6cd340bbfb76767}{\index{ns3@{ns3}!Cached\-Router\-Table@{Cached\-Router\-Table}}
+\index{Cached\-Router\-Table@{Cached\-Router\-Table}!ns3@{ns3}}
+\subsubsection[{Cached\-Router\-Table}]{\setlength{\rightskip}{0pt plus 5cm}typedef boost\-::unordered\-\_\-multimap$<$std\-::string, Ipv4\-Address$>$ {\bf ns3\-::\-Cached\-Router\-Table}}}\label{namespacens3_a6e64320f2e97002ba6cd340bbfb76767}
+
+
+container to store mapping of name and corresponding ip address of the cached router. \hyperlink{classns3_1_1Content}{Content} is cached at the router. It stores the name of the content and ip address of router where the content was cached. 
+
+\hypertarget{namespacens3_a0d17c0f2e1efb713fe4a62d283039f06}{\index{ns3@{ns3}!cr\-Iterator@{cr\-Iterator}}
+\index{cr\-Iterator@{cr\-Iterator}!ns3@{ns3}}
+\subsubsection[{cr\-Iterator}]{\setlength{\rightskip}{0pt plus 5cm}typedef Cached\-Router\-Table\-::const\-\_\-iterator {\bf ns3\-::cr\-Iterator}}}\label{namespacens3_a0d17c0f2e1efb713fe4a62d283039f06}
+
+
+Type Definition for the constant iterater of the Cached\-Router\-Table. 
+
+\hypertarget{namespacens3_ab14a5629528234e6f76ad3bb180022fe}{\index{ns3@{ns3}!Interface\-File\-Map\-Ipv4@{Interface\-File\-Map\-Ipv4}}
+\index{Interface\-File\-Map\-Ipv4@{Interface\-File\-Map\-Ipv4}!ns3@{ns3}}
+\subsubsection[{Interface\-File\-Map\-Ipv4}]{\setlength{\rightskip}{0pt plus 5cm}typedef std\-::map$<${\bf Interface\-Pair\-Ipv4}, Ptr$<$Pcap\-File\-Wrapper$>$ $>$ {\bf ns3\-::\-Interface\-File\-Map\-Ipv4}}}\label{namespacens3_ab14a5629528234e6f76ad3bb180022fe}
+\hypertarget{namespacens3_a83e2603870381affabd5ca766d17daff}{\index{ns3@{ns3}!Interface\-Pair\-Ipv4@{Interface\-Pair\-Ipv4}}
+\index{Interface\-Pair\-Ipv4@{Interface\-Pair\-Ipv4}!ns3@{ns3}}
+\subsubsection[{Interface\-Pair\-Ipv4}]{\setlength{\rightskip}{0pt plus 5cm}typedef std\-::pair$<$Ptr$<$Ipv4$>$, uint32\-\_\-t$>$ {\bf ns3\-::\-Interface\-Pair\-Ipv4}}}\label{namespacens3_a83e2603870381affabd5ca766d17daff}
+\hypertarget{namespacens3_a5634ac4e27d952132fba4cd906d4ebd3}{\index{ns3@{ns3}!Interface\-Stream\-Map\-Ipv4@{Interface\-Stream\-Map\-Ipv4}}
+\index{Interface\-Stream\-Map\-Ipv4@{Interface\-Stream\-Map\-Ipv4}!ns3@{ns3}}
+\subsubsection[{Interface\-Stream\-Map\-Ipv4}]{\setlength{\rightskip}{0pt plus 5cm}typedef std\-::map$<${\bf Interface\-Pair\-Ipv4}, Ptr$<$Output\-Stream\-Wrapper$>$ $>$ {\bf ns3\-::\-Interface\-Stream\-Map\-Ipv4}}}\label{namespacens3_a5634ac4e27d952132fba4cd906d4ebd3}
+\hypertarget{namespacens3_a30b2bc59285e3015fedd6268c6f77947}{\index{ns3@{ns3}!Name\-Server\-Table@{Name\-Server\-Table}}
+\index{Name\-Server\-Table@{Name\-Server\-Table}!ns3@{ns3}}
+\subsubsection[{Name\-Server\-Table}]{\setlength{\rightskip}{0pt plus 5cm}typedef boost\-::unordered\-\_\-multimap$<$std\-::string, Ipv4\-Address$>$ {\bf ns3\-::\-Name\-Server\-Table}}}\label{namespacens3_a30b2bc59285e3015fedd6268c6f77947}
+
+
+Container to store mapping of name and corresponding ip address of the server. It is used at I\-C\-N Manager to find ipv4 address of server at which the requested name is stored. 
+
+\hypertarget{namespacens3_a81ca04d4bcf5358cad6f7b2d7fd0fe2a}{\index{ns3@{ns3}!nsiterator@{nsiterator}}
+\index{nsiterator@{nsiterator}!ns3@{ns3}}
+\subsubsection[{nsiterator}]{\setlength{\rightskip}{0pt plus 5cm}typedef Name\-Server\-Table\-::const\-\_\-iterator {\bf ns3\-::nsiterator}}}\label{namespacens3_a81ca04d4bcf5358cad6f7b2d7fd0fe2a}
+
+
+Type Definition for the constant iterater of the Cached\-Router\-Table. 
+
+
+
+\subsection{Function Documentation}
+\hypertarget{namespacens3_acde124208ae741ae241b61b9a22ead8d}{\index{ns3@{ns3}!Ipv4\-Router\-L3\-Protocol\-Rx\-Tx\-Sink@{Ipv4\-Router\-L3\-Protocol\-Rx\-Tx\-Sink}}
+\index{Ipv4\-Router\-L3\-Protocol\-Rx\-Tx\-Sink@{Ipv4\-Router\-L3\-Protocol\-Rx\-Tx\-Sink}!ns3@{ns3}}
+\subsubsection[{Ipv4\-Router\-L3\-Protocol\-Rx\-Tx\-Sink}]{\setlength{\rightskip}{0pt plus 5cm}static void ns3\-::\-Ipv4\-Router\-L3\-Protocol\-Rx\-Tx\-Sink (
+\begin{DoxyParamCaption}
+\item[{Ptr$<$ const Packet $>$}]{p, }
+\item[{Ptr$<$ Ipv4 $>$}]{ipv4, }
+\item[{uint32\-\_\-t}]{interface}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{namespacens3_acde124208ae741ae241b61b9a22ead8d}
+\hypertarget{namespacens3_a2be7b55fe7376e277afb8f71327b9d05}{\index{ns3@{ns3}!N\-S\-\_\-\-L\-O\-G\-\_\-\-C\-O\-M\-P\-O\-N\-E\-N\-T\-\_\-\-D\-E\-F\-I\-N\-E@{N\-S\-\_\-\-L\-O\-G\-\_\-\-C\-O\-M\-P\-O\-N\-E\-N\-T\-\_\-\-D\-E\-F\-I\-N\-E}}
+\index{N\-S\-\_\-\-L\-O\-G\-\_\-\-C\-O\-M\-P\-O\-N\-E\-N\-T\-\_\-\-D\-E\-F\-I\-N\-E@{N\-S\-\_\-\-L\-O\-G\-\_\-\-C\-O\-M\-P\-O\-N\-E\-N\-T\-\_\-\-D\-E\-F\-I\-N\-E}!ns3@{ns3}}
+\subsubsection[{N\-S\-\_\-\-L\-O\-G\-\_\-\-C\-O\-M\-P\-O\-N\-E\-N\-T\-\_\-\-D\-E\-F\-I\-N\-E}]{\setlength{\rightskip}{0pt plus 5cm}ns3\-::\-N\-S\-\_\-\-L\-O\-G\-\_\-\-C\-O\-M\-P\-O\-N\-E\-N\-T\-\_\-\-D\-E\-F\-I\-N\-E (
+\begin{DoxyParamCaption}
+\item[{\char`\"{}O\-I\-C\-N\-Zipf\-Client\char`\"{}}]{}
+\end{DoxyParamCaption}
+)}}\label{namespacens3_a2be7b55fe7376e277afb8f71327b9d05}
+\hypertarget{namespacens3_ad2212d0dcd1ccd20c6030d2c76e196c7}{\index{ns3@{ns3}!N\-S\-\_\-\-O\-B\-J\-E\-C\-T\-\_\-\-E\-N\-S\-U\-R\-E\-\_\-\-R\-E\-G\-I\-S\-T\-E\-R\-E\-D@{N\-S\-\_\-\-O\-B\-J\-E\-C\-T\-\_\-\-E\-N\-S\-U\-R\-E\-\_\-\-R\-E\-G\-I\-S\-T\-E\-R\-E\-D}}
+\index{N\-S\-\_\-\-O\-B\-J\-E\-C\-T\-\_\-\-E\-N\-S\-U\-R\-E\-\_\-\-R\-E\-G\-I\-S\-T\-E\-R\-E\-D@{N\-S\-\_\-\-O\-B\-J\-E\-C\-T\-\_\-\-E\-N\-S\-U\-R\-E\-\_\-\-R\-E\-G\-I\-S\-T\-E\-R\-E\-D}!ns3@{ns3}}
+\subsubsection[{N\-S\-\_\-\-O\-B\-J\-E\-C\-T\-\_\-\-E\-N\-S\-U\-R\-E\-\_\-\-R\-E\-G\-I\-S\-T\-E\-R\-E\-D}]{\setlength{\rightskip}{0pt plus 5cm}ns3\-::\-N\-S\-\_\-\-O\-B\-J\-E\-C\-T\-\_\-\-E\-N\-S\-U\-R\-E\-\_\-\-R\-E\-G\-I\-S\-T\-E\-R\-E\-D (
+\begin{DoxyParamCaption}
+\item[{Oicn\-Header}]{}
+\end{DoxyParamCaption}
+)}}\label{namespacens3_ad2212d0dcd1ccd20c6030d2c76e196c7}
+\hypertarget{namespacens3_a80d7142232aff7f2dc93bc1712e44175}{\index{ns3@{ns3}!N\-S\-\_\-\-O\-B\-J\-E\-C\-T\-\_\-\-E\-N\-S\-U\-R\-E\-\_\-\-R\-E\-G\-I\-S\-T\-E\-R\-E\-D@{N\-S\-\_\-\-O\-B\-J\-E\-C\-T\-\_\-\-E\-N\-S\-U\-R\-E\-\_\-\-R\-E\-G\-I\-S\-T\-E\-R\-E\-D}}
+\index{N\-S\-\_\-\-O\-B\-J\-E\-C\-T\-\_\-\-E\-N\-S\-U\-R\-E\-\_\-\-R\-E\-G\-I\-S\-T\-E\-R\-E\-D@{N\-S\-\_\-\-O\-B\-J\-E\-C\-T\-\_\-\-E\-N\-S\-U\-R\-E\-\_\-\-R\-E\-G\-I\-S\-T\-E\-R\-E\-D}!ns3@{ns3}}
+\subsubsection[{N\-S\-\_\-\-O\-B\-J\-E\-C\-T\-\_\-\-E\-N\-S\-U\-R\-E\-\_\-\-R\-E\-G\-I\-S\-T\-E\-R\-E\-D}]{\setlength{\rightskip}{0pt plus 5cm}ns3\-::\-N\-S\-\_\-\-O\-B\-J\-E\-C\-T\-\_\-\-E\-N\-S\-U\-R\-E\-\_\-\-R\-E\-G\-I\-S\-T\-E\-R\-E\-D (
+\begin{DoxyParamCaption}
+\item[{Dns\-Plus\-Question\-Header}]{}
+\end{DoxyParamCaption}
+)}}\label{namespacens3_a80d7142232aff7f2dc93bc1712e44175}
+\hypertarget{namespacens3_a3e3a498ea22985f2c7e32c84a98efe01}{\index{ns3@{ns3}!N\-S\-\_\-\-O\-B\-J\-E\-C\-T\-\_\-\-E\-N\-S\-U\-R\-E\-\_\-\-R\-E\-G\-I\-S\-T\-E\-R\-E\-D@{N\-S\-\_\-\-O\-B\-J\-E\-C\-T\-\_\-\-E\-N\-S\-U\-R\-E\-\_\-\-R\-E\-G\-I\-S\-T\-E\-R\-E\-D}}
+\index{N\-S\-\_\-\-O\-B\-J\-E\-C\-T\-\_\-\-E\-N\-S\-U\-R\-E\-\_\-\-R\-E\-G\-I\-S\-T\-E\-R\-E\-D@{N\-S\-\_\-\-O\-B\-J\-E\-C\-T\-\_\-\-E\-N\-S\-U\-R\-E\-\_\-\-R\-E\-G\-I\-S\-T\-E\-R\-E\-D}!ns3@{ns3}}
+\subsubsection[{N\-S\-\_\-\-O\-B\-J\-E\-C\-T\-\_\-\-E\-N\-S\-U\-R\-E\-\_\-\-R\-E\-G\-I\-S\-T\-E\-R\-E\-D}]{\setlength{\rightskip}{0pt plus 5cm}ns3\-::\-N\-S\-\_\-\-O\-B\-J\-E\-C\-T\-\_\-\-E\-N\-S\-U\-R\-E\-\_\-\-R\-E\-G\-I\-S\-T\-E\-R\-E\-D (
+\begin{DoxyParamCaption}
+\item[{Dns\-Plus\-Answer\-Section}]{}
+\end{DoxyParamCaption}
+)}}\label{namespacens3_a3e3a498ea22985f2c7e32c84a98efe01}
+\hypertarget{namespacens3_a57376580499e06ddc7511faa940ee830}{\index{ns3@{ns3}!N\-S\-\_\-\-O\-B\-J\-E\-C\-T\-\_\-\-E\-N\-S\-U\-R\-E\-\_\-\-R\-E\-G\-I\-S\-T\-E\-R\-E\-D@{N\-S\-\_\-\-O\-B\-J\-E\-C\-T\-\_\-\-E\-N\-S\-U\-R\-E\-\_\-\-R\-E\-G\-I\-S\-T\-E\-R\-E\-D}}
+\index{N\-S\-\_\-\-O\-B\-J\-E\-C\-T\-\_\-\-E\-N\-S\-U\-R\-E\-\_\-\-R\-E\-G\-I\-S\-T\-E\-R\-E\-D@{N\-S\-\_\-\-O\-B\-J\-E\-C\-T\-\_\-\-E\-N\-S\-U\-R\-E\-\_\-\-R\-E\-G\-I\-S\-T\-E\-R\-E\-D}!ns3@{ns3}}
+\subsubsection[{N\-S\-\_\-\-O\-B\-J\-E\-C\-T\-\_\-\-E\-N\-S\-U\-R\-E\-\_\-\-R\-E\-G\-I\-S\-T\-E\-R\-E\-D}]{\setlength{\rightskip}{0pt plus 5cm}ns3\-::\-N\-S\-\_\-\-O\-B\-J\-E\-C\-T\-\_\-\-E\-N\-S\-U\-R\-E\-\_\-\-R\-E\-G\-I\-S\-T\-E\-R\-E\-D (
+\begin{DoxyParamCaption}
+\item[{Dns\-Plus\-Header}]{}
+\end{DoxyParamCaption}
+)}}\label{namespacens3_a57376580499e06ddc7511faa940ee830}
+\hypertarget{namespacens3_a8da84469566489f34d19639bac5068a9}{\index{ns3@{ns3}!N\-S\-\_\-\-O\-B\-J\-E\-C\-T\-\_\-\-E\-N\-S\-U\-R\-E\-\_\-\-R\-E\-G\-I\-S\-T\-E\-R\-E\-D@{N\-S\-\_\-\-O\-B\-J\-E\-C\-T\-\_\-\-E\-N\-S\-U\-R\-E\-\_\-\-R\-E\-G\-I\-S\-T\-E\-R\-E\-D}}
+\index{N\-S\-\_\-\-O\-B\-J\-E\-C\-T\-\_\-\-E\-N\-S\-U\-R\-E\-\_\-\-R\-E\-G\-I\-S\-T\-E\-R\-E\-D@{N\-S\-\_\-\-O\-B\-J\-E\-C\-T\-\_\-\-E\-N\-S\-U\-R\-E\-\_\-\-R\-E\-G\-I\-S\-T\-E\-R\-E\-D}!ns3@{ns3}}
+\subsubsection[{N\-S\-\_\-\-O\-B\-J\-E\-C\-T\-\_\-\-E\-N\-S\-U\-R\-E\-\_\-\-R\-E\-G\-I\-S\-T\-E\-R\-E\-D}]{\setlength{\rightskip}{0pt plus 5cm}ns3\-::\-N\-S\-\_\-\-O\-B\-J\-E\-C\-T\-\_\-\-E\-N\-S\-U\-R\-E\-\_\-\-R\-E\-G\-I\-S\-T\-E\-R\-E\-D (
+\begin{DoxyParamCaption}
+\item[{Cache\-Manager}]{}
+\end{DoxyParamCaption}
+)}}\label{namespacens3_a8da84469566489f34d19639bac5068a9}
+\hypertarget{namespacens3_aeef94ca03b6f6aedeb2e56a2a89dcfb3}{\index{ns3@{ns3}!N\-S\-\_\-\-O\-B\-J\-E\-C\-T\-\_\-\-E\-N\-S\-U\-R\-E\-\_\-\-R\-E\-G\-I\-S\-T\-E\-R\-E\-D@{N\-S\-\_\-\-O\-B\-J\-E\-C\-T\-\_\-\-E\-N\-S\-U\-R\-E\-\_\-\-R\-E\-G\-I\-S\-T\-E\-R\-E\-D}}
+\index{N\-S\-\_\-\-O\-B\-J\-E\-C\-T\-\_\-\-E\-N\-S\-U\-R\-E\-\_\-\-R\-E\-G\-I\-S\-T\-E\-R\-E\-D@{N\-S\-\_\-\-O\-B\-J\-E\-C\-T\-\_\-\-E\-N\-S\-U\-R\-E\-\_\-\-R\-E\-G\-I\-S\-T\-E\-R\-E\-D}!ns3@{ns3}}
+\subsubsection[{N\-S\-\_\-\-O\-B\-J\-E\-C\-T\-\_\-\-E\-N\-S\-U\-R\-E\-\_\-\-R\-E\-G\-I\-S\-T\-E\-R\-E\-D}]{\setlength{\rightskip}{0pt plus 5cm}ns3\-::\-N\-S\-\_\-\-O\-B\-J\-E\-C\-T\-\_\-\-E\-N\-S\-U\-R\-E\-\_\-\-R\-E\-G\-I\-S\-T\-E\-R\-E\-D (
+\begin{DoxyParamCaption}
+\item[{Named\-Content\-Cache}]{}
+\end{DoxyParamCaption}
+)}}\label{namespacens3_aeef94ca03b6f6aedeb2e56a2a89dcfb3}
+\hypertarget{namespacens3_a704818cf1d1907da8696fd1ba465ec38}{\index{ns3@{ns3}!N\-S\-\_\-\-O\-B\-J\-E\-C\-T\-\_\-\-E\-N\-S\-U\-R\-E\-\_\-\-R\-E\-G\-I\-S\-T\-E\-R\-E\-D@{N\-S\-\_\-\-O\-B\-J\-E\-C\-T\-\_\-\-E\-N\-S\-U\-R\-E\-\_\-\-R\-E\-G\-I\-S\-T\-E\-R\-E\-D}}
+\index{N\-S\-\_\-\-O\-B\-J\-E\-C\-T\-\_\-\-E\-N\-S\-U\-R\-E\-\_\-\-R\-E\-G\-I\-S\-T\-E\-R\-E\-D@{N\-S\-\_\-\-O\-B\-J\-E\-C\-T\-\_\-\-E\-N\-S\-U\-R\-E\-\_\-\-R\-E\-G\-I\-S\-T\-E\-R\-E\-D}!ns3@{ns3}}
+\subsubsection[{N\-S\-\_\-\-O\-B\-J\-E\-C\-T\-\_\-\-E\-N\-S\-U\-R\-E\-\_\-\-R\-E\-G\-I\-S\-T\-E\-R\-E\-D}]{\setlength{\rightskip}{0pt plus 5cm}ns3\-::\-N\-S\-\_\-\-O\-B\-J\-E\-C\-T\-\_\-\-E\-N\-S\-U\-R\-E\-\_\-\-R\-E\-G\-I\-S\-T\-E\-R\-E\-D (
+\begin{DoxyParamCaption}
+\item[{Cache\-With\-L\-F\-U}]{}
+\end{DoxyParamCaption}
+)}}\label{namespacens3_a704818cf1d1907da8696fd1ba465ec38}
+\hypertarget{namespacens3_a11d4fd8e7336cda6fe2fb537c212ef34}{\index{ns3@{ns3}!N\-S\-\_\-\-O\-B\-J\-E\-C\-T\-\_\-\-E\-N\-S\-U\-R\-E\-\_\-\-R\-E\-G\-I\-S\-T\-E\-R\-E\-D@{N\-S\-\_\-\-O\-B\-J\-E\-C\-T\-\_\-\-E\-N\-S\-U\-R\-E\-\_\-\-R\-E\-G\-I\-S\-T\-E\-R\-E\-D}}
+\index{N\-S\-\_\-\-O\-B\-J\-E\-C\-T\-\_\-\-E\-N\-S\-U\-R\-E\-\_\-\-R\-E\-G\-I\-S\-T\-E\-R\-E\-D@{N\-S\-\_\-\-O\-B\-J\-E\-C\-T\-\_\-\-E\-N\-S\-U\-R\-E\-\_\-\-R\-E\-G\-I\-S\-T\-E\-R\-E\-D}!ns3@{ns3}}
+\subsubsection[{N\-S\-\_\-\-O\-B\-J\-E\-C\-T\-\_\-\-E\-N\-S\-U\-R\-E\-\_\-\-R\-E\-G\-I\-S\-T\-E\-R\-E\-D}]{\setlength{\rightskip}{0pt plus 5cm}ns3\-::\-N\-S\-\_\-\-O\-B\-J\-E\-C\-T\-\_\-\-E\-N\-S\-U\-R\-E\-\_\-\-R\-E\-G\-I\-S\-T\-E\-R\-E\-D (
+\begin{DoxyParamCaption}
+\item[{Simple\-Universal\-Caching}]{}
+\end{DoxyParamCaption}
+)}}\label{namespacens3_a11d4fd8e7336cda6fe2fb537c212ef34}
+\hypertarget{namespacens3_a35f0a7af48a81b53a1ef5dc824e13802}{\index{ns3@{ns3}!N\-S\-\_\-\-O\-B\-J\-E\-C\-T\-\_\-\-E\-N\-S\-U\-R\-E\-\_\-\-R\-E\-G\-I\-S\-T\-E\-R\-E\-D@{N\-S\-\_\-\-O\-B\-J\-E\-C\-T\-\_\-\-E\-N\-S\-U\-R\-E\-\_\-\-R\-E\-G\-I\-S\-T\-E\-R\-E\-D}}
+\index{N\-S\-\_\-\-O\-B\-J\-E\-C\-T\-\_\-\-E\-N\-S\-U\-R\-E\-\_\-\-R\-E\-G\-I\-S\-T\-E\-R\-E\-D@{N\-S\-\_\-\-O\-B\-J\-E\-C\-T\-\_\-\-E\-N\-S\-U\-R\-E\-\_\-\-R\-E\-G\-I\-S\-T\-E\-R\-E\-D}!ns3@{ns3}}
+\subsubsection[{N\-S\-\_\-\-O\-B\-J\-E\-C\-T\-\_\-\-E\-N\-S\-U\-R\-E\-\_\-\-R\-E\-G\-I\-S\-T\-E\-R\-E\-D}]{\setlength{\rightskip}{0pt plus 5cm}ns3\-::\-N\-S\-\_\-\-O\-B\-J\-E\-C\-T\-\_\-\-E\-N\-S\-U\-R\-E\-\_\-\-R\-E\-G\-I\-S\-T\-E\-R\-E\-D (
+\begin{DoxyParamCaption}
+\item[{Cache\-With\-L\-R\-U}]{}
+\end{DoxyParamCaption}
+)}}\label{namespacens3_a35f0a7af48a81b53a1ef5dc824e13802}
+\hypertarget{namespacens3_a5b24363261fa57f25abe3ebab1c4f6e9}{\index{ns3@{ns3}!N\-S\-\_\-\-O\-B\-J\-E\-C\-T\-\_\-\-E\-N\-S\-U\-R\-E\-\_\-\-R\-E\-G\-I\-S\-T\-E\-R\-E\-D@{N\-S\-\_\-\-O\-B\-J\-E\-C\-T\-\_\-\-E\-N\-S\-U\-R\-E\-\_\-\-R\-E\-G\-I\-S\-T\-E\-R\-E\-D}}
+\index{N\-S\-\_\-\-O\-B\-J\-E\-C\-T\-\_\-\-E\-N\-S\-U\-R\-E\-\_\-\-R\-E\-G\-I\-S\-T\-E\-R\-E\-D@{N\-S\-\_\-\-O\-B\-J\-E\-C\-T\-\_\-\-E\-N\-S\-U\-R\-E\-\_\-\-R\-E\-G\-I\-S\-T\-E\-R\-E\-D}!ns3@{ns3}}
+\subsubsection[{N\-S\-\_\-\-O\-B\-J\-E\-C\-T\-\_\-\-E\-N\-S\-U\-R\-E\-\_\-\-R\-E\-G\-I\-S\-T\-E\-R\-E\-D}]{\setlength{\rightskip}{0pt plus 5cm}ns3\-::\-N\-S\-\_\-\-O\-B\-J\-E\-C\-T\-\_\-\-E\-N\-S\-U\-R\-E\-\_\-\-R\-E\-G\-I\-S\-T\-E\-R\-E\-D (
+\begin{DoxyParamCaption}
+\item[{Sublayer\-Protocol}]{}
+\end{DoxyParamCaption}
+)}}\label{namespacens3_a5b24363261fa57f25abe3ebab1c4f6e9}
+\hypertarget{namespacens3_aecd9f25af1b30fe642f6ecdfc1eac7fd}{\index{ns3@{ns3}!N\-S\-\_\-\-O\-B\-J\-E\-C\-T\-\_\-\-E\-N\-S\-U\-R\-E\-\_\-\-R\-E\-G\-I\-S\-T\-E\-R\-E\-D@{N\-S\-\_\-\-O\-B\-J\-E\-C\-T\-\_\-\-E\-N\-S\-U\-R\-E\-\_\-\-R\-E\-G\-I\-S\-T\-E\-R\-E\-D}}
+\index{N\-S\-\_\-\-O\-B\-J\-E\-C\-T\-\_\-\-E\-N\-S\-U\-R\-E\-\_\-\-R\-E\-G\-I\-S\-T\-E\-R\-E\-D@{N\-S\-\_\-\-O\-B\-J\-E\-C\-T\-\_\-\-E\-N\-S\-U\-R\-E\-\_\-\-R\-E\-G\-I\-S\-T\-E\-R\-E\-D}!ns3@{ns3}}
+\subsubsection[{N\-S\-\_\-\-O\-B\-J\-E\-C\-T\-\_\-\-E\-N\-S\-U\-R\-E\-\_\-\-R\-E\-G\-I\-S\-T\-E\-R\-E\-D}]{\setlength{\rightskip}{0pt plus 5cm}ns3\-::\-N\-S\-\_\-\-O\-B\-J\-E\-C\-T\-\_\-\-E\-N\-S\-U\-R\-E\-\_\-\-R\-E\-G\-I\-S\-T\-E\-R\-E\-D (
+\begin{DoxyParamCaption}
+\item[{Cache\-With\-Fifo}]{}
+\end{DoxyParamCaption}
+)}}\label{namespacens3_aecd9f25af1b30fe642f6ecdfc1eac7fd}
+\hypertarget{namespacens3_aeee9902c9606817f94af20038a756d49}{\index{ns3@{ns3}!N\-S\-\_\-\-O\-B\-J\-E\-C\-T\-\_\-\-E\-N\-S\-U\-R\-E\-\_\-\-R\-E\-G\-I\-S\-T\-E\-R\-E\-D@{N\-S\-\_\-\-O\-B\-J\-E\-C\-T\-\_\-\-E\-N\-S\-U\-R\-E\-\_\-\-R\-E\-G\-I\-S\-T\-E\-R\-E\-D}}
+\index{N\-S\-\_\-\-O\-B\-J\-E\-C\-T\-\_\-\-E\-N\-S\-U\-R\-E\-\_\-\-R\-E\-G\-I\-S\-T\-E\-R\-E\-D@{N\-S\-\_\-\-O\-B\-J\-E\-C\-T\-\_\-\-E\-N\-S\-U\-R\-E\-\_\-\-R\-E\-G\-I\-S\-T\-E\-R\-E\-D}!ns3@{ns3}}
+\subsubsection[{N\-S\-\_\-\-O\-B\-J\-E\-C\-T\-\_\-\-E\-N\-S\-U\-R\-E\-\_\-\-R\-E\-G\-I\-S\-T\-E\-R\-E\-D}]{\setlength{\rightskip}{0pt plus 5cm}ns3\-::\-N\-S\-\_\-\-O\-B\-J\-E\-C\-T\-\_\-\-E\-N\-S\-U\-R\-E\-\_\-\-R\-E\-G\-I\-S\-T\-E\-R\-E\-D (
+\begin{DoxyParamCaption}
+\item[{Icn\-Manager}]{}
+\end{DoxyParamCaption}
+)}}\label{namespacens3_aeee9902c9606817f94af20038a756d49}
+\hypertarget{namespacens3_a26e378a3dcc3dd94128b88d95d55f5d2}{\index{ns3@{ns3}!N\-S\-\_\-\-O\-B\-J\-E\-C\-T\-\_\-\-E\-N\-S\-U\-R\-E\-\_\-\-R\-E\-G\-I\-S\-T\-E\-R\-E\-D@{N\-S\-\_\-\-O\-B\-J\-E\-C\-T\-\_\-\-E\-N\-S\-U\-R\-E\-\_\-\-R\-E\-G\-I\-S\-T\-E\-R\-E\-D}}
+\index{N\-S\-\_\-\-O\-B\-J\-E\-C\-T\-\_\-\-E\-N\-S\-U\-R\-E\-\_\-\-R\-E\-G\-I\-S\-T\-E\-R\-E\-D@{N\-S\-\_\-\-O\-B\-J\-E\-C\-T\-\_\-\-E\-N\-S\-U\-R\-E\-\_\-\-R\-E\-G\-I\-S\-T\-E\-R\-E\-D}!ns3@{ns3}}
+\subsubsection[{N\-S\-\_\-\-O\-B\-J\-E\-C\-T\-\_\-\-E\-N\-S\-U\-R\-E\-\_\-\-R\-E\-G\-I\-S\-T\-E\-R\-E\-D}]{\setlength{\rightskip}{0pt plus 5cm}ns3\-::\-N\-S\-\_\-\-O\-B\-J\-E\-C\-T\-\_\-\-E\-N\-S\-U\-R\-E\-\_\-\-R\-E\-G\-I\-S\-T\-E\-R\-E\-D (
+\begin{DoxyParamCaption}
+\item[{O\-I\-C\-N\-Zipf\-Client}]{}
+\end{DoxyParamCaption}
+)}}\label{namespacens3_a26e378a3dcc3dd94128b88d95d55f5d2}
+\hypertarget{namespacens3_abb83fe630e3f65b883af1bcf508dac71}{\index{ns3@{ns3}!N\-S\-\_\-\-O\-B\-J\-E\-C\-T\-\_\-\-E\-N\-S\-U\-R\-E\-\_\-\-R\-E\-G\-I\-S\-T\-E\-R\-E\-D@{N\-S\-\_\-\-O\-B\-J\-E\-C\-T\-\_\-\-E\-N\-S\-U\-R\-E\-\_\-\-R\-E\-G\-I\-S\-T\-E\-R\-E\-D}}
+\index{N\-S\-\_\-\-O\-B\-J\-E\-C\-T\-\_\-\-E\-N\-S\-U\-R\-E\-\_\-\-R\-E\-G\-I\-S\-T\-E\-R\-E\-D@{N\-S\-\_\-\-O\-B\-J\-E\-C\-T\-\_\-\-E\-N\-S\-U\-R\-E\-\_\-\-R\-E\-G\-I\-S\-T\-E\-R\-E\-D}!ns3@{ns3}}
+\subsubsection[{N\-S\-\_\-\-O\-B\-J\-E\-C\-T\-\_\-\-E\-N\-S\-U\-R\-E\-\_\-\-R\-E\-G\-I\-S\-T\-E\-R\-E\-D}]{\setlength{\rightskip}{0pt plus 5cm}ns3\-::\-N\-S\-\_\-\-O\-B\-J\-E\-C\-T\-\_\-\-E\-N\-S\-U\-R\-E\-\_\-\-R\-E\-G\-I\-S\-T\-E\-R\-E\-D (
+\begin{DoxyParamCaption}
+\item[{Oicn\-Server}]{}
+\end{DoxyParamCaption}
+)}}\label{namespacens3_abb83fe630e3f65b883af1bcf508dac71}
+\hypertarget{namespacens3_ae38be77e7e591e3f607c3adab9edbead}{\index{ns3@{ns3}!N\-S\-\_\-\-O\-B\-J\-E\-C\-T\-\_\-\-E\-N\-S\-U\-R\-E\-\_\-\-R\-E\-G\-I\-S\-T\-E\-R\-E\-D@{N\-S\-\_\-\-O\-B\-J\-E\-C\-T\-\_\-\-E\-N\-S\-U\-R\-E\-\_\-\-R\-E\-G\-I\-S\-T\-E\-R\-E\-D}}
+\index{N\-S\-\_\-\-O\-B\-J\-E\-C\-T\-\_\-\-E\-N\-S\-U\-R\-E\-\_\-\-R\-E\-G\-I\-S\-T\-E\-R\-E\-D@{N\-S\-\_\-\-O\-B\-J\-E\-C\-T\-\_\-\-E\-N\-S\-U\-R\-E\-\_\-\-R\-E\-G\-I\-S\-T\-E\-R\-E\-D}!ns3@{ns3}}
+\subsubsection[{N\-S\-\_\-\-O\-B\-J\-E\-C\-T\-\_\-\-E\-N\-S\-U\-R\-E\-\_\-\-R\-E\-G\-I\-S\-T\-E\-R\-E\-D}]{\setlength{\rightskip}{0pt plus 5cm}ns3\-::\-N\-S\-\_\-\-O\-B\-J\-E\-C\-T\-\_\-\-E\-N\-S\-U\-R\-E\-\_\-\-R\-E\-G\-I\-S\-T\-E\-R\-E\-D (
+\begin{DoxyParamCaption}
+\item[{Ipv4\-Router\-L3\-Protocol}]{}
+\end{DoxyParamCaption}
+)}}\label{namespacens3_ae38be77e7e591e3f607c3adab9edbead}
+\hypertarget{namespacens3_acbb68d2034dc3902cee0df5508ca8e9b}{\index{ns3@{ns3}!N\-S\-\_\-\-O\-B\-J\-E\-C\-T\-\_\-\-E\-N\-S\-U\-R\-E\-\_\-\-R\-E\-G\-I\-S\-T\-E\-R\-E\-D@{N\-S\-\_\-\-O\-B\-J\-E\-C\-T\-\_\-\-E\-N\-S\-U\-R\-E\-\_\-\-R\-E\-G\-I\-S\-T\-E\-R\-E\-D}}
+\index{N\-S\-\_\-\-O\-B\-J\-E\-C\-T\-\_\-\-E\-N\-S\-U\-R\-E\-\_\-\-R\-E\-G\-I\-S\-T\-E\-R\-E\-D@{N\-S\-\_\-\-O\-B\-J\-E\-C\-T\-\_\-\-E\-N\-S\-U\-R\-E\-\_\-\-R\-E\-G\-I\-S\-T\-E\-R\-E\-D}!ns3@{ns3}}
+\subsubsection[{N\-S\-\_\-\-O\-B\-J\-E\-C\-T\-\_\-\-E\-N\-S\-U\-R\-E\-\_\-\-R\-E\-G\-I\-S\-T\-E\-R\-E\-D}]{\setlength{\rightskip}{0pt plus 5cm}ns3\-::\-N\-S\-\_\-\-O\-B\-J\-E\-C\-T\-\_\-\-E\-N\-S\-U\-R\-E\-\_\-\-R\-E\-G\-I\-S\-T\-E\-R\-E\-D (
+\begin{DoxyParamCaption}
+\item[{Icn\-Router}]{}
+\end{DoxyParamCaption}
+)}}\label{namespacens3_acbb68d2034dc3902cee0df5508ca8e9b}
+\hypertarget{namespacens3_a180cc56188c0e63295439f2f58246f48}{\index{ns3@{ns3}!N\-S\-\_\-\-O\-B\-J\-E\-C\-T\-\_\-\-E\-N\-S\-U\-R\-E\-\_\-\-R\-E\-G\-I\-S\-T\-E\-R\-E\-D@{N\-S\-\_\-\-O\-B\-J\-E\-C\-T\-\_\-\-E\-N\-S\-U\-R\-E\-\_\-\-R\-E\-G\-I\-S\-T\-E\-R\-E\-D}}
+\index{N\-S\-\_\-\-O\-B\-J\-E\-C\-T\-\_\-\-E\-N\-S\-U\-R\-E\-\_\-\-R\-E\-G\-I\-S\-T\-E\-R\-E\-D@{N\-S\-\_\-\-O\-B\-J\-E\-C\-T\-\_\-\-E\-N\-S\-U\-R\-E\-\_\-\-R\-E\-G\-I\-S\-T\-E\-R\-E\-D}!ns3@{ns3}}
+\subsubsection[{N\-S\-\_\-\-O\-B\-J\-E\-C\-T\-\_\-\-E\-N\-S\-U\-R\-E\-\_\-\-R\-E\-G\-I\-S\-T\-E\-R\-E\-D}]{\setlength{\rightskip}{0pt plus 5cm}ns3\-::\-N\-S\-\_\-\-O\-B\-J\-E\-C\-T\-\_\-\-E\-N\-S\-U\-R\-E\-\_\-\-R\-E\-G\-I\-S\-T\-E\-R\-E\-D (
+\begin{DoxyParamCaption}
+\item[{Oicn\-Client}]{}
+\end{DoxyParamCaption}
+)}}\label{namespacens3_a180cc56188c0e63295439f2f58246f48}
+\hypertarget{namespacens3_ab673fe087092e83ec770c736b6cb6c3f}{\index{ns3@{ns3}!print\-\_\-map@{print\-\_\-map}}
+\index{print\-\_\-map@{print\-\_\-map}!ns3@{ns3}}
+\subsubsection[{print\-\_\-map}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Map\-Type $>$ void ns3\-::print\-\_\-map (
+\begin{DoxyParamCaption}
+\item[{const Map\-Type \&}]{m}
+\end{DoxyParamCaption}
+)}}\label{namespacens3_ab673fe087092e83ec770c736b6cb6c3f}
+
+
+\subsection{Variable Documentation}
+\hypertarget{namespacens3_ac1df4c15ca334fd8713f6600d097c1a6}{\index{ns3@{ns3}!g\-\_\-interface\-File\-Map\-Ipv4@{g\-\_\-interface\-File\-Map\-Ipv4}}
+\index{g\-\_\-interface\-File\-Map\-Ipv4@{g\-\_\-interface\-File\-Map\-Ipv4}!ns3@{ns3}}
+\subsubsection[{g\-\_\-interface\-File\-Map\-Ipv4}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Interface\-File\-Map\-Ipv4} ns3\-::g\-\_\-interface\-File\-Map\-Ipv4\hspace{0.3cm}{\ttfamily [static]}}}\label{namespacens3_ac1df4c15ca334fd8713f6600d097c1a6}
+\hypertarget{namespacens3_ad7720e08dcb21331d85c00128abc175a}{\index{ns3@{ns3}!g\-\_\-interface\-Stream\-Map\-Ipv4@{g\-\_\-interface\-Stream\-Map\-Ipv4}}
+\index{g\-\_\-interface\-Stream\-Map\-Ipv4@{g\-\_\-interface\-Stream\-Map\-Ipv4}!ns3@{ns3}}
+\subsubsection[{g\-\_\-interface\-Stream\-Map\-Ipv4}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Interface\-Stream\-Map\-Ipv4} ns3\-::g\-\_\-interface\-Stream\-Map\-Ipv4\hspace{0.3cm}{\ttfamily [static]}}}\label{namespacens3_ad7720e08dcb21331d85c00128abc175a}

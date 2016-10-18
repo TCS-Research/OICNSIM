@@ -1,0 +1,168 @@
+#include "ns3/type-id.h"
+#include "ns3/type-name.h"
+#include "ns3/ptr.h"
+#include "ns3/log.h"
+#include "ns3/packet.h"
+#include "ns3/simulator.h"
+#include "named-content-cache-entry.h"
+#include "cache-with-lru.h"
+#include <stdint.h>
+#include <string>
+#include <utility>
+#include <cstring>
+#include <iostream>
+#include <boost/unordered_map.hpp>
+#include <boost/bimap.hpp>
+#include <boost/bimap/bimap.hpp>
+#include <boost/bimap/set_of.hpp>
+#include <boost/bimap/detail/bimap_core.hpp>
+#include <boost/bimap/unordered_set_of.hpp>
+
+NS_LOG_COMPONENT_DEFINE ("CacheWithLRU");
+
+namespace ns3{
+//namespace oicn{
+
+NS_OBJECT_ENSURE_REGISTERED (CacheWithLRU);
+
+TypeId CacheWithLRU::GetTypeId (void)
+{
+	NS_LOG_INFO (" Check ");
+  static TypeId tid = TypeId ("ns3::CacheWithLRU")
+    .SetParent<NamedContentCache> ()
+    .AddConstructor<CacheWithLRU> ();
+
+  return tid;
+
+}
+
+CacheWithLRU::CacheWithLRU()
+ : cache_size (),
+   policyindex (),
+   cache()
+{
+	NS_LOG_INFO (" Check ");
+	//cache.reserve(100);
+	//policyindex.right.reserve(100);
+	/*NamedContentCacheEntry entry;
+	std::pair<std::string, NamedContentCacheEntry> initializer1 (" oicn://content/initializer ", entry);
+	cache.insert(initializer1);
+	std::pair<uint32_t, std::string> initializer2 (0, " oicn://content/initializer ");
+	policyindex.left.insert(initializer2);*/
+}
+
+CacheWithLRU::~CacheWithLRU()
+{
+
+}
+
+NamedContentCacheEntry CacheWithLRU::CreateEntry(std::string Name, Ptr<Packet> packet, Ipv4Header ipheader)
+{
+	//NS_LOG_DEBUG (" Check "<<this);
+     NamedContentCacheEntry entry;
+     uint8_t data[packet->GetSize()];
+     packet->CopyData (data, packet->GetSize());
+     std::string data1((char*)data);
+     entry.SetData(data1);
+     entry.SetTimestamp(Simulator::Now().GetMilliSeconds());
+     return(entry);
+}
+  
+uint64_t CacheWithLRU::CreateIndex(NamedContentCacheEntry entry)
+{
+	NS_LOG_INFO (" Check ");
+     uint64_t index = entry.GetTimestamp();
+     return (index);
+}
+  
+bool CacheWithLRU::IsEvictable(uint32_t index)
+{
+	NS_LOG_INFO (" Check ");
+	return true;
+}
+
+std::string CacheWithLRU::EvictEntry()
+{
+	NS_LOG_INFO (" Check ");
+
+	left_iterator it = policyindex.left.begin();
+    //NS_LOG_DEBUG (" Entry to be evicted "<<it->second<<" with index "<<it->first);
+    it++;
+    std::string name = it->second;
+    policyindex.left.erase(it);
+    cache.erase(name);
+    NS_LOG_DEBUG (" All Entries in cache ");
+    for(left_iterator iter = policyindex.left.begin(); iter != policyindex.left.end(); iter++ )
+    {
+   		std::cout <<"   "<<iter->first << "-->" << iter->second << std::endl;
+    }
+    return(name);
+}
+  
+void CacheWithLRU::UpdateIndex(std::string Name)
+{
+	NS_LOG_INFO (" Check ");
+     policyindex.right.erase(Name);
+     Cache::const_iterator it = cache.find(Name);
+     NamedContentCacheEntry temp = it->second;
+     cache.erase(it);
+     temp.SetTimestamp(Simulator::Now().GetMilliSeconds());
+     InsertToCache(Name, temp);
+     InsertToPolicyIndex(CreateIndex(temp), Name);
+}
+
+
+
+void CacheWithLRU::SetCacheSize(uint32_t size)
+{
+	NS_LOG_INFO (" Check ");
+	cache_size = size;
+}
+
+uint32_t CacheWithLRU::GetCacheSize()
+{
+	NS_LOG_INFO (" Check ");
+	return(cache_size);
+}
+
+ void CacheWithLRU::InsertToCache(std::string Name, NamedContentCacheEntry entry)
+{
+	 NS_LOG_INFO (" Check ");
+  std::pair<std::string, NamedContentCacheEntry> Entry (Name, entry);
+  cache.insert(Entry);
+  /*for(Cache::const_iterator iter = cache.begin(); iter != cache.end(); iter++ )
+  {
+	  std::cout <<"   "<<iter->first << "-->" << iter->second << std::endl;
+  }*/
+}
+
+ void CacheWithLRU::InsertToPolicyIndex(uint32_t index, std::string Name)
+{
+	 NS_LOG_INFO (" Check ");
+	 policyindex.insert({index, Name});
+	 for(left_iterator iter = policyindex.left.begin(); iter != policyindex.left.end(); iter++ )
+	 {
+		 std::cout <<"   "<<iter->first << "-->" << iter->second << std::endl;
+	 }
+}
+
+ bool CacheWithLRU::IsFull()
+{
+	 NS_LOG_DEBUG (" cache.size() is "<<cache.size()<<" while set Cache size is "<<cache_size<<std::endl);
+	 if (cache.size()<cache_size) return false;
+	 else return true;
+}
+
+Ptr<Packet> CacheWithLRU::Find(std::string Name)
+{
+	NS_LOG_INFO (" Check ");
+  Cache::const_iterator hit = cache.find(Name);
+  NamedContentCacheEntry entryhit = hit->second;
+  std::string data = entryhit.GetData();
+  Ptr<Packet> packet = Create<Packet> (data);
+  UpdateIndex(Name);
+  return(packet);
+}
+
+//}
+}

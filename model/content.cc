@@ -30,7 +30,6 @@ std::string Content::GetContent(uint32_t index)
 	}
 	else if (index>99999)
 	{
-		NS_LOG_DEBUG ("index>99999 "<<index<<std::endl);
 		digit[0] = (index/100000)+48;
 		digit[1] = ((index%100000)/10000)+48;
 		digit[2] = ((index%10000)/1000)+48;
@@ -48,7 +47,6 @@ std::string Content::GetContent(uint32_t index)
 	}
 	else if (index>9999)
 	{
-		NS_LOG_DEBUG ("index>9999 "<<index<<std::endl);
 		digit[0] = (index/10000)+48;
 		digit[1] = ((index%10000)/1000)+48;
 		digit[2] = ((index%1000)/100)+48;
@@ -63,7 +61,6 @@ std::string Content::GetContent(uint32_t index)
 	 }
 	else if (index>999)
 	{
-		NS_LOG_DEBUG ("index>999 "<<index<<std::endl);
 		digit[0] = (index/1000)+48;
 		digit[1] = ((index%1000)/100)+48;
 		digit[2] = ((index%100)/10)+48;
@@ -76,7 +73,6 @@ std::string Content::GetContent(uint32_t index)
  	}
 	else if (index>99)
 	{
-		NS_LOG_DEBUG ("index>99 "<<index<<std::endl);
 		digit[0] = (index/100)+48;
 		digit[1] = ((index%100)/10)+48;
 		digit[2] = (index%10)+48;
@@ -87,7 +83,6 @@ std::string Content::GetContent(uint32_t index)
 	}
 	else if (index>9)
     {
-		NS_LOG_DEBUG ("index>9 "<<index<<std::endl);
 		digit[0] = (index/10)+48;
 		digit[1] = (index%10)+48;
 		suffix.append((char*)&digit[0]);
@@ -96,7 +91,6 @@ std::string Content::GetContent(uint32_t index)
     }
 	else if (index>0)
 	{
-		NS_LOG_DEBUG ("index>0 "<<index<<std::endl);
 		digit[0] = index+48;
 		suffix.append("0/");
 	   	suffix.append((char*)&digit[0]);

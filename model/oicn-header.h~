@@ -1,0 +1,41 @@
+#ifndef OICN_HEADER_H
+#define OICN_HEADER_H
+
+#include <stdint.h>
+#include <string>
+#include "ns3/header.h"
+#include "ns3/type-name.h"
+
+namespace ns3{
+//namespace oicn{
+
+class OICNHeader : public Header
+{
+  public:
+
+  static TypeId GetTypeId (void);
+  virtual ~OICNHeader ();
+  inline uint32_t GetSerializedSize () const;
+  void Serialize (Buffer::Iterator start) const;
+  uint32_t Deserialize (Buffer::Iterator start);
+  void SetName(std::string name) const;
+  void SetName(uint8_t name) const;
+  //inline std::string GetName();
+  inline uint8_t GetName();
+  void SetFirst4Bytes(uint32_t header_length, bool reply, bool cachable);
+  inline void SetRequest();
+  inline void SetCachable();
+  inline void SetNonCachable();
+
+  private:
+
+  uint8_t m_name;
+  const uint32_t cachable_start = 983040;
+  const uint32_t non_cachable_start = 720896;
+  const uint32_t request_start = 196608;
+  uint32_t header_length;
+  uint32_t first4bytes;
+};
+//} // end of namespace ns3
+} // end of namespcae oicn
+#endif

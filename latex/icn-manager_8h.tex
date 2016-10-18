@@ -1,0 +1,53 @@
+\hypertarget{icn-manager_8h}{\section{model/icn-\/manager.h File Reference}
+\label{icn-manager_8h}\index{model/icn-\/manager.\-h@{model/icn-\/manager.\-h}}
+}
+{\ttfamily \#include \char`\"{}ns3/type-\/name.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}ns3/application.\-h\char`\"{}}\\*
+{\ttfamily \#include $<$c++/4.\-8/unordered\-\_\-map$>$}\\*
+{\ttfamily \#include $<$stdint.\-h$>$}\\*
+{\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include $<$string$>$}\\*
+{\ttfamily \#include $<$vector$>$}\\*
+{\ttfamily \#include $<$utility$>$}\\*
+{\ttfamily \#include $<$boost/unordered\-\_\-map.\-hpp$>$}\\*
+{\ttfamily \#include \char`\"{}oicn-\/server-\/application.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}ns3/node.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}ns3/ptr.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}ns3/type-\/id.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}oicn-\/header.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}dnsplus-\/question-\/header.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}dnsplus-\/answer-\/section.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}ns3/ipv4-\/address.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}dnsplus-\/header.\-h\char`\"{}}\\*
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classns3_1_1IcnManager}{ns3\-::\-Icn\-Manager}
+\begin{DoxyCompactList}\small\item\em It resolves the name requested by the client and direct the source (server or cached source(router)) to send the requested content back to client. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{namespacens3}{ns3}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef \\*
+boost\-::unordered\-\_\-multimap\\*
+$<$ std\-::string, Ipv4\-Address $>$ \hyperlink{namespacens3_a30b2bc59285e3015fedd6268c6f77947}{ns3\-::\-Name\-Server\-Table}
+\begin{DoxyCompactList}\small\item\em Container to store mapping of name and corresponding ip address of the server. It is used at I\-C\-N Manager to find ipv4 address of server at which the requested name is stored. \end{DoxyCompactList}\item 
+typedef \\*
+boost\-::unordered\-\_\-multimap\\*
+$<$ std\-::string, Ipv4\-Address $>$ \hyperlink{namespacens3_a6e64320f2e97002ba6cd340bbfb76767}{ns3\-::\-Cached\-Router\-Table}
+\begin{DoxyCompactList}\small\item\em container to store mapping of name and corresponding ip address of the cached router. \hyperlink{classns3_1_1Content}{Content} is cached at the router. It stores the name of the content and ip address of router where the content was cached. \end{DoxyCompactList}\item 
+typedef \\*
+Cached\-Router\-Table\-::const\-\_\-iterator \hyperlink{namespacens3_a0d17c0f2e1efb713fe4a62d283039f06}{ns3\-::cr\-Iterator}
+\begin{DoxyCompactList}\small\item\em Type Definition for the constant iterater of the Cached\-Router\-Table. \end{DoxyCompactList}\item 
+typedef \\*
+Name\-Server\-Table\-::const\-\_\-iterator \hyperlink{namespacens3_a81ca04d4bcf5358cad6f7b2d7fd0fe2a}{ns3\-::nsiterator}
+\begin{DoxyCompactList}\small\item\em Type Definition for the constant iterater of the Cached\-Router\-Table. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$class Map\-Type $>$ }\\void \hyperlink{namespacens3_ab673fe087092e83ec770c736b6cb6c3f}{ns3\-::print\-\_\-map} (const Map\-Type \&m)
+\end{DoxyCompactItemize}

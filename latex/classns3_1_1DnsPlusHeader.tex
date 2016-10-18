@@ -1,0 +1,692 @@
+\hypertarget{classns3_1_1DnsPlusHeader}{\section{ns3\-:\-:Dns\-Plus\-Header Class Reference}
+\label{classns3_1_1DnsPlusHeader}\index{ns3\-::\-Dns\-Plus\-Header@{ns3\-::\-Dns\-Plus\-Header}}
+}
+
+
+It is similar to D\-N\-S header. It used for name resolution of the content.  
+
+
+
+
+{\ttfamily \#include $<$dnsplus-\/header.\-h$>$}
+
+Inheritance diagram for ns3\-:\-:Dns\-Plus\-Header\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classns3_1_1DnsPlusHeader}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classns3_1_1DnsPlusHeader_aa39739cfaece6711a01861f45f0e6067}{Dns\-Plus\-Header} ()
+\item 
+\hyperlink{classns3_1_1DnsPlusHeader_a16cd6385e338fbb7cdcd0c6d33ccc7bb}{$\sim$\-Dns\-Plus\-Header} ()
+\item 
+virtual Type\-Id \hyperlink{classns3_1_1DnsPlusHeader_a4d290db0c63ed92adc4cdbd09fe84c24}{Get\-Instance\-Type\-Id} (void) const 
+\item 
+virtual uint32\-\_\-t \hyperlink{classns3_1_1DnsPlusHeader_ac951e2cb1473ec87540b829c2d572b39}{Get\-Serialized\-Size} (void) const 
+\item 
+virtual void \hyperlink{classns3_1_1DnsPlusHeader_af396f9396640c877af51efaf2f199072}{Serialize} (Buffer\-::\-Iterator start) const 
+\item 
+virtual uint32\-\_\-t \hyperlink{classns3_1_1DnsPlusHeader_a4fd5e5a6b42851c06ddf3aec0e357768}{Deserialize} (Buffer\-::\-Iterator start)
+\item 
+virtual void \hyperlink{classns3_1_1DnsPlusHeader_a1db3739a5909bf66de04839fd455c244}{Print} (std\-::ostream \&os) const 
+\item 
+void \hyperlink{classns3_1_1DnsPlusHeader_a163bb071a4227854dcdd139c7f98cd27}{Set\-Q\-R} (uint8\-\_\-t qr\-Bit)
+\begin{DoxyCompactList}\small\item\em Set Q\-R bit. \end{DoxyCompactList}\item 
+void \hyperlink{classns3_1_1DnsPlusHeader_aaeb6a6c63353ba23e4b992f4bac58b05}{Set\-Id} (uint16\-\_\-t id\-Bits)
+\begin{DoxyCompactList}\small\item\em Set Id. \end{DoxyCompactList}\item 
+void \hyperlink{classns3_1_1DnsPlusHeader_a3b6ee82ad16a50f44ee634477e73b560}{Set\-O\-P\-C\-O\-D\-E} (uint8\-\_\-t opcode)
+\begin{DoxyCompactList}\small\item\em Set opcode. \end{DoxyCompactList}\item 
+void \hyperlink{classns3_1_1DnsPlusHeader_a101aaca4f9508380a7bb27b170de4c9f}{Set\-A\-A} (uint8\-\_\-t aa\-Bit)
+\begin{DoxyCompactList}\small\item\em Set A\-A Authoritative Answer bit. \end{DoxyCompactList}\item 
+void \hyperlink{classns3_1_1DnsPlusHeader_a5902c88c45f698ddea33524ab548a7d9}{Set\-T\-C} (uint8\-\_\-t tc\-Bit)
+\begin{DoxyCompactList}\small\item\em Set Truncation bit. \end{DoxyCompactList}\item 
+void \hyperlink{classns3_1_1DnsPlusHeader_ad7e284af8733c294da48aa30a6587233}{Set\-R\-D} (uint8\-\_\-t rd\-Bit)
+\begin{DoxyCompactList}\small\item\em Set Recursion Desired bit. \end{DoxyCompactList}\item 
+void \hyperlink{classns3_1_1DnsPlusHeader_ae3027f5af8724d06e2e1df355ae0a853}{Set\-R\-A} (uint8\-\_\-t ra\-Bit)
+\begin{DoxyCompactList}\small\item\em Set Recursion Avaliable bit. \end{DoxyCompactList}\item 
+void \hyperlink{classns3_1_1DnsPlusHeader_aae30ef6d451eec678278171ed7a5fe6c}{Set\-Z} (uint8\-\_\-t z\-Bit)
+\begin{DoxyCompactList}\small\item\em Set Z bit. \end{DoxyCompactList}\item 
+void \hyperlink{classns3_1_1DnsPlusHeader_a83fb23f26dc34870c1bf6e1284b32ef5}{Set\-R\-C\-O\-D\-E} (uint8\-\_\-t rcode\-Bits)
+\begin{DoxyCompactList}\small\item\em Set Response Code. \end{DoxyCompactList}\item 
+void \hyperlink{classns3_1_1DnsPlusHeader_a975e84f17140d5c7ba171edd64b7919e}{Set\-Q\-D\-Count} (uint16\-\_\-t qdcount\-Bits)
+\begin{DoxyCompactList}\small\item\em Set Q\-D\-Count Bit. \end{DoxyCompactList}\item 
+void \hyperlink{classns3_1_1DnsPlusHeader_a49a171a0aa8582dcf6a44bdfde783c7a}{Set\-A\-N\-Count} (uint16\-\_\-t ancount\-Bits)
+\begin{DoxyCompactList}\small\item\em Set A\-N\-Count Bit. \end{DoxyCompactList}\item 
+void \hyperlink{classns3_1_1DnsPlusHeader_aae6d4997842c4e7674eb5da84aca1758}{Set\-N\-S\-Count} (uint16\-\_\-t nscount\-Bits)
+\begin{DoxyCompactList}\small\item\em Set N\-S\-Count bit. \end{DoxyCompactList}\item 
+void \hyperlink{classns3_1_1DnsPlusHeader_a77392a980ddd74a651c6b91e3a68e7cf}{Set\-A\-R\-Count} (uint16\-\_\-t arcount\-Bits)
+\begin{DoxyCompactList}\small\item\em Set A\-R\-Count Bit. \end{DoxyCompactList}\item 
+uint16\-\_\-t \hyperlink{classns3_1_1DnsPlusHeader_aae7edb215fce7562cb0946b87f8f84d0}{Get\-Id} ()
+\begin{DoxyCompactList}\small\item\em Get Id of D\-N\-S request. \end{DoxyCompactList}\item 
+uint8\-\_\-t \hyperlink{classns3_1_1DnsPlusHeader_aed50596c87046b01e05bd9851a69e82c}{Get\-Q\-R} ()
+\begin{DoxyCompactList}\small\item\em Get Q\-R bit. \end{DoxyCompactList}\item 
+uint8\-\_\-t \hyperlink{classns3_1_1DnsPlusHeader_a7c1f46655a3b37ce288922a10c0b1d85}{Get\-O\-P\-C\-O\-D\-E} ()
+\begin{DoxyCompactList}\small\item\em Get O\-P\-C\-O\-D\-E bits. \end{DoxyCompactList}\item 
+uint8\-\_\-t \hyperlink{classns3_1_1DnsPlusHeader_a3134d8329f6b6d30398bd85fd5dc680b}{Get\-A\-A} ()
+\begin{DoxyCompactList}\small\item\em Get A\-A bit. \end{DoxyCompactList}\item 
+uint8\-\_\-t \hyperlink{classns3_1_1DnsPlusHeader_a63a67866520ddb9348b1177fe2fc3e3e}{Get\-T\-C} ()
+\begin{DoxyCompactList}\small\item\em Get T\-C bit. \end{DoxyCompactList}\item 
+uint8\-\_\-t \hyperlink{classns3_1_1DnsPlusHeader_a6ba87b0dbc7c2198670c6c4e31f9a726}{Get\-R\-D} ()
+\begin{DoxyCompactList}\small\item\em Get R\-D bit. \end{DoxyCompactList}\item 
+uint8\-\_\-t \hyperlink{classns3_1_1DnsPlusHeader_a0d9c76d160543f5d6bcc032c6d1e8994}{Get\-R\-A} ()
+\begin{DoxyCompactList}\small\item\em Get R\-A bit. \end{DoxyCompactList}\item 
+uint8\-\_\-t \hyperlink{classns3_1_1DnsPlusHeader_af00e13f343d53b2bb84079b850e88eb5}{Get\-Z} ()
+\begin{DoxyCompactList}\small\item\em Get Z bit. \end{DoxyCompactList}\item 
+uint8\-\_\-t \hyperlink{classns3_1_1DnsPlusHeader_aa7f893eb6a224c347e11d5af5ec5e87c}{Get\-R\-C\-O\-D\-E} ()
+\begin{DoxyCompactList}\small\item\em Get R\-C\-O\-D\-E. \end{DoxyCompactList}\item 
+uint16\-\_\-t \hyperlink{classns3_1_1DnsPlusHeader_a72e660095dcbbcfbd3ea56af26081fde}{Get\-Q\-D\-Count} ()
+\begin{DoxyCompactList}\small\item\em Get Q\-Dcount. \end{DoxyCompactList}\item 
+uint16\-\_\-t \hyperlink{classns3_1_1DnsPlusHeader_ad4170edcd79f47db1d5d344265dbe814}{Get\-A\-N\-Count} ()
+\begin{DoxyCompactList}\small\item\em Get A\-N\-Count. \end{DoxyCompactList}\item 
+uint16\-\_\-t \hyperlink{classns3_1_1DnsPlusHeader_aabe109de0f4dd99b373f108b24a6f4dd}{Get\-N\-S\-Count} ()
+\begin{DoxyCompactList}\small\item\em Get N\-Scount. \end{DoxyCompactList}\item 
+uint16\-\_\-t \hyperlink{classns3_1_1DnsPlusHeader_a5a870a653b4cee6899e219510fbfa4a4}{Get\-A\-R\-Count} ()
+\begin{DoxyCompactList}\small\item\em Get A\-R\-Count. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static Type\-Id \hyperlink{classns3_1_1DnsPlusHeader_aca249927d0ab0ec498b4dd77c76fc9ec}{Get\-Type\-Id} (void)
+\begin{DoxyCompactList}\small\item\em Get the type I\-D. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+uint32\-\_\-t \hyperlink{classns3_1_1DnsPlusHeader_a2cb95f6912613452fc57847e15e4f7ac}{m\-\_\-flag}
+\begin{DoxyCompactList}\small\item\em flag \end{DoxyCompactList}\item 
+uint16\-\_\-t \hyperlink{classns3_1_1DnsPlusHeader_a5c9375cfe16fc339e52d0ae1b9c19a24}{m\-\_\-\-Id}
+\begin{DoxyCompactList}\small\item\em Id bits of header. \end{DoxyCompactList}\item 
+uint8\-\_\-t \hyperlink{classns3_1_1DnsPlusHeader_a913492faf18c9740d1a4db2e7b056b54}{m\-\_\-\-Q\-R}
+\begin{DoxyCompactList}\small\item\em Q\-R bit of header. \end{DoxyCompactList}\item 
+uint8\-\_\-t \hyperlink{classns3_1_1DnsPlusHeader_ae93aeff5c9677e5252405cab8323f2df}{m\-\_\-\-O\-P\-C\-O\-D\-E}
+\begin{DoxyCompactList}\small\item\em O\-P\-C\-O\-D\-E bits of header. \end{DoxyCompactList}\item 
+uint8\-\_\-t \hyperlink{classns3_1_1DnsPlusHeader_a2e41f079b9f89209837405def7797a0d}{m\-\_\-\-A\-A}
+\begin{DoxyCompactList}\small\item\em A\-A bit of header. \end{DoxyCompactList}\item 
+uint8\-\_\-t \hyperlink{classns3_1_1DnsPlusHeader_ad6b32f1358164571eb3eba7f083af321}{m\-\_\-\-T\-C}
+\begin{DoxyCompactList}\small\item\em T\-C bit of header. \end{DoxyCompactList}\item 
+uint8\-\_\-t \hyperlink{classns3_1_1DnsPlusHeader_aceb20feea34744185f0e8fcb0ea4e7f4}{m\-\_\-\-R\-D}
+\begin{DoxyCompactList}\small\item\em R\-D bit of header. \end{DoxyCompactList}\item 
+uint8\-\_\-t \hyperlink{classns3_1_1DnsPlusHeader_a275459d7076136ce2c7099734b264cd5}{m\-\_\-\-R\-A}
+\begin{DoxyCompactList}\small\item\em R\-A bit of header. \end{DoxyCompactList}\item 
+uint8\-\_\-t \hyperlink{classns3_1_1DnsPlusHeader_a9fb25d01e3e4ce98158926c2195a20cf}{m\-\_\-\-Z}
+\begin{DoxyCompactList}\small\item\em Z bits of header. \end{DoxyCompactList}\item 
+uint8\-\_\-t \hyperlink{classns3_1_1DnsPlusHeader_a35835f0ee81cfec4806f85d9b62daca6}{m\-\_\-\-R\-C\-O\-D\-E}
+\begin{DoxyCompactList}\small\item\em R\-C\-O\-D\-E bits of header. \end{DoxyCompactList}\item 
+uint16\-\_\-t \hyperlink{classns3_1_1DnsPlusHeader_ab85daf2b1bc16d2c58d1b6c1e21395d8}{m\-\_\-\-Q\-D\-Count}
+\begin{DoxyCompactList}\small\item\em Q\-D\-Count bits of header. \end{DoxyCompactList}\item 
+uint16\-\_\-t \hyperlink{classns3_1_1DnsPlusHeader_ac01fe04b25d9e3e75a4ae181cc8a156f}{m\-\_\-\-A\-N\-Count}
+\begin{DoxyCompactList}\small\item\em A\-N\-Count bits of header. \end{DoxyCompactList}\item 
+uint16\-\_\-t \hyperlink{classns3_1_1DnsPlusHeader_ace416d666df5fe25acfbfdd7aad309ce}{m\-\_\-\-N\-S\-Count}
+\begin{DoxyCompactList}\small\item\em N\-S\-Count bits of header. \end{DoxyCompactList}\item 
+uint16\-\_\-t \hyperlink{classns3_1_1DnsPlusHeader_afe7adb4352d8f52c21a7c3f922314045}{m\-\_\-\-A\-R\-Count}
+\begin{DoxyCompactList}\small\item\em A\-R\-Count bits of header. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+It is similar to D\-N\-S header. It used for name resolution of the content. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classns3_1_1DnsPlusHeader_aa39739cfaece6711a01861f45f0e6067}{\index{ns3\-::\-Dns\-Plus\-Header@{ns3\-::\-Dns\-Plus\-Header}!Dns\-Plus\-Header@{Dns\-Plus\-Header}}
+\index{Dns\-Plus\-Header@{Dns\-Plus\-Header}!ns3::DnsPlusHeader@{ns3\-::\-Dns\-Plus\-Header}}
+\subsubsection[{Dns\-Plus\-Header}]{\setlength{\rightskip}{0pt plus 5cm}ns3\-::\-Dns\-Plus\-Header\-::\-Dns\-Plus\-Header (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classns3_1_1DnsPlusHeader_aa39739cfaece6711a01861f45f0e6067}
+\hypertarget{classns3_1_1DnsPlusHeader_a16cd6385e338fbb7cdcd0c6d33ccc7bb}{\index{ns3\-::\-Dns\-Plus\-Header@{ns3\-::\-Dns\-Plus\-Header}!$\sim$\-Dns\-Plus\-Header@{$\sim$\-Dns\-Plus\-Header}}
+\index{$\sim$\-Dns\-Plus\-Header@{$\sim$\-Dns\-Plus\-Header}!ns3::DnsPlusHeader@{ns3\-::\-Dns\-Plus\-Header}}
+\subsubsection[{$\sim$\-Dns\-Plus\-Header}]{\setlength{\rightskip}{0pt plus 5cm}ns3\-::\-Dns\-Plus\-Header\-::$\sim$\-Dns\-Plus\-Header (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classns3_1_1DnsPlusHeader_a16cd6385e338fbb7cdcd0c6d33ccc7bb}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classns3_1_1DnsPlusHeader_a4fd5e5a6b42851c06ddf3aec0e357768}{\index{ns3\-::\-Dns\-Plus\-Header@{ns3\-::\-Dns\-Plus\-Header}!Deserialize@{Deserialize}}
+\index{Deserialize@{Deserialize}!ns3::DnsPlusHeader@{ns3\-::\-Dns\-Plus\-Header}}
+\subsubsection[{Deserialize}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t ns3\-::\-Dns\-Plus\-Header\-::\-Deserialize (
+\begin{DoxyParamCaption}
+\item[{Buffer\-::\-Iterator}]{start}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classns3_1_1DnsPlusHeader_a4fd5e5a6b42851c06ddf3aec0e357768}
+\hypertarget{classns3_1_1DnsPlusHeader_a3134d8329f6b6d30398bd85fd5dc680b}{\index{ns3\-::\-Dns\-Plus\-Header@{ns3\-::\-Dns\-Plus\-Header}!Get\-A\-A@{Get\-A\-A}}
+\index{Get\-A\-A@{Get\-A\-A}!ns3::DnsPlusHeader@{ns3\-::\-Dns\-Plus\-Header}}
+\subsubsection[{Get\-A\-A}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t ns3\-::\-Dns\-Plus\-Header\-::\-Get\-A\-A (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classns3_1_1DnsPlusHeader_a3134d8329f6b6d30398bd85fd5dc680b}
+
+
+Get A\-A bit. 
+
+\begin{DoxyReturn}{Returns}
+A\-A bit 
+\end{DoxyReturn}
+\hypertarget{classns3_1_1DnsPlusHeader_ad4170edcd79f47db1d5d344265dbe814}{\index{ns3\-::\-Dns\-Plus\-Header@{ns3\-::\-Dns\-Plus\-Header}!Get\-A\-N\-Count@{Get\-A\-N\-Count}}
+\index{Get\-A\-N\-Count@{Get\-A\-N\-Count}!ns3::DnsPlusHeader@{ns3\-::\-Dns\-Plus\-Header}}
+\subsubsection[{Get\-A\-N\-Count}]{\setlength{\rightskip}{0pt plus 5cm}uint16\-\_\-t ns3\-::\-Dns\-Plus\-Header\-::\-Get\-A\-N\-Count (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classns3_1_1DnsPlusHeader_ad4170edcd79f47db1d5d344265dbe814}
+
+
+Get A\-N\-Count. 
+
+\begin{DoxyReturn}{Returns}
+A\-N\-Count 
+\end{DoxyReturn}
+\hypertarget{classns3_1_1DnsPlusHeader_a5a870a653b4cee6899e219510fbfa4a4}{\index{ns3\-::\-Dns\-Plus\-Header@{ns3\-::\-Dns\-Plus\-Header}!Get\-A\-R\-Count@{Get\-A\-R\-Count}}
+\index{Get\-A\-R\-Count@{Get\-A\-R\-Count}!ns3::DnsPlusHeader@{ns3\-::\-Dns\-Plus\-Header}}
+\subsubsection[{Get\-A\-R\-Count}]{\setlength{\rightskip}{0pt plus 5cm}uint16\-\_\-t ns3\-::\-Dns\-Plus\-Header\-::\-Get\-A\-R\-Count (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classns3_1_1DnsPlusHeader_a5a870a653b4cee6899e219510fbfa4a4}
+
+
+Get A\-R\-Count. 
+
+\begin{DoxyReturn}{Returns}
+A\-R\-Count bit 
+\end{DoxyReturn}
+\hypertarget{classns3_1_1DnsPlusHeader_aae7edb215fce7562cb0946b87f8f84d0}{\index{ns3\-::\-Dns\-Plus\-Header@{ns3\-::\-Dns\-Plus\-Header}!Get\-Id@{Get\-Id}}
+\index{Get\-Id@{Get\-Id}!ns3::DnsPlusHeader@{ns3\-::\-Dns\-Plus\-Header}}
+\subsubsection[{Get\-Id}]{\setlength{\rightskip}{0pt plus 5cm}uint16\-\_\-t ns3\-::\-Dns\-Plus\-Header\-::\-Get\-Id (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classns3_1_1DnsPlusHeader_aae7edb215fce7562cb0946b87f8f84d0}
+
+
+Get Id of D\-N\-S request. 
+
+\begin{DoxyReturn}{Returns}
+Id of D\-N\-S request 
+\end{DoxyReturn}
+\hypertarget{classns3_1_1DnsPlusHeader_a4d290db0c63ed92adc4cdbd09fe84c24}{\index{ns3\-::\-Dns\-Plus\-Header@{ns3\-::\-Dns\-Plus\-Header}!Get\-Instance\-Type\-Id@{Get\-Instance\-Type\-Id}}
+\index{Get\-Instance\-Type\-Id@{Get\-Instance\-Type\-Id}!ns3::DnsPlusHeader@{ns3\-::\-Dns\-Plus\-Header}}
+\subsubsection[{Get\-Instance\-Type\-Id}]{\setlength{\rightskip}{0pt plus 5cm}Type\-Id ns3\-::\-Dns\-Plus\-Header\-::\-Get\-Instance\-Type\-Id (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classns3_1_1DnsPlusHeader_a4d290db0c63ed92adc4cdbd09fe84c24}
+\hypertarget{classns3_1_1DnsPlusHeader_aabe109de0f4dd99b373f108b24a6f4dd}{\index{ns3\-::\-Dns\-Plus\-Header@{ns3\-::\-Dns\-Plus\-Header}!Get\-N\-S\-Count@{Get\-N\-S\-Count}}
+\index{Get\-N\-S\-Count@{Get\-N\-S\-Count}!ns3::DnsPlusHeader@{ns3\-::\-Dns\-Plus\-Header}}
+\subsubsection[{Get\-N\-S\-Count}]{\setlength{\rightskip}{0pt plus 5cm}uint16\-\_\-t ns3\-::\-Dns\-Plus\-Header\-::\-Get\-N\-S\-Count (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classns3_1_1DnsPlusHeader_aabe109de0f4dd99b373f108b24a6f4dd}
+
+
+Get N\-Scount. 
+
+\begin{DoxyReturn}{Returns}
+N\-S\-Count bit 
+\end{DoxyReturn}
+\hypertarget{classns3_1_1DnsPlusHeader_a7c1f46655a3b37ce288922a10c0b1d85}{\index{ns3\-::\-Dns\-Plus\-Header@{ns3\-::\-Dns\-Plus\-Header}!Get\-O\-P\-C\-O\-D\-E@{Get\-O\-P\-C\-O\-D\-E}}
+\index{Get\-O\-P\-C\-O\-D\-E@{Get\-O\-P\-C\-O\-D\-E}!ns3::DnsPlusHeader@{ns3\-::\-Dns\-Plus\-Header}}
+\subsubsection[{Get\-O\-P\-C\-O\-D\-E}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t ns3\-::\-Dns\-Plus\-Header\-::\-Get\-O\-P\-C\-O\-D\-E (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classns3_1_1DnsPlusHeader_a7c1f46655a3b37ce288922a10c0b1d85}
+
+
+Get O\-P\-C\-O\-D\-E bits. 
+
+\begin{DoxyReturn}{Returns}
+O\-P\-C\-O\-D\-E bits 
+\end{DoxyReturn}
+\hypertarget{classns3_1_1DnsPlusHeader_a72e660095dcbbcfbd3ea56af26081fde}{\index{ns3\-::\-Dns\-Plus\-Header@{ns3\-::\-Dns\-Plus\-Header}!Get\-Q\-D\-Count@{Get\-Q\-D\-Count}}
+\index{Get\-Q\-D\-Count@{Get\-Q\-D\-Count}!ns3::DnsPlusHeader@{ns3\-::\-Dns\-Plus\-Header}}
+\subsubsection[{Get\-Q\-D\-Count}]{\setlength{\rightskip}{0pt plus 5cm}uint16\-\_\-t ns3\-::\-Dns\-Plus\-Header\-::\-Get\-Q\-D\-Count (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classns3_1_1DnsPlusHeader_a72e660095dcbbcfbd3ea56af26081fde}
+
+
+Get Q\-Dcount. 
+
+\begin{DoxyReturn}{Returns}
+Q\-D\-Count 
+\end{DoxyReturn}
+\hypertarget{classns3_1_1DnsPlusHeader_aed50596c87046b01e05bd9851a69e82c}{\index{ns3\-::\-Dns\-Plus\-Header@{ns3\-::\-Dns\-Plus\-Header}!Get\-Q\-R@{Get\-Q\-R}}
+\index{Get\-Q\-R@{Get\-Q\-R}!ns3::DnsPlusHeader@{ns3\-::\-Dns\-Plus\-Header}}
+\subsubsection[{Get\-Q\-R}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t ns3\-::\-Dns\-Plus\-Header\-::\-Get\-Q\-R (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classns3_1_1DnsPlusHeader_aed50596c87046b01e05bd9851a69e82c}
+
+
+Get Q\-R bit. 
+
+\begin{DoxyReturn}{Returns}
+Q\-R bit 
+\end{DoxyReturn}
+\hypertarget{classns3_1_1DnsPlusHeader_a0d9c76d160543f5d6bcc032c6d1e8994}{\index{ns3\-::\-Dns\-Plus\-Header@{ns3\-::\-Dns\-Plus\-Header}!Get\-R\-A@{Get\-R\-A}}
+\index{Get\-R\-A@{Get\-R\-A}!ns3::DnsPlusHeader@{ns3\-::\-Dns\-Plus\-Header}}
+\subsubsection[{Get\-R\-A}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t ns3\-::\-Dns\-Plus\-Header\-::\-Get\-R\-A (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classns3_1_1DnsPlusHeader_a0d9c76d160543f5d6bcc032c6d1e8994}
+
+
+Get R\-A bit. 
+
+\begin{DoxyReturn}{Returns}
+R\-A bit 
+\end{DoxyReturn}
+\hypertarget{classns3_1_1DnsPlusHeader_aa7f893eb6a224c347e11d5af5ec5e87c}{\index{ns3\-::\-Dns\-Plus\-Header@{ns3\-::\-Dns\-Plus\-Header}!Get\-R\-C\-O\-D\-E@{Get\-R\-C\-O\-D\-E}}
+\index{Get\-R\-C\-O\-D\-E@{Get\-R\-C\-O\-D\-E}!ns3::DnsPlusHeader@{ns3\-::\-Dns\-Plus\-Header}}
+\subsubsection[{Get\-R\-C\-O\-D\-E}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t ns3\-::\-Dns\-Plus\-Header\-::\-Get\-R\-C\-O\-D\-E (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classns3_1_1DnsPlusHeader_aa7f893eb6a224c347e11d5af5ec5e87c}
+
+
+Get R\-C\-O\-D\-E. 
+
+\begin{DoxyReturn}{Returns}
+R\-C\-O\-D\-E 
+\end{DoxyReturn}
+\hypertarget{classns3_1_1DnsPlusHeader_a6ba87b0dbc7c2198670c6c4e31f9a726}{\index{ns3\-::\-Dns\-Plus\-Header@{ns3\-::\-Dns\-Plus\-Header}!Get\-R\-D@{Get\-R\-D}}
+\index{Get\-R\-D@{Get\-R\-D}!ns3::DnsPlusHeader@{ns3\-::\-Dns\-Plus\-Header}}
+\subsubsection[{Get\-R\-D}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t ns3\-::\-Dns\-Plus\-Header\-::\-Get\-R\-D (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classns3_1_1DnsPlusHeader_a6ba87b0dbc7c2198670c6c4e31f9a726}
+
+
+Get R\-D bit. 
+
+\begin{DoxyReturn}{Returns}
+R\-D bit 
+\end{DoxyReturn}
+\hypertarget{classns3_1_1DnsPlusHeader_ac951e2cb1473ec87540b829c2d572b39}{\index{ns3\-::\-Dns\-Plus\-Header@{ns3\-::\-Dns\-Plus\-Header}!Get\-Serialized\-Size@{Get\-Serialized\-Size}}
+\index{Get\-Serialized\-Size@{Get\-Serialized\-Size}!ns3::DnsPlusHeader@{ns3\-::\-Dns\-Plus\-Header}}
+\subsubsection[{Get\-Serialized\-Size}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t ns3\-::\-Dns\-Plus\-Header\-::\-Get\-Serialized\-Size (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classns3_1_1DnsPlusHeader_ac951e2cb1473ec87540b829c2d572b39}
+\hypertarget{classns3_1_1DnsPlusHeader_a63a67866520ddb9348b1177fe2fc3e3e}{\index{ns3\-::\-Dns\-Plus\-Header@{ns3\-::\-Dns\-Plus\-Header}!Get\-T\-C@{Get\-T\-C}}
+\index{Get\-T\-C@{Get\-T\-C}!ns3::DnsPlusHeader@{ns3\-::\-Dns\-Plus\-Header}}
+\subsubsection[{Get\-T\-C}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t ns3\-::\-Dns\-Plus\-Header\-::\-Get\-T\-C (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classns3_1_1DnsPlusHeader_a63a67866520ddb9348b1177fe2fc3e3e}
+
+
+Get T\-C bit. 
+
+\begin{DoxyReturn}{Returns}
+T\-C bit 
+\end{DoxyReturn}
+\hypertarget{classns3_1_1DnsPlusHeader_aca249927d0ab0ec498b4dd77c76fc9ec}{\index{ns3\-::\-Dns\-Plus\-Header@{ns3\-::\-Dns\-Plus\-Header}!Get\-Type\-Id@{Get\-Type\-Id}}
+\index{Get\-Type\-Id@{Get\-Type\-Id}!ns3::DnsPlusHeader@{ns3\-::\-Dns\-Plus\-Header}}
+\subsubsection[{Get\-Type\-Id}]{\setlength{\rightskip}{0pt plus 5cm}Type\-Id ns3\-::\-Dns\-Plus\-Header\-::\-Get\-Type\-Id (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classns3_1_1DnsPlusHeader_aca249927d0ab0ec498b4dd77c76fc9ec}
+
+
+Get the type I\-D. 
+
+\begin{DoxyReturn}{Returns}
+the object Type\-Id 
+\end{DoxyReturn}
+\hypertarget{classns3_1_1DnsPlusHeader_af00e13f343d53b2bb84079b850e88eb5}{\index{ns3\-::\-Dns\-Plus\-Header@{ns3\-::\-Dns\-Plus\-Header}!Get\-Z@{Get\-Z}}
+\index{Get\-Z@{Get\-Z}!ns3::DnsPlusHeader@{ns3\-::\-Dns\-Plus\-Header}}
+\subsubsection[{Get\-Z}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t ns3\-::\-Dns\-Plus\-Header\-::\-Get\-Z (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classns3_1_1DnsPlusHeader_af00e13f343d53b2bb84079b850e88eb5}
+
+
+Get Z bit. 
+
+\begin{DoxyReturn}{Returns}
+Z bit 
+\end{DoxyReturn}
+\hypertarget{classns3_1_1DnsPlusHeader_a1db3739a5909bf66de04839fd455c244}{\index{ns3\-::\-Dns\-Plus\-Header@{ns3\-::\-Dns\-Plus\-Header}!Print@{Print}}
+\index{Print@{Print}!ns3::DnsPlusHeader@{ns3\-::\-Dns\-Plus\-Header}}
+\subsubsection[{Print}]{\setlength{\rightskip}{0pt plus 5cm}void ns3\-::\-Dns\-Plus\-Header\-::\-Print (
+\begin{DoxyParamCaption}
+\item[{std\-::ostream \&}]{os}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classns3_1_1DnsPlusHeader_a1db3739a5909bf66de04839fd455c244}
+\hypertarget{classns3_1_1DnsPlusHeader_af396f9396640c877af51efaf2f199072}{\index{ns3\-::\-Dns\-Plus\-Header@{ns3\-::\-Dns\-Plus\-Header}!Serialize@{Serialize}}
+\index{Serialize@{Serialize}!ns3::DnsPlusHeader@{ns3\-::\-Dns\-Plus\-Header}}
+\subsubsection[{Serialize}]{\setlength{\rightskip}{0pt plus 5cm}void ns3\-::\-Dns\-Plus\-Header\-::\-Serialize (
+\begin{DoxyParamCaption}
+\item[{Buffer\-::\-Iterator}]{start}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classns3_1_1DnsPlusHeader_af396f9396640c877af51efaf2f199072}
+\hypertarget{classns3_1_1DnsPlusHeader_a101aaca4f9508380a7bb27b170de4c9f}{\index{ns3\-::\-Dns\-Plus\-Header@{ns3\-::\-Dns\-Plus\-Header}!Set\-A\-A@{Set\-A\-A}}
+\index{Set\-A\-A@{Set\-A\-A}!ns3::DnsPlusHeader@{ns3\-::\-Dns\-Plus\-Header}}
+\subsubsection[{Set\-A\-A}]{\setlength{\rightskip}{0pt plus 5cm}void ns3\-::\-Dns\-Plus\-Header\-::\-Set\-A\-A (
+\begin{DoxyParamCaption}
+\item[{uint8\-\_\-t}]{aa\-Bit}
+\end{DoxyParamCaption}
+)}}\label{classns3_1_1DnsPlusHeader_a101aaca4f9508380a7bb27b170de4c9f}
+
+
+Set A\-A Authoritative Answer bit. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em aa\-Bit} & Authoritative Answer bit. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classns3_1_1DnsPlusHeader_a49a171a0aa8582dcf6a44bdfde783c7a}{\index{ns3\-::\-Dns\-Plus\-Header@{ns3\-::\-Dns\-Plus\-Header}!Set\-A\-N\-Count@{Set\-A\-N\-Count}}
+\index{Set\-A\-N\-Count@{Set\-A\-N\-Count}!ns3::DnsPlusHeader@{ns3\-::\-Dns\-Plus\-Header}}
+\subsubsection[{Set\-A\-N\-Count}]{\setlength{\rightskip}{0pt plus 5cm}void ns3\-::\-Dns\-Plus\-Header\-::\-Set\-A\-N\-Count (
+\begin{DoxyParamCaption}
+\item[{uint16\-\_\-t}]{ancount\-Bits}
+\end{DoxyParamCaption}
+)}}\label{classns3_1_1DnsPlusHeader_a49a171a0aa8582dcf6a44bdfde783c7a}
+
+
+Set A\-N\-Count Bit. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ancount\-Bits} & A\-N\-Count Bit \\
+\hline
+\end{DoxyParams}
+\hypertarget{classns3_1_1DnsPlusHeader_a77392a980ddd74a651c6b91e3a68e7cf}{\index{ns3\-::\-Dns\-Plus\-Header@{ns3\-::\-Dns\-Plus\-Header}!Set\-A\-R\-Count@{Set\-A\-R\-Count}}
+\index{Set\-A\-R\-Count@{Set\-A\-R\-Count}!ns3::DnsPlusHeader@{ns3\-::\-Dns\-Plus\-Header}}
+\subsubsection[{Set\-A\-R\-Count}]{\setlength{\rightskip}{0pt plus 5cm}void ns3\-::\-Dns\-Plus\-Header\-::\-Set\-A\-R\-Count (
+\begin{DoxyParamCaption}
+\item[{uint16\-\_\-t}]{arcount\-Bits}
+\end{DoxyParamCaption}
+)}}\label{classns3_1_1DnsPlusHeader_a77392a980ddd74a651c6b91e3a68e7cf}
+
+
+Set A\-R\-Count Bit. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em arcount\-Bits} & A\-R\-Count Bit \\
+\hline
+\end{DoxyParams}
+\hypertarget{classns3_1_1DnsPlusHeader_aaeb6a6c63353ba23e4b992f4bac58b05}{\index{ns3\-::\-Dns\-Plus\-Header@{ns3\-::\-Dns\-Plus\-Header}!Set\-Id@{Set\-Id}}
+\index{Set\-Id@{Set\-Id}!ns3::DnsPlusHeader@{ns3\-::\-Dns\-Plus\-Header}}
+\subsubsection[{Set\-Id}]{\setlength{\rightskip}{0pt plus 5cm}void ns3\-::\-Dns\-Plus\-Header\-::\-Set\-Id (
+\begin{DoxyParamCaption}
+\item[{uint16\-\_\-t}]{id\-Bits}
+\end{DoxyParamCaption}
+)}}\label{classns3_1_1DnsPlusHeader_aaeb6a6c63353ba23e4b992f4bac58b05}
+
+
+Set Id. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id\-Bits} & Id of D\-N\-S request \\
+\hline
+\end{DoxyParams}
+\hypertarget{classns3_1_1DnsPlusHeader_aae6d4997842c4e7674eb5da84aca1758}{\index{ns3\-::\-Dns\-Plus\-Header@{ns3\-::\-Dns\-Plus\-Header}!Set\-N\-S\-Count@{Set\-N\-S\-Count}}
+\index{Set\-N\-S\-Count@{Set\-N\-S\-Count}!ns3::DnsPlusHeader@{ns3\-::\-Dns\-Plus\-Header}}
+\subsubsection[{Set\-N\-S\-Count}]{\setlength{\rightskip}{0pt plus 5cm}void ns3\-::\-Dns\-Plus\-Header\-::\-Set\-N\-S\-Count (
+\begin{DoxyParamCaption}
+\item[{uint16\-\_\-t}]{nscount\-Bits}
+\end{DoxyParamCaption}
+)}}\label{classns3_1_1DnsPlusHeader_aae6d4997842c4e7674eb5da84aca1758}
+
+
+Set N\-S\-Count bit. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em nscount\-Bits} & N\-S\-Count bit \\
+\hline
+\end{DoxyParams}
+\hypertarget{classns3_1_1DnsPlusHeader_a3b6ee82ad16a50f44ee634477e73b560}{\index{ns3\-::\-Dns\-Plus\-Header@{ns3\-::\-Dns\-Plus\-Header}!Set\-O\-P\-C\-O\-D\-E@{Set\-O\-P\-C\-O\-D\-E}}
+\index{Set\-O\-P\-C\-O\-D\-E@{Set\-O\-P\-C\-O\-D\-E}!ns3::DnsPlusHeader@{ns3\-::\-Dns\-Plus\-Header}}
+\subsubsection[{Set\-O\-P\-C\-O\-D\-E}]{\setlength{\rightskip}{0pt plus 5cm}void ns3\-::\-Dns\-Plus\-Header\-::\-Set\-O\-P\-C\-O\-D\-E (
+\begin{DoxyParamCaption}
+\item[{uint8\-\_\-t}]{opcode}
+\end{DoxyParamCaption}
+)}}\label{classns3_1_1DnsPlusHeader_a3b6ee82ad16a50f44ee634477e73b560}
+
+
+Set opcode. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em opcode} & O\-P\-C\-O\-D\-E field \\
+\hline
+\end{DoxyParams}
+\hypertarget{classns3_1_1DnsPlusHeader_a975e84f17140d5c7ba171edd64b7919e}{\index{ns3\-::\-Dns\-Plus\-Header@{ns3\-::\-Dns\-Plus\-Header}!Set\-Q\-D\-Count@{Set\-Q\-D\-Count}}
+\index{Set\-Q\-D\-Count@{Set\-Q\-D\-Count}!ns3::DnsPlusHeader@{ns3\-::\-Dns\-Plus\-Header}}
+\subsubsection[{Set\-Q\-D\-Count}]{\setlength{\rightskip}{0pt plus 5cm}void ns3\-::\-Dns\-Plus\-Header\-::\-Set\-Q\-D\-Count (
+\begin{DoxyParamCaption}
+\item[{uint16\-\_\-t}]{qdcount\-Bits}
+\end{DoxyParamCaption}
+)}}\label{classns3_1_1DnsPlusHeader_a975e84f17140d5c7ba171edd64b7919e}
+
+
+Set Q\-D\-Count Bit. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em qdcount\-Bits} & Q\-D\-Count Bit \\
+\hline
+\end{DoxyParams}
+\hypertarget{classns3_1_1DnsPlusHeader_a163bb071a4227854dcdd139c7f98cd27}{\index{ns3\-::\-Dns\-Plus\-Header@{ns3\-::\-Dns\-Plus\-Header}!Set\-Q\-R@{Set\-Q\-R}}
+\index{Set\-Q\-R@{Set\-Q\-R}!ns3::DnsPlusHeader@{ns3\-::\-Dns\-Plus\-Header}}
+\subsubsection[{Set\-Q\-R}]{\setlength{\rightskip}{0pt plus 5cm}void ns3\-::\-Dns\-Plus\-Header\-::\-Set\-Q\-R (
+\begin{DoxyParamCaption}
+\item[{uint8\-\_\-t}]{qr\-Bit}
+\end{DoxyParamCaption}
+)}}\label{classns3_1_1DnsPlusHeader_a163bb071a4227854dcdd139c7f98cd27}
+
+
+Set Q\-R bit. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em qr\-Bit} & Q\-R bit, 0 specify the Query and 1 a response. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classns3_1_1DnsPlusHeader_ae3027f5af8724d06e2e1df355ae0a853}{\index{ns3\-::\-Dns\-Plus\-Header@{ns3\-::\-Dns\-Plus\-Header}!Set\-R\-A@{Set\-R\-A}}
+\index{Set\-R\-A@{Set\-R\-A}!ns3::DnsPlusHeader@{ns3\-::\-Dns\-Plus\-Header}}
+\subsubsection[{Set\-R\-A}]{\setlength{\rightskip}{0pt plus 5cm}void ns3\-::\-Dns\-Plus\-Header\-::\-Set\-R\-A (
+\begin{DoxyParamCaption}
+\item[{uint8\-\_\-t}]{ra\-Bit}
+\end{DoxyParamCaption}
+)}}\label{classns3_1_1DnsPlusHeader_ae3027f5af8724d06e2e1df355ae0a853}
+
+
+Set Recursion Avaliable bit. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ra\-Bit} & Recursion Avaliable \\
+\hline
+\end{DoxyParams}
+\hypertarget{classns3_1_1DnsPlusHeader_a83fb23f26dc34870c1bf6e1284b32ef5}{\index{ns3\-::\-Dns\-Plus\-Header@{ns3\-::\-Dns\-Plus\-Header}!Set\-R\-C\-O\-D\-E@{Set\-R\-C\-O\-D\-E}}
+\index{Set\-R\-C\-O\-D\-E@{Set\-R\-C\-O\-D\-E}!ns3::DnsPlusHeader@{ns3\-::\-Dns\-Plus\-Header}}
+\subsubsection[{Set\-R\-C\-O\-D\-E}]{\setlength{\rightskip}{0pt plus 5cm}void ns3\-::\-Dns\-Plus\-Header\-::\-Set\-R\-C\-O\-D\-E (
+\begin{DoxyParamCaption}
+\item[{uint8\-\_\-t}]{rcode\-Bits}
+\end{DoxyParamCaption}
+)}}\label{classns3_1_1DnsPlusHeader_a83fb23f26dc34870c1bf6e1284b32ef5}
+
+
+Set Response Code. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rcode\-Bits} & Response Code \\
+\hline
+\end{DoxyParams}
+\hypertarget{classns3_1_1DnsPlusHeader_ad7e284af8733c294da48aa30a6587233}{\index{ns3\-::\-Dns\-Plus\-Header@{ns3\-::\-Dns\-Plus\-Header}!Set\-R\-D@{Set\-R\-D}}
+\index{Set\-R\-D@{Set\-R\-D}!ns3::DnsPlusHeader@{ns3\-::\-Dns\-Plus\-Header}}
+\subsubsection[{Set\-R\-D}]{\setlength{\rightskip}{0pt plus 5cm}void ns3\-::\-Dns\-Plus\-Header\-::\-Set\-R\-D (
+\begin{DoxyParamCaption}
+\item[{uint8\-\_\-t}]{rd\-Bit}
+\end{DoxyParamCaption}
+)}}\label{classns3_1_1DnsPlusHeader_ad7e284af8733c294da48aa30a6587233}
+
+
+Set Recursion Desired bit. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rd\-Bit} & Recursion Desired bit \\
+\hline
+\end{DoxyParams}
+\hypertarget{classns3_1_1DnsPlusHeader_a5902c88c45f698ddea33524ab548a7d9}{\index{ns3\-::\-Dns\-Plus\-Header@{ns3\-::\-Dns\-Plus\-Header}!Set\-T\-C@{Set\-T\-C}}
+\index{Set\-T\-C@{Set\-T\-C}!ns3::DnsPlusHeader@{ns3\-::\-Dns\-Plus\-Header}}
+\subsubsection[{Set\-T\-C}]{\setlength{\rightskip}{0pt plus 5cm}void ns3\-::\-Dns\-Plus\-Header\-::\-Set\-T\-C (
+\begin{DoxyParamCaption}
+\item[{uint8\-\_\-t}]{tc\-Bit}
+\end{DoxyParamCaption}
+)}}\label{classns3_1_1DnsPlusHeader_a5902c88c45f698ddea33524ab548a7d9}
+
+
+Set Truncation bit. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tc\-Bit} & Truncation bit \\
+\hline
+\end{DoxyParams}
+\hypertarget{classns3_1_1DnsPlusHeader_aae30ef6d451eec678278171ed7a5fe6c}{\index{ns3\-::\-Dns\-Plus\-Header@{ns3\-::\-Dns\-Plus\-Header}!Set\-Z@{Set\-Z}}
+\index{Set\-Z@{Set\-Z}!ns3::DnsPlusHeader@{ns3\-::\-Dns\-Plus\-Header}}
+\subsubsection[{Set\-Z}]{\setlength{\rightskip}{0pt plus 5cm}void ns3\-::\-Dns\-Plus\-Header\-::\-Set\-Z (
+\begin{DoxyParamCaption}
+\item[{uint8\-\_\-t}]{z\-Bit}
+\end{DoxyParamCaption}
+)}}\label{classns3_1_1DnsPlusHeader_aae30ef6d451eec678278171ed7a5fe6c}
+
+
+Set Z bit. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em z\-Bit} & Z bit \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classns3_1_1DnsPlusHeader_a2e41f079b9f89209837405def7797a0d}{\index{ns3\-::\-Dns\-Plus\-Header@{ns3\-::\-Dns\-Plus\-Header}!m\-\_\-\-A\-A@{m\-\_\-\-A\-A}}
+\index{m\-\_\-\-A\-A@{m\-\_\-\-A\-A}!ns3::DnsPlusHeader@{ns3\-::\-Dns\-Plus\-Header}}
+\subsubsection[{m\-\_\-\-A\-A}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t ns3\-::\-Dns\-Plus\-Header\-::m\-\_\-\-A\-A\hspace{0.3cm}{\ttfamily [private]}}}\label{classns3_1_1DnsPlusHeader_a2e41f079b9f89209837405def7797a0d}
+
+
+A\-A bit of header. 
+
+\hypertarget{classns3_1_1DnsPlusHeader_ac01fe04b25d9e3e75a4ae181cc8a156f}{\index{ns3\-::\-Dns\-Plus\-Header@{ns3\-::\-Dns\-Plus\-Header}!m\-\_\-\-A\-N\-Count@{m\-\_\-\-A\-N\-Count}}
+\index{m\-\_\-\-A\-N\-Count@{m\-\_\-\-A\-N\-Count}!ns3::DnsPlusHeader@{ns3\-::\-Dns\-Plus\-Header}}
+\subsubsection[{m\-\_\-\-A\-N\-Count}]{\setlength{\rightskip}{0pt plus 5cm}uint16\-\_\-t ns3\-::\-Dns\-Plus\-Header\-::m\-\_\-\-A\-N\-Count\hspace{0.3cm}{\ttfamily [private]}}}\label{classns3_1_1DnsPlusHeader_ac01fe04b25d9e3e75a4ae181cc8a156f}
+
+
+A\-N\-Count bits of header. 
+
+\hypertarget{classns3_1_1DnsPlusHeader_afe7adb4352d8f52c21a7c3f922314045}{\index{ns3\-::\-Dns\-Plus\-Header@{ns3\-::\-Dns\-Plus\-Header}!m\-\_\-\-A\-R\-Count@{m\-\_\-\-A\-R\-Count}}
+\index{m\-\_\-\-A\-R\-Count@{m\-\_\-\-A\-R\-Count}!ns3::DnsPlusHeader@{ns3\-::\-Dns\-Plus\-Header}}
+\subsubsection[{m\-\_\-\-A\-R\-Count}]{\setlength{\rightskip}{0pt plus 5cm}uint16\-\_\-t ns3\-::\-Dns\-Plus\-Header\-::m\-\_\-\-A\-R\-Count\hspace{0.3cm}{\ttfamily [private]}}}\label{classns3_1_1DnsPlusHeader_afe7adb4352d8f52c21a7c3f922314045}
+
+
+A\-R\-Count bits of header. 
+
+\hypertarget{classns3_1_1DnsPlusHeader_a2cb95f6912613452fc57847e15e4f7ac}{\index{ns3\-::\-Dns\-Plus\-Header@{ns3\-::\-Dns\-Plus\-Header}!m\-\_\-flag@{m\-\_\-flag}}
+\index{m\-\_\-flag@{m\-\_\-flag}!ns3::DnsPlusHeader@{ns3\-::\-Dns\-Plus\-Header}}
+\subsubsection[{m\-\_\-flag}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t ns3\-::\-Dns\-Plus\-Header\-::m\-\_\-flag\hspace{0.3cm}{\ttfamily [private]}}}\label{classns3_1_1DnsPlusHeader_a2cb95f6912613452fc57847e15e4f7ac}
+
+
+flag 
+
+\hypertarget{classns3_1_1DnsPlusHeader_a5c9375cfe16fc339e52d0ae1b9c19a24}{\index{ns3\-::\-Dns\-Plus\-Header@{ns3\-::\-Dns\-Plus\-Header}!m\-\_\-\-Id@{m\-\_\-\-Id}}
+\index{m\-\_\-\-Id@{m\-\_\-\-Id}!ns3::DnsPlusHeader@{ns3\-::\-Dns\-Plus\-Header}}
+\subsubsection[{m\-\_\-\-Id}]{\setlength{\rightskip}{0pt plus 5cm}uint16\-\_\-t ns3\-::\-Dns\-Plus\-Header\-::m\-\_\-\-Id\hspace{0.3cm}{\ttfamily [private]}}}\label{classns3_1_1DnsPlusHeader_a5c9375cfe16fc339e52d0ae1b9c19a24}
+
+
+Id bits of header. 
+
+\hypertarget{classns3_1_1DnsPlusHeader_ace416d666df5fe25acfbfdd7aad309ce}{\index{ns3\-::\-Dns\-Plus\-Header@{ns3\-::\-Dns\-Plus\-Header}!m\-\_\-\-N\-S\-Count@{m\-\_\-\-N\-S\-Count}}
+\index{m\-\_\-\-N\-S\-Count@{m\-\_\-\-N\-S\-Count}!ns3::DnsPlusHeader@{ns3\-::\-Dns\-Plus\-Header}}
+\subsubsection[{m\-\_\-\-N\-S\-Count}]{\setlength{\rightskip}{0pt plus 5cm}uint16\-\_\-t ns3\-::\-Dns\-Plus\-Header\-::m\-\_\-\-N\-S\-Count\hspace{0.3cm}{\ttfamily [private]}}}\label{classns3_1_1DnsPlusHeader_ace416d666df5fe25acfbfdd7aad309ce}
+
+
+N\-S\-Count bits of header. 
+
+\hypertarget{classns3_1_1DnsPlusHeader_ae93aeff5c9677e5252405cab8323f2df}{\index{ns3\-::\-Dns\-Plus\-Header@{ns3\-::\-Dns\-Plus\-Header}!m\-\_\-\-O\-P\-C\-O\-D\-E@{m\-\_\-\-O\-P\-C\-O\-D\-E}}
+\index{m\-\_\-\-O\-P\-C\-O\-D\-E@{m\-\_\-\-O\-P\-C\-O\-D\-E}!ns3::DnsPlusHeader@{ns3\-::\-Dns\-Plus\-Header}}
+\subsubsection[{m\-\_\-\-O\-P\-C\-O\-D\-E}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t ns3\-::\-Dns\-Plus\-Header\-::m\-\_\-\-O\-P\-C\-O\-D\-E\hspace{0.3cm}{\ttfamily [private]}}}\label{classns3_1_1DnsPlusHeader_ae93aeff5c9677e5252405cab8323f2df}
+
+
+O\-P\-C\-O\-D\-E bits of header. 
+
+\hypertarget{classns3_1_1DnsPlusHeader_ab85daf2b1bc16d2c58d1b6c1e21395d8}{\index{ns3\-::\-Dns\-Plus\-Header@{ns3\-::\-Dns\-Plus\-Header}!m\-\_\-\-Q\-D\-Count@{m\-\_\-\-Q\-D\-Count}}
+\index{m\-\_\-\-Q\-D\-Count@{m\-\_\-\-Q\-D\-Count}!ns3::DnsPlusHeader@{ns3\-::\-Dns\-Plus\-Header}}
+\subsubsection[{m\-\_\-\-Q\-D\-Count}]{\setlength{\rightskip}{0pt plus 5cm}uint16\-\_\-t ns3\-::\-Dns\-Plus\-Header\-::m\-\_\-\-Q\-D\-Count\hspace{0.3cm}{\ttfamily [private]}}}\label{classns3_1_1DnsPlusHeader_ab85daf2b1bc16d2c58d1b6c1e21395d8}
+
+
+Q\-D\-Count bits of header. 
+
+\hypertarget{classns3_1_1DnsPlusHeader_a913492faf18c9740d1a4db2e7b056b54}{\index{ns3\-::\-Dns\-Plus\-Header@{ns3\-::\-Dns\-Plus\-Header}!m\-\_\-\-Q\-R@{m\-\_\-\-Q\-R}}
+\index{m\-\_\-\-Q\-R@{m\-\_\-\-Q\-R}!ns3::DnsPlusHeader@{ns3\-::\-Dns\-Plus\-Header}}
+\subsubsection[{m\-\_\-\-Q\-R}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t ns3\-::\-Dns\-Plus\-Header\-::m\-\_\-\-Q\-R\hspace{0.3cm}{\ttfamily [private]}}}\label{classns3_1_1DnsPlusHeader_a913492faf18c9740d1a4db2e7b056b54}
+
+
+Q\-R bit of header. 
+
+\hypertarget{classns3_1_1DnsPlusHeader_a275459d7076136ce2c7099734b264cd5}{\index{ns3\-::\-Dns\-Plus\-Header@{ns3\-::\-Dns\-Plus\-Header}!m\-\_\-\-R\-A@{m\-\_\-\-R\-A}}
+\index{m\-\_\-\-R\-A@{m\-\_\-\-R\-A}!ns3::DnsPlusHeader@{ns3\-::\-Dns\-Plus\-Header}}
+\subsubsection[{m\-\_\-\-R\-A}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t ns3\-::\-Dns\-Plus\-Header\-::m\-\_\-\-R\-A\hspace{0.3cm}{\ttfamily [private]}}}\label{classns3_1_1DnsPlusHeader_a275459d7076136ce2c7099734b264cd5}
+
+
+R\-A bit of header. 
+
+\hypertarget{classns3_1_1DnsPlusHeader_a35835f0ee81cfec4806f85d9b62daca6}{\index{ns3\-::\-Dns\-Plus\-Header@{ns3\-::\-Dns\-Plus\-Header}!m\-\_\-\-R\-C\-O\-D\-E@{m\-\_\-\-R\-C\-O\-D\-E}}
+\index{m\-\_\-\-R\-C\-O\-D\-E@{m\-\_\-\-R\-C\-O\-D\-E}!ns3::DnsPlusHeader@{ns3\-::\-Dns\-Plus\-Header}}
+\subsubsection[{m\-\_\-\-R\-C\-O\-D\-E}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t ns3\-::\-Dns\-Plus\-Header\-::m\-\_\-\-R\-C\-O\-D\-E\hspace{0.3cm}{\ttfamily [private]}}}\label{classns3_1_1DnsPlusHeader_a35835f0ee81cfec4806f85d9b62daca6}
+
+
+R\-C\-O\-D\-E bits of header. 
+
+\hypertarget{classns3_1_1DnsPlusHeader_aceb20feea34744185f0e8fcb0ea4e7f4}{\index{ns3\-::\-Dns\-Plus\-Header@{ns3\-::\-Dns\-Plus\-Header}!m\-\_\-\-R\-D@{m\-\_\-\-R\-D}}
+\index{m\-\_\-\-R\-D@{m\-\_\-\-R\-D}!ns3::DnsPlusHeader@{ns3\-::\-Dns\-Plus\-Header}}
+\subsubsection[{m\-\_\-\-R\-D}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t ns3\-::\-Dns\-Plus\-Header\-::m\-\_\-\-R\-D\hspace{0.3cm}{\ttfamily [private]}}}\label{classns3_1_1DnsPlusHeader_aceb20feea34744185f0e8fcb0ea4e7f4}
+
+
+R\-D bit of header. 
+
+\hypertarget{classns3_1_1DnsPlusHeader_ad6b32f1358164571eb3eba7f083af321}{\index{ns3\-::\-Dns\-Plus\-Header@{ns3\-::\-Dns\-Plus\-Header}!m\-\_\-\-T\-C@{m\-\_\-\-T\-C}}
+\index{m\-\_\-\-T\-C@{m\-\_\-\-T\-C}!ns3::DnsPlusHeader@{ns3\-::\-Dns\-Plus\-Header}}
+\subsubsection[{m\-\_\-\-T\-C}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t ns3\-::\-Dns\-Plus\-Header\-::m\-\_\-\-T\-C\hspace{0.3cm}{\ttfamily [private]}}}\label{classns3_1_1DnsPlusHeader_ad6b32f1358164571eb3eba7f083af321}
+
+
+T\-C bit of header. 
+
+\hypertarget{classns3_1_1DnsPlusHeader_a9fb25d01e3e4ce98158926c2195a20cf}{\index{ns3\-::\-Dns\-Plus\-Header@{ns3\-::\-Dns\-Plus\-Header}!m\-\_\-\-Z@{m\-\_\-\-Z}}
+\index{m\-\_\-\-Z@{m\-\_\-\-Z}!ns3::DnsPlusHeader@{ns3\-::\-Dns\-Plus\-Header}}
+\subsubsection[{m\-\_\-\-Z}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t ns3\-::\-Dns\-Plus\-Header\-::m\-\_\-\-Z\hspace{0.3cm}{\ttfamily [private]}}}\label{classns3_1_1DnsPlusHeader_a9fb25d01e3e4ce98158926c2195a20cf}
+
+
+Z bits of header. 
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+model/\hyperlink{dnsplus-header_8h}{dnsplus-\/header.\-h}\item 
+model/\hyperlink{dnsplus-header_8cc}{dnsplus-\/header.\-cc}\end{DoxyCompactItemize}

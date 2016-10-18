@@ -1,0 +1,408 @@
+\hypertarget{classns3_1_1OICNZipfClient}{\section{ns3\-:\-:O\-I\-C\-N\-Zipf\-Client Class Reference}
+\label{classns3_1_1OICNZipfClient}\index{ns3\-::\-O\-I\-C\-N\-Zipf\-Client@{ns3\-::\-O\-I\-C\-N\-Zipf\-Client}}
+}
+
+
+O\-I\-C\-N Zipf Client application, it generates request for the contents following Zipf-\/\-Mandelbrot Distribution. Here is the explanation of Zipf-\/\-Mandelbrot Distribution\-: \href{http://en.wikipedia.org/wiki/Zipf%E2%80%93Mandelbrot_law}{\tt http\-://en.\-wikipedia.\-org/wiki/\-Zipf\%\-E2\%80\%93\-Mandelbrot\-\_\-law}. Client application send name resolution to I\-C\-N Manager. I\-C\-N Manager do the name resolution and direct source (I\-C\-N router or server) to send the content to the O\-I\-C\-N Zipf Client.  
+
+
+
+
+{\ttfamily \#include $<$oicn-\/zipf-\/client.\-h$>$}
+
+Inheritance diagram for ns3\-:\-:O\-I\-C\-N\-Zipf\-Client\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classns3_1_1OICNZipfClient}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classns3_1_1OICNZipfClient_ad408bc6446376318703b8e001d99a97f}{O\-I\-C\-N\-Zipf\-Client} (void)
+\item 
+virtual \hyperlink{classns3_1_1OICNZipfClient_a3f6cd458cc6a987da49699932c38b9bc}{$\sim$\-O\-I\-C\-N\-Zipf\-Client} (void)
+\item 
+void \hyperlink{classns3_1_1OICNZipfClient_a61c4940713bdd9363b8313696b2c4ffa}{Set\-Zipf} (std\-::pair$<$ int, int $>$ range)
+\begin{DoxyCompactList}\small\item\em Set the range of the index of content. \end{DoxyCompactList}\item 
+Ptr$<$ Packet $>$ \hyperlink{classns3_1_1OICNZipfClient_a4a76b1b9373eb3bb7e43970222def563}{Construct\-Sublayer} (Ptr$<$ Packet $>$ packet, std\-::string Name)
+\begin{DoxyCompactList}\small\item\em Construct the sublayer header. \end{DoxyCompactList}\item 
+Ptr$<$ Packet $>$ \hyperlink{classns3_1_1OICNZipfClient_ade9706357b84a74244249284e6da73cb}{Construct\-Dns\-Plus\-Header} (Ptr$<$ Packet $>$ packet)
+\begin{DoxyCompactList}\small\item\em Construct the D\-N\-S Plus header. \end{DoxyCompactList}\item 
+Ptr$<$ Packet $>$ \hyperlink{classns3_1_1OICNZipfClient_a966298b46754229776f3536e80fcff57}{Construct\-Dns\-Plus\-Question} (Ptr$<$ Packet $>$ packet, std\-::string name)
+\begin{DoxyCompactList}\small\item\em Construct the D\-N\-S Plus Question Section. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static Type\-Id \hyperlink{classns3_1_1OICNZipfClient_afe8d27ae680ce9efbe3006013ff3adf5}{Get\-Type\-Id} (void)
+\begin{DoxyCompactList}\small\item\em Get the type I\-D. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{classns3_1_1OICNZipfClient_aa0e32df291032ec158f3bdad7022d7b4}{Do\-Dispose} (void)
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classns3_1_1OICNZipfClient_a82eace7ea478582445022df4add70a9c}{Handle\-Read\-Icn\-Manager} (Ptr$<$ Socket $>$ socket)
+\begin{DoxyCompactList}\small\item\em Handle a packet reception from I\-C\-N Manager port (36). This function is called by lower layers. \end{DoxyCompactList}\item 
+void \hyperlink{classns3_1_1OICNZipfClient_aee5aa32b3b7d847ac8f01db8439a2b33}{Handle\-Read\-Source} (Ptr$<$ Socket $>$ socket)
+\begin{DoxyCompactList}\small\item\em Handle a packet reception from Source port (I\-C\-N Router or Server) (89). This function is called by lower layers. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classns3_1_1OICNZipfClient_abe66add9def5db29de9e2fc4b274c636}{Start\-Application} (void)
+\item 
+virtual void \hyperlink{classns3_1_1OICNZipfClient_af6857512948b5fbcf711f7a126133473}{Stop\-Application} (void)
+\item 
+int \hyperlink{classns3_1_1OICNZipfClient_a55dcd262453681f5b464cdf732d68ed2}{Get\-Next\-Content\-Index} ()
+\begin{DoxyCompactList}\small\item\em Generate the indices of content to be requested following Zipf-\/\-Mandelbrot Distribution. \end{DoxyCompactList}\item 
+void \hyperlink{classns3_1_1OICNZipfClient_aa7c04e11ce1f197bd4462e961ef04a2e}{Schedule\-Transmit} (Time dt)
+\begin{DoxyCompactList}\small\item\em Schedule the next packet transmission. \end{DoxyCompactList}\item 
+void \hyperlink{classns3_1_1OICNZipfClient_a3c656a3d51f7ddc8d6b31fbb88f2a575}{Send} ()
+\begin{DoxyCompactList}\small\item\em Send a packet to I\-C\-N Manager. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\-::pair$<$ uint32\-\_\-t, uint32\-\_\-t $>$ \hyperlink{classns3_1_1OICNZipfClient_a374afd9b3085995e5fc37befbc593925}{m\-\_\-range}
+\begin{DoxyCompactList}\small\item\em range of the indices of the contents \end{DoxyCompactList}\item 
+uint32\-\_\-t \hyperlink{classns3_1_1OICNZipfClient_ad8cd34cc29d9ff89702f5c805a58aaf4}{m\-\_\-sent}
+\begin{DoxyCompactList}\small\item\em counter for sent packets \end{DoxyCompactList}\item 
+uint32\-\_\-t \hyperlink{classns3_1_1OICNZipfClient_ab2cc3b1156fb17d67c19e16526696770}{m\-\_\-count}
+\begin{DoxyCompactList}\small\item\em the maximum number of packets the application will send \end{DoxyCompactList}\item 
+double \hyperlink{classns3_1_1OICNZipfClient_aa56cf1606f17a1753bb4b066f75d5dcc}{m\-\_\-q}
+\begin{DoxyCompactList}\small\item\em q in (k+q)$^\wedge$s \end{DoxyCompactList}\item 
+double \hyperlink{classns3_1_1OICNZipfClient_a4bf5ef44d4ee8832da331827774bff10}{m\-\_\-s}
+\begin{DoxyCompactList}\small\item\em s in (k+q)$^\wedge$s \end{DoxyCompactList}\item 
+std\-::vector$<$ double $>$ \hyperlink{classns3_1_1OICNZipfClient_a1dd636e731bbe2b2273970c3e9c191b7}{m\-\_\-\-Pcum}
+\begin{DoxyCompactList}\small\item\em cumulative probability \end{DoxyCompactList}\item 
+uint32\-\_\-t \hyperlink{classns3_1_1OICNZipfClient_a4146b87daf72c43e4d9f1e288897e30e}{m\-\_\-\-N}
+\begin{DoxyCompactList}\small\item\em number of the contents \end{DoxyCompactList}\item 
+uint16\-\_\-t \hyperlink{classns3_1_1OICNZipfClient_a9f6a96310cf93dd8233c3f8c7c9bf298}{m\-\_\-port\-Fixed}
+\begin{DoxyCompactList}\small\item\em client port is attached with port no 26, it will listen to this port from O\-I\-C\-N Source(\-I\-C\-N router or server) \end{DoxyCompactList}\item 
+Ptr$<$ Socket $>$ \hyperlink{classns3_1_1OICNZipfClient_accb08afc8f8218076eaa919743381e79}{m\-\_\-socket\-Icn\-Manager}
+\begin{DoxyCompactList}\small\item\em socket associated with I\-C\-N Manager \end{DoxyCompactList}\item 
+Ptr$<$ Socket $>$ \hyperlink{classns3_1_1OICNZipfClient_ada2f1cccaed0a70bf548ad789669a2f6}{m\-\_\-socket\-Source}
+\begin{DoxyCompactList}\small\item\em socket associated with Source \end{DoxyCompactList}\item 
+Event\-Id \hyperlink{classns3_1_1OICNZipfClient_ae3d2dfdcf8327811fd5f2def89214b21}{m\-\_\-send\-Event}
+\begin{DoxyCompactList}\small\item\em event to send the next packet \end{DoxyCompactList}\item 
+Time \hyperlink{classns3_1_1OICNZipfClient_a916a69a684a6422b37ee520c499430e9}{m\-\_\-interval}
+\begin{DoxyCompactList}\small\item\em packet inter-\/send time \end{DoxyCompactList}\item 
+Address \hyperlink{classns3_1_1OICNZipfClient_af1bb1bbc3778f4b0deff03288e1cd56f}{m\-\_\-icn\-Manager\-Address}
+\begin{DoxyCompactList}\small\item\em I\-C\-N Manager Address. \end{DoxyCompactList}\item 
+uint16\-\_\-t \hyperlink{classns3_1_1OICNZipfClient_a9f0e99cf57dbab4950612c6eecfdeb8c}{m\-\_\-icn\-Manager\-Port}
+\begin{DoxyCompactList}\small\item\em I\-C\-N Manager port. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+O\-I\-C\-N Zipf Client application, it generates request for the contents following Zipf-\/\-Mandelbrot Distribution. Here is the explanation of Zipf-\/\-Mandelbrot Distribution\-: \href{http://en.wikipedia.org/wiki/Zipf%E2%80%93Mandelbrot_law}{\tt http\-://en.\-wikipedia.\-org/wiki/\-Zipf\%\-E2\%80\%93\-Mandelbrot\-\_\-law}. Client application send name resolution to I\-C\-N Manager. I\-C\-N Manager do the name resolution and direct source (I\-C\-N router or server) to send the content to the O\-I\-C\-N Zipf Client. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classns3_1_1OICNZipfClient_ad408bc6446376318703b8e001d99a97f}{\index{ns3\-::\-O\-I\-C\-N\-Zipf\-Client@{ns3\-::\-O\-I\-C\-N\-Zipf\-Client}!O\-I\-C\-N\-Zipf\-Client@{O\-I\-C\-N\-Zipf\-Client}}
+\index{O\-I\-C\-N\-Zipf\-Client@{O\-I\-C\-N\-Zipf\-Client}!ns3::OICNZipfClient@{ns3\-::\-O\-I\-C\-N\-Zipf\-Client}}
+\subsubsection[{O\-I\-C\-N\-Zipf\-Client}]{\setlength{\rightskip}{0pt plus 5cm}ns3\-::\-O\-I\-C\-N\-Zipf\-Client\-::\-O\-I\-C\-N\-Zipf\-Client (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{classns3_1_1OICNZipfClient_ad408bc6446376318703b8e001d99a97f}
+\hypertarget{classns3_1_1OICNZipfClient_a3f6cd458cc6a987da49699932c38b9bc}{\index{ns3\-::\-O\-I\-C\-N\-Zipf\-Client@{ns3\-::\-O\-I\-C\-N\-Zipf\-Client}!$\sim$\-O\-I\-C\-N\-Zipf\-Client@{$\sim$\-O\-I\-C\-N\-Zipf\-Client}}
+\index{$\sim$\-O\-I\-C\-N\-Zipf\-Client@{$\sim$\-O\-I\-C\-N\-Zipf\-Client}!ns3::OICNZipfClient@{ns3\-::\-O\-I\-C\-N\-Zipf\-Client}}
+\subsubsection[{$\sim$\-O\-I\-C\-N\-Zipf\-Client}]{\setlength{\rightskip}{0pt plus 5cm}ns3\-::\-O\-I\-C\-N\-Zipf\-Client\-::$\sim$\-O\-I\-C\-N\-Zipf\-Client (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classns3_1_1OICNZipfClient_a3f6cd458cc6a987da49699932c38b9bc}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classns3_1_1OICNZipfClient_ade9706357b84a74244249284e6da73cb}{\index{ns3\-::\-O\-I\-C\-N\-Zipf\-Client@{ns3\-::\-O\-I\-C\-N\-Zipf\-Client}!Construct\-Dns\-Plus\-Header@{Construct\-Dns\-Plus\-Header}}
+\index{Construct\-Dns\-Plus\-Header@{Construct\-Dns\-Plus\-Header}!ns3::OICNZipfClient@{ns3\-::\-O\-I\-C\-N\-Zipf\-Client}}
+\subsubsection[{Construct\-Dns\-Plus\-Header}]{\setlength{\rightskip}{0pt plus 5cm}Ptr$<$ Packet $>$ ns3\-::\-O\-I\-C\-N\-Zipf\-Client\-::\-Construct\-Dns\-Plus\-Header (
+\begin{DoxyParamCaption}
+\item[{Ptr$<$ Packet $>$}]{packet}
+\end{DoxyParamCaption}
+)}}\label{classns3_1_1OICNZipfClient_ade9706357b84a74244249284e6da73cb}
+
+
+Construct the D\-N\-S Plus header. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em packet} & packet being constructed by application layer \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+packet constructed after adding D\-N\-S Plus header 
+\end{DoxyReturn}
+\hypertarget{classns3_1_1OICNZipfClient_a966298b46754229776f3536e80fcff57}{\index{ns3\-::\-O\-I\-C\-N\-Zipf\-Client@{ns3\-::\-O\-I\-C\-N\-Zipf\-Client}!Construct\-Dns\-Plus\-Question@{Construct\-Dns\-Plus\-Question}}
+\index{Construct\-Dns\-Plus\-Question@{Construct\-Dns\-Plus\-Question}!ns3::OICNZipfClient@{ns3\-::\-O\-I\-C\-N\-Zipf\-Client}}
+\subsubsection[{Construct\-Dns\-Plus\-Question}]{\setlength{\rightskip}{0pt plus 5cm}Ptr$<$ Packet $>$ ns3\-::\-O\-I\-C\-N\-Zipf\-Client\-::\-Construct\-Dns\-Plus\-Question (
+\begin{DoxyParamCaption}
+\item[{Ptr$<$ Packet $>$}]{packet, }
+\item[{std\-::string}]{name}
+\end{DoxyParamCaption}
+)}}\label{classns3_1_1OICNZipfClient_a966298b46754229776f3536e80fcff57}
+
+
+Construct the D\-N\-S Plus Question Section. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em packet} & packet being constructed by application layer \\
+\hline
+{\em name} & name of the content \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+packet constructed after adding D\-N\-S Plus Question Section 
+\end{DoxyReturn}
+\hypertarget{classns3_1_1OICNZipfClient_a4a76b1b9373eb3bb7e43970222def563}{\index{ns3\-::\-O\-I\-C\-N\-Zipf\-Client@{ns3\-::\-O\-I\-C\-N\-Zipf\-Client}!Construct\-Sublayer@{Construct\-Sublayer}}
+\index{Construct\-Sublayer@{Construct\-Sublayer}!ns3::OICNZipfClient@{ns3\-::\-O\-I\-C\-N\-Zipf\-Client}}
+\subsubsection[{Construct\-Sublayer}]{\setlength{\rightskip}{0pt plus 5cm}Ptr$<$ Packet $>$ ns3\-::\-O\-I\-C\-N\-Zipf\-Client\-::\-Construct\-Sublayer (
+\begin{DoxyParamCaption}
+\item[{Ptr$<$ Packet $>$}]{packet, }
+\item[{std\-::string}]{Name}
+\end{DoxyParamCaption}
+)}}\label{classns3_1_1OICNZipfClient_a4a76b1b9373eb3bb7e43970222def563}
+
+
+Construct the sublayer header. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em packet} & packet constructed by application layer \\
+\hline
+{\em name} & name of the content \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+packet constructed after adding sublayer 
+\end{DoxyReturn}
+\hypertarget{classns3_1_1OICNZipfClient_aa0e32df291032ec158f3bdad7022d7b4}{\index{ns3\-::\-O\-I\-C\-N\-Zipf\-Client@{ns3\-::\-O\-I\-C\-N\-Zipf\-Client}!Do\-Dispose@{Do\-Dispose}}
+\index{Do\-Dispose@{Do\-Dispose}!ns3::OICNZipfClient@{ns3\-::\-O\-I\-C\-N\-Zipf\-Client}}
+\subsubsection[{Do\-Dispose}]{\setlength{\rightskip}{0pt plus 5cm}void ns3\-::\-O\-I\-C\-N\-Zipf\-Client\-::\-Do\-Dispose (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}}\label{classns3_1_1OICNZipfClient_aa0e32df291032ec158f3bdad7022d7b4}
+\hypertarget{classns3_1_1OICNZipfClient_a55dcd262453681f5b464cdf732d68ed2}{\index{ns3\-::\-O\-I\-C\-N\-Zipf\-Client@{ns3\-::\-O\-I\-C\-N\-Zipf\-Client}!Get\-Next\-Content\-Index@{Get\-Next\-Content\-Index}}
+\index{Get\-Next\-Content\-Index@{Get\-Next\-Content\-Index}!ns3::OICNZipfClient@{ns3\-::\-O\-I\-C\-N\-Zipf\-Client}}
+\subsubsection[{Get\-Next\-Content\-Index}]{\setlength{\rightskip}{0pt plus 5cm}int ns3\-::\-O\-I\-C\-N\-Zipf\-Client\-::\-Get\-Next\-Content\-Index (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classns3_1_1OICNZipfClient_a55dcd262453681f5b464cdf732d68ed2}
+
+
+Generate the indices of content to be requested following Zipf-\/\-Mandelbrot Distribution. 
+
+\begin{DoxyReturn}{Returns}
+index of the content next to be request 
+\end{DoxyReturn}
+\hypertarget{classns3_1_1OICNZipfClient_afe8d27ae680ce9efbe3006013ff3adf5}{\index{ns3\-::\-O\-I\-C\-N\-Zipf\-Client@{ns3\-::\-O\-I\-C\-N\-Zipf\-Client}!Get\-Type\-Id@{Get\-Type\-Id}}
+\index{Get\-Type\-Id@{Get\-Type\-Id}!ns3::OICNZipfClient@{ns3\-::\-O\-I\-C\-N\-Zipf\-Client}}
+\subsubsection[{Get\-Type\-Id}]{\setlength{\rightskip}{0pt plus 5cm}Type\-Id ns3\-::\-O\-I\-C\-N\-Zipf\-Client\-::\-Get\-Type\-Id (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classns3_1_1OICNZipfClient_afe8d27ae680ce9efbe3006013ff3adf5}
+
+
+Get the type I\-D. 
+
+\begin{DoxyReturn}{Returns}
+the object Type\-Id 
+\end{DoxyReturn}
+\hypertarget{classns3_1_1OICNZipfClient_a82eace7ea478582445022df4add70a9c}{\index{ns3\-::\-O\-I\-C\-N\-Zipf\-Client@{ns3\-::\-O\-I\-C\-N\-Zipf\-Client}!Handle\-Read\-Icn\-Manager@{Handle\-Read\-Icn\-Manager}}
+\index{Handle\-Read\-Icn\-Manager@{Handle\-Read\-Icn\-Manager}!ns3::OICNZipfClient@{ns3\-::\-O\-I\-C\-N\-Zipf\-Client}}
+\subsubsection[{Handle\-Read\-Icn\-Manager}]{\setlength{\rightskip}{0pt plus 5cm}void ns3\-::\-O\-I\-C\-N\-Zipf\-Client\-::\-Handle\-Read\-Icn\-Manager (
+\begin{DoxyParamCaption}
+\item[{Ptr$<$ Socket $>$}]{socket}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classns3_1_1OICNZipfClient_a82eace7ea478582445022df4add70a9c}
+
+
+Handle a packet reception from I\-C\-N Manager port (36). This function is called by lower layers. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em socket} & the socket the packet was received to. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classns3_1_1OICNZipfClient_aee5aa32b3b7d847ac8f01db8439a2b33}{\index{ns3\-::\-O\-I\-C\-N\-Zipf\-Client@{ns3\-::\-O\-I\-C\-N\-Zipf\-Client}!Handle\-Read\-Source@{Handle\-Read\-Source}}
+\index{Handle\-Read\-Source@{Handle\-Read\-Source}!ns3::OICNZipfClient@{ns3\-::\-O\-I\-C\-N\-Zipf\-Client}}
+\subsubsection[{Handle\-Read\-Source}]{\setlength{\rightskip}{0pt plus 5cm}void ns3\-::\-O\-I\-C\-N\-Zipf\-Client\-::\-Handle\-Read\-Source (
+\begin{DoxyParamCaption}
+\item[{Ptr$<$ Socket $>$}]{socket}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classns3_1_1OICNZipfClient_aee5aa32b3b7d847ac8f01db8439a2b33}
+
+
+Handle a packet reception from Source port (I\-C\-N Router or Server) (89). This function is called by lower layers. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em socket} & the socket the packet was received to. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classns3_1_1OICNZipfClient_aa7c04e11ce1f197bd4462e961ef04a2e}{\index{ns3\-::\-O\-I\-C\-N\-Zipf\-Client@{ns3\-::\-O\-I\-C\-N\-Zipf\-Client}!Schedule\-Transmit@{Schedule\-Transmit}}
+\index{Schedule\-Transmit@{Schedule\-Transmit}!ns3::OICNZipfClient@{ns3\-::\-O\-I\-C\-N\-Zipf\-Client}}
+\subsubsection[{Schedule\-Transmit}]{\setlength{\rightskip}{0pt plus 5cm}void ns3\-::\-O\-I\-C\-N\-Zipf\-Client\-::\-Schedule\-Transmit (
+\begin{DoxyParamCaption}
+\item[{Time}]{dt}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classns3_1_1OICNZipfClient_aa7c04e11ce1f197bd4462e961ef04a2e}
+
+
+Schedule the next packet transmission. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dt} & time interval between packets. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classns3_1_1OICNZipfClient_a3c656a3d51f7ddc8d6b31fbb88f2a575}{\index{ns3\-::\-O\-I\-C\-N\-Zipf\-Client@{ns3\-::\-O\-I\-C\-N\-Zipf\-Client}!Send@{Send}}
+\index{Send@{Send}!ns3::OICNZipfClient@{ns3\-::\-O\-I\-C\-N\-Zipf\-Client}}
+\subsubsection[{Send}]{\setlength{\rightskip}{0pt plus 5cm}void ns3\-::\-O\-I\-C\-N\-Zipf\-Client\-::\-Send (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classns3_1_1OICNZipfClient_a3c656a3d51f7ddc8d6b31fbb88f2a575}
+
+
+Send a packet to I\-C\-N Manager. 
+
+\hypertarget{classns3_1_1OICNZipfClient_a61c4940713bdd9363b8313696b2c4ffa}{\index{ns3\-::\-O\-I\-C\-N\-Zipf\-Client@{ns3\-::\-O\-I\-C\-N\-Zipf\-Client}!Set\-Zipf@{Set\-Zipf}}
+\index{Set\-Zipf@{Set\-Zipf}!ns3::OICNZipfClient@{ns3\-::\-O\-I\-C\-N\-Zipf\-Client}}
+\subsubsection[{Set\-Zipf}]{\setlength{\rightskip}{0pt plus 5cm}void ns3\-::\-O\-I\-C\-N\-Zipf\-Client\-::\-Set\-Zipf (
+\begin{DoxyParamCaption}
+\item[{std\-::pair$<$ int, int $>$}]{range}
+\end{DoxyParamCaption}
+)}}\label{classns3_1_1OICNZipfClient_a61c4940713bdd9363b8313696b2c4ffa}
+
+
+Set the range of the index of content. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em range} & range of the index of content \\
+\hline
+\end{DoxyParams}
+\hypertarget{classns3_1_1OICNZipfClient_abe66add9def5db29de9e2fc4b274c636}{\index{ns3\-::\-O\-I\-C\-N\-Zipf\-Client@{ns3\-::\-O\-I\-C\-N\-Zipf\-Client}!Start\-Application@{Start\-Application}}
+\index{Start\-Application@{Start\-Application}!ns3::OICNZipfClient@{ns3\-::\-O\-I\-C\-N\-Zipf\-Client}}
+\subsubsection[{Start\-Application}]{\setlength{\rightskip}{0pt plus 5cm}void ns3\-::\-O\-I\-C\-N\-Zipf\-Client\-::\-Start\-Application (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [virtual]}}}\label{classns3_1_1OICNZipfClient_abe66add9def5db29de9e2fc4b274c636}
+\hypertarget{classns3_1_1OICNZipfClient_af6857512948b5fbcf711f7a126133473}{\index{ns3\-::\-O\-I\-C\-N\-Zipf\-Client@{ns3\-::\-O\-I\-C\-N\-Zipf\-Client}!Stop\-Application@{Stop\-Application}}
+\index{Stop\-Application@{Stop\-Application}!ns3::OICNZipfClient@{ns3\-::\-O\-I\-C\-N\-Zipf\-Client}}
+\subsubsection[{Stop\-Application}]{\setlength{\rightskip}{0pt plus 5cm}void ns3\-::\-O\-I\-C\-N\-Zipf\-Client\-::\-Stop\-Application (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [virtual]}}}\label{classns3_1_1OICNZipfClient_af6857512948b5fbcf711f7a126133473}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classns3_1_1OICNZipfClient_ab2cc3b1156fb17d67c19e16526696770}{\index{ns3\-::\-O\-I\-C\-N\-Zipf\-Client@{ns3\-::\-O\-I\-C\-N\-Zipf\-Client}!m\-\_\-count@{m\-\_\-count}}
+\index{m\-\_\-count@{m\-\_\-count}!ns3::OICNZipfClient@{ns3\-::\-O\-I\-C\-N\-Zipf\-Client}}
+\subsubsection[{m\-\_\-count}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t ns3\-::\-O\-I\-C\-N\-Zipf\-Client\-::m\-\_\-count\hspace{0.3cm}{\ttfamily [private]}}}\label{classns3_1_1OICNZipfClient_ab2cc3b1156fb17d67c19e16526696770}
+
+
+the maximum number of packets the application will send 
+
+\hypertarget{classns3_1_1OICNZipfClient_af1bb1bbc3778f4b0deff03288e1cd56f}{\index{ns3\-::\-O\-I\-C\-N\-Zipf\-Client@{ns3\-::\-O\-I\-C\-N\-Zipf\-Client}!m\-\_\-icn\-Manager\-Address@{m\-\_\-icn\-Manager\-Address}}
+\index{m\-\_\-icn\-Manager\-Address@{m\-\_\-icn\-Manager\-Address}!ns3::OICNZipfClient@{ns3\-::\-O\-I\-C\-N\-Zipf\-Client}}
+\subsubsection[{m\-\_\-icn\-Manager\-Address}]{\setlength{\rightskip}{0pt plus 5cm}Address ns3\-::\-O\-I\-C\-N\-Zipf\-Client\-::m\-\_\-icn\-Manager\-Address\hspace{0.3cm}{\ttfamily [private]}}}\label{classns3_1_1OICNZipfClient_af1bb1bbc3778f4b0deff03288e1cd56f}
+
+
+I\-C\-N Manager Address. 
+
+\hypertarget{classns3_1_1OICNZipfClient_a9f0e99cf57dbab4950612c6eecfdeb8c}{\index{ns3\-::\-O\-I\-C\-N\-Zipf\-Client@{ns3\-::\-O\-I\-C\-N\-Zipf\-Client}!m\-\_\-icn\-Manager\-Port@{m\-\_\-icn\-Manager\-Port}}
+\index{m\-\_\-icn\-Manager\-Port@{m\-\_\-icn\-Manager\-Port}!ns3::OICNZipfClient@{ns3\-::\-O\-I\-C\-N\-Zipf\-Client}}
+\subsubsection[{m\-\_\-icn\-Manager\-Port}]{\setlength{\rightskip}{0pt plus 5cm}uint16\-\_\-t ns3\-::\-O\-I\-C\-N\-Zipf\-Client\-::m\-\_\-icn\-Manager\-Port\hspace{0.3cm}{\ttfamily [private]}}}\label{classns3_1_1OICNZipfClient_a9f0e99cf57dbab4950612c6eecfdeb8c}
+
+
+I\-C\-N Manager port. 
+
+\hypertarget{classns3_1_1OICNZipfClient_a916a69a684a6422b37ee520c499430e9}{\index{ns3\-::\-O\-I\-C\-N\-Zipf\-Client@{ns3\-::\-O\-I\-C\-N\-Zipf\-Client}!m\-\_\-interval@{m\-\_\-interval}}
+\index{m\-\_\-interval@{m\-\_\-interval}!ns3::OICNZipfClient@{ns3\-::\-O\-I\-C\-N\-Zipf\-Client}}
+\subsubsection[{m\-\_\-interval}]{\setlength{\rightskip}{0pt plus 5cm}Time ns3\-::\-O\-I\-C\-N\-Zipf\-Client\-::m\-\_\-interval\hspace{0.3cm}{\ttfamily [private]}}}\label{classns3_1_1OICNZipfClient_a916a69a684a6422b37ee520c499430e9}
+
+
+packet inter-\/send time 
+
+\hypertarget{classns3_1_1OICNZipfClient_a4146b87daf72c43e4d9f1e288897e30e}{\index{ns3\-::\-O\-I\-C\-N\-Zipf\-Client@{ns3\-::\-O\-I\-C\-N\-Zipf\-Client}!m\-\_\-\-N@{m\-\_\-\-N}}
+\index{m\-\_\-\-N@{m\-\_\-\-N}!ns3::OICNZipfClient@{ns3\-::\-O\-I\-C\-N\-Zipf\-Client}}
+\subsubsection[{m\-\_\-\-N}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t ns3\-::\-O\-I\-C\-N\-Zipf\-Client\-::m\-\_\-\-N\hspace{0.3cm}{\ttfamily [private]}}}\label{classns3_1_1OICNZipfClient_a4146b87daf72c43e4d9f1e288897e30e}
+
+
+number of the contents 
+
+\hypertarget{classns3_1_1OICNZipfClient_a1dd636e731bbe2b2273970c3e9c191b7}{\index{ns3\-::\-O\-I\-C\-N\-Zipf\-Client@{ns3\-::\-O\-I\-C\-N\-Zipf\-Client}!m\-\_\-\-Pcum@{m\-\_\-\-Pcum}}
+\index{m\-\_\-\-Pcum@{m\-\_\-\-Pcum}!ns3::OICNZipfClient@{ns3\-::\-O\-I\-C\-N\-Zipf\-Client}}
+\subsubsection[{m\-\_\-\-Pcum}]{\setlength{\rightskip}{0pt plus 5cm}std\-::vector$<$double$>$ ns3\-::\-O\-I\-C\-N\-Zipf\-Client\-::m\-\_\-\-Pcum\hspace{0.3cm}{\ttfamily [private]}}}\label{classns3_1_1OICNZipfClient_a1dd636e731bbe2b2273970c3e9c191b7}
+
+
+cumulative probability 
+
+\hypertarget{classns3_1_1OICNZipfClient_a9f6a96310cf93dd8233c3f8c7c9bf298}{\index{ns3\-::\-O\-I\-C\-N\-Zipf\-Client@{ns3\-::\-O\-I\-C\-N\-Zipf\-Client}!m\-\_\-port\-Fixed@{m\-\_\-port\-Fixed}}
+\index{m\-\_\-port\-Fixed@{m\-\_\-port\-Fixed}!ns3::OICNZipfClient@{ns3\-::\-O\-I\-C\-N\-Zipf\-Client}}
+\subsubsection[{m\-\_\-port\-Fixed}]{\setlength{\rightskip}{0pt plus 5cm}uint16\-\_\-t ns3\-::\-O\-I\-C\-N\-Zipf\-Client\-::m\-\_\-port\-Fixed\hspace{0.3cm}{\ttfamily [private]}}}\label{classns3_1_1OICNZipfClient_a9f6a96310cf93dd8233c3f8c7c9bf298}
+
+
+client port is attached with port no 26, it will listen to this port from O\-I\-C\-N Source(\-I\-C\-N router or server) 
+
+\hypertarget{classns3_1_1OICNZipfClient_aa56cf1606f17a1753bb4b066f75d5dcc}{\index{ns3\-::\-O\-I\-C\-N\-Zipf\-Client@{ns3\-::\-O\-I\-C\-N\-Zipf\-Client}!m\-\_\-q@{m\-\_\-q}}
+\index{m\-\_\-q@{m\-\_\-q}!ns3::OICNZipfClient@{ns3\-::\-O\-I\-C\-N\-Zipf\-Client}}
+\subsubsection[{m\-\_\-q}]{\setlength{\rightskip}{0pt plus 5cm}double ns3\-::\-O\-I\-C\-N\-Zipf\-Client\-::m\-\_\-q\hspace{0.3cm}{\ttfamily [private]}}}\label{classns3_1_1OICNZipfClient_aa56cf1606f17a1753bb4b066f75d5dcc}
+
+
+q in (k+q)$^\wedge$s 
+
+\hypertarget{classns3_1_1OICNZipfClient_a374afd9b3085995e5fc37befbc593925}{\index{ns3\-::\-O\-I\-C\-N\-Zipf\-Client@{ns3\-::\-O\-I\-C\-N\-Zipf\-Client}!m\-\_\-range@{m\-\_\-range}}
+\index{m\-\_\-range@{m\-\_\-range}!ns3::OICNZipfClient@{ns3\-::\-O\-I\-C\-N\-Zipf\-Client}}
+\subsubsection[{m\-\_\-range}]{\setlength{\rightskip}{0pt plus 5cm}std\-::pair$<$uint32\-\_\-t, uint32\-\_\-t$>$ ns3\-::\-O\-I\-C\-N\-Zipf\-Client\-::m\-\_\-range\hspace{0.3cm}{\ttfamily [private]}}}\label{classns3_1_1OICNZipfClient_a374afd9b3085995e5fc37befbc593925}
+
+
+range of the indices of the contents 
+
+\hypertarget{classns3_1_1OICNZipfClient_a4bf5ef44d4ee8832da331827774bff10}{\index{ns3\-::\-O\-I\-C\-N\-Zipf\-Client@{ns3\-::\-O\-I\-C\-N\-Zipf\-Client}!m\-\_\-s@{m\-\_\-s}}
+\index{m\-\_\-s@{m\-\_\-s}!ns3::OICNZipfClient@{ns3\-::\-O\-I\-C\-N\-Zipf\-Client}}
+\subsubsection[{m\-\_\-s}]{\setlength{\rightskip}{0pt plus 5cm}double ns3\-::\-O\-I\-C\-N\-Zipf\-Client\-::m\-\_\-s\hspace{0.3cm}{\ttfamily [private]}}}\label{classns3_1_1OICNZipfClient_a4bf5ef44d4ee8832da331827774bff10}
+
+
+s in (k+q)$^\wedge$s 
+
+\hypertarget{classns3_1_1OICNZipfClient_ae3d2dfdcf8327811fd5f2def89214b21}{\index{ns3\-::\-O\-I\-C\-N\-Zipf\-Client@{ns3\-::\-O\-I\-C\-N\-Zipf\-Client}!m\-\_\-send\-Event@{m\-\_\-send\-Event}}
+\index{m\-\_\-send\-Event@{m\-\_\-send\-Event}!ns3::OICNZipfClient@{ns3\-::\-O\-I\-C\-N\-Zipf\-Client}}
+\subsubsection[{m\-\_\-send\-Event}]{\setlength{\rightskip}{0pt plus 5cm}Event\-Id ns3\-::\-O\-I\-C\-N\-Zipf\-Client\-::m\-\_\-send\-Event\hspace{0.3cm}{\ttfamily [private]}}}\label{classns3_1_1OICNZipfClient_ae3d2dfdcf8327811fd5f2def89214b21}
+
+
+event to send the next packet 
+
+\hypertarget{classns3_1_1OICNZipfClient_ad8cd34cc29d9ff89702f5c805a58aaf4}{\index{ns3\-::\-O\-I\-C\-N\-Zipf\-Client@{ns3\-::\-O\-I\-C\-N\-Zipf\-Client}!m\-\_\-sent@{m\-\_\-sent}}
+\index{m\-\_\-sent@{m\-\_\-sent}!ns3::OICNZipfClient@{ns3\-::\-O\-I\-C\-N\-Zipf\-Client}}
+\subsubsection[{m\-\_\-sent}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t ns3\-::\-O\-I\-C\-N\-Zipf\-Client\-::m\-\_\-sent\hspace{0.3cm}{\ttfamily [private]}}}\label{classns3_1_1OICNZipfClient_ad8cd34cc29d9ff89702f5c805a58aaf4}
+
+
+counter for sent packets 
+
+\hypertarget{classns3_1_1OICNZipfClient_accb08afc8f8218076eaa919743381e79}{\index{ns3\-::\-O\-I\-C\-N\-Zipf\-Client@{ns3\-::\-O\-I\-C\-N\-Zipf\-Client}!m\-\_\-socket\-Icn\-Manager@{m\-\_\-socket\-Icn\-Manager}}
+\index{m\-\_\-socket\-Icn\-Manager@{m\-\_\-socket\-Icn\-Manager}!ns3::OICNZipfClient@{ns3\-::\-O\-I\-C\-N\-Zipf\-Client}}
+\subsubsection[{m\-\_\-socket\-Icn\-Manager}]{\setlength{\rightskip}{0pt plus 5cm}Ptr$<$Socket$>$ ns3\-::\-O\-I\-C\-N\-Zipf\-Client\-::m\-\_\-socket\-Icn\-Manager\hspace{0.3cm}{\ttfamily [private]}}}\label{classns3_1_1OICNZipfClient_accb08afc8f8218076eaa919743381e79}
+
+
+socket associated with I\-C\-N Manager 
+
+\hypertarget{classns3_1_1OICNZipfClient_ada2f1cccaed0a70bf548ad789669a2f6}{\index{ns3\-::\-O\-I\-C\-N\-Zipf\-Client@{ns3\-::\-O\-I\-C\-N\-Zipf\-Client}!m\-\_\-socket\-Source@{m\-\_\-socket\-Source}}
+\index{m\-\_\-socket\-Source@{m\-\_\-socket\-Source}!ns3::OICNZipfClient@{ns3\-::\-O\-I\-C\-N\-Zipf\-Client}}
+\subsubsection[{m\-\_\-socket\-Source}]{\setlength{\rightskip}{0pt plus 5cm}Ptr$<$Socket$>$ ns3\-::\-O\-I\-C\-N\-Zipf\-Client\-::m\-\_\-socket\-Source\hspace{0.3cm}{\ttfamily [private]}}}\label{classns3_1_1OICNZipfClient_ada2f1cccaed0a70bf548ad789669a2f6}
+
+
+socket associated with Source 
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+model/\hyperlink{oicn-zipf-client_8h}{oicn-\/zipf-\/client.\-h}\item 
+model/\hyperlink{oicn-zipf-client_8cc}{oicn-\/zipf-\/client.\-cc}\end{DoxyCompactItemize}

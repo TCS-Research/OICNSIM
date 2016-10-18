@@ -22,7 +22,7 @@ class Node;
 class Ipv4RoutingHelper;
 
 /**
- * \brief aggregate IP/TCP/UDP and Caching functionality to only ICN Routers
+ * \brief Aggregate IP/TCP/UDP and Caching functionality to only ICN Routers
  *        in the Network.
  *
  * This class is exactly same as the InternetStackHelper of ns3. The only

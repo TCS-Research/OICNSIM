@@ -61,20 +61,15 @@ DnsPlusAnswerSection::~DnsPlusAnswerSection() {
 void DnsPlusAnswerSection::Serialize (Buffer::Iterator start) const
 {
 	Buffer::Iterator i = start;
-	NS_LOG_DEBUG("Name is"<< m_name<<"Name length "<<m_nameLength);
 	uint32_t temp;
-	NS_LOG_DEBUG("Reserved Bit "<<(uint32_t)m_reservedFlag);
 	temp=(uint32_t) m_reservedFlag;
 	temp = temp << 28;
 	temp =temp | m_nameLength;
-	NS_LOG_DEBUG(" value write "<< temp);
 	i.WriteHtonU32(temp);
-	NS_LOG_DEBUG (" temp is "<< temp);
 
 	char name[m_name.size()];
 	memset(name,0,m_name.size());
 	strcpy(name,m_name.c_str());
-	NS_LOG_DEBUG ("Length of Name is  "<<m_name.size()<<" Name is : "<<name);//
 	i.Write ((uint8_t*)name, m_name.size());
 	i.WriteHtonU16(m_Type);
 	i.WriteHtonU16(m_Class);

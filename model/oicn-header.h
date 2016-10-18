@@ -23,12 +23,12 @@ namespace ns3{
  * to and deserialization from a byte buffer.
  */
 
-class OICNHeader : public Header
+class OicnHeader : public Header
 {
 public:
 
-  OICNHeader ();
-  ~OICNHeader ();
+  OicnHeader ();
+  ~OicnHeader ();
   static TypeId GetTypeId (void);
   virtual TypeId GetInstanceTypeId (void) const;
   virtual uint32_t GetSerializedSize (void) const;

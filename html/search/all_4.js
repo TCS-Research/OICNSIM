@@ -1,0 +1,27 @@
+var searchData=
+[
+  ['deleterawsocket',['DeleteRawSocket',['../classns3_1_1Ipv4RouterL3Protocol.html#ac15242f30514a7656194efd4736d54e5',1,'ns3::Ipv4RouterL3Protocol']]],
+  ['deserialize',['Deserialize',['../classns3_1_1DnsPlusAnswerSection.html#ad26bc4f46c7b59f1d296d903b3b88baf',1,'ns3::DnsPlusAnswerSection::Deserialize()'],['../classns3_1_1DnsPlusHeader.html#a4fd5e5a6b42851c06ddf3aec0e357768',1,'ns3::DnsPlusHeader::Deserialize()'],['../classns3_1_1DnsPlusQuestionHeader.html#ac75fc840943cca37028eb0c8a23c4bea',1,'ns3::DnsPlusQuestionHeader::Deserialize()'],['../classns3_1_1OicnHeader.html#af16eaf62f9048fe56e714f44459f754d',1,'ns3::OicnHeader::Deserialize()']]],
+  ['dnsplus_2danswer_2dsection_2ecc',['dnsplus-answer-section.cc',['../dnsplus-answer-section_8cc.html',1,'']]],
+  ['dnsplus_2danswer_2dsection_2eh',['dnsplus-answer-section.h',['../dnsplus-answer-section_8h.html',1,'']]],
+  ['dnsplus_2dheader_2ecc',['dnsplus-header.cc',['../dnsplus-header_8cc.html',1,'']]],
+  ['dnsplus_2dheader_2eh',['dnsplus-header.h',['../dnsplus-header_8h.html',1,'']]],
+  ['dnsplus_2dquestion_2dheader_2ecc',['dnsplus-question-header.cc',['../dnsplus-question-header_8cc.html',1,'']]],
+  ['dnsplus_2dquestion_2dheader_2eh',['dnsplus-question-header.h',['../dnsplus-question-header_8h.html',1,'']]],
+  ['dnsplusanswersection',['DnsPlusAnswerSection',['../classns3_1_1DnsPlusAnswerSection.html',1,'ns3']]],
+  ['dnsplusanswersection',['DnsPlusAnswerSection',['../classns3_1_1DnsPlusAnswerSection.html#aa1cb6dbcaa5dd169bb7059cb9e7f235f',1,'ns3::DnsPlusAnswerSection']]],
+  ['dnsplusheader',['DnsPlusHeader',['../classns3_1_1DnsPlusHeader.html',1,'ns3']]],
+  ['dnsplusheader',['DnsPlusHeader',['../classns3_1_1DnsPlusHeader.html#aa39739cfaece6711a01861f45f0e6067',1,'ns3::DnsPlusHeader']]],
+  ['dnsplusquestionheader',['DnsPlusQuestionHeader',['../classns3_1_1DnsPlusQuestionHeader.html',1,'ns3']]],
+  ['dnsplusquestionheader',['DnsPlusQuestionHeader',['../classns3_1_1DnsPlusQuestionHeader.html#a3007f16f1486ea4d9e92f0a16304db5c',1,'ns3::DnsPlusQuestionHeader']]],
+  ['dodispose',['DoDispose',['../classns3_1_1IcnManager.html#ad7e1a50c5d1411ae7e73a489be9c1503',1,'ns3::IcnManager::DoDispose()'],['../classns3_1_1IcnRouter.html#a753e828732d2efd5edf54965642a1605',1,'ns3::IcnRouter::DoDispose()'],['../classns3_1_1Ipv4RouterL3Protocol.html#ab4177a69c5d6de8f7453a59edcfafe41',1,'ns3::Ipv4RouterL3Protocol::DoDispose()'],['../classns3_1_1OicnClient.html#a31a8c315ffb1b3fd93b6fefd596921f1',1,'ns3::OicnClient::DoDispose()'],['../classns3_1_1OicnServer.html#a6a2cf9407f2c0d0168d1f2d99c57ba6e',1,'ns3::OicnServer::DoDispose()'],['../classns3_1_1OICNZipfClient.html#aa0e32df291032ec158f3bdad7022d7b4',1,'ns3::OICNZipfClient::DoDispose()']]],
+  ['dofragmentation',['DoFragmentation',['../classns3_1_1Ipv4RouterL3Protocol.html#aeefc9ca2a1cbc6fbd8a676f1bab18313',1,'ns3::Ipv4RouterL3Protocol']]],
+  ['dorun',['DoRun',['../classOIcnTestCase1.html#af4aeea901fc4edf5f3efb357bf890154',1,'OIcnTestCase1']]],
+  ['drop_5fbad_5fchecksum',['DROP_BAD_CHECKSUM',['../classns3_1_1Ipv4RouterL3Protocol.html#a050d08aa42fe2c3f9c133a263e121fcdaa7a09de0c3a08a72d5e443151d0d9f95',1,'ns3::Ipv4RouterL3Protocol']]],
+  ['drop_5ffragment_5ftimeout',['DROP_FRAGMENT_TIMEOUT',['../classns3_1_1Ipv4RouterL3Protocol.html#a050d08aa42fe2c3f9c133a263e121fcda5616817187e3e89a1e76e65d30293abe',1,'ns3::Ipv4RouterL3Protocol']]],
+  ['drop_5finterface_5fdown',['DROP_INTERFACE_DOWN',['../classns3_1_1Ipv4RouterL3Protocol.html#a050d08aa42fe2c3f9c133a263e121fcdab55f6d41f00ca4c6ab4a2211ec9ee1f2',1,'ns3::Ipv4RouterL3Protocol']]],
+  ['drop_5fno_5froute',['DROP_NO_ROUTE',['../classns3_1_1Ipv4RouterL3Protocol.html#a050d08aa42fe2c3f9c133a263e121fcdaed5a0bb11a898cfc1050d9087a5030dc',1,'ns3::Ipv4RouterL3Protocol']]],
+  ['drop_5froute_5ferror',['DROP_ROUTE_ERROR',['../classns3_1_1Ipv4RouterL3Protocol.html#a050d08aa42fe2c3f9c133a263e121fcda9543ec21a03e3ee4a394152ca8f15a95',1,'ns3::Ipv4RouterL3Protocol']]],
+  ['drop_5fttl_5fexpired',['DROP_TTL_EXPIRED',['../classns3_1_1Ipv4RouterL3Protocol.html#a050d08aa42fe2c3f9c133a263e121fcdaa4940eaf513382cd5e6d580a12610c21',1,'ns3::Ipv4RouterL3Protocol']]],
+  ['dropreason',['DropReason',['../classns3_1_1Ipv4RouterL3Protocol.html#a050d08aa42fe2c3f9c133a263e121fcd',1,'ns3::Ipv4RouterL3Protocol']]]
+];

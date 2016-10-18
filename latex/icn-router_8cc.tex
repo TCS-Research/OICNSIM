@@ -1,0 +1,54 @@
+\hypertarget{icn-router_8cc}{\section{model/icn-\/router.cc File Reference}
+\label{icn-router_8cc}\index{model/icn-\/router.\-cc@{model/icn-\/router.\-cc}}
+}
+{\ttfamily \#include \char`\"{}icn-\/router.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}content.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}icn-\/manager.\-h\char`\"{}}\\*
+{\ttfamily \#include $<$stdint.\-h$>$}\\*
+{\ttfamily \#include $<$string$>$}\\*
+{\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include $<$utility$>$}\\*
+{\ttfamily \#include $<$boost/unordered\-\_\-map.\-hpp$>$}\\*
+{\ttfamily \#include $<$new$>$}\\*
+{\ttfamily \#include $<$vector$>$}\\*
+{\ttfamily \#include $<$c++/4.\-8/unordered\-\_\-map$>$}\\*
+{\ttfamily \#include \char`\"{}ns3/ipv4-\/address.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}ns3/callback.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}ns3/uinteger.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}ns3/simulator.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}ns3/ptr.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}ns3/node.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}ns3/node-\/list.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}ns3/packet.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}ns3/type-\/id.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}ns3/log.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}oicn-\/header.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}ns3/ipv4.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}ns3/ipv4-\/interface-\/address.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}ns3/socket.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}ns3/type-\/name.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}cache-\/manager.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}named-\/content-\/cache.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}sublayer-\/protocol.\-h\char`\"{}}\\*
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{namespacens3}{ns3}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{icn-router_8cc_a86f8ce58576ae8034f2d42ab33041a31}{N\-S\-\_\-\-L\-O\-G\-\_\-\-C\-O\-M\-P\-O\-N\-E\-N\-T\-\_\-\-D\-E\-F\-I\-N\-E} (\char`\"{}Icn\-Router\char`\"{})
+\item 
+\hyperlink{namespacens3_acbb68d2034dc3902cee0df5508ca8e9b}{ns3\-::\-N\-S\-\_\-\-O\-B\-J\-E\-C\-T\-\_\-\-E\-N\-S\-U\-R\-E\-\_\-\-R\-E\-G\-I\-S\-T\-E\-R\-E\-D} (Icn\-Router)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{icn-router_8cc_a86f8ce58576ae8034f2d42ab33041a31}{\index{icn-\/router.\-cc@{icn-\/router.\-cc}!N\-S\-\_\-\-L\-O\-G\-\_\-\-C\-O\-M\-P\-O\-N\-E\-N\-T\-\_\-\-D\-E\-F\-I\-N\-E@{N\-S\-\_\-\-L\-O\-G\-\_\-\-C\-O\-M\-P\-O\-N\-E\-N\-T\-\_\-\-D\-E\-F\-I\-N\-E}}
+\index{N\-S\-\_\-\-L\-O\-G\-\_\-\-C\-O\-M\-P\-O\-N\-E\-N\-T\-\_\-\-D\-E\-F\-I\-N\-E@{N\-S\-\_\-\-L\-O\-G\-\_\-\-C\-O\-M\-P\-O\-N\-E\-N\-T\-\_\-\-D\-E\-F\-I\-N\-E}!icn-router.cc@{icn-\/router.\-cc}}
+\subsubsection[{N\-S\-\_\-\-L\-O\-G\-\_\-\-C\-O\-M\-P\-O\-N\-E\-N\-T\-\_\-\-D\-E\-F\-I\-N\-E}]{\setlength{\rightskip}{0pt plus 5cm}N\-S\-\_\-\-L\-O\-G\-\_\-\-C\-O\-M\-P\-O\-N\-E\-N\-T\-\_\-\-D\-E\-F\-I\-N\-E (
+\begin{DoxyParamCaption}
+\item[{\char`\"{}Icn\-Router\char`\"{}}]{}
+\end{DoxyParamCaption}
+)}}\label{icn-router_8cc_a86f8ce58576ae8034f2d42ab33041a31}

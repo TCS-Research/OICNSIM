@@ -1,0 +1,314 @@
+\hypertarget{classns3_1_1OicnServer}{\section{ns3\-:\-:Oicn\-Server Class Reference}
+\label{classns3_1_1OicnServer}\index{ns3\-::\-Oicn\-Server@{ns3\-::\-Oicn\-Server}}
+}
+
+
+O\-I\-C\-N Server Application, it accept request of content from I\-C\-N Manager and send to the client.  
+
+
+
+
+{\ttfamily \#include $<$oicn-\/server-\/application.\-h$>$}
+
+Inheritance diagram for ns3\-:\-:Oicn\-Server\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classns3_1_1OicnServer}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classns3_1_1OicnServer_ab9f66365f8d1a5f08e8c049aa9f932ef}{Oicn\-Server} ()
+\item 
+virtual \hyperlink{classns3_1_1OicnServer_ab897c892c1bad60b83f770a53e76547e}{$\sim$\-Oicn\-Server} (void)
+\item 
+void \hyperlink{classns3_1_1OicnServer_a61860ecd2544eb4e7774c7c2c19da63c}{Set\-Content} (std\-::vector$<$ int $>$ index)
+\begin{DoxyCompactList}\small\item\em During initialisation of server, it sets the content that server will contain. \hyperlink{classns3_1_1Content}{Content} list will remain same during the simulation. \end{DoxyCompactList}\item 
+Ptr$<$ Packet $>$ \hyperlink{classns3_1_1OicnServer_a1813b07463e62f0c011a5ab169174c94}{Get\-Content} (std\-::string name)
+\begin{DoxyCompactList}\small\item\em It retrieves the content corresponding to the name, passed as the parameter to the function. \end{DoxyCompactList}\item 
+Ptr$<$ Packet $>$ \hyperlink{classns3_1_1OicnServer_ae543f14a173b0e294a78694f1f91f15f}{Construct\-Sublayer} (Ptr$<$ Packet $>$ packet, std\-::string name)
+\begin{DoxyCompactList}\small\item\em Construct the sublayer header. \end{DoxyCompactList}\item 
+void \hyperlink{classns3_1_1OicnServer_a8dd7f5f546baf72d2eeef2ba78c3b797}{Send\-To\-Client} (uint32\-\_\-t client\-Address, std\-::string name)
+\begin{DoxyCompactList}\small\item\em Send the content to client. \end{DoxyCompactList}\item 
+void \hyperlink{classns3_1_1OicnServer_abd1ea8c1e1332d232c2a2dbc559ea769}{Read\-Packet} (Ptr$<$ Packet $>$ packet, Ipv4\-Address sender\-Address, uint16\-\_\-t sender\-Port)
+\begin{DoxyCompactList}\small\item\em Read the packet received at I\-C\-N Manager port i.\-e. 89. \end{DoxyCompactList}\item 
+void \hyperlink{classns3_1_1OicnServer_af9a0c2a5aae516f33ae3a6a452b6e61c}{Send\-Ack\-To\-Icn\-Manager} (Ipv4\-Address icn\-Manager\-Ipv4\-Address, uint16\-\_\-t icn\-Manager\-Port, \hyperlink{classns3_1_1DnsPlusQuestionHeader}{Dns\-Plus\-Question\-Header} dns\-Plus\-Question\-Header, \hyperlink{classns3_1_1DnsPlusHeader}{Dns\-Plus\-Header} dns\-Plus\-Header, \hyperlink{classns3_1_1OicnHeader}{Oicn\-Header} oicn\-Header)
+\begin{DoxyCompactList}\small\item\em After receiving the content request from the I\-C\-N Manager, it send back the A\-C\-K of same to I\-C\-N Manager. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static Type\-Id \hyperlink{classns3_1_1OicnServer_a6feccce194eec32aeeaaed73b215c7ec}{Get\-Type\-Id} (void)
+\begin{DoxyCompactList}\small\item\em Get the type I\-D. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{classns3_1_1OicnServer_a6a2cf9407f2c0d0168d1f2d99c57ba6e}{Do\-Dispose} (void)
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classns3_1_1OicnServer_acc544f5a8c2941ebbec576dd87ebbd4b}{Handle\-Read\-Icn\-Manger} (Ptr$<$ Socket $>$ socket)
+\begin{DoxyCompactList}\small\item\em Handle a packet reception from I\-C\-N Manager port (36). This function is called by lower layers. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classns3_1_1OicnServer_a185a5fb39786caf3f89a65b08f61a6e8}{Start\-Application} (void)
+\item 
+virtual void \hyperlink{classns3_1_1OicnServer_a12256e51cce0c25a66eef8cc256e367e}{Stop\-Application} (void)
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+boost\-::unordered\-\_\-map\\*
+$<$ std\-::string, std\-::string $>$ \hyperlink{classns3_1_1OicnServer_ae9c0c07d3749a24b15ad2cd3e13c52a6}{server\-\_\-content}
+\begin{DoxyCompactList}\small\item\em It contain name and corresponding content. \end{DoxyCompactList}\item 
+Ptr$<$ Socket $>$ \hyperlink{classns3_1_1OicnServer_ab5844e0fda8496f62cb0bd472a1e4783}{m\-\_\-socket}
+\begin{DoxyCompactList}\small\item\em socket \end{DoxyCompactList}\item 
+Ptr$<$ Socket $>$ \hyperlink{classns3_1_1OicnServer_a836b1c3feef3d7946fd187dec6e4f229}{m\-\_\-socket\-Icn\-Manager}
+\begin{DoxyCompactList}\small\item\em socket connected to I\-C\-N Manager port 36 \end{DoxyCompactList}\item 
+uint16\-\_\-t \hyperlink{classns3_1_1OicnServer_af323ee83ebbb895c021b3ba2eadae2cc}{m\-\_\-port}
+\begin{DoxyCompactList}\small\item\em port at which server listens it defined as 89 \end{DoxyCompactList}\item 
+uint16\-\_\-t \hyperlink{classns3_1_1OicnServer_a3c7e8287c7efc4790e2a83c67163daca}{m\-\_\-client\-Port}
+\begin{DoxyCompactList}\small\item\em port at which client will listen to the request, here defined as 26 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+O\-I\-C\-N Server Application, it accept request of content from I\-C\-N Manager and send to the client. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classns3_1_1OicnServer_ab9f66365f8d1a5f08e8c049aa9f932ef}{\index{ns3\-::\-Oicn\-Server@{ns3\-::\-Oicn\-Server}!Oicn\-Server@{Oicn\-Server}}
+\index{Oicn\-Server@{Oicn\-Server}!ns3::OicnServer@{ns3\-::\-Oicn\-Server}}
+\subsubsection[{Oicn\-Server}]{\setlength{\rightskip}{0pt plus 5cm}ns3\-::\-Oicn\-Server\-::\-Oicn\-Server (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classns3_1_1OicnServer_ab9f66365f8d1a5f08e8c049aa9f932ef}
+\hypertarget{classns3_1_1OicnServer_ab897c892c1bad60b83f770a53e76547e}{\index{ns3\-::\-Oicn\-Server@{ns3\-::\-Oicn\-Server}!$\sim$\-Oicn\-Server@{$\sim$\-Oicn\-Server}}
+\index{$\sim$\-Oicn\-Server@{$\sim$\-Oicn\-Server}!ns3::OicnServer@{ns3\-::\-Oicn\-Server}}
+\subsubsection[{$\sim$\-Oicn\-Server}]{\setlength{\rightskip}{0pt plus 5cm}ns3\-::\-Oicn\-Server\-::$\sim$\-Oicn\-Server (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classns3_1_1OicnServer_ab897c892c1bad60b83f770a53e76547e}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classns3_1_1OicnServer_ae543f14a173b0e294a78694f1f91f15f}{\index{ns3\-::\-Oicn\-Server@{ns3\-::\-Oicn\-Server}!Construct\-Sublayer@{Construct\-Sublayer}}
+\index{Construct\-Sublayer@{Construct\-Sublayer}!ns3::OicnServer@{ns3\-::\-Oicn\-Server}}
+\subsubsection[{Construct\-Sublayer}]{\setlength{\rightskip}{0pt plus 5cm}Ptr$<$ Packet $>$ ns3\-::\-Oicn\-Server\-::\-Construct\-Sublayer (
+\begin{DoxyParamCaption}
+\item[{Ptr$<$ Packet $>$}]{packet, }
+\item[{std\-::string}]{name}
+\end{DoxyParamCaption}
+)}}\label{classns3_1_1OicnServer_ae543f14a173b0e294a78694f1f91f15f}
+
+
+Construct the sublayer header. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em packet} & packet constructed by application layer \\
+\hline
+{\em name} & name of the content \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+packet constructed after adding sublayer 
+\end{DoxyReturn}
+\hypertarget{classns3_1_1OicnServer_a6a2cf9407f2c0d0168d1f2d99c57ba6e}{\index{ns3\-::\-Oicn\-Server@{ns3\-::\-Oicn\-Server}!Do\-Dispose@{Do\-Dispose}}
+\index{Do\-Dispose@{Do\-Dispose}!ns3::OicnServer@{ns3\-::\-Oicn\-Server}}
+\subsubsection[{Do\-Dispose}]{\setlength{\rightskip}{0pt plus 5cm}void ns3\-::\-Oicn\-Server\-::\-Do\-Dispose (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}}\label{classns3_1_1OicnServer_a6a2cf9407f2c0d0168d1f2d99c57ba6e}
+\hypertarget{classns3_1_1OicnServer_a1813b07463e62f0c011a5ab169174c94}{\index{ns3\-::\-Oicn\-Server@{ns3\-::\-Oicn\-Server}!Get\-Content@{Get\-Content}}
+\index{Get\-Content@{Get\-Content}!ns3::OicnServer@{ns3\-::\-Oicn\-Server}}
+\subsubsection[{Get\-Content}]{\setlength{\rightskip}{0pt plus 5cm}Ptr$<$ Packet $>$ ns3\-::\-Oicn\-Server\-::\-Get\-Content (
+\begin{DoxyParamCaption}
+\item[{std\-::string}]{name}
+\end{DoxyParamCaption}
+)}}\label{classns3_1_1OicnServer_a1813b07463e62f0c011a5ab169174c94}
+
+
+It retrieves the content corresponding to the name, passed as the parameter to the function. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & name of the content \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+packet containing the content, corresponding to the name mentioned in the parameter 
+\end{DoxyReturn}
+\hypertarget{classns3_1_1OicnServer_a6feccce194eec32aeeaaed73b215c7ec}{\index{ns3\-::\-Oicn\-Server@{ns3\-::\-Oicn\-Server}!Get\-Type\-Id@{Get\-Type\-Id}}
+\index{Get\-Type\-Id@{Get\-Type\-Id}!ns3::OicnServer@{ns3\-::\-Oicn\-Server}}
+\subsubsection[{Get\-Type\-Id}]{\setlength{\rightskip}{0pt plus 5cm}Type\-Id ns3\-::\-Oicn\-Server\-::\-Get\-Type\-Id (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classns3_1_1OicnServer_a6feccce194eec32aeeaaed73b215c7ec}
+
+
+Get the type I\-D. 
+
+\begin{DoxyReturn}{Returns}
+the object Type\-Id 
+\end{DoxyReturn}
+\hypertarget{classns3_1_1OicnServer_acc544f5a8c2941ebbec576dd87ebbd4b}{\index{ns3\-::\-Oicn\-Server@{ns3\-::\-Oicn\-Server}!Handle\-Read\-Icn\-Manger@{Handle\-Read\-Icn\-Manger}}
+\index{Handle\-Read\-Icn\-Manger@{Handle\-Read\-Icn\-Manger}!ns3::OicnServer@{ns3\-::\-Oicn\-Server}}
+\subsubsection[{Handle\-Read\-Icn\-Manger}]{\setlength{\rightskip}{0pt plus 5cm}void ns3\-::\-Oicn\-Server\-::\-Handle\-Read\-Icn\-Manger (
+\begin{DoxyParamCaption}
+\item[{Ptr$<$ Socket $>$}]{socket}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classns3_1_1OicnServer_acc544f5a8c2941ebbec576dd87ebbd4b}
+
+
+Handle a packet reception from I\-C\-N Manager port (36). This function is called by lower layers. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em socket} & the socket the packet was received to \\
+\hline
+\end{DoxyParams}
+\hypertarget{classns3_1_1OicnServer_abd1ea8c1e1332d232c2a2dbc559ea769}{\index{ns3\-::\-Oicn\-Server@{ns3\-::\-Oicn\-Server}!Read\-Packet@{Read\-Packet}}
+\index{Read\-Packet@{Read\-Packet}!ns3::OicnServer@{ns3\-::\-Oicn\-Server}}
+\subsubsection[{Read\-Packet}]{\setlength{\rightskip}{0pt plus 5cm}void ns3\-::\-Oicn\-Server\-::\-Read\-Packet (
+\begin{DoxyParamCaption}
+\item[{Ptr$<$ Packet $>$}]{packet, }
+\item[{Ipv4\-Address}]{sender\-Address, }
+\item[{uint16\-\_\-t}]{sender\-Port}
+\end{DoxyParamCaption}
+)}}\label{classns3_1_1OicnServer_abd1ea8c1e1332d232c2a2dbc559ea769}
+
+
+Read the packet received at I\-C\-N Manager port i.\-e. 89. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em packet} & packet received at I\-C\-N Manager port \\
+\hline
+{\em sender\-Address} & Ipv4 address of the sender \\
+\hline
+{\em sender\-Port} & port of the sender \\
+\hline
+\end{DoxyParams}
+\hypertarget{classns3_1_1OicnServer_af9a0c2a5aae516f33ae3a6a452b6e61c}{\index{ns3\-::\-Oicn\-Server@{ns3\-::\-Oicn\-Server}!Send\-Ack\-To\-Icn\-Manager@{Send\-Ack\-To\-Icn\-Manager}}
+\index{Send\-Ack\-To\-Icn\-Manager@{Send\-Ack\-To\-Icn\-Manager}!ns3::OicnServer@{ns3\-::\-Oicn\-Server}}
+\subsubsection[{Send\-Ack\-To\-Icn\-Manager}]{\setlength{\rightskip}{0pt plus 5cm}void ns3\-::\-Oicn\-Server\-::\-Send\-Ack\-To\-Icn\-Manager (
+\begin{DoxyParamCaption}
+\item[{Ipv4\-Address}]{icn\-Manager\-Ipv4\-Address, }
+\item[{uint16\-\_\-t}]{icn\-Manager\-Port, }
+\item[{{\bf Dns\-Plus\-Question\-Header}}]{dns\-Plus\-Question\-Header, }
+\item[{{\bf Dns\-Plus\-Header}}]{dns\-Plus\-Header, }
+\item[{{\bf Oicn\-Header}}]{oicn\-Header}
+\end{DoxyParamCaption}
+)}}\label{classns3_1_1OicnServer_af9a0c2a5aae516f33ae3a6a452b6e61c}
+
+
+After receiving the content request from the I\-C\-N Manager, it send back the A\-C\-K of same to I\-C\-N Manager. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em icn\-Manager\-Ipv4\-Address} & I\-C\-N Manager Ipv4 address to which A\-C\-K has to be sent \\
+\hline
+{\em icn\-Manager\-Port} & I\-C\-N Manager port at which A\-C\-K has to be sent \\
+\hline
+{\em dns\-Plus\-Question\-Header} & dns Plus Question header section of the packet \\
+\hline
+{\em dns\-Plus\-Header} & dns Plus header section of the packet \\
+\hline
+{\em oicn\-Header} & oicn header section of the packet \\
+\hline
+\end{DoxyParams}
+\hypertarget{classns3_1_1OicnServer_a8dd7f5f546baf72d2eeef2ba78c3b797}{\index{ns3\-::\-Oicn\-Server@{ns3\-::\-Oicn\-Server}!Send\-To\-Client@{Send\-To\-Client}}
+\index{Send\-To\-Client@{Send\-To\-Client}!ns3::OicnServer@{ns3\-::\-Oicn\-Server}}
+\subsubsection[{Send\-To\-Client}]{\setlength{\rightskip}{0pt plus 5cm}void ns3\-::\-Oicn\-Server\-::\-Send\-To\-Client (
+\begin{DoxyParamCaption}
+\item[{uint32\-\_\-t}]{client\-Address, }
+\item[{std\-::string}]{name}
+\end{DoxyParamCaption}
+)}}\label{classns3_1_1OicnServer_a8dd7f5f546baf72d2eeef2ba78c3b797}
+
+
+Send the content to client. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em client\-Address} & address of the client \\
+\hline
+{\em name} & name of the content \\
+\hline
+\end{DoxyParams}
+\hypertarget{classns3_1_1OicnServer_a61860ecd2544eb4e7774c7c2c19da63c}{\index{ns3\-::\-Oicn\-Server@{ns3\-::\-Oicn\-Server}!Set\-Content@{Set\-Content}}
+\index{Set\-Content@{Set\-Content}!ns3::OicnServer@{ns3\-::\-Oicn\-Server}}
+\subsubsection[{Set\-Content}]{\setlength{\rightskip}{0pt plus 5cm}void ns3\-::\-Oicn\-Server\-::\-Set\-Content (
+\begin{DoxyParamCaption}
+\item[{std\-::vector$<$ int $>$}]{index}
+\end{DoxyParamCaption}
+)}}\label{classns3_1_1OicnServer_a61860ecd2544eb4e7774c7c2c19da63c}
+
+
+During initialisation of server, it sets the content that server will contain. \hyperlink{classns3_1_1Content}{Content} list will remain same during the simulation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & index of content, which the server will contain \\
+\hline
+\end{DoxyParams}
+\hypertarget{classns3_1_1OicnServer_a185a5fb39786caf3f89a65b08f61a6e8}{\index{ns3\-::\-Oicn\-Server@{ns3\-::\-Oicn\-Server}!Start\-Application@{Start\-Application}}
+\index{Start\-Application@{Start\-Application}!ns3::OicnServer@{ns3\-::\-Oicn\-Server}}
+\subsubsection[{Start\-Application}]{\setlength{\rightskip}{0pt plus 5cm}void ns3\-::\-Oicn\-Server\-::\-Start\-Application (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [virtual]}}}\label{classns3_1_1OicnServer_a185a5fb39786caf3f89a65b08f61a6e8}
+\hypertarget{classns3_1_1OicnServer_a12256e51cce0c25a66eef8cc256e367e}{\index{ns3\-::\-Oicn\-Server@{ns3\-::\-Oicn\-Server}!Stop\-Application@{Stop\-Application}}
+\index{Stop\-Application@{Stop\-Application}!ns3::OicnServer@{ns3\-::\-Oicn\-Server}}
+\subsubsection[{Stop\-Application}]{\setlength{\rightskip}{0pt plus 5cm}void ns3\-::\-Oicn\-Server\-::\-Stop\-Application (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [virtual]}}}\label{classns3_1_1OicnServer_a12256e51cce0c25a66eef8cc256e367e}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classns3_1_1OicnServer_a3c7e8287c7efc4790e2a83c67163daca}{\index{ns3\-::\-Oicn\-Server@{ns3\-::\-Oicn\-Server}!m\-\_\-client\-Port@{m\-\_\-client\-Port}}
+\index{m\-\_\-client\-Port@{m\-\_\-client\-Port}!ns3::OicnServer@{ns3\-::\-Oicn\-Server}}
+\subsubsection[{m\-\_\-client\-Port}]{\setlength{\rightskip}{0pt plus 5cm}uint16\-\_\-t ns3\-::\-Oicn\-Server\-::m\-\_\-client\-Port\hspace{0.3cm}{\ttfamily [private]}}}\label{classns3_1_1OicnServer_a3c7e8287c7efc4790e2a83c67163daca}
+
+
+port at which client will listen to the request, here defined as 26 
+
+\hypertarget{classns3_1_1OicnServer_af323ee83ebbb895c021b3ba2eadae2cc}{\index{ns3\-::\-Oicn\-Server@{ns3\-::\-Oicn\-Server}!m\-\_\-port@{m\-\_\-port}}
+\index{m\-\_\-port@{m\-\_\-port}!ns3::OicnServer@{ns3\-::\-Oicn\-Server}}
+\subsubsection[{m\-\_\-port}]{\setlength{\rightskip}{0pt plus 5cm}uint16\-\_\-t ns3\-::\-Oicn\-Server\-::m\-\_\-port\hspace{0.3cm}{\ttfamily [private]}}}\label{classns3_1_1OicnServer_af323ee83ebbb895c021b3ba2eadae2cc}
+
+
+port at which server listens it defined as 89 
+
+\hypertarget{classns3_1_1OicnServer_ab5844e0fda8496f62cb0bd472a1e4783}{\index{ns3\-::\-Oicn\-Server@{ns3\-::\-Oicn\-Server}!m\-\_\-socket@{m\-\_\-socket}}
+\index{m\-\_\-socket@{m\-\_\-socket}!ns3::OicnServer@{ns3\-::\-Oicn\-Server}}
+\subsubsection[{m\-\_\-socket}]{\setlength{\rightskip}{0pt plus 5cm}Ptr$<$Socket$>$ ns3\-::\-Oicn\-Server\-::m\-\_\-socket\hspace{0.3cm}{\ttfamily [private]}}}\label{classns3_1_1OicnServer_ab5844e0fda8496f62cb0bd472a1e4783}
+
+
+socket 
+
+\hypertarget{classns3_1_1OicnServer_a836b1c3feef3d7946fd187dec6e4f229}{\index{ns3\-::\-Oicn\-Server@{ns3\-::\-Oicn\-Server}!m\-\_\-socket\-Icn\-Manager@{m\-\_\-socket\-Icn\-Manager}}
+\index{m\-\_\-socket\-Icn\-Manager@{m\-\_\-socket\-Icn\-Manager}!ns3::OicnServer@{ns3\-::\-Oicn\-Server}}
+\subsubsection[{m\-\_\-socket\-Icn\-Manager}]{\setlength{\rightskip}{0pt plus 5cm}Ptr$<$Socket$>$ ns3\-::\-Oicn\-Server\-::m\-\_\-socket\-Icn\-Manager\hspace{0.3cm}{\ttfamily [private]}}}\label{classns3_1_1OicnServer_a836b1c3feef3d7946fd187dec6e4f229}
+
+
+socket connected to I\-C\-N Manager port 36 
+
+\hypertarget{classns3_1_1OicnServer_ae9c0c07d3749a24b15ad2cd3e13c52a6}{\index{ns3\-::\-Oicn\-Server@{ns3\-::\-Oicn\-Server}!server\-\_\-content@{server\-\_\-content}}
+\index{server\-\_\-content@{server\-\_\-content}!ns3::OicnServer@{ns3\-::\-Oicn\-Server}}
+\subsubsection[{server\-\_\-content}]{\setlength{\rightskip}{0pt plus 5cm}boost\-::unordered\-\_\-map$<$std\-::string, std\-::string$>$ ns3\-::\-Oicn\-Server\-::server\-\_\-content\hspace{0.3cm}{\ttfamily [private]}}}\label{classns3_1_1OicnServer_ae9c0c07d3749a24b15ad2cd3e13c52a6}
+
+
+It contain name and corresponding content. 
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+model/\hyperlink{oicn-server-application_8h}{oicn-\/server-\/application.\-h}\item 
+model/\hyperlink{oicn-server-application_8cc}{oicn-\/server-\/application.\-cc}\end{DoxyCompactItemize}

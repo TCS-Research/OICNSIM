@@ -1,0 +1,121 @@
+\hypertarget{classns3_1_1OicnServerHelper}{\section{ns3\-:\-:Oicn\-Server\-Helper Class Reference}
+\label{classns3_1_1OicnServerHelper}\index{ns3\-::\-Oicn\-Server\-Helper@{ns3\-::\-Oicn\-Server\-Helper}}
+}
+
+
+Create a O\-I\-C\-N Server application. I\-C\-N Manager direct O\-I\-C\-N server to send requested content to O\-I\-C\-N client.  
+
+
+
+
+{\ttfamily \#include $<$oicn-\/application-\/helper.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classns3_1_1OicnServerHelper_a998b6d70d51296b555b21db53495fa06}{Oicn\-Server\-Helper} ()
+\item 
+Application\-Container \hyperlink{classns3_1_1OicnServerHelper_a4b67e200abe0195e41e9d90fe7d39bbd}{Install} (Ptr$<$ Node $>$ node, std\-::vector$<$ int $>$ index) const 
+\item 
+Application\-Container \hyperlink{classns3_1_1OicnServerHelper_aea4f4451e7c402188d9420bd1651d353}{Install} (Node\-Container c, std\-::vector$<$ int $>$ index) const 
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+Application\-Container \hyperlink{classns3_1_1OicnServerHelper_ab941edf2e4f5d21a605234c5641c389e}{Install\-Priv} (Ptr$<$ Node $>$ node, std\-::vector$<$ int $>$ index) const 
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Object\-Factory \hyperlink{classns3_1_1OicnServerHelper_a19cdffceba4d5dfc156b3f1bf18e2531}{m\-\_\-factory}
+\begin{DoxyCompactList}\small\item\em Object factory. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Create a O\-I\-C\-N Server application. I\-C\-N Manager direct O\-I\-C\-N server to send requested content to O\-I\-C\-N client. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classns3_1_1OicnServerHelper_a998b6d70d51296b555b21db53495fa06}{\index{ns3\-::\-Oicn\-Server\-Helper@{ns3\-::\-Oicn\-Server\-Helper}!Oicn\-Server\-Helper@{Oicn\-Server\-Helper}}
+\index{Oicn\-Server\-Helper@{Oicn\-Server\-Helper}!ns3::OicnServerHelper@{ns3\-::\-Oicn\-Server\-Helper}}
+\subsubsection[{Oicn\-Server\-Helper}]{\setlength{\rightskip}{0pt plus 5cm}ns3\-::\-Oicn\-Server\-Helper\-::\-Oicn\-Server\-Helper (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classns3_1_1OicnServerHelper_a998b6d70d51296b555b21db53495fa06}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classns3_1_1OicnServerHelper_a4b67e200abe0195e41e9d90fe7d39bbd}{\index{ns3\-::\-Oicn\-Server\-Helper@{ns3\-::\-Oicn\-Server\-Helper}!Install@{Install}}
+\index{Install@{Install}!ns3::OicnServerHelper@{ns3\-::\-Oicn\-Server\-Helper}}
+\subsubsection[{Install}]{\setlength{\rightskip}{0pt plus 5cm}Application\-Container ns3\-::\-Oicn\-Server\-Helper\-::\-Install (
+\begin{DoxyParamCaption}
+\item[{Ptr$<$ Node $>$}]{node, }
+\item[{std\-::vector$<$ int $>$}]{index}
+\end{DoxyParamCaption}
+) const}}\label{classns3_1_1OicnServerHelper_a4b67e200abe0195e41e9d90fe7d39bbd}
+Create an \hyperlink{classns3_1_1OicnServer}{Oicn\-Server} Application having content specified by indices on the specified node.
+
+
+\begin{DoxyParams}{Parameters}
+{\em node} & The node on which to create the Application. The node is specified by a Ptr$<$\-Node$>$. \\
+\hline
+{\em index} & vector containing the indices of the content \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+an Application\-Container holding the Application created 
+\end{DoxyReturn}
+\hypertarget{classns3_1_1OicnServerHelper_aea4f4451e7c402188d9420bd1651d353}{\index{ns3\-::\-Oicn\-Server\-Helper@{ns3\-::\-Oicn\-Server\-Helper}!Install@{Install}}
+\index{Install@{Install}!ns3::OicnServerHelper@{ns3\-::\-Oicn\-Server\-Helper}}
+\subsubsection[{Install}]{\setlength{\rightskip}{0pt plus 5cm}Application\-Container ns3\-::\-Oicn\-Server\-Helper\-::\-Install (
+\begin{DoxyParamCaption}
+\item[{Node\-Container}]{c, }
+\item[{std\-::vector$<$ int $>$}]{index}
+\end{DoxyParamCaption}
+) const}}\label{classns3_1_1OicnServerHelper_aea4f4451e7c402188d9420bd1651d353}
+Create an \hyperlink{classns3_1_1OicnServer}{Oicn\-Server} Application having content specified by indices on the specified Node.
+
+
+\begin{DoxyParams}{Parameters}
+{\em c} & The nodes on which to create the Applications. The nodes are specified by a Node\-Container. \\
+\hline
+{\em index} & vector containing the indices of the content \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+an Application\-Container holding the Application created 
+\end{DoxyReturn}
+\hypertarget{classns3_1_1OicnServerHelper_ab941edf2e4f5d21a605234c5641c389e}{\index{ns3\-::\-Oicn\-Server\-Helper@{ns3\-::\-Oicn\-Server\-Helper}!Install\-Priv@{Install\-Priv}}
+\index{Install\-Priv@{Install\-Priv}!ns3::OicnServerHelper@{ns3\-::\-Oicn\-Server\-Helper}}
+\subsubsection[{Install\-Priv}]{\setlength{\rightskip}{0pt plus 5cm}Application\-Container ns3\-::\-Oicn\-Server\-Helper\-::\-Install\-Priv (
+\begin{DoxyParamCaption}
+\item[{Ptr$<$ Node $>$}]{node, }
+\item[{std\-::vector$<$ int $>$}]{index}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [private]}}}\label{classns3_1_1OicnServerHelper_ab941edf2e4f5d21a605234c5641c389e}
+Install an \hyperlink{classns3_1_1OicnServer}{Oicn\-Server} on the node 
+\begin{DoxyParams}{Parameters}
+{\em node} & The node on which an \hyperlink{classns3_1_1OicnServer}{Oicn\-Server} will be installed. \\
+\hline
+{\em index} & vector containing the indices of the content \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+an Application\-Container holding the Application created 
+\end{DoxyReturn}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classns3_1_1OicnServerHelper_a19cdffceba4d5dfc156b3f1bf18e2531}{\index{ns3\-::\-Oicn\-Server\-Helper@{ns3\-::\-Oicn\-Server\-Helper}!m\-\_\-factory@{m\-\_\-factory}}
+\index{m\-\_\-factory@{m\-\_\-factory}!ns3::OicnServerHelper@{ns3\-::\-Oicn\-Server\-Helper}}
+\subsubsection[{m\-\_\-factory}]{\setlength{\rightskip}{0pt plus 5cm}Object\-Factory ns3\-::\-Oicn\-Server\-Helper\-::m\-\_\-factory\hspace{0.3cm}{\ttfamily [private]}}}\label{classns3_1_1OicnServerHelper_a19cdffceba4d5dfc156b3f1bf18e2531}
+
+
+Object factory. 
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+helper/\hyperlink{oicn-application-helper_8h}{oicn-\/application-\/helper.\-h}\item 
+helper/\hyperlink{oicn-application-helper_8cc}{oicn-\/application-\/helper.\-cc}\end{DoxyCompactItemize}

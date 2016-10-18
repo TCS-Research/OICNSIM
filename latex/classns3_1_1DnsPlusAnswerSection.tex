@@ -1,0 +1,470 @@
+\hypertarget{classns3_1_1DnsPlusAnswerSection}{\section{ns3\-:\-:Dns\-Plus\-Answer\-Section Class Reference}
+\label{classns3_1_1DnsPlusAnswerSection}\index{ns3\-::\-Dns\-Plus\-Answer\-Section@{ns3\-::\-Dns\-Plus\-Answer\-Section}}
+}
+
+
+It is similar to D\-N\-S Answer Section header.  
+
+
+
+
+{\ttfamily \#include $<$dnsplus-\/answer-\/section.\-h$>$}
+
+Inheritance diagram for ns3\-:\-:Dns\-Plus\-Answer\-Section\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classns3_1_1DnsPlusAnswerSection}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classns3_1_1DnsPlusAnswerSection_aa1cb6dbcaa5dd169bb7059cb9e7f235f}{Dns\-Plus\-Answer\-Section} ()
+\item 
+virtual \hyperlink{classns3_1_1DnsPlusAnswerSection_ad0ace36d41761416f5920ef0126c3c1c}{$\sim$\-Dns\-Plus\-Answer\-Section} ()
+\item 
+virtual Type\-Id \hyperlink{classns3_1_1DnsPlusAnswerSection_a49405ae6e379132ec12836e371bc30ea}{Get\-Instance\-Type\-Id} (void) const 
+\item 
+virtual uint32\-\_\-t \hyperlink{classns3_1_1DnsPlusAnswerSection_a104fd989f35df0b3d4b85c33f73c864b}{Get\-Serialized\-Size} (void) const 
+\item 
+virtual void \hyperlink{classns3_1_1DnsPlusAnswerSection_a107a061aaef4face000adb7f3317f52e}{Serialize} (Buffer\-::\-Iterator start) const 
+\item 
+virtual uint32\-\_\-t \hyperlink{classns3_1_1DnsPlusAnswerSection_ad26bc4f46c7b59f1d296d903b3b88baf}{Deserialize} (Buffer\-::\-Iterator start)
+\item 
+virtual void \hyperlink{classns3_1_1DnsPlusAnswerSection_a34e5cbe940177587b43ba50d5586beee}{Print} (std\-::ostream \&os) const 
+\item 
+void \hyperlink{classns3_1_1DnsPlusAnswerSection_ab1fe1a8c00d52e81469d7edfa3d18b25}{Set\-Name} (std\-::string name)
+\begin{DoxyCompactList}\small\item\em Set the name of the content in answer section. \end{DoxyCompactList}\item 
+void \hyperlink{classns3_1_1DnsPlusAnswerSection_a4cfd46dc9b8003e1066d0501e2fefff4}{Set\-Name\-Length} (uint32\-\_\-t name\-Length)
+\begin{DoxyCompactList}\small\item\em Set the length of the name of the content in answer section. \end{DoxyCompactList}\item 
+void \hyperlink{classns3_1_1DnsPlusAnswerSection_a02c33fb6b02a6ace1f7a29e2df46960b}{Set\-Type} (uint16\-\_\-t Type)
+\begin{DoxyCompactList}\small\item\em Set the type of data in R\-D D\-A\-T\-A field of answer section. \end{DoxyCompactList}\item 
+void \hyperlink{classns3_1_1DnsPlusAnswerSection_ab1e5926e561e8728860024e0dd28a621}{Set\-Class} (uint16\-\_\-t Class)
+\begin{DoxyCompactList}\small\item\em Set the class of data in R\-D D\-A\-T\-A field of answer section. \end{DoxyCompactList}\item 
+void \hyperlink{classns3_1_1DnsPlusAnswerSection_a43fe4e27216871cb41e2aabd6ea41729}{Set\-Reserved\-Flag} (uint16\-\_\-t reserved\-Flag)
+\begin{DoxyCompactList}\small\item\em Set the Reserved flag, these are not currently used, reserved for future use. \end{DoxyCompactList}\item 
+void \hyperlink{classns3_1_1DnsPlusAnswerSection_a0eb309d8e58aac31bffa90518458de3b}{Set\-Ttl} (uint16\-\_\-t ttl)
+\begin{DoxyCompactList}\small\item\em Set the ttl field of answer section. \end{DoxyCompactList}\item 
+void \hyperlink{classns3_1_1DnsPlusAnswerSection_af7c04ba7137a994822eea5c9a2870ba1}{Set\-Rd\-Length} (uint16\-\_\-t rd\-Length)
+\begin{DoxyCompactList}\small\item\em Set length of R\-D D\-A\-T\-A field of answer section. \end{DoxyCompactList}\item 
+void \hyperlink{classns3_1_1DnsPlusAnswerSection_a9d577220126adbf68a0f6475b57560fb}{Set\-Rd\-Data} (Ipv4\-Address rd\-Data)
+\begin{DoxyCompactList}\small\item\em Set the R\-D D\-A\-T\-A field of answer section. \end{DoxyCompactList}\item 
+std\-::string \hyperlink{classns3_1_1DnsPlusAnswerSection_afdc38626ee1ff71c315bc2b6f119b350}{Get\-Name} ()
+\begin{DoxyCompactList}\small\item\em Get name of the content. \end{DoxyCompactList}\item 
+uint16\-\_\-t \hyperlink{classns3_1_1DnsPlusAnswerSection_ab1c3734345015e5178a41defed12e18e}{Get\-Class} ()
+\begin{DoxyCompactList}\small\item\em Get the class of the answer section. \end{DoxyCompactList}\item 
+uint16\-\_\-t \hyperlink{classns3_1_1DnsPlusAnswerSection_a766b46334b73e311f789842ba5e946d2}{Get\-Type} ()
+\begin{DoxyCompactList}\small\item\em Get the type of answer section. \end{DoxyCompactList}\item 
+uint8\-\_\-t \hyperlink{classns3_1_1DnsPlusAnswerSection_a0fcc7d52387c28ef0b6054a3d445bab2}{Get\-Reserved\-Flag} ()
+\begin{DoxyCompactList}\small\item\em Get the reserved flag. \end{DoxyCompactList}\item 
+uint16\-\_\-t \hyperlink{classns3_1_1DnsPlusAnswerSection_a675a24874435063a12abaacbf28caa7d}{Get\-Ttl} ()
+\begin{DoxyCompactList}\small\item\em Get the ttl of answer section. \end{DoxyCompactList}\item 
+uint16\-\_\-t \hyperlink{classns3_1_1DnsPlusAnswerSection_a7208ae0d866c3292f2b92de9f32fe869}{Get\-Rd\-Length} ()
+\begin{DoxyCompactList}\small\item\em Get the length of R\-D Data of answer section. \end{DoxyCompactList}\item 
+uint32\-\_\-t \hyperlink{classns3_1_1DnsPlusAnswerSection_ae3deac68a760812cbb49e532ac0ab2c6}{Get\-Rd\-Data} ()
+\begin{DoxyCompactList}\small\item\em Get the R\-D Data of answer section. \end{DoxyCompactList}\item 
+uint32\-\_\-t \hyperlink{classns3_1_1DnsPlusAnswerSection_a3f52e08f71e8f5d942c5c888e997ed5f}{Get\-Name\-Length} ()
+\begin{DoxyCompactList}\small\item\em Get the Length of the name of the content. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static Type\-Id \hyperlink{classns3_1_1DnsPlusAnswerSection_acc0093742dd85d654eb0faf7c3492baf}{Get\-Type\-Id} (void)
+\begin{DoxyCompactList}\small\item\em Get the type I\-D. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+uint8\-\_\-t \hyperlink{classns3_1_1DnsPlusAnswerSection_ab7c55e4309c4e3ea9d2f6cee4f51a5a9}{m\-\_\-reserved\-Flag}
+\begin{DoxyCompactList}\small\item\em reserved flag bits \end{DoxyCompactList}\item 
+std\-::string \hyperlink{classns3_1_1DnsPlusAnswerSection_a4e6ba01e32ecd32c175a814f60ddd315}{m\-\_\-name}
+\begin{DoxyCompactList}\small\item\em name of the content \end{DoxyCompactList}\item 
+uint16\-\_\-t \hyperlink{classns3_1_1DnsPlusAnswerSection_a9ea44f6d896057b365c56b947cd051b4}{m\-\_\-\-Class}
+\begin{DoxyCompactList}\small\item\em class of data in R\-D D\-A\-T\-A field \end{DoxyCompactList}\item 
+uint16\-\_\-t \hyperlink{classns3_1_1DnsPlusAnswerSection_aa1a416336d5681c959c988c299a6cddf}{m\-\_\-\-Type}
+\begin{DoxyCompactList}\small\item\em type of data in R\-D D\-A\-T\-A field \end{DoxyCompactList}\item 
+uint32\-\_\-t \hyperlink{classns3_1_1DnsPlusAnswerSection_ac7759da5ffc094ed4d0e60d7095ed1d2}{m\-\_\-name\-Length}
+\begin{DoxyCompactList}\small\item\em length of the name of the content \end{DoxyCompactList}\item 
+uint16\-\_\-t \hyperlink{classns3_1_1DnsPlusAnswerSection_a2b8a98168673224b6575ab009e883d2f}{m\-\_\-ttl}
+\begin{DoxyCompactList}\small\item\em time to live of answer section \end{DoxyCompactList}\item 
+uint16\-\_\-t \hyperlink{classns3_1_1DnsPlusAnswerSection_a87bd32bf4be3b0d809014553260f5abb}{m\-\_\-rd\-Length}
+\begin{DoxyCompactList}\small\item\em length of R\-D Data \end{DoxyCompactList}\item 
+uint32\-\_\-t \hyperlink{classns3_1_1DnsPlusAnswerSection_ab02f72df4dd55bc16b58c4915e7bc0ce}{m\-\_\-rd\-Data}
+\begin{DoxyCompactList}\small\item\em R\-D Data of answer section. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+It is similar to D\-N\-S Answer Section header. 
+
+I\-C\-N Manager send packet with this header to the source of the requested content. This header contains the ip address of the client to whom content has to be sent. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classns3_1_1DnsPlusAnswerSection_aa1cb6dbcaa5dd169bb7059cb9e7f235f}{\index{ns3\-::\-Dns\-Plus\-Answer\-Section@{ns3\-::\-Dns\-Plus\-Answer\-Section}!Dns\-Plus\-Answer\-Section@{Dns\-Plus\-Answer\-Section}}
+\index{Dns\-Plus\-Answer\-Section@{Dns\-Plus\-Answer\-Section}!ns3::DnsPlusAnswerSection@{ns3\-::\-Dns\-Plus\-Answer\-Section}}
+\subsubsection[{Dns\-Plus\-Answer\-Section}]{\setlength{\rightskip}{0pt plus 5cm}ns3\-::\-Dns\-Plus\-Answer\-Section\-::\-Dns\-Plus\-Answer\-Section (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classns3_1_1DnsPlusAnswerSection_aa1cb6dbcaa5dd169bb7059cb9e7f235f}
+\hypertarget{classns3_1_1DnsPlusAnswerSection_ad0ace36d41761416f5920ef0126c3c1c}{\index{ns3\-::\-Dns\-Plus\-Answer\-Section@{ns3\-::\-Dns\-Plus\-Answer\-Section}!$\sim$\-Dns\-Plus\-Answer\-Section@{$\sim$\-Dns\-Plus\-Answer\-Section}}
+\index{$\sim$\-Dns\-Plus\-Answer\-Section@{$\sim$\-Dns\-Plus\-Answer\-Section}!ns3::DnsPlusAnswerSection@{ns3\-::\-Dns\-Plus\-Answer\-Section}}
+\subsubsection[{$\sim$\-Dns\-Plus\-Answer\-Section}]{\setlength{\rightskip}{0pt plus 5cm}ns3\-::\-Dns\-Plus\-Answer\-Section\-::$\sim$\-Dns\-Plus\-Answer\-Section (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classns3_1_1DnsPlusAnswerSection_ad0ace36d41761416f5920ef0126c3c1c}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classns3_1_1DnsPlusAnswerSection_ad26bc4f46c7b59f1d296d903b3b88baf}{\index{ns3\-::\-Dns\-Plus\-Answer\-Section@{ns3\-::\-Dns\-Plus\-Answer\-Section}!Deserialize@{Deserialize}}
+\index{Deserialize@{Deserialize}!ns3::DnsPlusAnswerSection@{ns3\-::\-Dns\-Plus\-Answer\-Section}}
+\subsubsection[{Deserialize}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t ns3\-::\-Dns\-Plus\-Answer\-Section\-::\-Deserialize (
+\begin{DoxyParamCaption}
+\item[{Buffer\-::\-Iterator}]{start}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classns3_1_1DnsPlusAnswerSection_ad26bc4f46c7b59f1d296d903b3b88baf}
+\hypertarget{classns3_1_1DnsPlusAnswerSection_ab1c3734345015e5178a41defed12e18e}{\index{ns3\-::\-Dns\-Plus\-Answer\-Section@{ns3\-::\-Dns\-Plus\-Answer\-Section}!Get\-Class@{Get\-Class}}
+\index{Get\-Class@{Get\-Class}!ns3::DnsPlusAnswerSection@{ns3\-::\-Dns\-Plus\-Answer\-Section}}
+\subsubsection[{Get\-Class}]{\setlength{\rightskip}{0pt plus 5cm}uint16\-\_\-t ns3\-::\-Dns\-Plus\-Answer\-Section\-::\-Get\-Class (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classns3_1_1DnsPlusAnswerSection_ab1c3734345015e5178a41defed12e18e}
+
+
+Get the class of the answer section. 
+
+\begin{DoxyReturn}{Returns}
+class of answer section. 
+\end{DoxyReturn}
+\hypertarget{classns3_1_1DnsPlusAnswerSection_a49405ae6e379132ec12836e371bc30ea}{\index{ns3\-::\-Dns\-Plus\-Answer\-Section@{ns3\-::\-Dns\-Plus\-Answer\-Section}!Get\-Instance\-Type\-Id@{Get\-Instance\-Type\-Id}}
+\index{Get\-Instance\-Type\-Id@{Get\-Instance\-Type\-Id}!ns3::DnsPlusAnswerSection@{ns3\-::\-Dns\-Plus\-Answer\-Section}}
+\subsubsection[{Get\-Instance\-Type\-Id}]{\setlength{\rightskip}{0pt plus 5cm}Type\-Id ns3\-::\-Dns\-Plus\-Answer\-Section\-::\-Get\-Instance\-Type\-Id (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classns3_1_1DnsPlusAnswerSection_a49405ae6e379132ec12836e371bc30ea}
+\hypertarget{classns3_1_1DnsPlusAnswerSection_afdc38626ee1ff71c315bc2b6f119b350}{\index{ns3\-::\-Dns\-Plus\-Answer\-Section@{ns3\-::\-Dns\-Plus\-Answer\-Section}!Get\-Name@{Get\-Name}}
+\index{Get\-Name@{Get\-Name}!ns3::DnsPlusAnswerSection@{ns3\-::\-Dns\-Plus\-Answer\-Section}}
+\subsubsection[{Get\-Name}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string ns3\-::\-Dns\-Plus\-Answer\-Section\-::\-Get\-Name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classns3_1_1DnsPlusAnswerSection_afdc38626ee1ff71c315bc2b6f119b350}
+
+
+Get name of the content. 
+
+\begin{DoxyReturn}{Returns}
+name of the content. 
+\end{DoxyReturn}
+\hypertarget{classns3_1_1DnsPlusAnswerSection_a3f52e08f71e8f5d942c5c888e997ed5f}{\index{ns3\-::\-Dns\-Plus\-Answer\-Section@{ns3\-::\-Dns\-Plus\-Answer\-Section}!Get\-Name\-Length@{Get\-Name\-Length}}
+\index{Get\-Name\-Length@{Get\-Name\-Length}!ns3::DnsPlusAnswerSection@{ns3\-::\-Dns\-Plus\-Answer\-Section}}
+\subsubsection[{Get\-Name\-Length}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t ns3\-::\-Dns\-Plus\-Answer\-Section\-::\-Get\-Name\-Length (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classns3_1_1DnsPlusAnswerSection_a3f52e08f71e8f5d942c5c888e997ed5f}
+
+
+Get the Length of the name of the content. 
+
+\begin{DoxyReturn}{Returns}
+length of the name of the content. 
+\end{DoxyReturn}
+\hypertarget{classns3_1_1DnsPlusAnswerSection_ae3deac68a760812cbb49e532ac0ab2c6}{\index{ns3\-::\-Dns\-Plus\-Answer\-Section@{ns3\-::\-Dns\-Plus\-Answer\-Section}!Get\-Rd\-Data@{Get\-Rd\-Data}}
+\index{Get\-Rd\-Data@{Get\-Rd\-Data}!ns3::DnsPlusAnswerSection@{ns3\-::\-Dns\-Plus\-Answer\-Section}}
+\subsubsection[{Get\-Rd\-Data}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t ns3\-::\-Dns\-Plus\-Answer\-Section\-::\-Get\-Rd\-Data (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classns3_1_1DnsPlusAnswerSection_ae3deac68a760812cbb49e532ac0ab2c6}
+
+
+Get the R\-D Data of answer section. 
+
+\begin{DoxyReturn}{Returns}
+R\-D Data of answer section. 
+\end{DoxyReturn}
+\hypertarget{classns3_1_1DnsPlusAnswerSection_a7208ae0d866c3292f2b92de9f32fe869}{\index{ns3\-::\-Dns\-Plus\-Answer\-Section@{ns3\-::\-Dns\-Plus\-Answer\-Section}!Get\-Rd\-Length@{Get\-Rd\-Length}}
+\index{Get\-Rd\-Length@{Get\-Rd\-Length}!ns3::DnsPlusAnswerSection@{ns3\-::\-Dns\-Plus\-Answer\-Section}}
+\subsubsection[{Get\-Rd\-Length}]{\setlength{\rightskip}{0pt plus 5cm}uint16\-\_\-t ns3\-::\-Dns\-Plus\-Answer\-Section\-::\-Get\-Rd\-Length (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classns3_1_1DnsPlusAnswerSection_a7208ae0d866c3292f2b92de9f32fe869}
+
+
+Get the length of R\-D Data of answer section. 
+
+\begin{DoxyReturn}{Returns}
+length of R\-D Data of answer section. 
+\end{DoxyReturn}
+\hypertarget{classns3_1_1DnsPlusAnswerSection_a0fcc7d52387c28ef0b6054a3d445bab2}{\index{ns3\-::\-Dns\-Plus\-Answer\-Section@{ns3\-::\-Dns\-Plus\-Answer\-Section}!Get\-Reserved\-Flag@{Get\-Reserved\-Flag}}
+\index{Get\-Reserved\-Flag@{Get\-Reserved\-Flag}!ns3::DnsPlusAnswerSection@{ns3\-::\-Dns\-Plus\-Answer\-Section}}
+\subsubsection[{Get\-Reserved\-Flag}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t ns3\-::\-Dns\-Plus\-Answer\-Section\-::\-Get\-Reserved\-Flag (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classns3_1_1DnsPlusAnswerSection_a0fcc7d52387c28ef0b6054a3d445bab2}
+
+
+Get the reserved flag. 
+
+\begin{DoxyReturn}{Returns}
+reserved\-Flag of answer section. 
+\end{DoxyReturn}
+\hypertarget{classns3_1_1DnsPlusAnswerSection_a104fd989f35df0b3d4b85c33f73c864b}{\index{ns3\-::\-Dns\-Plus\-Answer\-Section@{ns3\-::\-Dns\-Plus\-Answer\-Section}!Get\-Serialized\-Size@{Get\-Serialized\-Size}}
+\index{Get\-Serialized\-Size@{Get\-Serialized\-Size}!ns3::DnsPlusAnswerSection@{ns3\-::\-Dns\-Plus\-Answer\-Section}}
+\subsubsection[{Get\-Serialized\-Size}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t ns3\-::\-Dns\-Plus\-Answer\-Section\-::\-Get\-Serialized\-Size (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classns3_1_1DnsPlusAnswerSection_a104fd989f35df0b3d4b85c33f73c864b}
+\hypertarget{classns3_1_1DnsPlusAnswerSection_a675a24874435063a12abaacbf28caa7d}{\index{ns3\-::\-Dns\-Plus\-Answer\-Section@{ns3\-::\-Dns\-Plus\-Answer\-Section}!Get\-Ttl@{Get\-Ttl}}
+\index{Get\-Ttl@{Get\-Ttl}!ns3::DnsPlusAnswerSection@{ns3\-::\-Dns\-Plus\-Answer\-Section}}
+\subsubsection[{Get\-Ttl}]{\setlength{\rightskip}{0pt plus 5cm}uint16\-\_\-t ns3\-::\-Dns\-Plus\-Answer\-Section\-::\-Get\-Ttl (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classns3_1_1DnsPlusAnswerSection_a675a24874435063a12abaacbf28caa7d}
+
+
+Get the ttl of answer section. 
+
+\begin{DoxyReturn}{Returns}
+ttl of answer section. 
+\end{DoxyReturn}
+\hypertarget{classns3_1_1DnsPlusAnswerSection_a766b46334b73e311f789842ba5e946d2}{\index{ns3\-::\-Dns\-Plus\-Answer\-Section@{ns3\-::\-Dns\-Plus\-Answer\-Section}!Get\-Type@{Get\-Type}}
+\index{Get\-Type@{Get\-Type}!ns3::DnsPlusAnswerSection@{ns3\-::\-Dns\-Plus\-Answer\-Section}}
+\subsubsection[{Get\-Type}]{\setlength{\rightskip}{0pt plus 5cm}uint16\-\_\-t ns3\-::\-Dns\-Plus\-Answer\-Section\-::\-Get\-Type (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classns3_1_1DnsPlusAnswerSection_a766b46334b73e311f789842ba5e946d2}
+
+
+Get the type of answer section. 
+
+\begin{DoxyReturn}{Returns}
+type of answer section. 
+\end{DoxyReturn}
+\hypertarget{classns3_1_1DnsPlusAnswerSection_acc0093742dd85d654eb0faf7c3492baf}{\index{ns3\-::\-Dns\-Plus\-Answer\-Section@{ns3\-::\-Dns\-Plus\-Answer\-Section}!Get\-Type\-Id@{Get\-Type\-Id}}
+\index{Get\-Type\-Id@{Get\-Type\-Id}!ns3::DnsPlusAnswerSection@{ns3\-::\-Dns\-Plus\-Answer\-Section}}
+\subsubsection[{Get\-Type\-Id}]{\setlength{\rightskip}{0pt plus 5cm}Type\-Id ns3\-::\-Dns\-Plus\-Answer\-Section\-::\-Get\-Type\-Id (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classns3_1_1DnsPlusAnswerSection_acc0093742dd85d654eb0faf7c3492baf}
+
+
+Get the type I\-D. 
+
+\begin{DoxyReturn}{Returns}
+the object Type\-Id. 
+\end{DoxyReturn}
+\hypertarget{classns3_1_1DnsPlusAnswerSection_a34e5cbe940177587b43ba50d5586beee}{\index{ns3\-::\-Dns\-Plus\-Answer\-Section@{ns3\-::\-Dns\-Plus\-Answer\-Section}!Print@{Print}}
+\index{Print@{Print}!ns3::DnsPlusAnswerSection@{ns3\-::\-Dns\-Plus\-Answer\-Section}}
+\subsubsection[{Print}]{\setlength{\rightskip}{0pt plus 5cm}void ns3\-::\-Dns\-Plus\-Answer\-Section\-::\-Print (
+\begin{DoxyParamCaption}
+\item[{std\-::ostream \&}]{os}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classns3_1_1DnsPlusAnswerSection_a34e5cbe940177587b43ba50d5586beee}
+\hypertarget{classns3_1_1DnsPlusAnswerSection_a107a061aaef4face000adb7f3317f52e}{\index{ns3\-::\-Dns\-Plus\-Answer\-Section@{ns3\-::\-Dns\-Plus\-Answer\-Section}!Serialize@{Serialize}}
+\index{Serialize@{Serialize}!ns3::DnsPlusAnswerSection@{ns3\-::\-Dns\-Plus\-Answer\-Section}}
+\subsubsection[{Serialize}]{\setlength{\rightskip}{0pt plus 5cm}void ns3\-::\-Dns\-Plus\-Answer\-Section\-::\-Serialize (
+\begin{DoxyParamCaption}
+\item[{Buffer\-::\-Iterator}]{start}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classns3_1_1DnsPlusAnswerSection_a107a061aaef4face000adb7f3317f52e}
+\hypertarget{classns3_1_1DnsPlusAnswerSection_ab1e5926e561e8728860024e0dd28a621}{\index{ns3\-::\-Dns\-Plus\-Answer\-Section@{ns3\-::\-Dns\-Plus\-Answer\-Section}!Set\-Class@{Set\-Class}}
+\index{Set\-Class@{Set\-Class}!ns3::DnsPlusAnswerSection@{ns3\-::\-Dns\-Plus\-Answer\-Section}}
+\subsubsection[{Set\-Class}]{\setlength{\rightskip}{0pt plus 5cm}void ns3\-::\-Dns\-Plus\-Answer\-Section\-::\-Set\-Class (
+\begin{DoxyParamCaption}
+\item[{uint16\-\_\-t}]{Class}
+\end{DoxyParamCaption}
+)}}\label{classns3_1_1DnsPlusAnswerSection_ab1e5926e561e8728860024e0dd28a621}
+
+
+Set the class of data in R\-D D\-A\-T\-A field of answer section. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em class} & class of data in R\-D D\-A\-T\-A field of answer section. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classns3_1_1DnsPlusAnswerSection_ab1fe1a8c00d52e81469d7edfa3d18b25}{\index{ns3\-::\-Dns\-Plus\-Answer\-Section@{ns3\-::\-Dns\-Plus\-Answer\-Section}!Set\-Name@{Set\-Name}}
+\index{Set\-Name@{Set\-Name}!ns3::DnsPlusAnswerSection@{ns3\-::\-Dns\-Plus\-Answer\-Section}}
+\subsubsection[{Set\-Name}]{\setlength{\rightskip}{0pt plus 5cm}void ns3\-::\-Dns\-Plus\-Answer\-Section\-::\-Set\-Name (
+\begin{DoxyParamCaption}
+\item[{std\-::string}]{name}
+\end{DoxyParamCaption}
+)}}\label{classns3_1_1DnsPlusAnswerSection_ab1fe1a8c00d52e81469d7edfa3d18b25}
+
+
+Set the name of the content in answer section. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & it is name of the content. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classns3_1_1DnsPlusAnswerSection_a4cfd46dc9b8003e1066d0501e2fefff4}{\index{ns3\-::\-Dns\-Plus\-Answer\-Section@{ns3\-::\-Dns\-Plus\-Answer\-Section}!Set\-Name\-Length@{Set\-Name\-Length}}
+\index{Set\-Name\-Length@{Set\-Name\-Length}!ns3::DnsPlusAnswerSection@{ns3\-::\-Dns\-Plus\-Answer\-Section}}
+\subsubsection[{Set\-Name\-Length}]{\setlength{\rightskip}{0pt plus 5cm}void ns3\-::\-Dns\-Plus\-Answer\-Section\-::\-Set\-Name\-Length (
+\begin{DoxyParamCaption}
+\item[{uint32\-\_\-t}]{name\-Length}
+\end{DoxyParamCaption}
+)}}\label{classns3_1_1DnsPlusAnswerSection_a4cfd46dc9b8003e1066d0501e2fefff4}
+
+
+Set the length of the name of the content in answer section. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name\-Length} & length of the name of the content. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classns3_1_1DnsPlusAnswerSection_a9d577220126adbf68a0f6475b57560fb}{\index{ns3\-::\-Dns\-Plus\-Answer\-Section@{ns3\-::\-Dns\-Plus\-Answer\-Section}!Set\-Rd\-Data@{Set\-Rd\-Data}}
+\index{Set\-Rd\-Data@{Set\-Rd\-Data}!ns3::DnsPlusAnswerSection@{ns3\-::\-Dns\-Plus\-Answer\-Section}}
+\subsubsection[{Set\-Rd\-Data}]{\setlength{\rightskip}{0pt plus 5cm}void ns3\-::\-Dns\-Plus\-Answer\-Section\-::\-Set\-Rd\-Data (
+\begin{DoxyParamCaption}
+\item[{Ipv4\-Address}]{rd\-Data}
+\end{DoxyParamCaption}
+)}}\label{classns3_1_1DnsPlusAnswerSection_a9d577220126adbf68a0f6475b57560fb}
+
+
+Set the R\-D D\-A\-T\-A field of answer section. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rd\-Data} & value of data in R\-D D\-A\-T\-A field of answer section. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classns3_1_1DnsPlusAnswerSection_af7c04ba7137a994822eea5c9a2870ba1}{\index{ns3\-::\-Dns\-Plus\-Answer\-Section@{ns3\-::\-Dns\-Plus\-Answer\-Section}!Set\-Rd\-Length@{Set\-Rd\-Length}}
+\index{Set\-Rd\-Length@{Set\-Rd\-Length}!ns3::DnsPlusAnswerSection@{ns3\-::\-Dns\-Plus\-Answer\-Section}}
+\subsubsection[{Set\-Rd\-Length}]{\setlength{\rightskip}{0pt plus 5cm}void ns3\-::\-Dns\-Plus\-Answer\-Section\-::\-Set\-Rd\-Length (
+\begin{DoxyParamCaption}
+\item[{uint16\-\_\-t}]{rd\-Length}
+\end{DoxyParamCaption}
+)}}\label{classns3_1_1DnsPlusAnswerSection_af7c04ba7137a994822eea5c9a2870ba1}
+
+
+Set length of R\-D D\-A\-T\-A field of answer section. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rd\-Length} & length of R\-D D\-A\-T\-A field of answer section. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classns3_1_1DnsPlusAnswerSection_a43fe4e27216871cb41e2aabd6ea41729}{\index{ns3\-::\-Dns\-Plus\-Answer\-Section@{ns3\-::\-Dns\-Plus\-Answer\-Section}!Set\-Reserved\-Flag@{Set\-Reserved\-Flag}}
+\index{Set\-Reserved\-Flag@{Set\-Reserved\-Flag}!ns3::DnsPlusAnswerSection@{ns3\-::\-Dns\-Plus\-Answer\-Section}}
+\subsubsection[{Set\-Reserved\-Flag}]{\setlength{\rightskip}{0pt plus 5cm}void ns3\-::\-Dns\-Plus\-Answer\-Section\-::\-Set\-Reserved\-Flag (
+\begin{DoxyParamCaption}
+\item[{uint16\-\_\-t}]{reserved\-Flag}
+\end{DoxyParamCaption}
+)}}\label{classns3_1_1DnsPlusAnswerSection_a43fe4e27216871cb41e2aabd6ea41729}
+
+
+Set the Reserved flag, these are not currently used, reserved for future use. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em reserved\-Flag} & reserved flag bit \\
+\hline
+\end{DoxyParams}
+\hypertarget{classns3_1_1DnsPlusAnswerSection_a0eb309d8e58aac31bffa90518458de3b}{\index{ns3\-::\-Dns\-Plus\-Answer\-Section@{ns3\-::\-Dns\-Plus\-Answer\-Section}!Set\-Ttl@{Set\-Ttl}}
+\index{Set\-Ttl@{Set\-Ttl}!ns3::DnsPlusAnswerSection@{ns3\-::\-Dns\-Plus\-Answer\-Section}}
+\subsubsection[{Set\-Ttl}]{\setlength{\rightskip}{0pt plus 5cm}void ns3\-::\-Dns\-Plus\-Answer\-Section\-::\-Set\-Ttl (
+\begin{DoxyParamCaption}
+\item[{uint16\-\_\-t}]{ttl}
+\end{DoxyParamCaption}
+)}}\label{classns3_1_1DnsPlusAnswerSection_a0eb309d8e58aac31bffa90518458de3b}
+
+
+Set the ttl field of answer section. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ttl} & ttl field of answer section. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classns3_1_1DnsPlusAnswerSection_a02c33fb6b02a6ace1f7a29e2df46960b}{\index{ns3\-::\-Dns\-Plus\-Answer\-Section@{ns3\-::\-Dns\-Plus\-Answer\-Section}!Set\-Type@{Set\-Type}}
+\index{Set\-Type@{Set\-Type}!ns3::DnsPlusAnswerSection@{ns3\-::\-Dns\-Plus\-Answer\-Section}}
+\subsubsection[{Set\-Type}]{\setlength{\rightskip}{0pt plus 5cm}void ns3\-::\-Dns\-Plus\-Answer\-Section\-::\-Set\-Type (
+\begin{DoxyParamCaption}
+\item[{uint16\-\_\-t}]{Type}
+\end{DoxyParamCaption}
+)}}\label{classns3_1_1DnsPlusAnswerSection_a02c33fb6b02a6ace1f7a29e2df46960b}
+
+
+Set the type of data in R\-D D\-A\-T\-A field of answer section. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em type} & type of data in R\-D D\-A\-T\-A field of answer section. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classns3_1_1DnsPlusAnswerSection_a9ea44f6d896057b365c56b947cd051b4}{\index{ns3\-::\-Dns\-Plus\-Answer\-Section@{ns3\-::\-Dns\-Plus\-Answer\-Section}!m\-\_\-\-Class@{m\-\_\-\-Class}}
+\index{m\-\_\-\-Class@{m\-\_\-\-Class}!ns3::DnsPlusAnswerSection@{ns3\-::\-Dns\-Plus\-Answer\-Section}}
+\subsubsection[{m\-\_\-\-Class}]{\setlength{\rightskip}{0pt plus 5cm}uint16\-\_\-t ns3\-::\-Dns\-Plus\-Answer\-Section\-::m\-\_\-\-Class\hspace{0.3cm}{\ttfamily [private]}}}\label{classns3_1_1DnsPlusAnswerSection_a9ea44f6d896057b365c56b947cd051b4}
+
+
+class of data in R\-D D\-A\-T\-A field 
+
+\hypertarget{classns3_1_1DnsPlusAnswerSection_a4e6ba01e32ecd32c175a814f60ddd315}{\index{ns3\-::\-Dns\-Plus\-Answer\-Section@{ns3\-::\-Dns\-Plus\-Answer\-Section}!m\-\_\-name@{m\-\_\-name}}
+\index{m\-\_\-name@{m\-\_\-name}!ns3::DnsPlusAnswerSection@{ns3\-::\-Dns\-Plus\-Answer\-Section}}
+\subsubsection[{m\-\_\-name}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string ns3\-::\-Dns\-Plus\-Answer\-Section\-::m\-\_\-name\hspace{0.3cm}{\ttfamily [private]}}}\label{classns3_1_1DnsPlusAnswerSection_a4e6ba01e32ecd32c175a814f60ddd315}
+
+
+name of the content 
+
+\hypertarget{classns3_1_1DnsPlusAnswerSection_ac7759da5ffc094ed4d0e60d7095ed1d2}{\index{ns3\-::\-Dns\-Plus\-Answer\-Section@{ns3\-::\-Dns\-Plus\-Answer\-Section}!m\-\_\-name\-Length@{m\-\_\-name\-Length}}
+\index{m\-\_\-name\-Length@{m\-\_\-name\-Length}!ns3::DnsPlusAnswerSection@{ns3\-::\-Dns\-Plus\-Answer\-Section}}
+\subsubsection[{m\-\_\-name\-Length}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t ns3\-::\-Dns\-Plus\-Answer\-Section\-::m\-\_\-name\-Length\hspace{0.3cm}{\ttfamily [private]}}}\label{classns3_1_1DnsPlusAnswerSection_ac7759da5ffc094ed4d0e60d7095ed1d2}
+
+
+length of the name of the content 
+
+\hypertarget{classns3_1_1DnsPlusAnswerSection_ab02f72df4dd55bc16b58c4915e7bc0ce}{\index{ns3\-::\-Dns\-Plus\-Answer\-Section@{ns3\-::\-Dns\-Plus\-Answer\-Section}!m\-\_\-rd\-Data@{m\-\_\-rd\-Data}}
+\index{m\-\_\-rd\-Data@{m\-\_\-rd\-Data}!ns3::DnsPlusAnswerSection@{ns3\-::\-Dns\-Plus\-Answer\-Section}}
+\subsubsection[{m\-\_\-rd\-Data}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t ns3\-::\-Dns\-Plus\-Answer\-Section\-::m\-\_\-rd\-Data\hspace{0.3cm}{\ttfamily [private]}}}\label{classns3_1_1DnsPlusAnswerSection_ab02f72df4dd55bc16b58c4915e7bc0ce}
+
+
+R\-D Data of answer section. 
+
+\hypertarget{classns3_1_1DnsPlusAnswerSection_a87bd32bf4be3b0d809014553260f5abb}{\index{ns3\-::\-Dns\-Plus\-Answer\-Section@{ns3\-::\-Dns\-Plus\-Answer\-Section}!m\-\_\-rd\-Length@{m\-\_\-rd\-Length}}
+\index{m\-\_\-rd\-Length@{m\-\_\-rd\-Length}!ns3::DnsPlusAnswerSection@{ns3\-::\-Dns\-Plus\-Answer\-Section}}
+\subsubsection[{m\-\_\-rd\-Length}]{\setlength{\rightskip}{0pt plus 5cm}uint16\-\_\-t ns3\-::\-Dns\-Plus\-Answer\-Section\-::m\-\_\-rd\-Length\hspace{0.3cm}{\ttfamily [private]}}}\label{classns3_1_1DnsPlusAnswerSection_a87bd32bf4be3b0d809014553260f5abb}
+
+
+length of R\-D Data 
+
+\hypertarget{classns3_1_1DnsPlusAnswerSection_ab7c55e4309c4e3ea9d2f6cee4f51a5a9}{\index{ns3\-::\-Dns\-Plus\-Answer\-Section@{ns3\-::\-Dns\-Plus\-Answer\-Section}!m\-\_\-reserved\-Flag@{m\-\_\-reserved\-Flag}}
+\index{m\-\_\-reserved\-Flag@{m\-\_\-reserved\-Flag}!ns3::DnsPlusAnswerSection@{ns3\-::\-Dns\-Plus\-Answer\-Section}}
+\subsubsection[{m\-\_\-reserved\-Flag}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t ns3\-::\-Dns\-Plus\-Answer\-Section\-::m\-\_\-reserved\-Flag\hspace{0.3cm}{\ttfamily [private]}}}\label{classns3_1_1DnsPlusAnswerSection_ab7c55e4309c4e3ea9d2f6cee4f51a5a9}
+
+
+reserved flag bits 
+
+\hypertarget{classns3_1_1DnsPlusAnswerSection_a2b8a98168673224b6575ab009e883d2f}{\index{ns3\-::\-Dns\-Plus\-Answer\-Section@{ns3\-::\-Dns\-Plus\-Answer\-Section}!m\-\_\-ttl@{m\-\_\-ttl}}
+\index{m\-\_\-ttl@{m\-\_\-ttl}!ns3::DnsPlusAnswerSection@{ns3\-::\-Dns\-Plus\-Answer\-Section}}
+\subsubsection[{m\-\_\-ttl}]{\setlength{\rightskip}{0pt plus 5cm}uint16\-\_\-t ns3\-::\-Dns\-Plus\-Answer\-Section\-::m\-\_\-ttl\hspace{0.3cm}{\ttfamily [private]}}}\label{classns3_1_1DnsPlusAnswerSection_a2b8a98168673224b6575ab009e883d2f}
+
+
+time to live of answer section 
+
+\hypertarget{classns3_1_1DnsPlusAnswerSection_aa1a416336d5681c959c988c299a6cddf}{\index{ns3\-::\-Dns\-Plus\-Answer\-Section@{ns3\-::\-Dns\-Plus\-Answer\-Section}!m\-\_\-\-Type@{m\-\_\-\-Type}}
+\index{m\-\_\-\-Type@{m\-\_\-\-Type}!ns3::DnsPlusAnswerSection@{ns3\-::\-Dns\-Plus\-Answer\-Section}}
+\subsubsection[{m\-\_\-\-Type}]{\setlength{\rightskip}{0pt plus 5cm}uint16\-\_\-t ns3\-::\-Dns\-Plus\-Answer\-Section\-::m\-\_\-\-Type\hspace{0.3cm}{\ttfamily [private]}}}\label{classns3_1_1DnsPlusAnswerSection_aa1a416336d5681c959c988c299a6cddf}
+
+
+type of data in R\-D D\-A\-T\-A field 
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+model/\hyperlink{dnsplus-answer-section_8h}{dnsplus-\/answer-\/section.\-h}\item 
+model/\hyperlink{dnsplus-answer-section_8cc}{dnsplus-\/answer-\/section.\-cc}\end{DoxyCompactItemize}

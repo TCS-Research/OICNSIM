@@ -1,0 +1,331 @@
+\hypertarget{classns3_1_1DnsPlusQuestionHeader}{\section{ns3\-:\-:Dns\-Plus\-Question\-Header Class Reference}
+\label{classns3_1_1DnsPlusQuestionHeader}\index{ns3\-::\-Dns\-Plus\-Question\-Header@{ns3\-::\-Dns\-Plus\-Question\-Header}}
+}
+
+
+It is similar to D\-N\-S Question Section header. It contains the name of the content to be queried.  
+
+
+
+
+{\ttfamily \#include $<$dnsplus-\/question-\/header.\-h$>$}
+
+Inheritance diagram for ns3\-:\-:Dns\-Plus\-Question\-Header\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classns3_1_1DnsPlusQuestionHeader}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classns3_1_1DnsPlusQuestionHeader_a3007f16f1486ea4d9e92f0a16304db5c}{Dns\-Plus\-Question\-Header} ()
+\item 
+virtual \hyperlink{classns3_1_1DnsPlusQuestionHeader_a2491f3d2ea7e19769fe1964405d12da1}{$\sim$\-Dns\-Plus\-Question\-Header} ()
+\item 
+virtual Type\-Id \hyperlink{classns3_1_1DnsPlusQuestionHeader_a3a22c5fdc183804309a94aad3e09c054}{Get\-Instance\-Type\-Id} (void) const 
+\item 
+virtual uint32\-\_\-t \hyperlink{classns3_1_1DnsPlusQuestionHeader_a9e90cac30d95e95faaaeeab35fe9c15e}{Get\-Serialized\-Size} (void) const 
+\item 
+virtual void \hyperlink{classns3_1_1DnsPlusQuestionHeader_a7560e6469a4e5afdf4df095e7e6d6eab}{Serialize} (Buffer\-::\-Iterator start) const 
+\item 
+virtual uint32\-\_\-t \hyperlink{classns3_1_1DnsPlusQuestionHeader_ac75fc840943cca37028eb0c8a23c4bea}{Deserialize} (Buffer\-::\-Iterator start)
+\item 
+virtual void \hyperlink{classns3_1_1DnsPlusQuestionHeader_a8ef5f712bae1caef0c7f37590fa094c2}{Print} (std\-::ostream \&os) const 
+\item 
+void \hyperlink{classns3_1_1DnsPlusQuestionHeader_aaad52033f6142d4c0210fdeb68b95d15}{Set\-Name\-Length} (uint32\-\_\-t name\-Length)
+\item 
+void \hyperlink{classns3_1_1DnsPlusQuestionHeader_a2fe3d4e1f1eea6817a83e5008d308edf}{Set\-Name} (std\-::string name)
+\item 
+void \hyperlink{classns3_1_1DnsPlusQuestionHeader_ab4300d1305dfed701fd94d803b5741cd}{Set\-Qtype} (uint16\-\_\-t q\-Type)
+\begin{DoxyCompactList}\small\item\em Set the type of data. \end{DoxyCompactList}\item 
+void \hyperlink{classns3_1_1DnsPlusQuestionHeader_a8281d02c53d1f3ef5228dd1ddce35759}{Set\-Qclass} (uint16\-\_\-t q\-Class)
+\begin{DoxyCompactList}\small\item\em Set the class of data. \end{DoxyCompactList}\item 
+void \hyperlink{classns3_1_1DnsPlusQuestionHeader_a7ee32b2fd37340e16532f04670549d70}{Set\-Reserved\-Flag} (uint16\-\_\-t reserved\-Flag)
+\begin{DoxyCompactList}\small\item\em Set the Reserved flag, these are not currently used, reserved for future use. \end{DoxyCompactList}\item 
+std\-::string \hyperlink{classns3_1_1DnsPlusQuestionHeader_ab999fca8805a988c4917b330594160f5}{Get\-Name} ()
+\begin{DoxyCompactList}\small\item\em Get the name of content. \end{DoxyCompactList}\item 
+uint16\-\_\-t \hyperlink{classns3_1_1DnsPlusQuestionHeader_a221ec46b8f368cd3e7485bb76a2bbc5a}{Get\-Qclass} ()
+\begin{DoxyCompactList}\small\item\em Get the class of the query. \end{DoxyCompactList}\item 
+uint16\-\_\-t \hyperlink{classns3_1_1DnsPlusQuestionHeader_a08f7695d808ec124e8a928a5f614b469}{Get\-Qtype} ()
+\begin{DoxyCompactList}\small\item\em Get the type of the query. \end{DoxyCompactList}\item 
+uint8\-\_\-t \hyperlink{classns3_1_1DnsPlusQuestionHeader_a860734d80f335635c2c80317ec7de319}{Get\-Reserved\-Flag} ()
+\begin{DoxyCompactList}\small\item\em Get the reserved flag. \end{DoxyCompactList}\item 
+uint32\-\_\-t \hyperlink{classns3_1_1DnsPlusQuestionHeader_a48b9d74d2daecb56ce542b70f196b198}{Get\-Name\-Length} ()
+\begin{DoxyCompactList}\small\item\em Get the length of the name. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static Type\-Id \hyperlink{classns3_1_1DnsPlusQuestionHeader_adfca2ccbab64ac86e4e745e761146096}{Get\-Type\-Id} (void)
+\begin{DoxyCompactList}\small\item\em Get the type I\-D. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+uint8\-\_\-t \hyperlink{classns3_1_1DnsPlusQuestionHeader_a84e44f8fa45c27b13bd7a80ab4d3c648}{m\-\_\-reserved\-Flag}
+\begin{DoxyCompactList}\small\item\em reserved flag \end{DoxyCompactList}\item 
+std\-::string \hyperlink{classns3_1_1DnsPlusQuestionHeader_a37b7ee88822487ebb7515c4e6d711d9a}{m\-\_\-name}
+\begin{DoxyCompactList}\small\item\em name of the content \end{DoxyCompactList}\item 
+uint16\-\_\-t \hyperlink{classns3_1_1DnsPlusQuestionHeader_a3bc213161b96f292d6e3d0dab3d42cba}{m\-\_\-q\-Class}
+\begin{DoxyCompactList}\small\item\em class of the query \end{DoxyCompactList}\item 
+uint16\-\_\-t \hyperlink{classns3_1_1DnsPlusQuestionHeader_a9ec3c28da5e22b33bccb1406ba053876}{m\-\_\-q\-Type}
+\begin{DoxyCompactList}\small\item\em type of the query \end{DoxyCompactList}\item 
+uint32\-\_\-t \hyperlink{classns3_1_1DnsPlusQuestionHeader_ad17e8994480e0dc6c79ae59a0e4a80c6}{m\-\_\-name\-Length}
+\begin{DoxyCompactList}\small\item\em length of the name \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+It is similar to D\-N\-S Question Section header. It contains the name of the content to be queried. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classns3_1_1DnsPlusQuestionHeader_a3007f16f1486ea4d9e92f0a16304db5c}{\index{ns3\-::\-Dns\-Plus\-Question\-Header@{ns3\-::\-Dns\-Plus\-Question\-Header}!Dns\-Plus\-Question\-Header@{Dns\-Plus\-Question\-Header}}
+\index{Dns\-Plus\-Question\-Header@{Dns\-Plus\-Question\-Header}!ns3::DnsPlusQuestionHeader@{ns3\-::\-Dns\-Plus\-Question\-Header}}
+\subsubsection[{Dns\-Plus\-Question\-Header}]{\setlength{\rightskip}{0pt plus 5cm}ns3\-::\-Dns\-Plus\-Question\-Header\-::\-Dns\-Plus\-Question\-Header (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classns3_1_1DnsPlusQuestionHeader_a3007f16f1486ea4d9e92f0a16304db5c}
+\hypertarget{classns3_1_1DnsPlusQuestionHeader_a2491f3d2ea7e19769fe1964405d12da1}{\index{ns3\-::\-Dns\-Plus\-Question\-Header@{ns3\-::\-Dns\-Plus\-Question\-Header}!$\sim$\-Dns\-Plus\-Question\-Header@{$\sim$\-Dns\-Plus\-Question\-Header}}
+\index{$\sim$\-Dns\-Plus\-Question\-Header@{$\sim$\-Dns\-Plus\-Question\-Header}!ns3::DnsPlusQuestionHeader@{ns3\-::\-Dns\-Plus\-Question\-Header}}
+\subsubsection[{$\sim$\-Dns\-Plus\-Question\-Header}]{\setlength{\rightskip}{0pt plus 5cm}ns3\-::\-Dns\-Plus\-Question\-Header\-::$\sim$\-Dns\-Plus\-Question\-Header (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classns3_1_1DnsPlusQuestionHeader_a2491f3d2ea7e19769fe1964405d12da1}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classns3_1_1DnsPlusQuestionHeader_ac75fc840943cca37028eb0c8a23c4bea}{\index{ns3\-::\-Dns\-Plus\-Question\-Header@{ns3\-::\-Dns\-Plus\-Question\-Header}!Deserialize@{Deserialize}}
+\index{Deserialize@{Deserialize}!ns3::DnsPlusQuestionHeader@{ns3\-::\-Dns\-Plus\-Question\-Header}}
+\subsubsection[{Deserialize}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t ns3\-::\-Dns\-Plus\-Question\-Header\-::\-Deserialize (
+\begin{DoxyParamCaption}
+\item[{Buffer\-::\-Iterator}]{start}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classns3_1_1DnsPlusQuestionHeader_ac75fc840943cca37028eb0c8a23c4bea}
+\hypertarget{classns3_1_1DnsPlusQuestionHeader_a3a22c5fdc183804309a94aad3e09c054}{\index{ns3\-::\-Dns\-Plus\-Question\-Header@{ns3\-::\-Dns\-Plus\-Question\-Header}!Get\-Instance\-Type\-Id@{Get\-Instance\-Type\-Id}}
+\index{Get\-Instance\-Type\-Id@{Get\-Instance\-Type\-Id}!ns3::DnsPlusQuestionHeader@{ns3\-::\-Dns\-Plus\-Question\-Header}}
+\subsubsection[{Get\-Instance\-Type\-Id}]{\setlength{\rightskip}{0pt plus 5cm}Type\-Id ns3\-::\-Dns\-Plus\-Question\-Header\-::\-Get\-Instance\-Type\-Id (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classns3_1_1DnsPlusQuestionHeader_a3a22c5fdc183804309a94aad3e09c054}
+\hypertarget{classns3_1_1DnsPlusQuestionHeader_ab999fca8805a988c4917b330594160f5}{\index{ns3\-::\-Dns\-Plus\-Question\-Header@{ns3\-::\-Dns\-Plus\-Question\-Header}!Get\-Name@{Get\-Name}}
+\index{Get\-Name@{Get\-Name}!ns3::DnsPlusQuestionHeader@{ns3\-::\-Dns\-Plus\-Question\-Header}}
+\subsubsection[{Get\-Name}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string ns3\-::\-Dns\-Plus\-Question\-Header\-::\-Get\-Name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classns3_1_1DnsPlusQuestionHeader_ab999fca8805a988c4917b330594160f5}
+
+
+Get the name of content. 
+
+\begin{DoxyReturn}{Returns}
+name of content. 
+\end{DoxyReturn}
+\hypertarget{classns3_1_1DnsPlusQuestionHeader_a48b9d74d2daecb56ce542b70f196b198}{\index{ns3\-::\-Dns\-Plus\-Question\-Header@{ns3\-::\-Dns\-Plus\-Question\-Header}!Get\-Name\-Length@{Get\-Name\-Length}}
+\index{Get\-Name\-Length@{Get\-Name\-Length}!ns3::DnsPlusQuestionHeader@{ns3\-::\-Dns\-Plus\-Question\-Header}}
+\subsubsection[{Get\-Name\-Length}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t ns3\-::\-Dns\-Plus\-Question\-Header\-::\-Get\-Name\-Length (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classns3_1_1DnsPlusQuestionHeader_a48b9d74d2daecb56ce542b70f196b198}
+
+
+Get the length of the name. 
+
+\begin{DoxyReturn}{Returns}
+length of the name. 
+\end{DoxyReturn}
+\hypertarget{classns3_1_1DnsPlusQuestionHeader_a221ec46b8f368cd3e7485bb76a2bbc5a}{\index{ns3\-::\-Dns\-Plus\-Question\-Header@{ns3\-::\-Dns\-Plus\-Question\-Header}!Get\-Qclass@{Get\-Qclass}}
+\index{Get\-Qclass@{Get\-Qclass}!ns3::DnsPlusQuestionHeader@{ns3\-::\-Dns\-Plus\-Question\-Header}}
+\subsubsection[{Get\-Qclass}]{\setlength{\rightskip}{0pt plus 5cm}uint16\-\_\-t ns3\-::\-Dns\-Plus\-Question\-Header\-::\-Get\-Qclass (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classns3_1_1DnsPlusQuestionHeader_a221ec46b8f368cd3e7485bb76a2bbc5a}
+
+
+Get the class of the query. 
+
+\begin{DoxyReturn}{Returns}
+class of the query. 
+\end{DoxyReturn}
+\hypertarget{classns3_1_1DnsPlusQuestionHeader_a08f7695d808ec124e8a928a5f614b469}{\index{ns3\-::\-Dns\-Plus\-Question\-Header@{ns3\-::\-Dns\-Plus\-Question\-Header}!Get\-Qtype@{Get\-Qtype}}
+\index{Get\-Qtype@{Get\-Qtype}!ns3::DnsPlusQuestionHeader@{ns3\-::\-Dns\-Plus\-Question\-Header}}
+\subsubsection[{Get\-Qtype}]{\setlength{\rightskip}{0pt plus 5cm}uint16\-\_\-t ns3\-::\-Dns\-Plus\-Question\-Header\-::\-Get\-Qtype (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classns3_1_1DnsPlusQuestionHeader_a08f7695d808ec124e8a928a5f614b469}
+
+
+Get the type of the query. 
+
+\begin{DoxyReturn}{Returns}
+type of the query. 
+\end{DoxyReturn}
+\hypertarget{classns3_1_1DnsPlusQuestionHeader_a860734d80f335635c2c80317ec7de319}{\index{ns3\-::\-Dns\-Plus\-Question\-Header@{ns3\-::\-Dns\-Plus\-Question\-Header}!Get\-Reserved\-Flag@{Get\-Reserved\-Flag}}
+\index{Get\-Reserved\-Flag@{Get\-Reserved\-Flag}!ns3::DnsPlusQuestionHeader@{ns3\-::\-Dns\-Plus\-Question\-Header}}
+\subsubsection[{Get\-Reserved\-Flag}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t ns3\-::\-Dns\-Plus\-Question\-Header\-::\-Get\-Reserved\-Flag (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classns3_1_1DnsPlusQuestionHeader_a860734d80f335635c2c80317ec7de319}
+
+
+Get the reserved flag. 
+
+\begin{DoxyReturn}{Returns}
+Reserved flag. 
+\end{DoxyReturn}
+\hypertarget{classns3_1_1DnsPlusQuestionHeader_a9e90cac30d95e95faaaeeab35fe9c15e}{\index{ns3\-::\-Dns\-Plus\-Question\-Header@{ns3\-::\-Dns\-Plus\-Question\-Header}!Get\-Serialized\-Size@{Get\-Serialized\-Size}}
+\index{Get\-Serialized\-Size@{Get\-Serialized\-Size}!ns3::DnsPlusQuestionHeader@{ns3\-::\-Dns\-Plus\-Question\-Header}}
+\subsubsection[{Get\-Serialized\-Size}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t ns3\-::\-Dns\-Plus\-Question\-Header\-::\-Get\-Serialized\-Size (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classns3_1_1DnsPlusQuestionHeader_a9e90cac30d95e95faaaeeab35fe9c15e}
+\hypertarget{classns3_1_1DnsPlusQuestionHeader_adfca2ccbab64ac86e4e745e761146096}{\index{ns3\-::\-Dns\-Plus\-Question\-Header@{ns3\-::\-Dns\-Plus\-Question\-Header}!Get\-Type\-Id@{Get\-Type\-Id}}
+\index{Get\-Type\-Id@{Get\-Type\-Id}!ns3::DnsPlusQuestionHeader@{ns3\-::\-Dns\-Plus\-Question\-Header}}
+\subsubsection[{Get\-Type\-Id}]{\setlength{\rightskip}{0pt plus 5cm}Type\-Id ns3\-::\-Dns\-Plus\-Question\-Header\-::\-Get\-Type\-Id (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classns3_1_1DnsPlusQuestionHeader_adfca2ccbab64ac86e4e745e761146096}
+
+
+Get the type I\-D. 
+
+\begin{DoxyReturn}{Returns}
+the object Type\-Id. 
+\end{DoxyReturn}
+\hypertarget{classns3_1_1DnsPlusQuestionHeader_a8ef5f712bae1caef0c7f37590fa094c2}{\index{ns3\-::\-Dns\-Plus\-Question\-Header@{ns3\-::\-Dns\-Plus\-Question\-Header}!Print@{Print}}
+\index{Print@{Print}!ns3::DnsPlusQuestionHeader@{ns3\-::\-Dns\-Plus\-Question\-Header}}
+\subsubsection[{Print}]{\setlength{\rightskip}{0pt plus 5cm}void ns3\-::\-Dns\-Plus\-Question\-Header\-::\-Print (
+\begin{DoxyParamCaption}
+\item[{std\-::ostream \&}]{os}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classns3_1_1DnsPlusQuestionHeader_a8ef5f712bae1caef0c7f37590fa094c2}
+\hypertarget{classns3_1_1DnsPlusQuestionHeader_a7560e6469a4e5afdf4df095e7e6d6eab}{\index{ns3\-::\-Dns\-Plus\-Question\-Header@{ns3\-::\-Dns\-Plus\-Question\-Header}!Serialize@{Serialize}}
+\index{Serialize@{Serialize}!ns3::DnsPlusQuestionHeader@{ns3\-::\-Dns\-Plus\-Question\-Header}}
+\subsubsection[{Serialize}]{\setlength{\rightskip}{0pt plus 5cm}void ns3\-::\-Dns\-Plus\-Question\-Header\-::\-Serialize (
+\begin{DoxyParamCaption}
+\item[{Buffer\-::\-Iterator}]{start}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classns3_1_1DnsPlusQuestionHeader_a7560e6469a4e5afdf4df095e7e6d6eab}
+\hypertarget{classns3_1_1DnsPlusQuestionHeader_a2fe3d4e1f1eea6817a83e5008d308edf}{\index{ns3\-::\-Dns\-Plus\-Question\-Header@{ns3\-::\-Dns\-Plus\-Question\-Header}!Set\-Name@{Set\-Name}}
+\index{Set\-Name@{Set\-Name}!ns3::DnsPlusQuestionHeader@{ns3\-::\-Dns\-Plus\-Question\-Header}}
+\subsubsection[{Set\-Name}]{\setlength{\rightskip}{0pt plus 5cm}void ns3\-::\-Dns\-Plus\-Question\-Header\-::\-Set\-Name (
+\begin{DoxyParamCaption}
+\item[{std\-::string}]{name}
+\end{DoxyParamCaption}
+)}}\label{classns3_1_1DnsPlusQuestionHeader_a2fe3d4e1f1eea6817a83e5008d308edf}
+Set the name of the content. 
+\begin{DoxyParams}{Parameters}
+{\em name} & name of the content. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classns3_1_1DnsPlusQuestionHeader_aaad52033f6142d4c0210fdeb68b95d15}{\index{ns3\-::\-Dns\-Plus\-Question\-Header@{ns3\-::\-Dns\-Plus\-Question\-Header}!Set\-Name\-Length@{Set\-Name\-Length}}
+\index{Set\-Name\-Length@{Set\-Name\-Length}!ns3::DnsPlusQuestionHeader@{ns3\-::\-Dns\-Plus\-Question\-Header}}
+\subsubsection[{Set\-Name\-Length}]{\setlength{\rightskip}{0pt plus 5cm}void ns3\-::\-Dns\-Plus\-Question\-Header\-::\-Set\-Name\-Length (
+\begin{DoxyParamCaption}
+\item[{uint32\-\_\-t}]{name\-Length}
+\end{DoxyParamCaption}
+)}}\label{classns3_1_1DnsPlusQuestionHeader_aaad52033f6142d4c0210fdeb68b95d15}
+Set the length of the name. 
+\begin{DoxyParams}{Parameters}
+{\em name\-Length} & length of the name. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classns3_1_1DnsPlusQuestionHeader_a8281d02c53d1f3ef5228dd1ddce35759}{\index{ns3\-::\-Dns\-Plus\-Question\-Header@{ns3\-::\-Dns\-Plus\-Question\-Header}!Set\-Qclass@{Set\-Qclass}}
+\index{Set\-Qclass@{Set\-Qclass}!ns3::DnsPlusQuestionHeader@{ns3\-::\-Dns\-Plus\-Question\-Header}}
+\subsubsection[{Set\-Qclass}]{\setlength{\rightskip}{0pt plus 5cm}void ns3\-::\-Dns\-Plus\-Question\-Header\-::\-Set\-Qclass (
+\begin{DoxyParamCaption}
+\item[{uint16\-\_\-t}]{q\-Class}
+\end{DoxyParamCaption}
+)}}\label{classns3_1_1DnsPlusQuestionHeader_a8281d02c53d1f3ef5228dd1ddce35759}
+
+
+Set the class of data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em q\-Class} & class of data. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classns3_1_1DnsPlusQuestionHeader_ab4300d1305dfed701fd94d803b5741cd}{\index{ns3\-::\-Dns\-Plus\-Question\-Header@{ns3\-::\-Dns\-Plus\-Question\-Header}!Set\-Qtype@{Set\-Qtype}}
+\index{Set\-Qtype@{Set\-Qtype}!ns3::DnsPlusQuestionHeader@{ns3\-::\-Dns\-Plus\-Question\-Header}}
+\subsubsection[{Set\-Qtype}]{\setlength{\rightskip}{0pt plus 5cm}void ns3\-::\-Dns\-Plus\-Question\-Header\-::\-Set\-Qtype (
+\begin{DoxyParamCaption}
+\item[{uint16\-\_\-t}]{q\-Type}
+\end{DoxyParamCaption}
+)}}\label{classns3_1_1DnsPlusQuestionHeader_ab4300d1305dfed701fd94d803b5741cd}
+
+
+Set the type of data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em q\-Type} & type of data. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classns3_1_1DnsPlusQuestionHeader_a7ee32b2fd37340e16532f04670549d70}{\index{ns3\-::\-Dns\-Plus\-Question\-Header@{ns3\-::\-Dns\-Plus\-Question\-Header}!Set\-Reserved\-Flag@{Set\-Reserved\-Flag}}
+\index{Set\-Reserved\-Flag@{Set\-Reserved\-Flag}!ns3::DnsPlusQuestionHeader@{ns3\-::\-Dns\-Plus\-Question\-Header}}
+\subsubsection[{Set\-Reserved\-Flag}]{\setlength{\rightskip}{0pt plus 5cm}void ns3\-::\-Dns\-Plus\-Question\-Header\-::\-Set\-Reserved\-Flag (
+\begin{DoxyParamCaption}
+\item[{uint16\-\_\-t}]{reserved\-Flag}
+\end{DoxyParamCaption}
+)}}\label{classns3_1_1DnsPlusQuestionHeader_a7ee32b2fd37340e16532f04670549d70}
+
+
+Set the Reserved flag, these are not currently used, reserved for future use. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em reserved\-Flag} & reserved flag bit. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classns3_1_1DnsPlusQuestionHeader_a37b7ee88822487ebb7515c4e6d711d9a}{\index{ns3\-::\-Dns\-Plus\-Question\-Header@{ns3\-::\-Dns\-Plus\-Question\-Header}!m\-\_\-name@{m\-\_\-name}}
+\index{m\-\_\-name@{m\-\_\-name}!ns3::DnsPlusQuestionHeader@{ns3\-::\-Dns\-Plus\-Question\-Header}}
+\subsubsection[{m\-\_\-name}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string ns3\-::\-Dns\-Plus\-Question\-Header\-::m\-\_\-name\hspace{0.3cm}{\ttfamily [private]}}}\label{classns3_1_1DnsPlusQuestionHeader_a37b7ee88822487ebb7515c4e6d711d9a}
+
+
+name of the content 
+
+\hypertarget{classns3_1_1DnsPlusQuestionHeader_ad17e8994480e0dc6c79ae59a0e4a80c6}{\index{ns3\-::\-Dns\-Plus\-Question\-Header@{ns3\-::\-Dns\-Plus\-Question\-Header}!m\-\_\-name\-Length@{m\-\_\-name\-Length}}
+\index{m\-\_\-name\-Length@{m\-\_\-name\-Length}!ns3::DnsPlusQuestionHeader@{ns3\-::\-Dns\-Plus\-Question\-Header}}
+\subsubsection[{m\-\_\-name\-Length}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t ns3\-::\-Dns\-Plus\-Question\-Header\-::m\-\_\-name\-Length\hspace{0.3cm}{\ttfamily [private]}}}\label{classns3_1_1DnsPlusQuestionHeader_ad17e8994480e0dc6c79ae59a0e4a80c6}
+
+
+length of the name 
+
+\hypertarget{classns3_1_1DnsPlusQuestionHeader_a3bc213161b96f292d6e3d0dab3d42cba}{\index{ns3\-::\-Dns\-Plus\-Question\-Header@{ns3\-::\-Dns\-Plus\-Question\-Header}!m\-\_\-q\-Class@{m\-\_\-q\-Class}}
+\index{m\-\_\-q\-Class@{m\-\_\-q\-Class}!ns3::DnsPlusQuestionHeader@{ns3\-::\-Dns\-Plus\-Question\-Header}}
+\subsubsection[{m\-\_\-q\-Class}]{\setlength{\rightskip}{0pt plus 5cm}uint16\-\_\-t ns3\-::\-Dns\-Plus\-Question\-Header\-::m\-\_\-q\-Class\hspace{0.3cm}{\ttfamily [private]}}}\label{classns3_1_1DnsPlusQuestionHeader_a3bc213161b96f292d6e3d0dab3d42cba}
+
+
+class of the query 
+
+\hypertarget{classns3_1_1DnsPlusQuestionHeader_a9ec3c28da5e22b33bccb1406ba053876}{\index{ns3\-::\-Dns\-Plus\-Question\-Header@{ns3\-::\-Dns\-Plus\-Question\-Header}!m\-\_\-q\-Type@{m\-\_\-q\-Type}}
+\index{m\-\_\-q\-Type@{m\-\_\-q\-Type}!ns3::DnsPlusQuestionHeader@{ns3\-::\-Dns\-Plus\-Question\-Header}}
+\subsubsection[{m\-\_\-q\-Type}]{\setlength{\rightskip}{0pt plus 5cm}uint16\-\_\-t ns3\-::\-Dns\-Plus\-Question\-Header\-::m\-\_\-q\-Type\hspace{0.3cm}{\ttfamily [private]}}}\label{classns3_1_1DnsPlusQuestionHeader_a9ec3c28da5e22b33bccb1406ba053876}
+
+
+type of the query 
+
+\hypertarget{classns3_1_1DnsPlusQuestionHeader_a84e44f8fa45c27b13bd7a80ab4d3c648}{\index{ns3\-::\-Dns\-Plus\-Question\-Header@{ns3\-::\-Dns\-Plus\-Question\-Header}!m\-\_\-reserved\-Flag@{m\-\_\-reserved\-Flag}}
+\index{m\-\_\-reserved\-Flag@{m\-\_\-reserved\-Flag}!ns3::DnsPlusQuestionHeader@{ns3\-::\-Dns\-Plus\-Question\-Header}}
+\subsubsection[{m\-\_\-reserved\-Flag}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t ns3\-::\-Dns\-Plus\-Question\-Header\-::m\-\_\-reserved\-Flag\hspace{0.3cm}{\ttfamily [private]}}}\label{classns3_1_1DnsPlusQuestionHeader_a84e44f8fa45c27b13bd7a80ab4d3c648}
+
+
+reserved flag 
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+model/\hyperlink{dnsplus-question-header_8h}{dnsplus-\/question-\/header.\-h}\item 
+model/\hyperlink{dnsplus-question-header_8cc}{dnsplus-\/question-\/header.\-cc}\end{DoxyCompactItemize}

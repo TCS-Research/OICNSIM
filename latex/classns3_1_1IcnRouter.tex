@@ -1,0 +1,241 @@
+\hypertarget{classns3_1_1IcnRouter}{\section{ns3\-:\-:Icn\-Router Class Reference}
+\label{classns3_1_1IcnRouter}\index{ns3\-::\-Icn\-Router@{ns3\-::\-Icn\-Router}}
+}
+
+
+I\-C\-N Router has the capability to cache the contents.  
+
+
+
+
+{\ttfamily \#include $<$icn-\/router.\-h$>$}
+
+Inheritance diagram for ns3\-:\-:Icn\-Router\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classns3_1_1IcnRouter}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classns3_1_1IcnRouter_a897987eb9c320461f49a23b1d7c98812}{Icn\-Router} ()
+\item 
+virtual \hyperlink{classns3_1_1IcnRouter_a52e01ead62ed2cf1d22ecba1e5c935f3}{$\sim$\-Icn\-Router} (void)
+\item 
+void \hyperlink{classns3_1_1IcnRouter_aee36cbcb810f960360aaf4a7efdcc237}{Read\-Packet} (Ptr$<$ Packet $>$ packet, Ipv4\-Address sender\-Address, uint16\-\_\-t sender\-Port)
+\begin{DoxyCompactList}\small\item\em Read the recieved packet. If packet is content query packet from I\-C\-N Manager, it send the requested content to client address as mentioned in the packet. \end{DoxyCompactList}\item 
+void \hyperlink{classns3_1_1IcnRouter_aaaf642b9d376e673288a2a5e28ac1b65}{Send\-Ack\-To\-Icn\-Manager} (Ipv4\-Address icn\-Manager\-Ipv4\-Address, uint16\-\_\-t icn\-Manager\-Port, \hyperlink{classns3_1_1DnsPlusQuestionHeader}{Dns\-Plus\-Question\-Header} dns\-Plus\-Question\-Header, \hyperlink{classns3_1_1DnsPlusHeader}{Dns\-Plus\-Header} dns\-Plus\-Header, \hyperlink{classns3_1_1OicnHeader}{Oicn\-Header} oicn\-Header)
+\begin{DoxyCompactList}\small\item\em It send the A\-C\-K packet to I\-C\-N Manager stating that it has received the content query packet. \end{DoxyCompactList}\item 
+void \hyperlink{classns3_1_1IcnRouter_ae0452d61162e9ce77690ecd06eff81d8}{Send\-To\-Client} (uint32\-\_\-t client\-Address, std\-::string name)
+\begin{DoxyCompactList}\small\item\em It send the cached content to client as directed by the I\-C\-N Manager. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static Type\-Id \hyperlink{classns3_1_1IcnRouter_af11ef09981ae023b6c9aaba3e1b02cb8}{Get\-Type\-Id} (void)
+\begin{DoxyCompactList}\small\item\em Get the type I\-D. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{classns3_1_1IcnRouter_a753e828732d2efd5edf54965642a1605}{Do\-Dispose} (void)
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classns3_1_1IcnRouter_ab7af309cff6c4061bb4ec42cacf2d149}{Handle\-Read\-Icn\-Manger} (Ptr$<$ Socket $>$ socket)
+\begin{DoxyCompactList}\small\item\em Handle a packet reception. This function is called by lower layers. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classns3_1_1IcnRouter_a05d410c4dfb02bb8d7aaf6218ffb7254}{Start\-Application} (void)
+\item 
+virtual void \hyperlink{classns3_1_1IcnRouter_a92c56afe4750a18afca7ccca6410af46}{Stop\-Application} (void)
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Ptr$<$ Socket $>$ \hyperlink{classns3_1_1IcnRouter_a2b69d463e55b4be9f372c51bdb673d50}{m\-\_\-socket}
+\begin{DoxyCompactList}\small\item\em socket \end{DoxyCompactList}\item 
+Ptr$<$ Socket $>$ \hyperlink{classns3_1_1IcnRouter_ada56beecc0b64ce0ad38552c445dae88}{m\-\_\-socket\-Icn\-Manager}
+\begin{DoxyCompactList}\small\item\em socket connected to I\-C\-N Manager \end{DoxyCompactList}\item 
+uint16\-\_\-t \hyperlink{classns3_1_1IcnRouter_a793e6ef791d5581f4741e47cc969547e}{m\-\_\-port}
+\begin{DoxyCompactList}\small\item\em I\-C\-N Router port it us defined as 89. \end{DoxyCompactList}\item 
+uint16\-\_\-t \hyperlink{classns3_1_1IcnRouter_ab8a2228dfb2dda1af02f8017107d9f9a}{m\-\_\-client\-Port}
+\begin{DoxyCompactList}\small\item\em I\-C\-N Client port defined as 26. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+I\-C\-N Router has the capability to cache the contents. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classns3_1_1IcnRouter_a897987eb9c320461f49a23b1d7c98812}{\index{ns3\-::\-Icn\-Router@{ns3\-::\-Icn\-Router}!Icn\-Router@{Icn\-Router}}
+\index{Icn\-Router@{Icn\-Router}!ns3::IcnRouter@{ns3\-::\-Icn\-Router}}
+\subsubsection[{Icn\-Router}]{\setlength{\rightskip}{0pt plus 5cm}ns3\-::\-Icn\-Router\-::\-Icn\-Router (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classns3_1_1IcnRouter_a897987eb9c320461f49a23b1d7c98812}
+\hypertarget{classns3_1_1IcnRouter_a52e01ead62ed2cf1d22ecba1e5c935f3}{\index{ns3\-::\-Icn\-Router@{ns3\-::\-Icn\-Router}!$\sim$\-Icn\-Router@{$\sim$\-Icn\-Router}}
+\index{$\sim$\-Icn\-Router@{$\sim$\-Icn\-Router}!ns3::IcnRouter@{ns3\-::\-Icn\-Router}}
+\subsubsection[{$\sim$\-Icn\-Router}]{\setlength{\rightskip}{0pt plus 5cm}ns3\-::\-Icn\-Router\-::$\sim$\-Icn\-Router (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classns3_1_1IcnRouter_a52e01ead62ed2cf1d22ecba1e5c935f3}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classns3_1_1IcnRouter_a753e828732d2efd5edf54965642a1605}{\index{ns3\-::\-Icn\-Router@{ns3\-::\-Icn\-Router}!Do\-Dispose@{Do\-Dispose}}
+\index{Do\-Dispose@{Do\-Dispose}!ns3::IcnRouter@{ns3\-::\-Icn\-Router}}
+\subsubsection[{Do\-Dispose}]{\setlength{\rightskip}{0pt plus 5cm}void ns3\-::\-Icn\-Router\-::\-Do\-Dispose (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}}\label{classns3_1_1IcnRouter_a753e828732d2efd5edf54965642a1605}
+\hypertarget{classns3_1_1IcnRouter_af11ef09981ae023b6c9aaba3e1b02cb8}{\index{ns3\-::\-Icn\-Router@{ns3\-::\-Icn\-Router}!Get\-Type\-Id@{Get\-Type\-Id}}
+\index{Get\-Type\-Id@{Get\-Type\-Id}!ns3::IcnRouter@{ns3\-::\-Icn\-Router}}
+\subsubsection[{Get\-Type\-Id}]{\setlength{\rightskip}{0pt plus 5cm}Type\-Id ns3\-::\-Icn\-Router\-::\-Get\-Type\-Id (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classns3_1_1IcnRouter_af11ef09981ae023b6c9aaba3e1b02cb8}
+
+
+Get the type I\-D. 
+
+\begin{DoxyReturn}{Returns}
+the object Type\-Id 
+\end{DoxyReturn}
+\hypertarget{classns3_1_1IcnRouter_ab7af309cff6c4061bb4ec42cacf2d149}{\index{ns3\-::\-Icn\-Router@{ns3\-::\-Icn\-Router}!Handle\-Read\-Icn\-Manger@{Handle\-Read\-Icn\-Manger}}
+\index{Handle\-Read\-Icn\-Manger@{Handle\-Read\-Icn\-Manger}!ns3::IcnRouter@{ns3\-::\-Icn\-Router}}
+\subsubsection[{Handle\-Read\-Icn\-Manger}]{\setlength{\rightskip}{0pt plus 5cm}void ns3\-::\-Icn\-Router\-::\-Handle\-Read\-Icn\-Manger (
+\begin{DoxyParamCaption}
+\item[{Ptr$<$ Socket $>$}]{socket}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classns3_1_1IcnRouter_ab7af309cff6c4061bb4ec42cacf2d149}
+
+
+Handle a packet reception. This function is called by lower layers. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em socket} & the socket the packet was received to. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classns3_1_1IcnRouter_aee36cbcb810f960360aaf4a7efdcc237}{\index{ns3\-::\-Icn\-Router@{ns3\-::\-Icn\-Router}!Read\-Packet@{Read\-Packet}}
+\index{Read\-Packet@{Read\-Packet}!ns3::IcnRouter@{ns3\-::\-Icn\-Router}}
+\subsubsection[{Read\-Packet}]{\setlength{\rightskip}{0pt plus 5cm}void ns3\-::\-Icn\-Router\-::\-Read\-Packet (
+\begin{DoxyParamCaption}
+\item[{Ptr$<$ Packet $>$}]{packet, }
+\item[{Ipv4\-Address}]{sender\-Address, }
+\item[{uint16\-\_\-t}]{sender\-Port}
+\end{DoxyParamCaption}
+)}}\label{classns3_1_1IcnRouter_aee36cbcb810f960360aaf4a7efdcc237}
+
+
+Read the recieved packet. If packet is content query packet from I\-C\-N Manager, it send the requested content to client address as mentioned in the packet. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em packet} & packet received \\
+\hline
+{\em sender\-Address} & ipv4 address of sender \\
+\hline
+{\em port} & port of the sender \\
+\hline
+\end{DoxyParams}
+\hypertarget{classns3_1_1IcnRouter_aaaf642b9d376e673288a2a5e28ac1b65}{\index{ns3\-::\-Icn\-Router@{ns3\-::\-Icn\-Router}!Send\-Ack\-To\-Icn\-Manager@{Send\-Ack\-To\-Icn\-Manager}}
+\index{Send\-Ack\-To\-Icn\-Manager@{Send\-Ack\-To\-Icn\-Manager}!ns3::IcnRouter@{ns3\-::\-Icn\-Router}}
+\subsubsection[{Send\-Ack\-To\-Icn\-Manager}]{\setlength{\rightskip}{0pt plus 5cm}void ns3\-::\-Icn\-Router\-::\-Send\-Ack\-To\-Icn\-Manager (
+\begin{DoxyParamCaption}
+\item[{Ipv4\-Address}]{icn\-Manager\-Ipv4\-Address, }
+\item[{uint16\-\_\-t}]{icn\-Manager\-Port, }
+\item[{{\bf Dns\-Plus\-Question\-Header}}]{dns\-Plus\-Question\-Header, }
+\item[{{\bf Dns\-Plus\-Header}}]{dns\-Plus\-Header, }
+\item[{{\bf Oicn\-Header}}]{oicn\-Header}
+\end{DoxyParamCaption}
+)}}\label{classns3_1_1IcnRouter_aaaf642b9d376e673288a2a5e28ac1b65}
+
+
+It send the A\-C\-K packet to I\-C\-N Manager stating that it has received the content query packet. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em icn\-Manager\-Ipv4\-Address} & I\-C\-N Manager Ipv4 address \\
+\hline
+{\em icn\-Manager\-Port} & I\-C\-N Manager port \\
+\hline
+{\em dns\-Plus\-Question\-Header} & Dns\-Plus Question header section \\
+\hline
+{\em dns\-Plus\-Header} & Dns\-Plus header section \\
+\hline
+{\em oicn\-Header} & O\-I\-C\-N header \\
+\hline
+\end{DoxyParams}
+\hypertarget{classns3_1_1IcnRouter_ae0452d61162e9ce77690ecd06eff81d8}{\index{ns3\-::\-Icn\-Router@{ns3\-::\-Icn\-Router}!Send\-To\-Client@{Send\-To\-Client}}
+\index{Send\-To\-Client@{Send\-To\-Client}!ns3::IcnRouter@{ns3\-::\-Icn\-Router}}
+\subsubsection[{Send\-To\-Client}]{\setlength{\rightskip}{0pt plus 5cm}void ns3\-::\-Icn\-Router\-::\-Send\-To\-Client (
+\begin{DoxyParamCaption}
+\item[{uint32\-\_\-t}]{client\-Address, }
+\item[{std\-::string}]{name}
+\end{DoxyParamCaption}
+)}}\label{classns3_1_1IcnRouter_ae0452d61162e9ce77690ecd06eff81d8}
+
+
+It send the cached content to client as directed by the I\-C\-N Manager. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em client\-Address} & client ipv4 address \\
+\hline
+{\em name} & name of the requested content \\
+\hline
+\end{DoxyParams}
+\hypertarget{classns3_1_1IcnRouter_a05d410c4dfb02bb8d7aaf6218ffb7254}{\index{ns3\-::\-Icn\-Router@{ns3\-::\-Icn\-Router}!Start\-Application@{Start\-Application}}
+\index{Start\-Application@{Start\-Application}!ns3::IcnRouter@{ns3\-::\-Icn\-Router}}
+\subsubsection[{Start\-Application}]{\setlength{\rightskip}{0pt plus 5cm}void ns3\-::\-Icn\-Router\-::\-Start\-Application (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [virtual]}}}\label{classns3_1_1IcnRouter_a05d410c4dfb02bb8d7aaf6218ffb7254}
+\hypertarget{classns3_1_1IcnRouter_a92c56afe4750a18afca7ccca6410af46}{\index{ns3\-::\-Icn\-Router@{ns3\-::\-Icn\-Router}!Stop\-Application@{Stop\-Application}}
+\index{Stop\-Application@{Stop\-Application}!ns3::IcnRouter@{ns3\-::\-Icn\-Router}}
+\subsubsection[{Stop\-Application}]{\setlength{\rightskip}{0pt plus 5cm}void ns3\-::\-Icn\-Router\-::\-Stop\-Application (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [virtual]}}}\label{classns3_1_1IcnRouter_a92c56afe4750a18afca7ccca6410af46}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classns3_1_1IcnRouter_ab8a2228dfb2dda1af02f8017107d9f9a}{\index{ns3\-::\-Icn\-Router@{ns3\-::\-Icn\-Router}!m\-\_\-client\-Port@{m\-\_\-client\-Port}}
+\index{m\-\_\-client\-Port@{m\-\_\-client\-Port}!ns3::IcnRouter@{ns3\-::\-Icn\-Router}}
+\subsubsection[{m\-\_\-client\-Port}]{\setlength{\rightskip}{0pt plus 5cm}uint16\-\_\-t ns3\-::\-Icn\-Router\-::m\-\_\-client\-Port\hspace{0.3cm}{\ttfamily [private]}}}\label{classns3_1_1IcnRouter_ab8a2228dfb2dda1af02f8017107d9f9a}
+
+
+I\-C\-N Client port defined as 26. 
+
+\hypertarget{classns3_1_1IcnRouter_a793e6ef791d5581f4741e47cc969547e}{\index{ns3\-::\-Icn\-Router@{ns3\-::\-Icn\-Router}!m\-\_\-port@{m\-\_\-port}}
+\index{m\-\_\-port@{m\-\_\-port}!ns3::IcnRouter@{ns3\-::\-Icn\-Router}}
+\subsubsection[{m\-\_\-port}]{\setlength{\rightskip}{0pt plus 5cm}uint16\-\_\-t ns3\-::\-Icn\-Router\-::m\-\_\-port\hspace{0.3cm}{\ttfamily [private]}}}\label{classns3_1_1IcnRouter_a793e6ef791d5581f4741e47cc969547e}
+
+
+I\-C\-N Router port it us defined as 89. 
+
+\hypertarget{classns3_1_1IcnRouter_a2b69d463e55b4be9f372c51bdb673d50}{\index{ns3\-::\-Icn\-Router@{ns3\-::\-Icn\-Router}!m\-\_\-socket@{m\-\_\-socket}}
+\index{m\-\_\-socket@{m\-\_\-socket}!ns3::IcnRouter@{ns3\-::\-Icn\-Router}}
+\subsubsection[{m\-\_\-socket}]{\setlength{\rightskip}{0pt plus 5cm}Ptr$<$Socket$>$ ns3\-::\-Icn\-Router\-::m\-\_\-socket\hspace{0.3cm}{\ttfamily [private]}}}\label{classns3_1_1IcnRouter_a2b69d463e55b4be9f372c51bdb673d50}
+
+
+socket 
+
+\hypertarget{classns3_1_1IcnRouter_ada56beecc0b64ce0ad38552c445dae88}{\index{ns3\-::\-Icn\-Router@{ns3\-::\-Icn\-Router}!m\-\_\-socket\-Icn\-Manager@{m\-\_\-socket\-Icn\-Manager}}
+\index{m\-\_\-socket\-Icn\-Manager@{m\-\_\-socket\-Icn\-Manager}!ns3::IcnRouter@{ns3\-::\-Icn\-Router}}
+\subsubsection[{m\-\_\-socket\-Icn\-Manager}]{\setlength{\rightskip}{0pt plus 5cm}Ptr$<$Socket$>$ ns3\-::\-Icn\-Router\-::m\-\_\-socket\-Icn\-Manager\hspace{0.3cm}{\ttfamily [private]}}}\label{classns3_1_1IcnRouter_ada56beecc0b64ce0ad38552c445dae88}
+
+
+socket connected to I\-C\-N Manager 
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+model/\hyperlink{icn-router_8h}{icn-\/router.\-h}\item 
+model/\hyperlink{icn-router_8cc}{icn-\/router.\-cc}\end{DoxyCompactItemize}

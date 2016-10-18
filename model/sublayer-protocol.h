@@ -92,17 +92,17 @@ public:
 	bool isUdp (Ipv4Header ipheader);
 
 	/**
-	 * \brief cache the Application Layer (data) of the Packet after it has been recognized
+	 * \brief Cache the Application Layer (data) of the Packet after it has been recognized
 	 *        as an OICN Packet. If the Cache is not full, the data is automatically cached.
 	 *        If the Cache is full, the index (proirity) of the data will determine if
 	 *        some other Cache entry has to be evicted or not.
 	 * \param packet1 packet received by OICN Router with its Transport Header removed
-	 * \param Name name of the corresponding data (or content) of the packet, stored in
+	 * \param name name of the corresponding data (or content) of the packet, stored in
 	 *        OICN Header of the packet.
-	 * \param ipheader IP Header of the packet
+	 * \param ipheader ip header of the packet
 	 * \return true if the data has been cached
 	 */
-	bool CheckCache (Ptr<Packet> packet1, std::string Name, Ipv4Header ipheader);
+	bool CheckCache (Ptr<Packet> packet1, std::string name, Ipv4Header ipheader);
 
 
 	/**
@@ -138,7 +138,7 @@ public:
 	 *        'oicn_header' in the SublayerProtocol Object.
 	 * \param header OICN header removed from the received packet
 	 */
-	void SetOICNHeader (OICNHeader header);
+	void SetOICNHeader (OicnHeader header);
 
 	/**
 	 * \brief Set the cachability of the content
@@ -156,7 +156,7 @@ public:
 	 * \brief Get the OICN header stored in oicn_header Private Variable
 	 * \return OICNHeader OICN header stored in oicn_header Private Variable
 	 */
-	OICNHeader GetOICNHeader ();
+	OicnHeader GetOICNHeader ();
 
 
 	
@@ -173,7 +173,7 @@ private:
 	/**
 	 * \brief OICN header of the received packet
 	 */
-	OICNHeader oicn_header;
+	OicnHeader oicn_header;
 
 	/**
 	 * \brief socket pointer for the process of sending data queried by OICN Client

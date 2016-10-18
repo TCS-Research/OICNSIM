@@ -1,0 +1,423 @@
+\hypertarget{classns3_1_1RouterStackHelper}{\section{ns3\-:\-:Router\-Stack\-Helper Class Reference}
+\label{classns3_1_1RouterStackHelper}\index{ns3\-::\-Router\-Stack\-Helper@{ns3\-::\-Router\-Stack\-Helper}}
+}
+
+
+Aggregate I\-P/\-T\-C\-P/\-U\-D\-P and Caching functionality to only I\-C\-N Routers in the Network.  
+
+
+
+
+{\ttfamily \#include $<$router-\/stack-\/helper.\-h$>$}
+
+Inheritance diagram for ns3\-:\-:Router\-Stack\-Helper\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classns3_1_1RouterStackHelper}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classns3_1_1RouterStackHelper_afe2cc8f748caa13e72f9e2616b77c0e0}{Router\-Stack\-Helper} (void)
+\item 
+virtual \hyperlink{classns3_1_1RouterStackHelper_a3673fd8fb8184df5782b6e8538f6f1f6}{$\sim$\-Router\-Stack\-Helper} (void)
+\item 
+void \hyperlink{classns3_1_1RouterStackHelper_a0980b1c2c1fe1d05c40407558d06d649}{Reset} (void)
+\item 
+void \hyperlink{classns3_1_1RouterStackHelper_af322270b340c9f3b8df134d6e40671f3}{Set\-Routing\-Helper} (const Ipv4\-Routing\-Helper \&routing)
+\item 
+void \hyperlink{classns3_1_1RouterStackHelper_a94bdee66b5610184b317cdf107b27009}{Install} (std\-::string node\-Name) const 
+\item 
+void \hyperlink{classns3_1_1RouterStackHelper_a1fc5ba02a5cf54f0f008c15c4274531f}{Install} (Ptr$<$ Node $>$ node) const 
+\item 
+void \hyperlink{classns3_1_1RouterStackHelper_aa3d80267344ae81207ed2b5f1fab10bd}{Install} (Node\-Container c) const 
+\item 
+void \hyperlink{classns3_1_1RouterStackHelper_a46c4452fb80e27565675e69ee1a8f0f3}{Install\-All} (void) const 
+\item 
+void \hyperlink{classns3_1_1RouterStackHelper_a232b94c9750c49a70171b9aa3f9151b9}{Set\-Ipv4\-Stack\-Install} (bool enable)
+\begin{DoxyCompactList}\small\item\em Enable/disable I\-Pv4 stack install. \end{DoxyCompactList}\item 
+void \hyperlink{classns3_1_1RouterStackHelper_a33d51c290dae0395823847050645a38c}{Set\-Ipv4\-Arp\-Jitter} (bool enable)
+\begin{DoxyCompactList}\small\item\em Enable/disable I\-Pv4 A\-R\-P Jitter. \end{DoxyCompactList}\item 
+int64\-\_\-t \hyperlink{classns3_1_1RouterStackHelper_a150c650fa7384b68f6cc3b20e848b225}{Assign\-Streams} (Node\-Container c, int64\-\_\-t stream)
+\item 
+void \hyperlink{classns3_1_1RouterStackHelper_a957f8f558018bc7bfde76dc6047f64fd}{Set\-Cache\-Type} (std\-::string type\-Id)
+\begin{DoxyCompactList}\small\item\em Get the Type\-Id of the subclass of \hyperlink{classns3_1_1NamedContentCache}{Named\-Content\-Cache}, that implements the required caching policy. \end{DoxyCompactList}\item 
+std\-::string \hyperlink{classns3_1_1RouterStackHelper_a40b9a37ad83851c7949451589a422d16}{Get\-Cache\-Type} (void)
+\begin{DoxyCompactList}\small\item\em Get the Type\-Id of the subclass of \hyperlink{classns3_1_1NamedContentCache}{Named\-Content\-Cache}, that implements the required caching policy. \end{DoxyCompactList}\item 
+void \hyperlink{classns3_1_1RouterStackHelper_abad859db7b5bee7d1c4be9201a7972a8}{Set\-Cache\-Size} (uint32\-\_\-t size)
+\begin{DoxyCompactList}\small\item\em Set the size of the cache of the I\-C\-N Router. \end{DoxyCompactList}\item 
+void \hyperlink{classns3_1_1RouterStackHelper_a22e495a52aa107933c359eab17b8596f}{Control\-Cachability} (bool non\-\_\-cachable)
+\begin{DoxyCompactList}\small\item\em Function to set content is cachable or not at I\-C\-N Router. \end{DoxyCompactList}\item 
+void \hyperlink{classns3_1_1RouterStackHelper_a429a9b77f6b21301088125b4832a9cbf}{Set\-Freshness\-Time} (uint64\-\_\-t time)
+\begin{DoxyCompactList}\small\item\em Set the freshness time for the contents of the cache of the I\-C\-N Router. \end{DoxyCompactList}\item 
+uint64\-\_\-t \hyperlink{classns3_1_1RouterStackHelper_a6da6ab4e527893908dd351789230f03a}{Get\-Freshness\-Time} (void)
+\begin{DoxyCompactList}\small\item\em Get the freshness time set for the contents of the cache of the I\-C\-N Router. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{classns3_1_1RouterStackHelper_ac294402e8d59a7bdd294332cc4b3d33a}{Enable\-Pcap\-Ipv4\-Internal} (std\-::string prefix, Ptr$<$ Ipv4 $>$ ipv4, uint32\-\_\-t interface, bool explicit\-Filename)
+\begin{DoxyCompactList}\small\item\em Enable pcap output the indicated Ipv4 and interface pair. \end{DoxyCompactList}\item 
+void \hyperlink{classns3_1_1RouterStackHelper_abd09ae05773a9a706997514d4f807fcb}{Initialize} (void)
+\begin{DoxyCompactList}\small\item\em Initialize the helper to its default values. \end{DoxyCompactList}\item 
+bool \hyperlink{classns3_1_1RouterStackHelper_aabf5ed0df547a1ab881b9db4604966ca}{Pcap\-Hooked} (Ptr$<$ Ipv4 $>$ ipv4)
+\end{DoxyCompactItemize}
+\subsection*{Static Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \hyperlink{classns3_1_1RouterStackHelper_a2b7ed097c3e34fa5efcd431bf541036e}{Create\-And\-Aggregate\-Object\-From\-Type\-Id} (Ptr$<$ Node $>$ node, std\-::string type\-Id)
+\item 
+static void \hyperlink{classns3_1_1RouterStackHelper_a216a05a70257f4c669e68b833e8ec6fb}{Create\-And\-Aggregate\-Object\-From\-Type\-Id} (Ptr$<$ Node $>$ node, std\-::string type\-Id, bool t)
+\item 
+static void \hyperlink{classns3_1_1RouterStackHelper_a6ddb140133a71f5347ecaca6f79ff969}{Cleanup} (void)
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const Ipv4\-Routing\-Helper $\ast$ \hyperlink{classns3_1_1RouterStackHelper_afce5b67df8aff1a4a8fca50a32d0d746}{m\-\_\-routing}
+\item 
+bool \hyperlink{classns3_1_1RouterStackHelper_a53fa9e728900f9fad07e49487b1b5131}{m\-\_\-ipv4\-Enabled}
+\item 
+bool \hyperlink{classns3_1_1RouterStackHelper_afb7a40b6e245447f3d9fd6e55afb9a6f}{m\-\_\-ipv4\-Arp\-Jitter\-Enabled}
+\item 
+std\-::string \hyperlink{classns3_1_1RouterStackHelper_a00676974faf0f9061cdfa64e2b2481f3}{cache\-\_\-type}
+\begin{DoxyCompactList}\small\item\em Type\-Id of the sublclass of \hyperlink{classns3_1_1NamedContentCache}{Named\-Content\-Cache}. \end{DoxyCompactList}\item 
+bool \hyperlink{classns3_1_1RouterStackHelper_a0c094073c949fe9d5bbe3ec66b2311e6}{m\-\_\-non\-\_\-cachable}
+\item 
+uint32\-\_\-t \hyperlink{classns3_1_1RouterStackHelper_af1bcf688f4db05e771f97c5cc3f151b9}{cache\-\_\-size}
+\begin{DoxyCompactList}\small\item\em Cache size of the cache of I\-C\-N Router. \end{DoxyCompactList}\item 
+uint64\-\_\-t \hyperlink{classns3_1_1RouterStackHelper_abde25db92b103214ca320f74a3fea16f}{freshness\-\_\-time}
+\begin{DoxyCompactList}\small\item\em freshness time set for the contents of the cache of I\-C\-N Router \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Aggregate I\-P/\-T\-C\-P/\-U\-D\-P and Caching functionality to only I\-C\-N Routers in the Network. 
+
+This class is exactly same as the Internet\-Stack\-Helper of \hyperlink{namespacens3}{ns3}. The only difference being that additional A\-P\-Is that enable caching facility at I\-C\-N Routers are also aggregated along with the regular internet stack. Also, unlike Internet\-Stack\-Helper, this class aggregates \hyperlink{classns3_1_1Ipv4RouterL3Protocol}{Ipv4\-Router\-L3\-Protocol} instead of Ipv4\-L3\-Protocol for implementation of the Ipv4 Protocol. This helper is used to aggregate the requisite stack only at I\-C\-N Router nodes in a network implementing O\-I\-C\-N Architecture, while other nodes use the regular Internet\-Stack\-Helper of \hyperlink{namespacens3}{ns3}. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classns3_1_1RouterStackHelper_afe2cc8f748caa13e72f9e2616b77c0e0}{\index{ns3\-::\-Router\-Stack\-Helper@{ns3\-::\-Router\-Stack\-Helper}!Router\-Stack\-Helper@{Router\-Stack\-Helper}}
+\index{Router\-Stack\-Helper@{Router\-Stack\-Helper}!ns3::RouterStackHelper@{ns3\-::\-Router\-Stack\-Helper}}
+\subsubsection[{Router\-Stack\-Helper}]{\setlength{\rightskip}{0pt plus 5cm}ns3\-::\-Router\-Stack\-Helper\-::\-Router\-Stack\-Helper (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{classns3_1_1RouterStackHelper_afe2cc8f748caa13e72f9e2616b77c0e0}
+Create a new \hyperlink{classns3_1_1RouterStackHelper}{Router\-Stack\-Helper} which uses a mix of static routing and global routing by default. The static routing protocol (ns3\-::\-Ipv4\-Static\-Routing) and the global routing protocol are stored in an ns3\-::\-Ipv4\-List\-Routing protocol with priorities 0, and -\/10 by default. If you wish to use different priorites and different routing protocols, you need to use an adhoc ns3\-::\-Ipv4\-Routing\-Helper, such as ns3\-::\-Olsr\-Helper \hypertarget{classns3_1_1RouterStackHelper_a3673fd8fb8184df5782b6e8538f6f1f6}{\index{ns3\-::\-Router\-Stack\-Helper@{ns3\-::\-Router\-Stack\-Helper}!$\sim$\-Router\-Stack\-Helper@{$\sim$\-Router\-Stack\-Helper}}
+\index{$\sim$\-Router\-Stack\-Helper@{$\sim$\-Router\-Stack\-Helper}!ns3::RouterStackHelper@{ns3\-::\-Router\-Stack\-Helper}}
+\subsubsection[{$\sim$\-Router\-Stack\-Helper}]{\setlength{\rightskip}{0pt plus 5cm}ns3\-::\-Router\-Stack\-Helper\-::$\sim$\-Router\-Stack\-Helper (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classns3_1_1RouterStackHelper_a3673fd8fb8184df5782b6e8538f6f1f6}
+Destroy the \hyperlink{classns3_1_1RouterStackHelper}{Router\-Stack\-Helper} 
+
+\subsection{Member Function Documentation}
+\hypertarget{classns3_1_1RouterStackHelper_a150c650fa7384b68f6cc3b20e848b225}{\index{ns3\-::\-Router\-Stack\-Helper@{ns3\-::\-Router\-Stack\-Helper}!Assign\-Streams@{Assign\-Streams}}
+\index{Assign\-Streams@{Assign\-Streams}!ns3::RouterStackHelper@{ns3\-::\-Router\-Stack\-Helper}}
+\subsubsection[{Assign\-Streams}]{\setlength{\rightskip}{0pt plus 5cm}int64\-\_\-t ns3\-::\-Router\-Stack\-Helper\-::\-Assign\-Streams (
+\begin{DoxyParamCaption}
+\item[{Node\-Container}]{c, }
+\item[{int64\-\_\-t}]{stream}
+\end{DoxyParamCaption}
+)}}\label{classns3_1_1RouterStackHelper_a150c650fa7384b68f6cc3b20e848b225}
+Assign a fixed random variable stream number to the random variables used by this model. Return the number of streams (possibly zero) that have been assigned. The \hyperlink{classns3_1_1RouterStackHelper_a94bdee66b5610184b317cdf107b27009}{Install()} method should have previously been called by the user.
+
+
+\begin{DoxyParams}{Parameters}
+{\em stream} & first stream index to use \\
+\hline
+{\em c} & Node\-Container of the set of nodes for which the internet models should be modified to use a fixed stream \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the number of stream indices assigned by this helper 
+\end{DoxyReturn}
+\hypertarget{classns3_1_1RouterStackHelper_a6ddb140133a71f5347ecaca6f79ff969}{\index{ns3\-::\-Router\-Stack\-Helper@{ns3\-::\-Router\-Stack\-Helper}!Cleanup@{Cleanup}}
+\index{Cleanup@{Cleanup}!ns3::RouterStackHelper@{ns3\-::\-Router\-Stack\-Helper}}
+\subsubsection[{Cleanup}]{\setlength{\rightskip}{0pt plus 5cm}static void ns3\-::\-Router\-Stack\-Helper\-::\-Cleanup (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}}\label{classns3_1_1RouterStackHelper_a6ddb140133a71f5347ecaca6f79ff969}
+\hypertarget{classns3_1_1RouterStackHelper_a22e495a52aa107933c359eab17b8596f}{\index{ns3\-::\-Router\-Stack\-Helper@{ns3\-::\-Router\-Stack\-Helper}!Control\-Cachability@{Control\-Cachability}}
+\index{Control\-Cachability@{Control\-Cachability}!ns3::RouterStackHelper@{ns3\-::\-Router\-Stack\-Helper}}
+\subsubsection[{Control\-Cachability}]{\setlength{\rightskip}{0pt plus 5cm}void ns3\-::\-Router\-Stack\-Helper\-::\-Control\-Cachability (
+\begin{DoxyParamCaption}
+\item[{bool}]{non\-\_\-cachable}
+\end{DoxyParamCaption}
+)}}\label{classns3_1_1RouterStackHelper_a22e495a52aa107933c359eab17b8596f}
+
+
+Function to set content is cachable or not at I\-C\-N Router. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em non\-\_\-cachable} & parameter to set cacheability of the content, if true then non-\/cacheable otherwise cacheable \\
+\hline
+\end{DoxyParams}
+\hypertarget{classns3_1_1RouterStackHelper_a2b7ed097c3e34fa5efcd431bf541036e}{\index{ns3\-::\-Router\-Stack\-Helper@{ns3\-::\-Router\-Stack\-Helper}!Create\-And\-Aggregate\-Object\-From\-Type\-Id@{Create\-And\-Aggregate\-Object\-From\-Type\-Id}}
+\index{Create\-And\-Aggregate\-Object\-From\-Type\-Id@{Create\-And\-Aggregate\-Object\-From\-Type\-Id}!ns3::RouterStackHelper@{ns3\-::\-Router\-Stack\-Helper}}
+\subsubsection[{Create\-And\-Aggregate\-Object\-From\-Type\-Id}]{\setlength{\rightskip}{0pt plus 5cm}void ns3\-::\-Router\-Stack\-Helper\-::\-Create\-And\-Aggregate\-Object\-From\-Type\-Id (
+\begin{DoxyParamCaption}
+\item[{Ptr$<$ Node $>$}]{node, }
+\item[{std\-::string}]{type\-Id}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}}\label{classns3_1_1RouterStackHelper_a2b7ed097c3e34fa5efcd431bf541036e}
+\hypertarget{classns3_1_1RouterStackHelper_a216a05a70257f4c669e68b833e8ec6fb}{\index{ns3\-::\-Router\-Stack\-Helper@{ns3\-::\-Router\-Stack\-Helper}!Create\-And\-Aggregate\-Object\-From\-Type\-Id@{Create\-And\-Aggregate\-Object\-From\-Type\-Id}}
+\index{Create\-And\-Aggregate\-Object\-From\-Type\-Id@{Create\-And\-Aggregate\-Object\-From\-Type\-Id}!ns3::RouterStackHelper@{ns3\-::\-Router\-Stack\-Helper}}
+\subsubsection[{Create\-And\-Aggregate\-Object\-From\-Type\-Id}]{\setlength{\rightskip}{0pt plus 5cm}void ns3\-::\-Router\-Stack\-Helper\-::\-Create\-And\-Aggregate\-Object\-From\-Type\-Id (
+\begin{DoxyParamCaption}
+\item[{Ptr$<$ Node $>$}]{node, }
+\item[{std\-::string}]{type\-Id, }
+\item[{bool}]{t}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}}\label{classns3_1_1RouterStackHelper_a216a05a70257f4c669e68b833e8ec6fb}
+\hypertarget{classns3_1_1RouterStackHelper_ac294402e8d59a7bdd294332cc4b3d33a}{\index{ns3\-::\-Router\-Stack\-Helper@{ns3\-::\-Router\-Stack\-Helper}!Enable\-Pcap\-Ipv4\-Internal@{Enable\-Pcap\-Ipv4\-Internal}}
+\index{Enable\-Pcap\-Ipv4\-Internal@{Enable\-Pcap\-Ipv4\-Internal}!ns3::RouterStackHelper@{ns3\-::\-Router\-Stack\-Helper}}
+\subsubsection[{Enable\-Pcap\-Ipv4\-Internal}]{\setlength{\rightskip}{0pt plus 5cm}void ns3\-::\-Router\-Stack\-Helper\-::\-Enable\-Pcap\-Ipv4\-Internal (
+\begin{DoxyParamCaption}
+\item[{std\-::string}]{prefix, }
+\item[{Ptr$<$ Ipv4 $>$}]{ipv4, }
+\item[{uint32\-\_\-t}]{interface, }
+\item[{bool}]{explicit\-Filename}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [virtual]}}}\label{classns3_1_1RouterStackHelper_ac294402e8d59a7bdd294332cc4b3d33a}
+
+
+Enable pcap output the indicated Ipv4 and interface pair. 
+
+\hypertarget{classns3_1_1RouterStackHelper_a40b9a37ad83851c7949451589a422d16}{\index{ns3\-::\-Router\-Stack\-Helper@{ns3\-::\-Router\-Stack\-Helper}!Get\-Cache\-Type@{Get\-Cache\-Type}}
+\index{Get\-Cache\-Type@{Get\-Cache\-Type}!ns3::RouterStackHelper@{ns3\-::\-Router\-Stack\-Helper}}
+\subsubsection[{Get\-Cache\-Type}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string ns3\-::\-Router\-Stack\-Helper\-::\-Get\-Cache\-Type (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{classns3_1_1RouterStackHelper_a40b9a37ad83851c7949451589a422d16}
+
+
+Get the Type\-Id of the subclass of \hyperlink{classns3_1_1NamedContentCache}{Named\-Content\-Cache}, that implements the required caching policy. 
+
+\begin{DoxyReturn}{Returns}
+the Type\-Id of the subclass 
+\end{DoxyReturn}
+\hypertarget{classns3_1_1RouterStackHelper_a6da6ab4e527893908dd351789230f03a}{\index{ns3\-::\-Router\-Stack\-Helper@{ns3\-::\-Router\-Stack\-Helper}!Get\-Freshness\-Time@{Get\-Freshness\-Time}}
+\index{Get\-Freshness\-Time@{Get\-Freshness\-Time}!ns3::RouterStackHelper@{ns3\-::\-Router\-Stack\-Helper}}
+\subsubsection[{Get\-Freshness\-Time}]{\setlength{\rightskip}{0pt plus 5cm}uint64\-\_\-t ns3\-::\-Router\-Stack\-Helper\-::\-Get\-Freshness\-Time (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{classns3_1_1RouterStackHelper_a6da6ab4e527893908dd351789230f03a}
+
+
+Get the freshness time set for the contents of the cache of the I\-C\-N Router. 
+
+\begin{DoxyReturn}{Returns}
+the freshness time 
+\end{DoxyReturn}
+\hypertarget{classns3_1_1RouterStackHelper_abd09ae05773a9a706997514d4f807fcb}{\index{ns3\-::\-Router\-Stack\-Helper@{ns3\-::\-Router\-Stack\-Helper}!Initialize@{Initialize}}
+\index{Initialize@{Initialize}!ns3::RouterStackHelper@{ns3\-::\-Router\-Stack\-Helper}}
+\subsubsection[{Initialize}]{\setlength{\rightskip}{0pt plus 5cm}void ns3\-::\-Router\-Stack\-Helper\-::\-Initialize (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classns3_1_1RouterStackHelper_abd09ae05773a9a706997514d4f807fcb}
+
+
+Initialize the helper to its default values. 
+
+\hypertarget{classns3_1_1RouterStackHelper_a94bdee66b5610184b317cdf107b27009}{\index{ns3\-::\-Router\-Stack\-Helper@{ns3\-::\-Router\-Stack\-Helper}!Install@{Install}}
+\index{Install@{Install}!ns3::RouterStackHelper@{ns3\-::\-Router\-Stack\-Helper}}
+\subsubsection[{Install}]{\setlength{\rightskip}{0pt plus 5cm}void ns3\-::\-Router\-Stack\-Helper\-::\-Install (
+\begin{DoxyParamCaption}
+\item[{std\-::string}]{node\-Name}
+\end{DoxyParamCaption}
+) const}}\label{classns3_1_1RouterStackHelper_a94bdee66b5610184b317cdf107b27009}
+Aggregate implementations of the ns3\-::\-Ipv4, ns3\-::\-Udp, and ns3\-::\-Tcp classes onto the provided node. This method will assert if called on a node that already has an Ipv4 object aggregated to it.
+
+
+\begin{DoxyParams}{Parameters}
+{\em node\-Name} & The name of the node on which to install the stack. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classns3_1_1RouterStackHelper_a1fc5ba02a5cf54f0f008c15c4274531f}{\index{ns3\-::\-Router\-Stack\-Helper@{ns3\-::\-Router\-Stack\-Helper}!Install@{Install}}
+\index{Install@{Install}!ns3::RouterStackHelper@{ns3\-::\-Router\-Stack\-Helper}}
+\subsubsection[{Install}]{\setlength{\rightskip}{0pt plus 5cm}void ns3\-::\-Router\-Stack\-Helper\-::\-Install (
+\begin{DoxyParamCaption}
+\item[{Ptr$<$ Node $>$}]{node}
+\end{DoxyParamCaption}
+) const}}\label{classns3_1_1RouterStackHelper_a1fc5ba02a5cf54f0f008c15c4274531f}
+Aggregate implementations of the ns3\-::\-Ipv4, ns3\-::\-Udp, and ns3\-::\-Tcp classes onto the provided node. Also aggregate classes that implement caching functionalities. This method will assert if called on a node that already has an Ipv4 object aggregated to it.
+
+
+\begin{DoxyParams}{Parameters}
+{\em node} & The node on which to install the stack. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classns3_1_1RouterStackHelper_aa3d80267344ae81207ed2b5f1fab10bd}{\index{ns3\-::\-Router\-Stack\-Helper@{ns3\-::\-Router\-Stack\-Helper}!Install@{Install}}
+\index{Install@{Install}!ns3::RouterStackHelper@{ns3\-::\-Router\-Stack\-Helper}}
+\subsubsection[{Install}]{\setlength{\rightskip}{0pt plus 5cm}void ns3\-::\-Router\-Stack\-Helper\-::\-Install (
+\begin{DoxyParamCaption}
+\item[{Node\-Container}]{c}
+\end{DoxyParamCaption}
+) const}}\label{classns3_1_1RouterStackHelper_aa3d80267344ae81207ed2b5f1fab10bd}
+For each node in the input container, aggregate implementations of the ns3\-::\-Ipv4, ns3\-::\-Udp, and, ns3\-::\-Tcp classes. The program will assert if this method is called on a container with a node that already has an Ipv4 object aggregated to it.
+
+
+\begin{DoxyParams}{Parameters}
+{\em c} & Node\-Container that holds the set of nodes on which to install the new stacks. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classns3_1_1RouterStackHelper_a46c4452fb80e27565675e69ee1a8f0f3}{\index{ns3\-::\-Router\-Stack\-Helper@{ns3\-::\-Router\-Stack\-Helper}!Install\-All@{Install\-All}}
+\index{Install\-All@{Install\-All}!ns3::RouterStackHelper@{ns3\-::\-Router\-Stack\-Helper}}
+\subsubsection[{Install\-All}]{\setlength{\rightskip}{0pt plus 5cm}void ns3\-::\-Router\-Stack\-Helper\-::\-Install\-All (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const}}\label{classns3_1_1RouterStackHelper_a46c4452fb80e27565675e69ee1a8f0f3}
+Aggregate I\-Pv4, I\-Pv6, U\-D\-P, and T\-C\-P stacks to all nodes in the simulation \hypertarget{classns3_1_1RouterStackHelper_aabf5ed0df547a1ab881b9db4604966ca}{\index{ns3\-::\-Router\-Stack\-Helper@{ns3\-::\-Router\-Stack\-Helper}!Pcap\-Hooked@{Pcap\-Hooked}}
+\index{Pcap\-Hooked@{Pcap\-Hooked}!ns3::RouterStackHelper@{ns3\-::\-Router\-Stack\-Helper}}
+\subsubsection[{Pcap\-Hooked}]{\setlength{\rightskip}{0pt plus 5cm}bool ns3\-::\-Router\-Stack\-Helper\-::\-Pcap\-Hooked (
+\begin{DoxyParamCaption}
+\item[{Ptr$<$ Ipv4 $>$}]{ipv4}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classns3_1_1RouterStackHelper_aabf5ed0df547a1ab881b9db4604966ca}
+\hypertarget{classns3_1_1RouterStackHelper_a0980b1c2c1fe1d05c40407558d06d649}{\index{ns3\-::\-Router\-Stack\-Helper@{ns3\-::\-Router\-Stack\-Helper}!Reset@{Reset}}
+\index{Reset@{Reset}!ns3::RouterStackHelper@{ns3\-::\-Router\-Stack\-Helper}}
+\subsubsection[{Reset}]{\setlength{\rightskip}{0pt plus 5cm}void ns3\-::\-Router\-Stack\-Helper\-::\-Reset (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{classns3_1_1RouterStackHelper_a0980b1c2c1fe1d05c40407558d06d649}
+Return helper internal state to that of a newly constructed one \hypertarget{classns3_1_1RouterStackHelper_abad859db7b5bee7d1c4be9201a7972a8}{\index{ns3\-::\-Router\-Stack\-Helper@{ns3\-::\-Router\-Stack\-Helper}!Set\-Cache\-Size@{Set\-Cache\-Size}}
+\index{Set\-Cache\-Size@{Set\-Cache\-Size}!ns3::RouterStackHelper@{ns3\-::\-Router\-Stack\-Helper}}
+\subsubsection[{Set\-Cache\-Size}]{\setlength{\rightskip}{0pt plus 5cm}void ns3\-::\-Router\-Stack\-Helper\-::\-Set\-Cache\-Size (
+\begin{DoxyParamCaption}
+\item[{uint32\-\_\-t}]{size}
+\end{DoxyParamCaption}
+)}}\label{classns3_1_1RouterStackHelper_abad859db7b5bee7d1c4be9201a7972a8}
+
+
+Set the size of the cache of the I\-C\-N Router. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em size} & cache size to be set \\
+\hline
+\end{DoxyParams}
+\hypertarget{classns3_1_1RouterStackHelper_a957f8f558018bc7bfde76dc6047f64fd}{\index{ns3\-::\-Router\-Stack\-Helper@{ns3\-::\-Router\-Stack\-Helper}!Set\-Cache\-Type@{Set\-Cache\-Type}}
+\index{Set\-Cache\-Type@{Set\-Cache\-Type}!ns3::RouterStackHelper@{ns3\-::\-Router\-Stack\-Helper}}
+\subsubsection[{Set\-Cache\-Type}]{\setlength{\rightskip}{0pt plus 5cm}void ns3\-::\-Router\-Stack\-Helper\-::\-Set\-Cache\-Type (
+\begin{DoxyParamCaption}
+\item[{std\-::string}]{type\-Id}
+\end{DoxyParamCaption}
+)}}\label{classns3_1_1RouterStackHelper_a957f8f558018bc7bfde76dc6047f64fd}
+
+
+Get the Type\-Id of the subclass of \hyperlink{classns3_1_1NamedContentCache}{Named\-Content\-Cache}, that implements the required caching policy. 
+
+\begin{DoxyReturn}{Returns}
+the Type\-Id of the subclass 
+\end{DoxyReturn}
+\hypertarget{classns3_1_1RouterStackHelper_a429a9b77f6b21301088125b4832a9cbf}{\index{ns3\-::\-Router\-Stack\-Helper@{ns3\-::\-Router\-Stack\-Helper}!Set\-Freshness\-Time@{Set\-Freshness\-Time}}
+\index{Set\-Freshness\-Time@{Set\-Freshness\-Time}!ns3::RouterStackHelper@{ns3\-::\-Router\-Stack\-Helper}}
+\subsubsection[{Set\-Freshness\-Time}]{\setlength{\rightskip}{0pt plus 5cm}void ns3\-::\-Router\-Stack\-Helper\-::\-Set\-Freshness\-Time (
+\begin{DoxyParamCaption}
+\item[{uint64\-\_\-t}]{time}
+\end{DoxyParamCaption}
+)}}\label{classns3_1_1RouterStackHelper_a429a9b77f6b21301088125b4832a9cbf}
+
+
+Set the freshness time for the contents of the cache of the I\-C\-N Router. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em time} & freshness time to be set \\
+\hline
+\end{DoxyParams}
+\hypertarget{classns3_1_1RouterStackHelper_a33d51c290dae0395823847050645a38c}{\index{ns3\-::\-Router\-Stack\-Helper@{ns3\-::\-Router\-Stack\-Helper}!Set\-Ipv4\-Arp\-Jitter@{Set\-Ipv4\-Arp\-Jitter}}
+\index{Set\-Ipv4\-Arp\-Jitter@{Set\-Ipv4\-Arp\-Jitter}!ns3::RouterStackHelper@{ns3\-::\-Router\-Stack\-Helper}}
+\subsubsection[{Set\-Ipv4\-Arp\-Jitter}]{\setlength{\rightskip}{0pt plus 5cm}void ns3\-::\-Router\-Stack\-Helper\-::\-Set\-Ipv4\-Arp\-Jitter (
+\begin{DoxyParamCaption}
+\item[{bool}]{enable}
+\end{DoxyParamCaption}
+)}}\label{classns3_1_1RouterStackHelper_a33d51c290dae0395823847050645a38c}
+
+
+Enable/disable I\-Pv4 A\-R\-P Jitter. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em enable} & enable state \\
+\hline
+\end{DoxyParams}
+\hypertarget{classns3_1_1RouterStackHelper_a232b94c9750c49a70171b9aa3f9151b9}{\index{ns3\-::\-Router\-Stack\-Helper@{ns3\-::\-Router\-Stack\-Helper}!Set\-Ipv4\-Stack\-Install@{Set\-Ipv4\-Stack\-Install}}
+\index{Set\-Ipv4\-Stack\-Install@{Set\-Ipv4\-Stack\-Install}!ns3::RouterStackHelper@{ns3\-::\-Router\-Stack\-Helper}}
+\subsubsection[{Set\-Ipv4\-Stack\-Install}]{\setlength{\rightskip}{0pt plus 5cm}void ns3\-::\-Router\-Stack\-Helper\-::\-Set\-Ipv4\-Stack\-Install (
+\begin{DoxyParamCaption}
+\item[{bool}]{enable}
+\end{DoxyParamCaption}
+)}}\label{classns3_1_1RouterStackHelper_a232b94c9750c49a70171b9aa3f9151b9}
+
+
+Enable/disable I\-Pv4 stack install. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em enable} & enable state \\
+\hline
+\end{DoxyParams}
+\hypertarget{classns3_1_1RouterStackHelper_af322270b340c9f3b8df134d6e40671f3}{\index{ns3\-::\-Router\-Stack\-Helper@{ns3\-::\-Router\-Stack\-Helper}!Set\-Routing\-Helper@{Set\-Routing\-Helper}}
+\index{Set\-Routing\-Helper@{Set\-Routing\-Helper}!ns3::RouterStackHelper@{ns3\-::\-Router\-Stack\-Helper}}
+\subsubsection[{Set\-Routing\-Helper}]{\setlength{\rightskip}{0pt plus 5cm}void ns3\-::\-Router\-Stack\-Helper\-::\-Set\-Routing\-Helper (
+\begin{DoxyParamCaption}
+\item[{const Ipv4\-Routing\-Helper \&}]{routing}
+\end{DoxyParamCaption}
+)}}\label{classns3_1_1RouterStackHelper_af322270b340c9f3b8df134d6e40671f3}
+
+\begin{DoxyParams}{Parameters}
+{\em routing} & a new routing helper\\
+\hline
+\end{DoxyParams}
+Set the routing helper to use during Install. The routing helper is really an object factory which is used to create an object of type ns3\-::\-Ipv4\-Routing\-Protocol per node. This routing object is then associated to a single ns3\-::\-Ipv4 object through its ns3\-::\-Ipv4\-::\-Set\-Routing\-Protocol. 
+
+\subsection{Member Data Documentation}
+\hypertarget{classns3_1_1RouterStackHelper_af1bcf688f4db05e771f97c5cc3f151b9}{\index{ns3\-::\-Router\-Stack\-Helper@{ns3\-::\-Router\-Stack\-Helper}!cache\-\_\-size@{cache\-\_\-size}}
+\index{cache\-\_\-size@{cache\-\_\-size}!ns3::RouterStackHelper@{ns3\-::\-Router\-Stack\-Helper}}
+\subsubsection[{cache\-\_\-size}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t ns3\-::\-Router\-Stack\-Helper\-::cache\-\_\-size\hspace{0.3cm}{\ttfamily [private]}}}\label{classns3_1_1RouterStackHelper_af1bcf688f4db05e771f97c5cc3f151b9}
+
+
+Cache size of the cache of I\-C\-N Router. 
+
+\hypertarget{classns3_1_1RouterStackHelper_a00676974faf0f9061cdfa64e2b2481f3}{\index{ns3\-::\-Router\-Stack\-Helper@{ns3\-::\-Router\-Stack\-Helper}!cache\-\_\-type@{cache\-\_\-type}}
+\index{cache\-\_\-type@{cache\-\_\-type}!ns3::RouterStackHelper@{ns3\-::\-Router\-Stack\-Helper}}
+\subsubsection[{cache\-\_\-type}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string ns3\-::\-Router\-Stack\-Helper\-::cache\-\_\-type\hspace{0.3cm}{\ttfamily [private]}}}\label{classns3_1_1RouterStackHelper_a00676974faf0f9061cdfa64e2b2481f3}
+
+
+Type\-Id of the sublclass of \hyperlink{classns3_1_1NamedContentCache}{Named\-Content\-Cache}. 
+
+\hypertarget{classns3_1_1RouterStackHelper_abde25db92b103214ca320f74a3fea16f}{\index{ns3\-::\-Router\-Stack\-Helper@{ns3\-::\-Router\-Stack\-Helper}!freshness\-\_\-time@{freshness\-\_\-time}}
+\index{freshness\-\_\-time@{freshness\-\_\-time}!ns3::RouterStackHelper@{ns3\-::\-Router\-Stack\-Helper}}
+\subsubsection[{freshness\-\_\-time}]{\setlength{\rightskip}{0pt plus 5cm}uint64\-\_\-t ns3\-::\-Router\-Stack\-Helper\-::freshness\-\_\-time\hspace{0.3cm}{\ttfamily [private]}}}\label{classns3_1_1RouterStackHelper_abde25db92b103214ca320f74a3fea16f}
+
+
+freshness time set for the contents of the cache of I\-C\-N Router 
+
+\hypertarget{classns3_1_1RouterStackHelper_afb7a40b6e245447f3d9fd6e55afb9a6f}{\index{ns3\-::\-Router\-Stack\-Helper@{ns3\-::\-Router\-Stack\-Helper}!m\-\_\-ipv4\-Arp\-Jitter\-Enabled@{m\-\_\-ipv4\-Arp\-Jitter\-Enabled}}
+\index{m\-\_\-ipv4\-Arp\-Jitter\-Enabled@{m\-\_\-ipv4\-Arp\-Jitter\-Enabled}!ns3::RouterStackHelper@{ns3\-::\-Router\-Stack\-Helper}}
+\subsubsection[{m\-\_\-ipv4\-Arp\-Jitter\-Enabled}]{\setlength{\rightskip}{0pt plus 5cm}bool ns3\-::\-Router\-Stack\-Helper\-::m\-\_\-ipv4\-Arp\-Jitter\-Enabled\hspace{0.3cm}{\ttfamily [private]}}}\label{classns3_1_1RouterStackHelper_afb7a40b6e245447f3d9fd6e55afb9a6f}
+\hypertarget{classns3_1_1RouterStackHelper_a53fa9e728900f9fad07e49487b1b5131}{\index{ns3\-::\-Router\-Stack\-Helper@{ns3\-::\-Router\-Stack\-Helper}!m\-\_\-ipv4\-Enabled@{m\-\_\-ipv4\-Enabled}}
+\index{m\-\_\-ipv4\-Enabled@{m\-\_\-ipv4\-Enabled}!ns3::RouterStackHelper@{ns3\-::\-Router\-Stack\-Helper}}
+\subsubsection[{m\-\_\-ipv4\-Enabled}]{\setlength{\rightskip}{0pt plus 5cm}bool ns3\-::\-Router\-Stack\-Helper\-::m\-\_\-ipv4\-Enabled\hspace{0.3cm}{\ttfamily [private]}}}\label{classns3_1_1RouterStackHelper_a53fa9e728900f9fad07e49487b1b5131}
+\hypertarget{classns3_1_1RouterStackHelper_a0c094073c949fe9d5bbe3ec66b2311e6}{\index{ns3\-::\-Router\-Stack\-Helper@{ns3\-::\-Router\-Stack\-Helper}!m\-\_\-non\-\_\-cachable@{m\-\_\-non\-\_\-cachable}}
+\index{m\-\_\-non\-\_\-cachable@{m\-\_\-non\-\_\-cachable}!ns3::RouterStackHelper@{ns3\-::\-Router\-Stack\-Helper}}
+\subsubsection[{m\-\_\-non\-\_\-cachable}]{\setlength{\rightskip}{0pt plus 5cm}bool ns3\-::\-Router\-Stack\-Helper\-::m\-\_\-non\-\_\-cachable\hspace{0.3cm}{\ttfamily [private]}}}\label{classns3_1_1RouterStackHelper_a0c094073c949fe9d5bbe3ec66b2311e6}
+\hypertarget{classns3_1_1RouterStackHelper_afce5b67df8aff1a4a8fca50a32d0d746}{\index{ns3\-::\-Router\-Stack\-Helper@{ns3\-::\-Router\-Stack\-Helper}!m\-\_\-routing@{m\-\_\-routing}}
+\index{m\-\_\-routing@{m\-\_\-routing}!ns3::RouterStackHelper@{ns3\-::\-Router\-Stack\-Helper}}
+\subsubsection[{m\-\_\-routing}]{\setlength{\rightskip}{0pt plus 5cm}const Ipv4\-Routing\-Helper$\ast$ ns3\-::\-Router\-Stack\-Helper\-::m\-\_\-routing\hspace{0.3cm}{\ttfamily [private]}}}\label{classns3_1_1RouterStackHelper_afce5b67df8aff1a4a8fca50a32d0d746}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+helper/\hyperlink{router-stack-helper_8h}{router-\/stack-\/helper.\-h}\item 
+helper/\hyperlink{router-stack-helper_8cc}{router-\/stack-\/helper.\-cc}\end{DoxyCompactItemize}

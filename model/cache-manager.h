@@ -27,7 +27,7 @@ namespace ns3{
  * class. It also acts as an Interface between ICN Manager and
  * OICN Router when ICN Manager has to request a particular OICN Router
  * to retrieve a queried content from its cache. The Cache Manager then
- * find the queried content through its Name from the Cache, creates a
+ * find the queried content through its name from the cache, creates a
  * packet and sends it down the stack to SublayerProtocol class.
  *
  * This class is instantiated and aggregated to all OICN Routers in

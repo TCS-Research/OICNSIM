@@ -1,0 +1,151 @@
+\hypertarget{classns3_1_1CacheManager}{\section{ns3\-:\-:Cache\-Manager Class Reference}
+\label{classns3_1_1CacheManager}\index{ns3\-::\-Cache\-Manager@{ns3\-::\-Cache\-Manager}}
+}
+
+
+Manages the Named \hyperlink{classns3_1_1Content}{Content} Cache of an O\-I\-C\-N Router.  
+
+
+
+
+{\ttfamily \#include $<$cache-\/manager.\-h$>$}
+
+Inheritance diagram for ns3\-:\-:Cache\-Manager\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classns3_1_1CacheManager}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classns3_1_1CacheManager_a48853b4bb253bcc6c41c9185f8c81169}{Cache\-Manager} ()
+\item 
+virtual \hyperlink{classns3_1_1CacheManager_a6c35578ef0c60fc2395a813d5c26c395}{$\sim$\-Cache\-Manager} ()
+\item 
+void \hyperlink{classns3_1_1CacheManager_a154c3d0f83d4ad2cf3960017f5e26577}{Set\-Node} (Ptr$<$ Node $>$ node)
+\begin{DoxyCompactList}\small\item\em Set node associated with this stack. \end{DoxyCompactList}\item 
+Ptr$<$ Node $>$ \hyperlink{classns3_1_1CacheManager_a124af97c5ed58b4df52f0f9db827c6ab}{Get\-Node} ()
+\begin{DoxyCompactList}\small\item\em Get node associated with this stack. \end{DoxyCompactList}\item 
+bool \hyperlink{classns3_1_1CacheManager_ac07096eecd5c92c16ff0e68b1a9acf0b}{Set\-Entry} (Ptr$<$ Packet $>$ packet, std\-::string name, Ipv4\-Header ipheader)
+\begin{DoxyCompactList}\small\item\em Creates a cache entry from the data of the packet and stores it in the Cache. It also creates an index for the content and stores it in the Policy\-Index. All these are achieved by calling the appropriate functions in Named \hyperlink{classns3_1_1Content}{Content} Cache class. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static Type\-Id \hyperlink{classns3_1_1CacheManager_ac9b2923c1cbddb3868245fd3e0983159}{Get\-Type\-Id} (void)
+\begin{DoxyCompactList}\small\item\em Get the type I\-D. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Ptr$<$ Node $>$ \hyperlink{classns3_1_1CacheManager_acc6de7f84389b36268a9124a5f6b03d8}{m\-\_\-node}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Manages the Named \hyperlink{classns3_1_1Content}{Content} Cache of an O\-I\-C\-N Router. 
+
+This class takes care of the insertion and eviction process of the Cache and Policy\-Index through the functions of Named \hyperlink{classns3_1_1Content}{Content} Cache class. It also acts as an Interface between I\-C\-N Manager and O\-I\-C\-N Router when I\-C\-N Manager has to request a particular O\-I\-C\-N Router to retrieve a queried content from its cache. The Cache Manager then find the queried content through its name from the cache, creates a packet and sends it down the stack to \hyperlink{classns3_1_1SublayerProtocol}{Sublayer\-Protocol} class.
+
+This class is instantiated and aggregated to all O\-I\-C\-N Routers in the network, and is not required in any other components of O\-I\-C\-N Architecture.
+
+Note\-: The word Cache here refers to the boost\-::unordered\-\_\-map that stores the content along with its corresponding name. The word Policy\-Index refers to the boost\-::bimap container used for indexing the stored content in Cache. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classns3_1_1CacheManager_a48853b4bb253bcc6c41c9185f8c81169}{\index{ns3\-::\-Cache\-Manager@{ns3\-::\-Cache\-Manager}!Cache\-Manager@{Cache\-Manager}}
+\index{Cache\-Manager@{Cache\-Manager}!ns3::CacheManager@{ns3\-::\-Cache\-Manager}}
+\subsubsection[{Cache\-Manager}]{\setlength{\rightskip}{0pt plus 5cm}ns3\-::\-Cache\-Manager\-::\-Cache\-Manager (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classns3_1_1CacheManager_a48853b4bb253bcc6c41c9185f8c81169}
+\hypertarget{classns3_1_1CacheManager_a6c35578ef0c60fc2395a813d5c26c395}{\index{ns3\-::\-Cache\-Manager@{ns3\-::\-Cache\-Manager}!$\sim$\-Cache\-Manager@{$\sim$\-Cache\-Manager}}
+\index{$\sim$\-Cache\-Manager@{$\sim$\-Cache\-Manager}!ns3::CacheManager@{ns3\-::\-Cache\-Manager}}
+\subsubsection[{$\sim$\-Cache\-Manager}]{\setlength{\rightskip}{0pt plus 5cm}ns3\-::\-Cache\-Manager\-::$\sim$\-Cache\-Manager (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classns3_1_1CacheManager_a6c35578ef0c60fc2395a813d5c26c395}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classns3_1_1CacheManager_a124af97c5ed58b4df52f0f9db827c6ab}{\index{ns3\-::\-Cache\-Manager@{ns3\-::\-Cache\-Manager}!Get\-Node@{Get\-Node}}
+\index{Get\-Node@{Get\-Node}!ns3::CacheManager@{ns3\-::\-Cache\-Manager}}
+\subsubsection[{Get\-Node}]{\setlength{\rightskip}{0pt plus 5cm}Ptr$<$ Node $>$ ns3\-::\-Cache\-Manager\-::\-Get\-Node (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classns3_1_1CacheManager_a124af97c5ed58b4df52f0f9db827c6ab}
+
+
+Get node associated with this stack. 
+
+\begin{DoxyReturn}{Returns}
+node of the stack 
+\end{DoxyReturn}
+\hypertarget{classns3_1_1CacheManager_ac9b2923c1cbddb3868245fd3e0983159}{\index{ns3\-::\-Cache\-Manager@{ns3\-::\-Cache\-Manager}!Get\-Type\-Id@{Get\-Type\-Id}}
+\index{Get\-Type\-Id@{Get\-Type\-Id}!ns3::CacheManager@{ns3\-::\-Cache\-Manager}}
+\subsubsection[{Get\-Type\-Id}]{\setlength{\rightskip}{0pt plus 5cm}Type\-Id ns3\-::\-Cache\-Manager\-::\-Get\-Type\-Id (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classns3_1_1CacheManager_ac9b2923c1cbddb3868245fd3e0983159}
+
+
+Get the type I\-D. 
+
+\begin{DoxyReturn}{Returns}
+the object Type\-Id 
+\end{DoxyReturn}
+\hypertarget{classns3_1_1CacheManager_ac07096eecd5c92c16ff0e68b1a9acf0b}{\index{ns3\-::\-Cache\-Manager@{ns3\-::\-Cache\-Manager}!Set\-Entry@{Set\-Entry}}
+\index{Set\-Entry@{Set\-Entry}!ns3::CacheManager@{ns3\-::\-Cache\-Manager}}
+\subsubsection[{Set\-Entry}]{\setlength{\rightskip}{0pt plus 5cm}bool ns3\-::\-Cache\-Manager\-::\-Set\-Entry (
+\begin{DoxyParamCaption}
+\item[{Ptr$<$ Packet $>$}]{packet, }
+\item[{std\-::string}]{name, }
+\item[{Ipv4\-Header}]{ipheader}
+\end{DoxyParamCaption}
+)}}\label{classns3_1_1CacheManager_ac07096eecd5c92c16ff0e68b1a9acf0b}
+
+
+Creates a cache entry from the data of the packet and stores it in the Cache. It also creates an index for the content and stores it in the Policy\-Index. All these are achieved by calling the appropriate functions in Named \hyperlink{classns3_1_1Content}{Content} Cache class. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em packet} & packet received by O\-I\-C\-N Router \\
+\hline
+{\em name} & name of the content present in the packet \\
+\hline
+{\em ipheader} & ip header of the packet \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the content is cached 
+\end{DoxyReturn}
+\hypertarget{classns3_1_1CacheManager_a154c3d0f83d4ad2cf3960017f5e26577}{\index{ns3\-::\-Cache\-Manager@{ns3\-::\-Cache\-Manager}!Set\-Node@{Set\-Node}}
+\index{Set\-Node@{Set\-Node}!ns3::CacheManager@{ns3\-::\-Cache\-Manager}}
+\subsubsection[{Set\-Node}]{\setlength{\rightskip}{0pt plus 5cm}void ns3\-::\-Cache\-Manager\-::\-Set\-Node (
+\begin{DoxyParamCaption}
+\item[{Ptr$<$ Node $>$}]{node}
+\end{DoxyParamCaption}
+)}}\label{classns3_1_1CacheManager_a154c3d0f83d4ad2cf3960017f5e26577}
+
+
+Set node associated with this stack. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em node} & node to set \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classns3_1_1CacheManager_acc6de7f84389b36268a9124a5f6b03d8}{\index{ns3\-::\-Cache\-Manager@{ns3\-::\-Cache\-Manager}!m\-\_\-node@{m\-\_\-node}}
+\index{m\-\_\-node@{m\-\_\-node}!ns3::CacheManager@{ns3\-::\-Cache\-Manager}}
+\subsubsection[{m\-\_\-node}]{\setlength{\rightskip}{0pt plus 5cm}Ptr$<$Node$>$ ns3\-::\-Cache\-Manager\-::m\-\_\-node\hspace{0.3cm}{\ttfamily [private]}}}\label{classns3_1_1CacheManager_acc6de7f84389b36268a9124a5f6b03d8}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+model/\hyperlink{cache-manager_8h}{cache-\/manager.\-h}\item 
+model/\hyperlink{cache-manager_8cc}{cache-\/manager.\-cc}\end{DoxyCompactItemize}

@@ -1,0 +1,41 @@
+#include <unordered_map>
+#include <cstring>
+#include "ns3/type-name.h"
+#include "content.h"
+
+namespace ns3{
+//namespace oicn{
+
+void Content::Set()
+{
+	const char* name = "oicn://content/category/subcategory";
+	char* suffix = "1/1";
+	char contententry;
+	int i,j,index;
+	for (i=1; i<=9; i++)
+	{
+		for (j=1; j<=9; j++)
+		{
+			contententry = *(strcpy (&contententry, name));
+			contententry = *(strcat (&contententry, suffix));
+			index = i*10+j;
+			suffix[2] = suffix[2]+1;
+			container.insert({(uint32_t)index, (uint8_t)contententry});
+		}
+		suffix[0] = suffix[0]+1;
+	}
+	
+}
+
+/*Content::~Content()
+{
+	
+}*/
+
+uint8_t Content::GetContent(uint32_t index)
+{
+	Iterator it = container.find(index);
+	return (it->second);
+}
+//}
+}

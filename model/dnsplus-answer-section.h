@@ -22,8 +22,9 @@ namespace ns3 {
 
 /**
  * \brief It is similar to DNS Answer Section header.
+ *
  * ICN Manager send packet with this header to the source of the requested content.
- * This header contains the ip address of the client to whom content has to be sent
+ * This header contains the ip address of the client to whom content has to be sent.
  **/
 class DnsPlusAnswerSection: public Header {
 public:
@@ -49,7 +50,7 @@ public:
 
 	/**
 	 * \brief Set the length of the name of the content in answer section.
-	 * \param nameLength length of the name of content.
+	 * \param nameLength length of the name of the content.
 	 */
 	void SetNameLength(uint32_t nameLength);
 

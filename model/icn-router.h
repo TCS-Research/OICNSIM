@@ -61,7 +61,7 @@ public:
 	 * \param dnsPlusHeader DnsPlus header section
 	 * \param oicnHeader OICN header
 	 **/
-	void SendAckToIcnManager(Ipv4Address icnManagerIpv4Address, uint16_t icnManagerPort, DnsPlusQuestionHeader dnsPlusQuestionHeader, DnsPlusHeader dnsPlusHeader,OICNHeader oicnHeader);
+	void SendAckToIcnManager(Ipv4Address icnManagerIpv4Address, uint16_t icnManagerPort, DnsPlusQuestionHeader dnsPlusQuestionHeader, DnsPlusHeader dnsPlusHeader,OicnHeader oicnHeader);
 
 	/**
 	 * \brief It send the cached content to client as directed by the ICN Manager.

@@ -168,6 +168,7 @@ OICNZipfClient::Send (void)
 {
 	NS_LOG_FUNCTION (this);
 	std::string name = Content::GetContent (GetNextContentIndex ());
+	NS_LOG_INFO("The Zipf Client on node "<< GetNode()->GetId()<<" has queried for content with name "<<name);
 	Ptr<Ipv4> ipv4 = GetNode()->GetObject<Ipv4> ();
 	uint32_t host_address = ipv4->GetAddress(1, 0).GetLocal().Get();
 	Ptr<Packet> packet = Create<Packet>();
@@ -223,7 +224,7 @@ Ptr<Packet> OICNZipfClient::ConstructDnsPlusQuestion (Ptr<Packet> packet, std::s
 Ptr<Packet> OICNZipfClient::ConstructSublayer (Ptr<Packet> packet, std::string name)
 {
 
-	OICNHeader oicnheader;
+	OicnHeader oicnheader;
 	oicnheader.SetName (name);
 	oicnheader.SetRequest();
 	oicnheader.SetNonCachable();
@@ -240,7 +241,7 @@ void OICNZipfClient::HandleReadIcnManager (Ptr<Socket> socket)
 	{
 		if (InetSocketAddress::IsMatchingType (from))
 		{
-			OICNHeader oicnheader;
+			OicnHeader oicnheader;
 			packet->RemoveHeader(oicnheader);
 
 			DnsPlusHeader dnsPlusHeader;
@@ -305,7 +306,7 @@ void OICNZipfClient::HandleReadSource (Ptr<Socket> socket)
 
 		if (InetSocketAddress::IsMatchingType (from))
 		{
-			OICNHeader oicnheader;
+			OicnHeader oicnheader;
 			packet->RemoveHeader(oicnheader);
 			uint32_t First4Bytes = oicnheader.GetFirst4Bytes()-oicnheader.GetSerializedSize();
 			if (First4Bytes == 4026531840)//It is a Cachable Reply Packet

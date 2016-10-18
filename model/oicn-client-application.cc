@@ -181,7 +181,7 @@ Ptr<Packet> OicnClient::ConstructDnsPlusQuestion (Ptr<Packet> packet, std::strin
 
 Ptr<Packet> OicnClient::ConstructSublayer (Ptr<Packet> packet, std::string name)
 {
-	OICNHeader oicnheader;
+	OicnHeader oicnheader;
 	oicnheader.SetName (name);
 	oicnheader.SetRequest();
 	oicnheader.SetNonCachable();
@@ -198,7 +198,7 @@ void OicnClient::HandleReadIcnManager (Ptr<Socket> socket)
 
 		if (InetSocketAddress::IsMatchingType (from))
 		{
-			OICNHeader oicnheader;
+			OicnHeader oicnheader;
 			packet->RemoveHeader(oicnheader);
 
 			DnsPlusHeader dnsPlusHeader;
@@ -264,7 +264,7 @@ void OicnClient::HandleReadSource (Ptr<Socket> socket)
 
 		if (InetSocketAddress::IsMatchingType (from))
 		{
-			OICNHeader oicnheader;
+			OicnHeader oicnheader;
 			packet->RemoveHeader(oicnheader);
 			uint32_t First4Bytes = oicnheader.GetFirst4Bytes()-oicnheader.GetSerializedSize();
 			if (First4Bytes == 4026531840)//It is a Cachable Reply Packet

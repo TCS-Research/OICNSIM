@@ -1,0 +1,155 @@
+\hypertarget{classns3_1_1Ipv4RouterL3Protocol_1_1Fragments}{\section{ns3\-:\-:Ipv4\-Router\-L3\-Protocol\-:\-:Fragments Class Reference}
+\label{classns3_1_1Ipv4RouterL3Protocol_1_1Fragments}\index{ns3\-::\-Ipv4\-Router\-L3\-Protocol\-::\-Fragments@{ns3\-::\-Ipv4\-Router\-L3\-Protocol\-::\-Fragments}}
+}
+
+
+A Set of Fragment belonging to the same packet (src, dst, identification and proto)  
+
+
+Inheritance diagram for ns3\-:\-:Ipv4\-Router\-L3\-Protocol\-:\-:Fragments\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classns3_1_1Ipv4RouterL3Protocol_1_1Fragments}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classns3_1_1Ipv4RouterL3Protocol_1_1Fragments_a79843dcefae495214fd0409216c752bb}{Fragments} ()
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\hyperlink{classns3_1_1Ipv4RouterL3Protocol_1_1Fragments_aaef0bfaf9061b6a19f27a438fc20f3ae}{$\sim$\-Fragments} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+void \hyperlink{classns3_1_1Ipv4RouterL3Protocol_1_1Fragments_a5d4cc40fc1ba11c52024f674bdc1ddb7}{Add\-Fragment} (Ptr$<$ Packet $>$ fragment, uint16\-\_\-t fragment\-Offset, bool more\-Fragment)
+\begin{DoxyCompactList}\small\item\em Add a fragment. \end{DoxyCompactList}\item 
+bool \hyperlink{classns3_1_1Ipv4RouterL3Protocol_1_1Fragments_a1800010de516168a088838f33d7ad1c7}{Is\-Entire} () const 
+\begin{DoxyCompactList}\small\item\em If all fragments have been added. \end{DoxyCompactList}\item 
+Ptr$<$ Packet $>$ \hyperlink{classns3_1_1Ipv4RouterL3Protocol_1_1Fragments_a6d46b37853fb6275e7ee17cc011df935}{Get\-Packet} () const 
+\begin{DoxyCompactList}\small\item\em Get the entire packet. \end{DoxyCompactList}\item 
+Ptr$<$ Packet $>$ \hyperlink{classns3_1_1Ipv4RouterL3Protocol_1_1Fragments_a66b105030585bb6e71cffd8a4990a510}{Get\-Partial\-Packet} () const 
+\begin{DoxyCompactList}\small\item\em Get the complete part of the packet. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{classns3_1_1Ipv4RouterL3Protocol_1_1Fragments_a98acf0bddf84056bce2281fe62669cd1}{m\-\_\-more\-Fragment}
+\begin{DoxyCompactList}\small\item\em True if other fragments will be sent. \end{DoxyCompactList}\item 
+std\-::list$<$ std\-::pair$<$ Ptr\\*
+$<$ Packet $>$, uint16\-\_\-t $>$ $>$ \hyperlink{classns3_1_1Ipv4RouterL3Protocol_1_1Fragments_abdb3e0b06a2799f3bef00330ea0d66a2}{m\-\_\-fragments}
+\begin{DoxyCompactList}\small\item\em The current fragments. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A Set of Fragment belonging to the same packet (src, dst, identification and proto) 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classns3_1_1Ipv4RouterL3Protocol_1_1Fragments_a79843dcefae495214fd0409216c752bb}{\index{ns3\-::\-Ipv4\-Router\-L3\-Protocol\-::\-Fragments@{ns3\-::\-Ipv4\-Router\-L3\-Protocol\-::\-Fragments}!Fragments@{Fragments}}
+\index{Fragments@{Fragments}!ns3::Ipv4RouterL3Protocol::Fragments@{ns3\-::\-Ipv4\-Router\-L3\-Protocol\-::\-Fragments}}
+\subsubsection[{Fragments}]{\setlength{\rightskip}{0pt plus 5cm}ns3\-::\-Ipv4\-Router\-L3\-Protocol\-::\-Fragments\-::\-Fragments (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classns3_1_1Ipv4RouterL3Protocol_1_1Fragments_a79843dcefae495214fd0409216c752bb}
+
+
+Constructor. 
+
+\hypertarget{classns3_1_1Ipv4RouterL3Protocol_1_1Fragments_aaef0bfaf9061b6a19f27a438fc20f3ae}{\index{ns3\-::\-Ipv4\-Router\-L3\-Protocol\-::\-Fragments@{ns3\-::\-Ipv4\-Router\-L3\-Protocol\-::\-Fragments}!$\sim$\-Fragments@{$\sim$\-Fragments}}
+\index{$\sim$\-Fragments@{$\sim$\-Fragments}!ns3::Ipv4RouterL3Protocol::Fragments@{ns3\-::\-Ipv4\-Router\-L3\-Protocol\-::\-Fragments}}
+\subsubsection[{$\sim$\-Fragments}]{\setlength{\rightskip}{0pt plus 5cm}ns3\-::\-Ipv4\-Router\-L3\-Protocol\-::\-Fragments\-::$\sim$\-Fragments (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classns3_1_1Ipv4RouterL3Protocol_1_1Fragments_aaef0bfaf9061b6a19f27a438fc20f3ae}
+
+
+Destructor. 
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classns3_1_1Ipv4RouterL3Protocol_1_1Fragments_a5d4cc40fc1ba11c52024f674bdc1ddb7}{\index{ns3\-::\-Ipv4\-Router\-L3\-Protocol\-::\-Fragments@{ns3\-::\-Ipv4\-Router\-L3\-Protocol\-::\-Fragments}!Add\-Fragment@{Add\-Fragment}}
+\index{Add\-Fragment@{Add\-Fragment}!ns3::Ipv4RouterL3Protocol::Fragments@{ns3\-::\-Ipv4\-Router\-L3\-Protocol\-::\-Fragments}}
+\subsubsection[{Add\-Fragment}]{\setlength{\rightskip}{0pt plus 5cm}void ns3\-::\-Ipv4\-Router\-L3\-Protocol\-::\-Fragments\-::\-Add\-Fragment (
+\begin{DoxyParamCaption}
+\item[{Ptr$<$ Packet $>$}]{fragment, }
+\item[{uint16\-\_\-t}]{fragment\-Offset, }
+\item[{bool}]{more\-Fragment}
+\end{DoxyParamCaption}
+)}}\label{classns3_1_1Ipv4RouterL3Protocol_1_1Fragments_a5d4cc40fc1ba11c52024f674bdc1ddb7}
+
+
+Add a fragment. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em fragment} & the fragment \\
+\hline
+{\em fragment\-Offset} & the offset of the fragment \\
+\hline
+{\em more\-Fragment} & the bit \char`\"{}\-More Fragment\char`\"{} \\
+\hline
+\end{DoxyParams}
+\hypertarget{classns3_1_1Ipv4RouterL3Protocol_1_1Fragments_a6d46b37853fb6275e7ee17cc011df935}{\index{ns3\-::\-Ipv4\-Router\-L3\-Protocol\-::\-Fragments@{ns3\-::\-Ipv4\-Router\-L3\-Protocol\-::\-Fragments}!Get\-Packet@{Get\-Packet}}
+\index{Get\-Packet@{Get\-Packet}!ns3::Ipv4RouterL3Protocol::Fragments@{ns3\-::\-Ipv4\-Router\-L3\-Protocol\-::\-Fragments}}
+\subsubsection[{Get\-Packet}]{\setlength{\rightskip}{0pt plus 5cm}Ptr$<$ Packet $>$ ns3\-::\-Ipv4\-Router\-L3\-Protocol\-::\-Fragments\-::\-Get\-Packet (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classns3_1_1Ipv4RouterL3Protocol_1_1Fragments_a6d46b37853fb6275e7ee17cc011df935}
+
+
+Get the entire packet. 
+
+\begin{DoxyReturn}{Returns}
+the entire packet 
+\end{DoxyReturn}
+\hypertarget{classns3_1_1Ipv4RouterL3Protocol_1_1Fragments_a66b105030585bb6e71cffd8a4990a510}{\index{ns3\-::\-Ipv4\-Router\-L3\-Protocol\-::\-Fragments@{ns3\-::\-Ipv4\-Router\-L3\-Protocol\-::\-Fragments}!Get\-Partial\-Packet@{Get\-Partial\-Packet}}
+\index{Get\-Partial\-Packet@{Get\-Partial\-Packet}!ns3::Ipv4RouterL3Protocol::Fragments@{ns3\-::\-Ipv4\-Router\-L3\-Protocol\-::\-Fragments}}
+\subsubsection[{Get\-Partial\-Packet}]{\setlength{\rightskip}{0pt plus 5cm}Ptr$<$ Packet $>$ ns3\-::\-Ipv4\-Router\-L3\-Protocol\-::\-Fragments\-::\-Get\-Partial\-Packet (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classns3_1_1Ipv4RouterL3Protocol_1_1Fragments_a66b105030585bb6e71cffd8a4990a510}
+
+
+Get the complete part of the packet. 
+
+\begin{DoxyReturn}{Returns}
+the part we have comeplete 
+\end{DoxyReturn}
+\hypertarget{classns3_1_1Ipv4RouterL3Protocol_1_1Fragments_a1800010de516168a088838f33d7ad1c7}{\index{ns3\-::\-Ipv4\-Router\-L3\-Protocol\-::\-Fragments@{ns3\-::\-Ipv4\-Router\-L3\-Protocol\-::\-Fragments}!Is\-Entire@{Is\-Entire}}
+\index{Is\-Entire@{Is\-Entire}!ns3::Ipv4RouterL3Protocol::Fragments@{ns3\-::\-Ipv4\-Router\-L3\-Protocol\-::\-Fragments}}
+\subsubsection[{Is\-Entire}]{\setlength{\rightskip}{0pt plus 5cm}bool ns3\-::\-Ipv4\-Router\-L3\-Protocol\-::\-Fragments\-::\-Is\-Entire (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classns3_1_1Ipv4RouterL3Protocol_1_1Fragments_a1800010de516168a088838f33d7ad1c7}
+
+
+If all fragments have been added. 
+
+\begin{DoxyReturn}{Returns}
+true if the packet is entire 
+\end{DoxyReturn}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classns3_1_1Ipv4RouterL3Protocol_1_1Fragments_abdb3e0b06a2799f3bef00330ea0d66a2}{\index{ns3\-::\-Ipv4\-Router\-L3\-Protocol\-::\-Fragments@{ns3\-::\-Ipv4\-Router\-L3\-Protocol\-::\-Fragments}!m\-\_\-fragments@{m\-\_\-fragments}}
+\index{m\-\_\-fragments@{m\-\_\-fragments}!ns3::Ipv4RouterL3Protocol::Fragments@{ns3\-::\-Ipv4\-Router\-L3\-Protocol\-::\-Fragments}}
+\subsubsection[{m\-\_\-fragments}]{\setlength{\rightskip}{0pt plus 5cm}std\-::list$<$std\-::pair$<$Ptr$<$Packet$>$, uint16\-\_\-t$>$ $>$ ns3\-::\-Ipv4\-Router\-L3\-Protocol\-::\-Fragments\-::m\-\_\-fragments\hspace{0.3cm}{\ttfamily [private]}}}\label{classns3_1_1Ipv4RouterL3Protocol_1_1Fragments_abdb3e0b06a2799f3bef00330ea0d66a2}
+
+
+The current fragments. 
+
+\hypertarget{classns3_1_1Ipv4RouterL3Protocol_1_1Fragments_a98acf0bddf84056bce2281fe62669cd1}{\index{ns3\-::\-Ipv4\-Router\-L3\-Protocol\-::\-Fragments@{ns3\-::\-Ipv4\-Router\-L3\-Protocol\-::\-Fragments}!m\-\_\-more\-Fragment@{m\-\_\-more\-Fragment}}
+\index{m\-\_\-more\-Fragment@{m\-\_\-more\-Fragment}!ns3::Ipv4RouterL3Protocol::Fragments@{ns3\-::\-Ipv4\-Router\-L3\-Protocol\-::\-Fragments}}
+\subsubsection[{m\-\_\-more\-Fragment}]{\setlength{\rightskip}{0pt plus 5cm}bool ns3\-::\-Ipv4\-Router\-L3\-Protocol\-::\-Fragments\-::m\-\_\-more\-Fragment\hspace{0.3cm}{\ttfamily [private]}}}\label{classns3_1_1Ipv4RouterL3Protocol_1_1Fragments_a98acf0bddf84056bce2281fe62669cd1}
+
+
+True if other fragments will be sent. 
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+model/\hyperlink{ipv4-router-l3-protocol_8h}{ipv4-\/router-\/l3-\/protocol.\-h}\item 
+model/\hyperlink{ipv4-router-l3-protocol_8cc}{ipv4-\/router-\/l3-\/protocol.\-cc}\end{DoxyCompactItemize}

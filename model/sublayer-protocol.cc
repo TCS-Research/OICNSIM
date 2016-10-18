@@ -95,7 +95,7 @@ bool SublayerProtocol::HasSublayer (Ptr<Packet> packet1, Ipv4Header ipheader)   
 		if (udpheader.GetSourcePort() == 89)
 		{
 			NS_LOG_INFO (" Is from OICN Server Port");
-			OICNHeader oicnheader;
+			OicnHeader oicnheader;
 			packet1->RemoveHeader(oicnheader);
 			uint32_t First4Bytes = oicnheader.GetFirst4Bytes()-oicnheader.GetSerializedSize();
 			if (First4Bytes == 4026531840)
@@ -154,7 +154,7 @@ void SublayerProtocol::ConstructPacket (Ptr<Packet> packet, std::string Name, ui
 void SublayerProtocol::ConstructSublayer (Ptr<Packet> packet, std::string Name)
 {
 
-	OICNHeader oicnheader;
+	OicnHeader oicnheader;
 	oicnheader.SetName (Name);
 
 	/* if else condition for constructing sublayer
@@ -184,7 +184,7 @@ void SublayerProtocol::SetUdpHeader (UdpHeader header)
 	udp_header = header;
 }
 
-void SublayerProtocol::SetOICNHeader (OICNHeader header)
+void SublayerProtocol::SetOICNHeader (OicnHeader header)
 {
 	oicn_header = header;
 }
@@ -194,7 +194,7 @@ UdpHeader SublayerProtocol::GetUdpHeader ()
 	return(udp_header);
 }
 
-OICNHeader SublayerProtocol::GetOICNHeader ()
+OicnHeader SublayerProtocol::GetOICNHeader ()
 {
 	return(oicn_header);
 }

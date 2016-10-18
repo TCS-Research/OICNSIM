@@ -1,0 +1,30 @@
+\hypertarget{oicn-application-helper_8h}{\section{helper/oicn-\/application-\/helper.h File Reference}
+\label{oicn-application-helper_8h}\index{helper/oicn-\/application-\/helper.\-h@{helper/oicn-\/application-\/helper.\-h}}
+}
+{\ttfamily \#include $<$stdint.\-h$>$}\\*
+{\ttfamily \#include $<$vector$>$}\\*
+{\ttfamily \#include \char`\"{}ns3/uinteger.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}ns3/application.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}ns3/application-\/container.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}ns3/node-\/container.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}ns3/object-\/factory.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}ns3/ipv4-\/address.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}ns3/node.\-h\char`\"{}}\\*
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classns3_1_1OicnServerHelper}{ns3\-::\-Oicn\-Server\-Helper}
+\begin{DoxyCompactList}\small\item\em Create a O\-I\-C\-N Server application. I\-C\-N Manager direct O\-I\-C\-N server to send requested content to O\-I\-C\-N client. \end{DoxyCompactList}\item 
+class \hyperlink{classns3_1_1IcnManagerHelper}{ns3\-::\-Icn\-Manager\-Helper}
+\begin{DoxyCompactList}\small\item\em Create an application which resolve the name request (check whether content present at I\-C\-N router or server) and forward request to source of content (I\-C\-N router or server). \end{DoxyCompactList}\item 
+class \hyperlink{classns3_1_1OicnClientHelpher}{ns3\-::\-Oicn\-Client\-Helpher}
+\begin{DoxyCompactList}\small\item\em Create a O\-I\-C\-N Client application which send content name resolution request to I\-C\-N Manager. I\-C\-N Manager direct the content request to I\-C\-N source (O\-I\-C\-N server or I\-C\-N router) which reply to O\-I\-C\-N client with requested content. \end{DoxyCompactList}\item 
+class \hyperlink{classns3_1_1OicnZipfClientHelper}{ns3\-::\-Oicn\-Zipf\-Client\-Helper}
+\begin{DoxyCompactList}\small\item\em Create O\-I\-C\-N Zipf Client, it generates request for the contents following Zipf-\/\-Mandelbrot Distribution. Here is the explanation of Zipf-\/\-Mandelbrot Distribution\-: \href{http://en.wikipedia.org/wiki/Zipf%E2%80%93Mandelbrot_law}{\tt http\-://en.\-wikipedia.\-org/wiki/\-Zipf\%\-E2\%80\%93\-Mandelbrot\-\_\-law}. Client application send name resolution to I\-C\-N Manager. I\-C\-N Manager do the name resolution and direct source (I\-C\-N router or server) to send the content to the O\-I\-C\-N Zipf Client. \end{DoxyCompactList}\item 
+class \hyperlink{classns3_1_1IcnRouterHelpher}{ns3\-::\-Icn\-Router\-Helpher}
+\begin{DoxyCompactList}\small\item\em I\-C\-N Router has the capability to cache the contents. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{namespacens3}{ns3}
+\end{DoxyCompactItemize}

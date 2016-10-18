@@ -54,31 +54,20 @@ DnsPlusHeader::DnsPlusHeader()
  m_NSCount(0),
  m_ARCount(0)
 {
-	// TODO Auto-generated constructor stub
-
 }
 
 DnsPlusHeader::~DnsPlusHeader() {
-	// TODO Auto-generated destructor stub
 }
+
 void DnsPlusHeader::Serialize (Buffer::Iterator start) const
 {
-	NS_LOG_INFO (" Check ");
 	Buffer::Iterator i = start;
 	i.WriteHtonU16(m_Id);
-	NS_LOG_DEBUG (" Flag is "<< m_flag);
 	i.WriteHtonU16(m_flag);
 	i.WriteHtonU16(m_QDCount);
 	i.WriteHtonU16(m_ANCount);
 	i.WriteHtonU16(m_NSCount);
 	i.WriteHtonU16(m_ARCount);
-
-	/*  Buffer::Iterator i = start;
-  NS_LOG_DEBUG (" first2bytes in serialize is "<<first4bytes);
-  i.WriteHtonU16(Id)
-  i.WriteHtonU16(second2bytes);
-  i.WriteHtonU16(QDCount);
-  ;*/
 }
 
 uint32_t DnsPlusHeader::Deserialize (Buffer::Iterator start)
@@ -86,7 +75,6 @@ uint32_t DnsPlusHeader::Deserialize (Buffer::Iterator start)
 	Buffer::Iterator i = start;
 	m_Id = i.ReadNtohU16();
 	m_flag=i.ReadNtohU16();
-	NS_LOG_DEBUG(" Flag value "<< m_flag);
 
 	m_QR=((m_flag & 0x8000)>>15);
 	m_OPCODE=(m_flag & 0x7800)>>11;
@@ -96,15 +84,6 @@ uint32_t DnsPlusHeader::Deserialize (Buffer::Iterator start)
 	m_RA=(m_flag & 0x0080)>>7;
 	m_Z=(m_flag & 0x0070)>>4;
 	m_RCODE=(m_flag & 0x000F);
-
-	NS_LOG_DEBUG(" m_QR "<< (uint16_t )m_QR);
-	NS_LOG_DEBUG(" m_OPCODE "<< (uint16_t )m_OPCODE);
-	NS_LOG_DEBUG(" m_AA "<< (uint16_t )m_AA);
-	NS_LOG_DEBUG(" m_TC "<< (uint16_t )m_TC);
-	NS_LOG_DEBUG(" m_RD "<< (uint16_t )m_RD);
-	NS_LOG_DEBUG(" m_RA "<< (uint16_t )m_RA);
-	NS_LOG_DEBUG(" m_Z "<< (uint16_t )m_Z);
-	NS_LOG_DEBUG(" m_RCODE "<< (uint16_t )m_RCODE);
 
 	m_QDCount=i.ReadNtohU16();
 	m_ANCount=i.ReadNtohU16();
@@ -137,7 +116,6 @@ void DnsPlusHeader::SetQR(uint8_t qrbit	)
 		NS_LOG_DEBUG("Wrong value of QR");
 
 	m_flag=m_flag+qrbit*pow(2,15);
-	NS_LOG_DEBUG(" Flag value "<< m_flag);
 }
 
 void DnsPlusHeader::SetOPCODE(uint8_t opcodeBits)

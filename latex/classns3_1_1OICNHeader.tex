@@ -1,0 +1,287 @@
+\hypertarget{classns3_1_1OICNHeader}{\section{ns3\-:\-:O\-I\-C\-N\-Header Class Reference}
+\label{classns3_1_1OICNHeader}\index{ns3\-::\-O\-I\-C\-N\-Header@{ns3\-::\-O\-I\-C\-N\-Header}}
+}
+
+
+Class for Creating and Appending O\-I\-C\-N Sublayer to a Packet.  
+
+
+
+
+{\ttfamily \#include $<$oicn-\/header.\-h$>$}
+
+Inheritance diagram for ns3\-:\-:O\-I\-C\-N\-Header\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classns3_1_1OICNHeader}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classns3_1_1OICNHeader_a4cbc33855f4a10ff783c381913ee96f0}{O\-I\-C\-N\-Header} ()
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\hyperlink{classns3_1_1OICNHeader_a669c56c7d6c3fc928b1977e21ce01cba}{$\sim$\-O\-I\-C\-N\-Header} ()
+\item 
+virtual Type\-Id \hyperlink{classns3_1_1OICNHeader_afcb518fa0b425c74331e45273acafa12}{Get\-Instance\-Type\-Id} (void) const 
+\item 
+virtual void \hyperlink{classns3_1_1OICNHeader_a980575816ee9aea6247edbdc0434b80e}{Print} (std\-::ostream \&os) const 
+\item 
+virtual uint32\-\_\-t \hyperlink{classns3_1_1OICNHeader_a07608434af126c8a9c215653594b826d}{Get\-Serialized\-Size} (void) const 
+\item 
+virtual void \hyperlink{classns3_1_1OICNHeader_ab37b3c5b45fc5240cd156f90f05918de}{Serialize} (Buffer\-::\-Iterator start) const 
+\item 
+virtual uint32\-\_\-t \hyperlink{classns3_1_1OICNHeader_a059726f2757bfa5ce6bcf6d8015fb6e4}{Deserialize} (Buffer\-::\-Iterator start)
+\item 
+void \hyperlink{classns3_1_1OICNHeader_a6a5e2e963b9d7e5e1544f52c4ec7bf29}{Set\-Name} (std\-::string name)
+\begin{DoxyCompactList}\small\item\em Set the Chunk Name of the data contained in the O\-I\-C\-N Packet, or the data being queried. \end{DoxyCompactList}\item 
+std\-::string \hyperlink{classns3_1_1OICNHeader_a1d062df515f4e4b8286e5437db6d3480}{Get\-Name} (void)
+\begin{DoxyCompactList}\small\item\em Get the Chunk Name of the data contained in the O\-I\-C\-N Packet, or the data being queried. \end{DoxyCompactList}\item 
+void \hyperlink{classns3_1_1OICNHeader_a8227da3b57b8c276bd3168cdd52a7d50}{Set\-Request} (void)
+\begin{DoxyCompactList}\small\item\em Set the flag bit to request, indicating a request O\-I\-C\-N Packet. \end{DoxyCompactList}\item 
+void \hyperlink{classns3_1_1OICNHeader_a70e08208e07d59a090093c6f20920556}{Set\-Cachable} (void)
+\begin{DoxyCompactList}\small\item\em Set the reserve bits to cachable, indicating the data in the O\-I\-C\-N Packet can be cached in the incoming nodes of I\-C\-N Routers. \end{DoxyCompactList}\item 
+void \hyperlink{classns3_1_1OICNHeader_ad1fb10c77ab86b4b9394642cd05738c2}{Set\-Non\-Cachable} (void)
+\begin{DoxyCompactList}\small\item\em Set the reserve bits to non-\/cachable, indicating the data in the O\-I\-C\-N Packet cannot be cached in the incoming nodes of I\-C\-N Routers. \end{DoxyCompactList}\item 
+uint32\-\_\-t \hyperlink{classns3_1_1OICNHeader_ad9302a3724e7e699eb933a2d2e119da8}{Get\-First4\-Bytes} (void)
+\begin{DoxyCompactList}\small\item\em Get the first fours bytes of the O\-I\-C\-N Header. The first four bytes includes the flag bit, reserve bits and header length. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static Type\-Id \hyperlink{classns3_1_1OICNHeader_ab5313a8e4844f7bd21a93557b9b032b1}{Get\-Type\-Id} (void)
+\begin{DoxyCompactList}\small\item\em Get the type I\-D. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classns3_1_1OICNHeader_a0f1fbd0fe1a317a25cb6583165505c50}{Set\-First4\-Bytes} (uint32\-\_\-t Header\-Length, bool reply, bool cachable)
+\begin{DoxyCompactList}\small\item\em Set the first fours bytes of the O\-I\-C\-N Header. The first four bytes includes the flag bit, reserve bits and header length. Since the first four bytes will be in unsigned integer form, some adjustments have to be made to ensure the correct first four bytes after it is serialized. Integer constants like cachable\-\_\-start, non\-\_\-cachable\-\_\-start and request\-\_\-start, depending on whether the O\-I\-C\-N Packet is a request or a data packet, have to added to the integer header length. This results in the correct conversion from integer to bits during serialization. This has to be done because the chunk name in the O\-I\-C\-N Header is variable, resulting in variable header length. In other typical headers, the fixed header length is just serialized. This function is private because other classes should set the first four bytes only through the Set\-Request, Set\-Cachable and Set\-Non\-Cachable functions. Additional functions can be added in the future to set the first four bytes differently from what is already being provided. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\-::string \hyperlink{classns3_1_1OICNHeader_aeae9c3bd12d464c8735c94c144043532}{m\-\_\-name}
+\item 
+uint32\-\_\-t \hyperlink{classns3_1_1OICNHeader_ac92ae7083ec2a8f545015cdccce547f2}{header\-\_\-length}
+\item 
+uint32\-\_\-t \hyperlink{classns3_1_1OICNHeader_aed81d3b46c1f8b233bf0bfd15bb181fa}{first4bytes}
+\end{DoxyCompactItemize}
+\subsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const uint32\-\_\-t \hyperlink{classns3_1_1OICNHeader_a634bc285b730e2c64e97f7a5477e3baf}{cachable\-\_\-start} = 4026531840
+\begin{DoxyCompactList}\small\item\em This initially was for 20 bits but our header is 32 bits, so we have changed for 32 bits static const uint32\-\_\-t cachable\-\_\-start = 983040; //11110000000000000000 static const uint32\-\_\-t non\-\_\-cachable\-\_\-start = 720896;//10110000000000000000 static const uint32\-\_\-t request\-\_\-start = 196608; //00110000000000000000. \end{DoxyCompactList}\item 
+static const uint32\-\_\-t \hyperlink{classns3_1_1OICNHeader_a063e2606d1ed5d6544d5e5e261d04766}{non\-\_\-cachable\-\_\-start} = 2952790016
+\item 
+static const uint32\-\_\-t \hyperlink{classns3_1_1OICNHeader_aeed02f735f48273c72dc5947f2707d62}{request\-\_\-start} = 805306368
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class for Creating and Appending O\-I\-C\-N Sublayer to a Packet. 
+
+$\vert$--1bit--$\vert$---3 bits---$\vert$-\/-\/-\/-\/-\/-\/-\/---28 bits-\/-\/-\/-\/-\/-\/-\/---$\vert$variable length$\vert$ ...Transport Layer$\vert$flag bit$\vert$reserve bits$\vert$\-O\-I\-C\-N Sublayer Header Length$\vert$\-O\-I\-C\-N Chunk Name$\vert$\-Application Layer....
+
+The O\-I\-C\-N Sublayer is embedded between the Transport Layer and Application Layer. The header consists of a flag bit followed by 3 Reserved Bits, Header Length and I\-C\-N Chunk Name. The flag bit just indicates whether the O\-I\-C\-N Packet is request packet or data packet. The I\-C\-N Chunk Name is the name of the Packet data being queried, when the O\-I\-C\-N Packet is a request, or the name of the data/content itself, when the O\-I\-C\-N Packet is a data packet. The header length is 28 bits long, which indicates that the chunk name can a have a maximum of (2$^\wedge$20)-\/32 A\-S\-C\-I\-I Characters. This indicates that unlike other typical headers, the O\-I\-C\-N header has variable header length.
+
+Among the 3 Reserve bits, one bit is currently used to indicate whether the packet data can be cached in the present I\-C\-N Router or not. The I\-C\-N Router or O\-I\-C\-N Server can change this cachable bit to ensure the packet data is not cached further down the network. Recently, we found that this feature actually creates an obstacle for the caching capability of the network. So we will gradually remove this feature in the near future. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classns3_1_1OICNHeader_a4cbc33855f4a10ff783c381913ee96f0}{\index{ns3\-::\-O\-I\-C\-N\-Header@{ns3\-::\-O\-I\-C\-N\-Header}!O\-I\-C\-N\-Header@{O\-I\-C\-N\-Header}}
+\index{O\-I\-C\-N\-Header@{O\-I\-C\-N\-Header}!ns3::OICNHeader@{ns3\-::\-O\-I\-C\-N\-Header}}
+\subsubsection[{O\-I\-C\-N\-Header}]{\setlength{\rightskip}{0pt plus 5cm}ns3\-::\-O\-I\-C\-N\-Header\-::\-O\-I\-C\-N\-Header (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classns3_1_1OICNHeader_a4cbc33855f4a10ff783c381913ee96f0}
+
+
+Constructor. 
+
+Creates a null header \hypertarget{classns3_1_1OICNHeader_a669c56c7d6c3fc928b1977e21ce01cba}{\index{ns3\-::\-O\-I\-C\-N\-Header@{ns3\-::\-O\-I\-C\-N\-Header}!$\sim$\-O\-I\-C\-N\-Header@{$\sim$\-O\-I\-C\-N\-Header}}
+\index{$\sim$\-O\-I\-C\-N\-Header@{$\sim$\-O\-I\-C\-N\-Header}!ns3::OICNHeader@{ns3\-::\-O\-I\-C\-N\-Header}}
+\subsubsection[{$\sim$\-O\-I\-C\-N\-Header}]{\setlength{\rightskip}{0pt plus 5cm}ns3\-::\-O\-I\-C\-N\-Header\-::$\sim$\-O\-I\-C\-N\-Header (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classns3_1_1OICNHeader_a669c56c7d6c3fc928b1977e21ce01cba}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classns3_1_1OICNHeader_a059726f2757bfa5ce6bcf6d8015fb6e4}{\index{ns3\-::\-O\-I\-C\-N\-Header@{ns3\-::\-O\-I\-C\-N\-Header}!Deserialize@{Deserialize}}
+\index{Deserialize@{Deserialize}!ns3::OICNHeader@{ns3\-::\-O\-I\-C\-N\-Header}}
+\subsubsection[{Deserialize}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t ns3\-::\-O\-I\-C\-N\-Header\-::\-Deserialize (
+\begin{DoxyParamCaption}
+\item[{Buffer\-::\-Iterator}]{start}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classns3_1_1OICNHeader_a059726f2757bfa5ce6bcf6d8015fb6e4}
+\hypertarget{classns3_1_1OICNHeader_ad9302a3724e7e699eb933a2d2e119da8}{\index{ns3\-::\-O\-I\-C\-N\-Header@{ns3\-::\-O\-I\-C\-N\-Header}!Get\-First4\-Bytes@{Get\-First4\-Bytes}}
+\index{Get\-First4\-Bytes@{Get\-First4\-Bytes}!ns3::OICNHeader@{ns3\-::\-O\-I\-C\-N\-Header}}
+\subsubsection[{Get\-First4\-Bytes}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t ns3\-::\-O\-I\-C\-N\-Header\-::\-Get\-First4\-Bytes (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{classns3_1_1OICNHeader_ad9302a3724e7e699eb933a2d2e119da8}
+
+
+Get the first fours bytes of the O\-I\-C\-N Header. The first four bytes includes the flag bit, reserve bits and header length. 
+
+\begin{DoxyReturn}{Returns}
+The first four bytes of the O\-I\-C\-N Header in unsigned integer format 
+\end{DoxyReturn}
+\hypertarget{classns3_1_1OICNHeader_afcb518fa0b425c74331e45273acafa12}{\index{ns3\-::\-O\-I\-C\-N\-Header@{ns3\-::\-O\-I\-C\-N\-Header}!Get\-Instance\-Type\-Id@{Get\-Instance\-Type\-Id}}
+\index{Get\-Instance\-Type\-Id@{Get\-Instance\-Type\-Id}!ns3::OICNHeader@{ns3\-::\-O\-I\-C\-N\-Header}}
+\subsubsection[{Get\-Instance\-Type\-Id}]{\setlength{\rightskip}{0pt plus 5cm}Type\-Id ns3\-::\-O\-I\-C\-N\-Header\-::\-Get\-Instance\-Type\-Id (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classns3_1_1OICNHeader_afcb518fa0b425c74331e45273acafa12}
+\hypertarget{classns3_1_1OICNHeader_a1d062df515f4e4b8286e5437db6d3480}{\index{ns3\-::\-O\-I\-C\-N\-Header@{ns3\-::\-O\-I\-C\-N\-Header}!Get\-Name@{Get\-Name}}
+\index{Get\-Name@{Get\-Name}!ns3::OICNHeader@{ns3\-::\-O\-I\-C\-N\-Header}}
+\subsubsection[{Get\-Name}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string ns3\-::\-O\-I\-C\-N\-Header\-::\-Get\-Name (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{classns3_1_1OICNHeader_a1d062df515f4e4b8286e5437db6d3480}
+
+
+Get the Chunk Name of the data contained in the O\-I\-C\-N Packet, or the data being queried. 
+
+\begin{DoxyReturn}{Returns}
+The Chunk Name in std\-::string format 
+\end{DoxyReturn}
+\hypertarget{classns3_1_1OICNHeader_a07608434af126c8a9c215653594b826d}{\index{ns3\-::\-O\-I\-C\-N\-Header@{ns3\-::\-O\-I\-C\-N\-Header}!Get\-Serialized\-Size@{Get\-Serialized\-Size}}
+\index{Get\-Serialized\-Size@{Get\-Serialized\-Size}!ns3::OICNHeader@{ns3\-::\-O\-I\-C\-N\-Header}}
+\subsubsection[{Get\-Serialized\-Size}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t ns3\-::\-O\-I\-C\-N\-Header\-::\-Get\-Serialized\-Size (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classns3_1_1OICNHeader_a07608434af126c8a9c215653594b826d}
+\hypertarget{classns3_1_1OICNHeader_ab5313a8e4844f7bd21a93557b9b032b1}{\index{ns3\-::\-O\-I\-C\-N\-Header@{ns3\-::\-O\-I\-C\-N\-Header}!Get\-Type\-Id@{Get\-Type\-Id}}
+\index{Get\-Type\-Id@{Get\-Type\-Id}!ns3::OICNHeader@{ns3\-::\-O\-I\-C\-N\-Header}}
+\subsubsection[{Get\-Type\-Id}]{\setlength{\rightskip}{0pt plus 5cm}Type\-Id ns3\-::\-O\-I\-C\-N\-Header\-::\-Get\-Type\-Id (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classns3_1_1OICNHeader_ab5313a8e4844f7bd21a93557b9b032b1}
+
+
+Get the type I\-D. 
+
+\begin{DoxyReturn}{Returns}
+the object Type\-Id 
+\end{DoxyReturn}
+\hypertarget{classns3_1_1OICNHeader_a980575816ee9aea6247edbdc0434b80e}{\index{ns3\-::\-O\-I\-C\-N\-Header@{ns3\-::\-O\-I\-C\-N\-Header}!Print@{Print}}
+\index{Print@{Print}!ns3::OICNHeader@{ns3\-::\-O\-I\-C\-N\-Header}}
+\subsubsection[{Print}]{\setlength{\rightskip}{0pt plus 5cm}void ns3\-::\-O\-I\-C\-N\-Header\-::\-Print (
+\begin{DoxyParamCaption}
+\item[{std\-::ostream \&}]{os}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classns3_1_1OICNHeader_a980575816ee9aea6247edbdc0434b80e}
+\hypertarget{classns3_1_1OICNHeader_ab37b3c5b45fc5240cd156f90f05918de}{\index{ns3\-::\-O\-I\-C\-N\-Header@{ns3\-::\-O\-I\-C\-N\-Header}!Serialize@{Serialize}}
+\index{Serialize@{Serialize}!ns3::OICNHeader@{ns3\-::\-O\-I\-C\-N\-Header}}
+\subsubsection[{Serialize}]{\setlength{\rightskip}{0pt plus 5cm}void ns3\-::\-O\-I\-C\-N\-Header\-::\-Serialize (
+\begin{DoxyParamCaption}
+\item[{Buffer\-::\-Iterator}]{start}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classns3_1_1OICNHeader_ab37b3c5b45fc5240cd156f90f05918de}
+\hypertarget{classns3_1_1OICNHeader_a70e08208e07d59a090093c6f20920556}{\index{ns3\-::\-O\-I\-C\-N\-Header@{ns3\-::\-O\-I\-C\-N\-Header}!Set\-Cachable@{Set\-Cachable}}
+\index{Set\-Cachable@{Set\-Cachable}!ns3::OICNHeader@{ns3\-::\-O\-I\-C\-N\-Header}}
+\subsubsection[{Set\-Cachable}]{\setlength{\rightskip}{0pt plus 5cm}void ns3\-::\-O\-I\-C\-N\-Header\-::\-Set\-Cachable (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{classns3_1_1OICNHeader_a70e08208e07d59a090093c6f20920556}
+
+
+Set the reserve bits to cachable, indicating the data in the O\-I\-C\-N Packet can be cached in the incoming nodes of I\-C\-N Routers. 
+
+\hypertarget{classns3_1_1OICNHeader_a0f1fbd0fe1a317a25cb6583165505c50}{\index{ns3\-::\-O\-I\-C\-N\-Header@{ns3\-::\-O\-I\-C\-N\-Header}!Set\-First4\-Bytes@{Set\-First4\-Bytes}}
+\index{Set\-First4\-Bytes@{Set\-First4\-Bytes}!ns3::OICNHeader@{ns3\-::\-O\-I\-C\-N\-Header}}
+\subsubsection[{Set\-First4\-Bytes}]{\setlength{\rightskip}{0pt plus 5cm}void ns3\-::\-O\-I\-C\-N\-Header\-::\-Set\-First4\-Bytes (
+\begin{DoxyParamCaption}
+\item[{uint32\-\_\-t}]{Header\-Length, }
+\item[{bool}]{reply, }
+\item[{bool}]{cachable}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classns3_1_1OICNHeader_a0f1fbd0fe1a317a25cb6583165505c50}
+
+
+Set the first fours bytes of the O\-I\-C\-N Header. The first four bytes includes the flag bit, reserve bits and header length. Since the first four bytes will be in unsigned integer form, some adjustments have to be made to ensure the correct first four bytes after it is serialized. Integer constants like cachable\-\_\-start, non\-\_\-cachable\-\_\-start and request\-\_\-start, depending on whether the O\-I\-C\-N Packet is a request or a data packet, have to added to the integer header length. This results in the correct conversion from integer to bits during serialization. This has to be done because the chunk name in the O\-I\-C\-N Header is variable, resulting in variable header length. In other typical headers, the fixed header length is just serialized. This function is private because other classes should set the first four bytes only through the Set\-Request, Set\-Cachable and Set\-Non\-Cachable functions. Additional functions can be added in the future to set the first four bytes differently from what is already being provided. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Header\-Length} & the header length of the O\-I\-C\-N Header \\
+\hline
+{\em reply} & the flag bit indicating if the O\-I\-C\-N Packet is request or reply, zero if request and one if reply \\
+\hline
+{\em cachable} & indicates whether the data in the packet can be cached in incoming I\-C\-N Router nodes or not. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classns3_1_1OICNHeader_a6a5e2e963b9d7e5e1544f52c4ec7bf29}{\index{ns3\-::\-O\-I\-C\-N\-Header@{ns3\-::\-O\-I\-C\-N\-Header}!Set\-Name@{Set\-Name}}
+\index{Set\-Name@{Set\-Name}!ns3::OICNHeader@{ns3\-::\-O\-I\-C\-N\-Header}}
+\subsubsection[{Set\-Name}]{\setlength{\rightskip}{0pt plus 5cm}void ns3\-::\-O\-I\-C\-N\-Header\-::\-Set\-Name (
+\begin{DoxyParamCaption}
+\item[{std\-::string}]{name}
+\end{DoxyParamCaption}
+)}}\label{classns3_1_1OICNHeader_a6a5e2e963b9d7e5e1544f52c4ec7bf29}
+
+
+Set the Chunk Name of the data contained in the O\-I\-C\-N Packet, or the data being queried. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & The Chunk Name in std\-::string format \\
+\hline
+\end{DoxyParams}
+\hypertarget{classns3_1_1OICNHeader_ad1fb10c77ab86b4b9394642cd05738c2}{\index{ns3\-::\-O\-I\-C\-N\-Header@{ns3\-::\-O\-I\-C\-N\-Header}!Set\-Non\-Cachable@{Set\-Non\-Cachable}}
+\index{Set\-Non\-Cachable@{Set\-Non\-Cachable}!ns3::OICNHeader@{ns3\-::\-O\-I\-C\-N\-Header}}
+\subsubsection[{Set\-Non\-Cachable}]{\setlength{\rightskip}{0pt plus 5cm}void ns3\-::\-O\-I\-C\-N\-Header\-::\-Set\-Non\-Cachable (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{classns3_1_1OICNHeader_ad1fb10c77ab86b4b9394642cd05738c2}
+
+
+Set the reserve bits to non-\/cachable, indicating the data in the O\-I\-C\-N Packet cannot be cached in the incoming nodes of I\-C\-N Routers. 
+
+\hypertarget{classns3_1_1OICNHeader_a8227da3b57b8c276bd3168cdd52a7d50}{\index{ns3\-::\-O\-I\-C\-N\-Header@{ns3\-::\-O\-I\-C\-N\-Header}!Set\-Request@{Set\-Request}}
+\index{Set\-Request@{Set\-Request}!ns3::OICNHeader@{ns3\-::\-O\-I\-C\-N\-Header}}
+\subsubsection[{Set\-Request}]{\setlength{\rightskip}{0pt plus 5cm}void ns3\-::\-O\-I\-C\-N\-Header\-::\-Set\-Request (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{classns3_1_1OICNHeader_a8227da3b57b8c276bd3168cdd52a7d50}
+
+
+Set the flag bit to request, indicating a request O\-I\-C\-N Packet. 
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classns3_1_1OICNHeader_a634bc285b730e2c64e97f7a5477e3baf}{\index{ns3\-::\-O\-I\-C\-N\-Header@{ns3\-::\-O\-I\-C\-N\-Header}!cachable\-\_\-start@{cachable\-\_\-start}}
+\index{cachable\-\_\-start@{cachable\-\_\-start}!ns3::OICNHeader@{ns3\-::\-O\-I\-C\-N\-Header}}
+\subsubsection[{cachable\-\_\-start}]{\setlength{\rightskip}{0pt plus 5cm}const uint32\-\_\-t ns3\-::\-O\-I\-C\-N\-Header\-::cachable\-\_\-start = 4026531840\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}}\label{classns3_1_1OICNHeader_a634bc285b730e2c64e97f7a5477e3baf}
+
+
+This initially was for 20 bits but our header is 32 bits, so we have changed for 32 bits static const uint32\-\_\-t cachable\-\_\-start = 983040; //11110000000000000000 static const uint32\-\_\-t non\-\_\-cachable\-\_\-start = 720896;//10110000000000000000 static const uint32\-\_\-t request\-\_\-start = 196608; //00110000000000000000. 
+
+\hypertarget{classns3_1_1OICNHeader_aed81d3b46c1f8b233bf0bfd15bb181fa}{\index{ns3\-::\-O\-I\-C\-N\-Header@{ns3\-::\-O\-I\-C\-N\-Header}!first4bytes@{first4bytes}}
+\index{first4bytes@{first4bytes}!ns3::OICNHeader@{ns3\-::\-O\-I\-C\-N\-Header}}
+\subsubsection[{first4bytes}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t ns3\-::\-O\-I\-C\-N\-Header\-::first4bytes\hspace{0.3cm}{\ttfamily [private]}}}\label{classns3_1_1OICNHeader_aed81d3b46c1f8b233bf0bfd15bb181fa}
+\hypertarget{classns3_1_1OICNHeader_ac92ae7083ec2a8f545015cdccce547f2}{\index{ns3\-::\-O\-I\-C\-N\-Header@{ns3\-::\-O\-I\-C\-N\-Header}!header\-\_\-length@{header\-\_\-length}}
+\index{header\-\_\-length@{header\-\_\-length}!ns3::OICNHeader@{ns3\-::\-O\-I\-C\-N\-Header}}
+\subsubsection[{header\-\_\-length}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t ns3\-::\-O\-I\-C\-N\-Header\-::header\-\_\-length\hspace{0.3cm}{\ttfamily [private]}}}\label{classns3_1_1OICNHeader_ac92ae7083ec2a8f545015cdccce547f2}
+\hypertarget{classns3_1_1OICNHeader_aeae9c3bd12d464c8735c94c144043532}{\index{ns3\-::\-O\-I\-C\-N\-Header@{ns3\-::\-O\-I\-C\-N\-Header}!m\-\_\-name@{m\-\_\-name}}
+\index{m\-\_\-name@{m\-\_\-name}!ns3::OICNHeader@{ns3\-::\-O\-I\-C\-N\-Header}}
+\subsubsection[{m\-\_\-name}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string ns3\-::\-O\-I\-C\-N\-Header\-::m\-\_\-name\hspace{0.3cm}{\ttfamily [private]}}}\label{classns3_1_1OICNHeader_aeae9c3bd12d464c8735c94c144043532}
+\hypertarget{classns3_1_1OICNHeader_a063e2606d1ed5d6544d5e5e261d04766}{\index{ns3\-::\-O\-I\-C\-N\-Header@{ns3\-::\-O\-I\-C\-N\-Header}!non\-\_\-cachable\-\_\-start@{non\-\_\-cachable\-\_\-start}}
+\index{non\-\_\-cachable\-\_\-start@{non\-\_\-cachable\-\_\-start}!ns3::OICNHeader@{ns3\-::\-O\-I\-C\-N\-Header}}
+\subsubsection[{non\-\_\-cachable\-\_\-start}]{\setlength{\rightskip}{0pt plus 5cm}const uint32\-\_\-t ns3\-::\-O\-I\-C\-N\-Header\-::non\-\_\-cachable\-\_\-start = 2952790016\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}}\label{classns3_1_1OICNHeader_a063e2606d1ed5d6544d5e5e261d04766}
+\hypertarget{classns3_1_1OICNHeader_aeed02f735f48273c72dc5947f2707d62}{\index{ns3\-::\-O\-I\-C\-N\-Header@{ns3\-::\-O\-I\-C\-N\-Header}!request\-\_\-start@{request\-\_\-start}}
+\index{request\-\_\-start@{request\-\_\-start}!ns3::OICNHeader@{ns3\-::\-O\-I\-C\-N\-Header}}
+\subsubsection[{request\-\_\-start}]{\setlength{\rightskip}{0pt plus 5cm}const uint32\-\_\-t ns3\-::\-O\-I\-C\-N\-Header\-::request\-\_\-start = 805306368\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}}\label{classns3_1_1OICNHeader_aeed02f735f48273c72dc5947f2707d62}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+test/\hyperlink{test_2oicn-header_8h}{oicn-\/header.\-h}\item 
+test/\hyperlink{test_2oicn-header_8cc}{oicn-\/header.\-cc}\end{DoxyCompactItemize}

@@ -1,0 +1,246 @@
+\hypertarget{classns3_1_1OicnClientHelpher}{\section{ns3\-:\-:Oicn\-Client\-Helpher Class Reference}
+\label{classns3_1_1OicnClientHelpher}\index{ns3\-::\-Oicn\-Client\-Helpher@{ns3\-::\-Oicn\-Client\-Helpher}}
+}
+
+
+Create a O\-I\-C\-N Client application which send content name resolution request to I\-C\-N Manager. I\-C\-N Manager direct the content request to I\-C\-N source (O\-I\-C\-N server or I\-C\-N router) which reply to O\-I\-C\-N client with requested content.  
+
+
+
+
+{\ttfamily \#include $<$oicn-\/application-\/helper.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classns3_1_1OicnClientHelpher_a8619c2f71ef3fc04f2b348dffe1ba98f}{Oicn\-Client\-Helpher} (Ipv4\-Address ip, uint16\-\_\-t port)
+\item 
+\hyperlink{classns3_1_1OicnClientHelpher_a34e23eea59e35ca63a59a4afcabc52cf}{Oicn\-Client\-Helpher} (Address address, uint16\-\_\-t port)
+\item 
+\hyperlink{classns3_1_1OicnClientHelpher_a9cc046926b6ed35a81453acbbd3b96a6}{Oicn\-Client\-Helpher} ()
+\item 
+void \hyperlink{classns3_1_1OicnClientHelpher_a11a83c357296fef47c261de8e5773c8f}{Set\-Attribute} (std\-::string name, const Attribute\-Value \&value)
+\item 
+Application\-Container \hyperlink{classns3_1_1OicnClientHelpher_a9092f106877f63dc98d290c8e58062af}{Install} (Ptr$<$ Node $>$ node, std\-::vector$<$ int $>$ index) const 
+\item 
+Application\-Container \hyperlink{classns3_1_1OicnClientHelpher_a1e40ddee6d66de8f8aabc6099e8499ba}{Install} (Ptr$<$ Node $>$ node, std\-::pair$<$ int, int $>$ range) const 
+\item 
+Application\-Container \hyperlink{classns3_1_1OicnClientHelpher_a7f475089dfdd7c221dada95b84ace165}{Install} (Node\-Container c, std\-::vector$<$ int $>$ index) const 
+\item 
+Application\-Container \hyperlink{classns3_1_1OicnClientHelpher_a97dfea27ebd1fea82d7055fbcba83e20}{Install} (Node\-Container c, std\-::pair$<$ int, int $>$ range) const 
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+Application\-Container \hyperlink{classns3_1_1OicnClientHelpher_a9479132ca656221e74b6ea587180d063}{Install\-Priv} (Ptr$<$ Node $>$ node, std\-::vector$<$ int $>$ index) const 
+\item 
+Application\-Container \hyperlink{classns3_1_1OicnClientHelpher_a1d0e2b4999138dfabbcb02281c236592}{Install\-Priv} (Ptr$<$ Node $>$ node, std\-::pair$<$ int, int $>$ range) const 
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Object\-Factory \hyperlink{classns3_1_1OicnClientHelpher_aa58d9af446cdcba7fbaf4a0f579962fe}{m\-\_\-factory}
+\begin{DoxyCompactList}\small\item\em Object factory. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Create a O\-I\-C\-N Client application which send content name resolution request to I\-C\-N Manager. I\-C\-N Manager direct the content request to I\-C\-N source (O\-I\-C\-N server or I\-C\-N router) which reply to O\-I\-C\-N client with requested content. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classns3_1_1OicnClientHelpher_a8619c2f71ef3fc04f2b348dffe1ba98f}{\index{ns3\-::\-Oicn\-Client\-Helpher@{ns3\-::\-Oicn\-Client\-Helpher}!Oicn\-Client\-Helpher@{Oicn\-Client\-Helpher}}
+\index{Oicn\-Client\-Helpher@{Oicn\-Client\-Helpher}!ns3::OicnClientHelpher@{ns3\-::\-Oicn\-Client\-Helpher}}
+\subsubsection[{Oicn\-Client\-Helpher}]{\setlength{\rightskip}{0pt plus 5cm}ns3\-::\-Oicn\-Client\-Helpher\-::\-Oicn\-Client\-Helpher (
+\begin{DoxyParamCaption}
+\item[{Ipv4\-Address}]{ip, }
+\item[{uint16\-\_\-t}]{port}
+\end{DoxyParamCaption}
+)}}\label{classns3_1_1OicnClientHelpher_a8619c2f71ef3fc04f2b348dffe1ba98f}
+Create \hyperlink{classns3_1_1OicnClientHelpher}{Oicn\-Client\-Helpher} configured with I\-C\-N Manager I\-P address and port number.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ip} & the I\-Pv4 address of the I\-C\-N Manager \\
+\hline
+{\em port} & the port number of the I\-C\-N Manager \\
+\hline
+\end{DoxyParams}
+\hypertarget{classns3_1_1OicnClientHelpher_a34e23eea59e35ca63a59a4afcabc52cf}{\index{ns3\-::\-Oicn\-Client\-Helpher@{ns3\-::\-Oicn\-Client\-Helpher}!Oicn\-Client\-Helpher@{Oicn\-Client\-Helpher}}
+\index{Oicn\-Client\-Helpher@{Oicn\-Client\-Helpher}!ns3::OicnClientHelpher@{ns3\-::\-Oicn\-Client\-Helpher}}
+\subsubsection[{Oicn\-Client\-Helpher}]{\setlength{\rightskip}{0pt plus 5cm}ns3\-::\-Oicn\-Client\-Helpher\-::\-Oicn\-Client\-Helpher (
+\begin{DoxyParamCaption}
+\item[{Address}]{address, }
+\item[{uint16\-\_\-t}]{port}
+\end{DoxyParamCaption}
+)}}\label{classns3_1_1OicnClientHelpher_a34e23eea59e35ca63a59a4afcabc52cf}
+Create \hyperlink{classns3_1_1OicnClientHelpher}{Oicn\-Client\-Helpher} configured with I\-C\-N Manager I\-P address and port number.
+
+
+\begin{DoxyParams}{Parameters}
+{\em address} & the I\-P address of the I\-C\-N Manager \\
+\hline
+{\em port} & the port number of the I\-C\-N Manager \\
+\hline
+\end{DoxyParams}
+\hypertarget{classns3_1_1OicnClientHelpher_a9cc046926b6ed35a81453acbbd3b96a6}{\index{ns3\-::\-Oicn\-Client\-Helpher@{ns3\-::\-Oicn\-Client\-Helpher}!Oicn\-Client\-Helpher@{Oicn\-Client\-Helpher}}
+\index{Oicn\-Client\-Helpher@{Oicn\-Client\-Helpher}!ns3::OicnClientHelpher@{ns3\-::\-Oicn\-Client\-Helpher}}
+\subsubsection[{Oicn\-Client\-Helpher}]{\setlength{\rightskip}{0pt plus 5cm}ns3\-::\-Oicn\-Client\-Helpher\-::\-Oicn\-Client\-Helpher (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classns3_1_1OicnClientHelpher_a9cc046926b6ed35a81453acbbd3b96a6}
+\hyperlink{classns3_1_1OicnClientHelpher}{Oicn\-Client\-Helpher} 
+
+\subsection{Member Function Documentation}
+\hypertarget{classns3_1_1OicnClientHelpher_a9092f106877f63dc98d290c8e58062af}{\index{ns3\-::\-Oicn\-Client\-Helpher@{ns3\-::\-Oicn\-Client\-Helpher}!Install@{Install}}
+\index{Install@{Install}!ns3::OicnClientHelpher@{ns3\-::\-Oicn\-Client\-Helpher}}
+\subsubsection[{Install}]{\setlength{\rightskip}{0pt plus 5cm}Application\-Container ns3\-::\-Oicn\-Client\-Helpher\-::\-Install (
+\begin{DoxyParamCaption}
+\item[{Ptr$<$ Node $>$}]{node, }
+\item[{std\-::vector$<$ int $>$}]{index}
+\end{DoxyParamCaption}
+) const}}\label{classns3_1_1OicnClientHelpher_a9092f106877f63dc98d290c8e58062af}
+Create an \hyperlink{classns3_1_1OicnClient}{Oicn\-Client} Application querying the content specified by indices on the specified Node.
+
+
+\begin{DoxyParams}{Parameters}
+{\em node} & the node on which to create the Application. The node is specified by a Ptr$<$\-Node$>$ \\
+\hline
+{\em index} & vector containing the indices of the content to be queried \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+an Application\-Container holding the Application created 
+\end{DoxyReturn}
+\hypertarget{classns3_1_1OicnClientHelpher_a1e40ddee6d66de8f8aabc6099e8499ba}{\index{ns3\-::\-Oicn\-Client\-Helpher@{ns3\-::\-Oicn\-Client\-Helpher}!Install@{Install}}
+\index{Install@{Install}!ns3::OicnClientHelpher@{ns3\-::\-Oicn\-Client\-Helpher}}
+\subsubsection[{Install}]{\setlength{\rightskip}{0pt plus 5cm}Application\-Container ns3\-::\-Oicn\-Client\-Helpher\-::\-Install (
+\begin{DoxyParamCaption}
+\item[{Ptr$<$ Node $>$}]{node, }
+\item[{std\-::pair$<$ int, int $>$}]{range}
+\end{DoxyParamCaption}
+) const}}\label{classns3_1_1OicnClientHelpher_a1e40ddee6d66de8f8aabc6099e8499ba}
+Create an \hyperlink{classns3_1_1OicnClient}{Oicn\-Client} Application querying the content specified by indices on the specified Node.
+
+
+\begin{DoxyParams}{Parameters}
+{\em node} & the node on which to create the Application. The node is specified by a Ptr$<$\-Node$>$ \\
+\hline
+{\em range} & range of the indices of the content to be queried \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+an Application\-Container holding the Application created 
+\end{DoxyReturn}
+\hypertarget{classns3_1_1OicnClientHelpher_a7f475089dfdd7c221dada95b84ace165}{\index{ns3\-::\-Oicn\-Client\-Helpher@{ns3\-::\-Oicn\-Client\-Helpher}!Install@{Install}}
+\index{Install@{Install}!ns3::OicnClientHelpher@{ns3\-::\-Oicn\-Client\-Helpher}}
+\subsubsection[{Install}]{\setlength{\rightskip}{0pt plus 5cm}Application\-Container ns3\-::\-Oicn\-Client\-Helpher\-::\-Install (
+\begin{DoxyParamCaption}
+\item[{Node\-Container}]{c, }
+\item[{std\-::vector$<$ int $>$}]{index}
+\end{DoxyParamCaption}
+) const}}\label{classns3_1_1OicnClientHelpher_a7f475089dfdd7c221dada95b84ace165}
+Create an \hyperlink{classns3_1_1OicnClient}{Oicn\-Client} Application querying the content specified by indices on the specified Node.
+
+
+\begin{DoxyParams}{Parameters}
+{\em c} & the nodes on which to create the Applications. The nodes are specified by a Node\-Container \\
+\hline
+{\em index} & vector containing the indices of the content to be queried \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+an Application\-Container holding the Application created 
+\end{DoxyReturn}
+\hypertarget{classns3_1_1OicnClientHelpher_a97dfea27ebd1fea82d7055fbcba83e20}{\index{ns3\-::\-Oicn\-Client\-Helpher@{ns3\-::\-Oicn\-Client\-Helpher}!Install@{Install}}
+\index{Install@{Install}!ns3::OicnClientHelpher@{ns3\-::\-Oicn\-Client\-Helpher}}
+\subsubsection[{Install}]{\setlength{\rightskip}{0pt plus 5cm}Application\-Container ns3\-::\-Oicn\-Client\-Helpher\-::\-Install (
+\begin{DoxyParamCaption}
+\item[{Node\-Container}]{c, }
+\item[{std\-::pair$<$ int, int $>$}]{range}
+\end{DoxyParamCaption}
+) const}}\label{classns3_1_1OicnClientHelpher_a97dfea27ebd1fea82d7055fbcba83e20}
+Create an \hyperlink{classns3_1_1OicnClient}{Oicn\-Client} Application querying the content specified by indices on the specified Node.
+
+
+\begin{DoxyParams}{Parameters}
+{\em c} & the nodes on which to create the Applications. The nodes are specified by a Node\-Container. \\
+\hline
+{\em range} & range of the indices of the content to be queried \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+an Application\-Container holding the Application created 
+\end{DoxyReturn}
+\hypertarget{classns3_1_1OicnClientHelpher_a9479132ca656221e74b6ea587180d063}{\index{ns3\-::\-Oicn\-Client\-Helpher@{ns3\-::\-Oicn\-Client\-Helpher}!Install\-Priv@{Install\-Priv}}
+\index{Install\-Priv@{Install\-Priv}!ns3::OicnClientHelpher@{ns3\-::\-Oicn\-Client\-Helpher}}
+\subsubsection[{Install\-Priv}]{\setlength{\rightskip}{0pt plus 5cm}Application\-Container ns3\-::\-Oicn\-Client\-Helpher\-::\-Install\-Priv (
+\begin{DoxyParamCaption}
+\item[{Ptr$<$ Node $>$}]{node, }
+\item[{std\-::vector$<$ int $>$}]{index}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [private]}}}\label{classns3_1_1OicnClientHelpher_a9479132ca656221e74b6ea587180d063}
+Install an O\-I\-C\-N Client on the node configured with all the attributes set with Set\-Attribute.
+
+
+\begin{DoxyParams}{Parameters}
+{\em node} & the node on which an O\-I\-C\-N\-Client will be installed \\
+\hline
+{\em index} & vector containing the indices of the content \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+an Application\-Container holding the Application created 
+\end{DoxyReturn}
+\hypertarget{classns3_1_1OicnClientHelpher_a1d0e2b4999138dfabbcb02281c236592}{\index{ns3\-::\-Oicn\-Client\-Helpher@{ns3\-::\-Oicn\-Client\-Helpher}!Install\-Priv@{Install\-Priv}}
+\index{Install\-Priv@{Install\-Priv}!ns3::OicnClientHelpher@{ns3\-::\-Oicn\-Client\-Helpher}}
+\subsubsection[{Install\-Priv}]{\setlength{\rightskip}{0pt plus 5cm}Application\-Container ns3\-::\-Oicn\-Client\-Helpher\-::\-Install\-Priv (
+\begin{DoxyParamCaption}
+\item[{Ptr$<$ Node $>$}]{node, }
+\item[{std\-::pair$<$ int, int $>$}]{range}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [private]}}}\label{classns3_1_1OicnClientHelpher_a1d0e2b4999138dfabbcb02281c236592}
+Install an O\-I\-C\-N Client on the node configured with all the attributes set with Set\-Attribute.
+
+
+\begin{DoxyParams}{Parameters}
+{\em node} & the node on which an O\-I\-C\-N\-Client will be installed \\
+\hline
+{\em range} & range of the indices of the content to be queried \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+an Application\-Container holding the Application created 
+\end{DoxyReturn}
+\hypertarget{classns3_1_1OicnClientHelpher_a11a83c357296fef47c261de8e5773c8f}{\index{ns3\-::\-Oicn\-Client\-Helpher@{ns3\-::\-Oicn\-Client\-Helpher}!Set\-Attribute@{Set\-Attribute}}
+\index{Set\-Attribute@{Set\-Attribute}!ns3::OicnClientHelpher@{ns3\-::\-Oicn\-Client\-Helpher}}
+\subsubsection[{Set\-Attribute}]{\setlength{\rightskip}{0pt plus 5cm}void ns3\-::\-Oicn\-Client\-Helpher\-::\-Set\-Attribute (
+\begin{DoxyParamCaption}
+\item[{std\-::string}]{name, }
+\item[{const Attribute\-Value \&}]{value}
+\end{DoxyParamCaption}
+)}}\label{classns3_1_1OicnClientHelpher_a11a83c357296fef47c261de8e5773c8f}
+Record an attribute to be set in each Application after it is is created.
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & the name of the attribute to set \\
+\hline
+{\em value} & the value of the attribute to set \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classns3_1_1OicnClientHelpher_aa58d9af446cdcba7fbaf4a0f579962fe}{\index{ns3\-::\-Oicn\-Client\-Helpher@{ns3\-::\-Oicn\-Client\-Helpher}!m\-\_\-factory@{m\-\_\-factory}}
+\index{m\-\_\-factory@{m\-\_\-factory}!ns3::OicnClientHelpher@{ns3\-::\-Oicn\-Client\-Helpher}}
+\subsubsection[{m\-\_\-factory}]{\setlength{\rightskip}{0pt plus 5cm}Object\-Factory ns3\-::\-Oicn\-Client\-Helpher\-::m\-\_\-factory\hspace{0.3cm}{\ttfamily [private]}}}\label{classns3_1_1OicnClientHelpher_aa58d9af446cdcba7fbaf4a0f579962fe}
+
+
+Object factory. 
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+helper/\hyperlink{oicn-application-helper_8h}{oicn-\/application-\/helper.\-h}\item 
+helper/\hyperlink{oicn-application-helper_8cc}{oicn-\/application-\/helper.\-cc}\end{DoxyCompactItemize}

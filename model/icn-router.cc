@@ -109,7 +109,7 @@ IcnRouter::HandleReadIcnManger (Ptr<Socket> socket)
 
 void IcnRouter::ReadPacket(Ptr<Packet> packet, Ipv4Address senderIpv4Address, uint16_t senderPort)
 {
-	OICNHeader oicnHeader;
+	OicnHeader oicnHeader;
 	packet->RemoveHeader(oicnHeader);
 	DnsPlusHeader dnsPlusHeader;
 	packet->RemoveHeader(dnsPlusHeader);
@@ -141,7 +141,7 @@ void IcnRouter::ReadPacket(Ptr<Packet> packet, Ipv4Address senderIpv4Address, ui
 						uint32_t clientAddress = dnsPlusAnswerSection.GetRdData();
 						if(name.size()>0)
 						{
-							NS_LOG_INFO(" ICN ROuter Recieved content request for the name "<<name);
+							NS_LOG_INFO(" ICN Router Received content request for the name "<<name);
 							SendAckToIcnManager(senderIpv4Address,senderPort,dnsPlusQuestionHeader,dnsPlusHeader,oicnHeader);
 							SendToClient(clientAddress,name);
 						}
@@ -163,7 +163,7 @@ void IcnRouter::ReadPacket(Ptr<Packet> packet, Ipv4Address senderIpv4Address, ui
 }
 
 
-void IcnRouter::SendAckToIcnManager(Ipv4Address icnManagerIpv4Address, uint16_t icnManagerPort, DnsPlusQuestionHeader dnsPlusQuestionHeader, DnsPlusHeader dnsPlusHeader,OICNHeader oicnHeader)
+void IcnRouter::SendAckToIcnManager(Ipv4Address icnManagerIpv4Address, uint16_t icnManagerPort, DnsPlusQuestionHeader dnsPlusQuestionHeader, DnsPlusHeader dnsPlusHeader,OicnHeader oicnHeader)
 {
 
 	Ptr<Packet> packet = Create<Packet>();

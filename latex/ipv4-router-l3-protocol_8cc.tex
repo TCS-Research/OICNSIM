@@ -1,0 +1,51 @@
+\hypertarget{ipv4-router-l3-protocol_8cc}{\section{model/ipv4-\/router-\/l3-\/protocol.cc File Reference}
+\label{ipv4-router-l3-protocol_8cc}\index{model/ipv4-\/router-\/l3-\/protocol.\-cc@{model/ipv4-\/router-\/l3-\/protocol.\-cc}}
+}
+{\ttfamily \#include \char`\"{}ns3/packet.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}ns3/ptr.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}ns3/log.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}ns3/callback.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}ns3/ipv4-\/address.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}ns3/ipv4-\/route.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}ns3/node.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}ns3/socket.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}ns3/net-\/device.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}ns3/uinteger.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}ns3/trace-\/source-\/accessor.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}ns3/object-\/vector.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}ns3/ipv4-\/header.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}ns3/boolean.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}ns3/ipv4-\/routing-\/table-\/entry.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}icn-\/manager.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}sublayer-\/protocol.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}cache-\/manager.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}named-\/content-\/cache.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}ns3/loopback-\/net-\/device.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}ns3/arp-\/l3-\/protocol.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}ipv4-\/router-\/l3-\/protocol.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}ns3/icmpv4-\/l4-\/protocol.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}ns3/ipv4-\/interface.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}ns3/ipv4-\/interface-\/address.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}ns3/ipv4-\/raw-\/socket-\/impl.\-h\char`\"{}}\\*
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{namespacens3}{ns3}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{ipv4-router-l3-protocol_8cc_a73bafcb79e6fd52dc676200e159217bb}{N\-S\-\_\-\-L\-O\-G\-\_\-\-C\-O\-M\-P\-O\-N\-E\-N\-T\-\_\-\-D\-E\-F\-I\-N\-E} (\char`\"{}Ipv4\-Router\-L3\-Protocol\char`\"{})
+\item 
+\hyperlink{namespacens3_ae38be77e7e591e3f607c3adab9edbead}{ns3\-::\-N\-S\-\_\-\-O\-B\-J\-E\-C\-T\-\_\-\-E\-N\-S\-U\-R\-E\-\_\-\-R\-E\-G\-I\-S\-T\-E\-R\-E\-D} (Ipv4\-Router\-L3\-Protocol)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{ipv4-router-l3-protocol_8cc_a73bafcb79e6fd52dc676200e159217bb}{\index{ipv4-\/router-\/l3-\/protocol.\-cc@{ipv4-\/router-\/l3-\/protocol.\-cc}!N\-S\-\_\-\-L\-O\-G\-\_\-\-C\-O\-M\-P\-O\-N\-E\-N\-T\-\_\-\-D\-E\-F\-I\-N\-E@{N\-S\-\_\-\-L\-O\-G\-\_\-\-C\-O\-M\-P\-O\-N\-E\-N\-T\-\_\-\-D\-E\-F\-I\-N\-E}}
+\index{N\-S\-\_\-\-L\-O\-G\-\_\-\-C\-O\-M\-P\-O\-N\-E\-N\-T\-\_\-\-D\-E\-F\-I\-N\-E@{N\-S\-\_\-\-L\-O\-G\-\_\-\-C\-O\-M\-P\-O\-N\-E\-N\-T\-\_\-\-D\-E\-F\-I\-N\-E}!ipv4-router-l3-protocol.cc@{ipv4-\/router-\/l3-\/protocol.\-cc}}
+\subsubsection[{N\-S\-\_\-\-L\-O\-G\-\_\-\-C\-O\-M\-P\-O\-N\-E\-N\-T\-\_\-\-D\-E\-F\-I\-N\-E}]{\setlength{\rightskip}{0pt plus 5cm}N\-S\-\_\-\-L\-O\-G\-\_\-\-C\-O\-M\-P\-O\-N\-E\-N\-T\-\_\-\-D\-E\-F\-I\-N\-E (
+\begin{DoxyParamCaption}
+\item[{\char`\"{}Ipv4\-Router\-L3\-Protocol\char`\"{}}]{}
+\end{DoxyParamCaption}
+)}}\label{ipv4-router-l3-protocol_8cc_a73bafcb79e6fd52dc676200e159217bb}

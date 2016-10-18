@@ -21,7 +21,7 @@ namespace ns3 {
 
 /**
  * \brief It is similar to DNS Question Section header.
- * it contains the name of the content to be queried.
+ * It contains the name of the content to be queried.
  **/
 
 class DnsPlusQuestionHeader: public Header {
@@ -30,7 +30,7 @@ public:
 	virtual ~DnsPlusQuestionHeader();
 	/**
 	 * \brief Get the type ID.
-	 * \return the object TypeId
+	 * \return the object TypeId.
 	 */
 	static TypeId GetTypeId (void);
 
@@ -41,67 +41,67 @@ public:
 	virtual void Print (std::ostream &os) const;
 	//Setters
 	/**
-	 * \brif Set the length of the name
-	 * \param nameLength length of the name
+	 * \brif Set the length of the name.
+	 * \param nameLength length of the name.
 	 */
 
 	void SetNameLength( uint32_t nameLength);
 	/**
-	 * \brif Set the name of the content
-	 * \param name name of the content
+	 * \brif Set the name of the content.
+	 * \param name name of the content.
 	 */
 
 	void SetName(std::string name);
 
 	/**
-	 * \brief Set the type of data
-	 * \param qType type of data
+	 * \brief Set the type of data.
+	 * \param qType type of data.
 	 */
 
 	void SetQtype(uint16_t qType);
 	/**
-	 * \brief Set the class of data
-	 * \param qClass class of data
+	 * \brief Set the class of data.
+	 * \param qClass class of data.
 	 */
 
 	void SetQclass(uint16_t qClass);
 
 	/**
-	 * \brief Set the Reserved flag, these are not currently used, reserved for future use
-	 * \param reservedFlag reserved flag bit
+	 * \brief Set the Reserved flag, these are not currently used, reserved for future use.
+	 * \param reservedFlag reserved flag bit.
 	 */
 
 	void SetReservedFlag(uint16_t reservedFlag);
 
-//Getters
+	//Getters
 
 	/**
 	 * \brief Get the name of content.
-	 * \return Name of content
+	 * \return name of content.
 	 */
 	std::string  GetName();
 
 	/**
 	 * \brief Get the class of the query.
-	 * \return class of the query
+	 * \return class of the query.
 	 */
 	uint16_t GetQclass();
 
 	/**
 	 * \brief Get the type of the query.
-	 * \return type of the query
+	 * \return type of the query.
 	 */
 	uint16_t GetQtype();
 
 	/**
 	 * \brief Get the reserved flag.
-	 * \return Reserved flag
+	 * \return Reserved flag.
 	 */
 	uint8_t GetReservedFlag();
 
 	/**
-	 * \brief Get the lenght of the name.
-	 * \return Length of the name
+	 * \brief Get the length of the name.
+	 * \return length of the name.
 	 */
 	uint32_t GetNameLength();
 

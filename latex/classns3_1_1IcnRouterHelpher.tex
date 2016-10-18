@@ -1,0 +1,146 @@
+\hypertarget{classns3_1_1IcnRouterHelpher}{\section{ns3\-:\-:Icn\-Router\-Helpher Class Reference}
+\label{classns3_1_1IcnRouterHelpher}\index{ns3\-::\-Icn\-Router\-Helpher@{ns3\-::\-Icn\-Router\-Helpher}}
+}
+
+
+I\-C\-N Router has the capability to cache the contents.  
+
+
+
+
+{\ttfamily \#include $<$oicn-\/application-\/helper.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classns3_1_1IcnRouterHelpher_a3cb1509ce406113dd7d7b9cfe07b76b1}{Icn\-Router\-Helpher} ()
+\item 
+void \hyperlink{classns3_1_1IcnRouterHelpher_aa2820444ac554e404d9fd6ce5f8a8fe6}{Set\-Attribute} (std\-::string name, const Attribute\-Value \&value)
+\item 
+Application\-Container \hyperlink{classns3_1_1IcnRouterHelpher_acef840c519effa743944c8e6eb1a422b}{Install} (Ptr$<$ Node $>$ node) const 
+\item 
+Application\-Container \hyperlink{classns3_1_1IcnRouterHelpher_acbe0017e55f293cd2c61aee1263e1878}{Install} (std\-::string node\-Name) const 
+\item 
+Application\-Container \hyperlink{classns3_1_1IcnRouterHelpher_a0846f519c253e08ceb8292aee2e46b67}{Install} (Node\-Container c) const 
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+Application\-Container \hyperlink{classns3_1_1IcnRouterHelpher_ade395ffa9be3d533ff54253fb2eb2b33}{Install\-Priv} (Ptr$<$ Node $>$ node) const 
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Object\-Factory \hyperlink{classns3_1_1IcnRouterHelpher_a1a9a541fc339cb6541195330b1c74009}{m\-\_\-factory}
+\begin{DoxyCompactList}\small\item\em Object factory. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+I\-C\-N Router has the capability to cache the contents. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classns3_1_1IcnRouterHelpher_a3cb1509ce406113dd7d7b9cfe07b76b1}{\index{ns3\-::\-Icn\-Router\-Helpher@{ns3\-::\-Icn\-Router\-Helpher}!Icn\-Router\-Helpher@{Icn\-Router\-Helpher}}
+\index{Icn\-Router\-Helpher@{Icn\-Router\-Helpher}!ns3::IcnRouterHelpher@{ns3\-::\-Icn\-Router\-Helpher}}
+\subsubsection[{Icn\-Router\-Helpher}]{\setlength{\rightskip}{0pt plus 5cm}ns3\-::\-Icn\-Router\-Helpher\-::\-Icn\-Router\-Helpher (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classns3_1_1IcnRouterHelpher_a3cb1509ce406113dd7d7b9cfe07b76b1}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classns3_1_1IcnRouterHelpher_acef840c519effa743944c8e6eb1a422b}{\index{ns3\-::\-Icn\-Router\-Helpher@{ns3\-::\-Icn\-Router\-Helpher}!Install@{Install}}
+\index{Install@{Install}!ns3::IcnRouterHelpher@{ns3\-::\-Icn\-Router\-Helpher}}
+\subsubsection[{Install}]{\setlength{\rightskip}{0pt plus 5cm}Application\-Container ns3\-::\-Icn\-Router\-Helpher\-::\-Install (
+\begin{DoxyParamCaption}
+\item[{Ptr$<$ Node $>$}]{node}
+\end{DoxyParamCaption}
+) const}}\label{classns3_1_1IcnRouterHelpher_acef840c519effa743944c8e6eb1a422b}
+Create an I\-C\-N Router Application
+
+
+\begin{DoxyParams}{Parameters}
+{\em node} & the node on which to create the Application. The node is specified by a Ptr$<$\-Node$>$. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+an Application\-Container holding the Application created 
+\end{DoxyReturn}
+\hypertarget{classns3_1_1IcnRouterHelpher_acbe0017e55f293cd2c61aee1263e1878}{\index{ns3\-::\-Icn\-Router\-Helpher@{ns3\-::\-Icn\-Router\-Helpher}!Install@{Install}}
+\index{Install@{Install}!ns3::IcnRouterHelpher@{ns3\-::\-Icn\-Router\-Helpher}}
+\subsubsection[{Install}]{\setlength{\rightskip}{0pt plus 5cm}Application\-Container ns3\-::\-Icn\-Router\-Helpher\-::\-Install (
+\begin{DoxyParamCaption}
+\item[{std\-::string}]{node\-Name}
+\end{DoxyParamCaption}
+) const}}\label{classns3_1_1IcnRouterHelpher_acbe0017e55f293cd2c61aee1263e1878}
+Create an I\-C\-N Router Application 
+\begin{DoxyParams}{Parameters}
+{\em node\-Name} & the name of the node on which to create the application \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+an Application\-Container holding the Application created 
+\end{DoxyReturn}
+\hypertarget{classns3_1_1IcnRouterHelpher_a0846f519c253e08ceb8292aee2e46b67}{\index{ns3\-::\-Icn\-Router\-Helpher@{ns3\-::\-Icn\-Router\-Helpher}!Install@{Install}}
+\index{Install@{Install}!ns3::IcnRouterHelpher@{ns3\-::\-Icn\-Router\-Helpher}}
+\subsubsection[{Install}]{\setlength{\rightskip}{0pt plus 5cm}Application\-Container ns3\-::\-Icn\-Router\-Helpher\-::\-Install (
+\begin{DoxyParamCaption}
+\item[{Node\-Container}]{c}
+\end{DoxyParamCaption}
+) const}}\label{classns3_1_1IcnRouterHelpher_a0846f519c253e08ceb8292aee2e46b67}
+Create an I\-C\-N Router Application 
+\begin{DoxyParams}{Parameters}
+{\em c} & the nodes on which to create the Applications. The nodes are specified by a Node\-Container. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+an Application\-Container holding the Application created 
+\end{DoxyReturn}
+\hypertarget{classns3_1_1IcnRouterHelpher_ade395ffa9be3d533ff54253fb2eb2b33}{\index{ns3\-::\-Icn\-Router\-Helpher@{ns3\-::\-Icn\-Router\-Helpher}!Install\-Priv@{Install\-Priv}}
+\index{Install\-Priv@{Install\-Priv}!ns3::IcnRouterHelpher@{ns3\-::\-Icn\-Router\-Helpher}}
+\subsubsection[{Install\-Priv}]{\setlength{\rightskip}{0pt plus 5cm}Application\-Container ns3\-::\-Icn\-Router\-Helpher\-::\-Install\-Priv (
+\begin{DoxyParamCaption}
+\item[{Ptr$<$ Node $>$}]{node}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [private]}}}\label{classns3_1_1IcnRouterHelpher_ade395ffa9be3d533ff54253fb2eb2b33}
+Install an I\-C\-N Router Application on the node configured with all the attributes set with Set\-Attribute. 
+\begin{DoxyParams}{Parameters}
+{\em node} & the node on which an O\-I\-C\-N\-Client will be installed. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+an Application\-Container holding the Application created 
+\end{DoxyReturn}
+\hypertarget{classns3_1_1IcnRouterHelpher_aa2820444ac554e404d9fd6ce5f8a8fe6}{\index{ns3\-::\-Icn\-Router\-Helpher@{ns3\-::\-Icn\-Router\-Helpher}!Set\-Attribute@{Set\-Attribute}}
+\index{Set\-Attribute@{Set\-Attribute}!ns3::IcnRouterHelpher@{ns3\-::\-Icn\-Router\-Helpher}}
+\subsubsection[{Set\-Attribute}]{\setlength{\rightskip}{0pt plus 5cm}void ns3\-::\-Icn\-Router\-Helpher\-::\-Set\-Attribute (
+\begin{DoxyParamCaption}
+\item[{std\-::string}]{name, }
+\item[{const Attribute\-Value \&}]{value}
+\end{DoxyParamCaption}
+)}}\label{classns3_1_1IcnRouterHelpher_aa2820444ac554e404d9fd6ce5f8a8fe6}
+Record an attribute to be set in each Application after it is is created.
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & the name of the attribute to set \\
+\hline
+{\em value} & the value of the attribute to set \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classns3_1_1IcnRouterHelpher_a1a9a541fc339cb6541195330b1c74009}{\index{ns3\-::\-Icn\-Router\-Helpher@{ns3\-::\-Icn\-Router\-Helpher}!m\-\_\-factory@{m\-\_\-factory}}
+\index{m\-\_\-factory@{m\-\_\-factory}!ns3::IcnRouterHelpher@{ns3\-::\-Icn\-Router\-Helpher}}
+\subsubsection[{m\-\_\-factory}]{\setlength{\rightskip}{0pt plus 5cm}Object\-Factory ns3\-::\-Icn\-Router\-Helpher\-::m\-\_\-factory\hspace{0.3cm}{\ttfamily [private]}}}\label{classns3_1_1IcnRouterHelpher_a1a9a541fc339cb6541195330b1c74009}
+
+
+Object factory. 
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+helper/\hyperlink{oicn-application-helper_8h}{oicn-\/application-\/helper.\-h}\item 
+helper/\hyperlink{oicn-application-helper_8cc}{oicn-\/application-\/helper.\-cc}\end{DoxyCompactItemize}

@@ -180,7 +180,7 @@ IcnManager::HandleReadSource (Ptr<Socket> socket)
 			//NS_LOG_INFO ("At time " << Simulator::Now ().GetSeconds () << "s ICN-Manager received " << packet->GetSize () <<" bytes from "<<
 	         //             InetSocketAddress::ConvertFrom (from).GetIpv4 ()<<" port "<< InetSocketAddress::ConvertFrom (from).GetPort ());
 
-			OICNHeader oicnheader;
+			OicnHeader oicnheader;
 			packet->RemoveHeader(oicnheader);
 
 			DnsPlusHeader dnsPlusHeader;
@@ -240,7 +240,7 @@ IcnManager::HandleReadSource (Ptr<Socket> socket)
 
 void IcnManager::ReadPacket(Ptr<Packet> packet, Ipv4Address clientIpv4Address, uint16_t clientPort)
 {
-	OICNHeader oicnHeader;
+	OicnHeader oicnHeader;
 	packet->RemoveHeader(oicnHeader);
 	DnsPlusHeader dnsPlusHeader;
 	packet->RemoveHeader(dnsPlusHeader);
@@ -339,7 +339,7 @@ Ipv4Address const * IcnManager::NameResolution (std::string name, bool &flag)
 	}
 }
 
-void IcnManager::SendAckToClient(Ipv4Address  clientIpv4Address, uint16_t clientPort, DnsPlusQuestionHeader dnsPlusQuestionHeader, DnsPlusHeader dnsPlusHeader,OICNHeader oicnHeader, bool &flag)
+void IcnManager::SendAckToClient(Ipv4Address  clientIpv4Address, uint16_t clientPort, DnsPlusQuestionHeader dnsPlusQuestionHeader, DnsPlusHeader dnsPlusHeader,OicnHeader oicnHeader, bool &flag)
 {
 	Ptr<Packet> packet = Create<Packet>();
 	packet->AddHeader(dnsPlusQuestionHeader);
@@ -371,7 +371,7 @@ void IcnManager::SendAckToClient(Ipv4Address  clientIpv4Address, uint16_t client
 
 }
 
-void IcnManager::SendToSource(Ipv4Address sourceIpv4Address, Ipv4Address clientIpv4Address,DnsPlusQuestionHeader dnsPlusQuestionHeader,DnsPlusHeader dnsPlusHeader,OICNHeader oicnHeader)
+void IcnManager::SendToSource(Ipv4Address sourceIpv4Address, Ipv4Address clientIpv4Address,DnsPlusQuestionHeader dnsPlusQuestionHeader,DnsPlusHeader dnsPlusHeader,OicnHeader oicnHeader)
 {
 	Ptr<Packet> packet = Create<Packet>();
 

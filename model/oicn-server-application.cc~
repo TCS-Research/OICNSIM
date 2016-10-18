@@ -1,0 +1,164 @@
+#include "oicn-server-application.h"
+#include "content.h"
+#include "icn-manager.h"
+#include <stdint.h>
+#include <string>
+#include <iostream>
+#include <utility>
+#include <boost/unordered_map.hpp>
+#include <new>
+#include <vector>
+#include <c++/4.8/unordered_map>
+#include "ns3/ipv4-address.h"
+#include "ns3/callback.h"
+#include "ns3/uinteger.h"
+#include "ns3/simulator.h"
+#include "ns3/ptr.h"
+#include "ns3/node.h"
+#include "ns3/node-list.h"
+#include "ns3/packet.h"
+#include "ns3/type-id.h"
+#include "icn-manager.h"
+#include "ns3/log.h"
+#include "oicn-header.h"
+#include "ns3/ipv4.h"
+#include "ns3/ipv4-interface-address.h"
+#include "ns3/node.h"
+#include "ns3/socket.h"
+#include "ns3/type-name.h"
+
+NS_LOG_COMPONENT_DEFINE ("OICNServer");
+
+namespace ns3{
+//namespace oicn{
+
+NS_OBJECT_ENSURE_REGISTERED (OICNServer);
+
+TypeId
+OICNServer::GetTypeId (void)
+{
+	//NS_LOG_DEBUG ("Node "<<GetNode()->GetId()<<"   Check ");
+  static TypeId tid = TypeId ("ns3::OICNServer")
+    .SetParent<Application> ()
+    .AddConstructor<OICNServer> ()
+	/*.AddAttribute ("NodeId", "The ID of the node of this Server.",
+	                UintegerValue (0),
+	                MakeUintegerAccessor (&OICNServer::m_nodeid),
+	                MakeUintegerChecker<uint32_t> ())*/
+    
+  ;
+  return tid;
+}
+
+OICNServer::OICNServer ()
+  : m_port(89)
+{
+	//NS_LOG_DEBUG ("Node "<<GetNode()->GetId()<<"   Check ");
+	server_content.reserve(100);
+	std::pair<std::string,std::string> initializer ("oicn://server_content/initializer ", " Dummy Data ");
+	server_content.insert(initializer);
+	/*for (uint32_t i=0; i<index.size(); i++)
+	{
+		 std::string Data = " Dummy Data ";
+		 std::string name = Content::GetContent(i);
+		 std::pair<std::string, std::string> entry (name, Data);
+		 server_content.insert(entry);
+    }*/
+
+	//NS_LOG_INFO(" Server Content Initialization Successful");
+}
+
+OICNServer::~OICNServer ()
+{
+ 
+}
+
+void
+OICNServer::DoDispose (void)
+{
+  Application::DoDispose ();
+}
+
+void
+OICNServer::StartApplication (void)
+{
+	NS_LOG_DEBUG ("Node "<<GetNode()->GetId()<<"   Check ");
+	if (m_socket == 0)
+    {
+      TypeId tid = TypeId::LookupByName ("ns3::UdpSocketFactory");
+      m_socket = Socket::CreateSocket (GetNode (), tid);
+      InetSocketAddress local = InetSocketAddress (Ipv4Address::GetAny(), m_port);
+      m_socket->Bind (local);
+    }
+}
+
+void
+OICNServer::StopApplication ()
+{
+	//NS_LOG_DEBUG ("Node "<<GetNode()->GetId()<<"   Check ");
+	if (m_socket != 0)
+    {
+	  m_socket->Close();
+    }
+}
+
+void OICNServer::SetContent (std::vector<int> index)
+{
+	//NS_LOG_DEBUG ("Node "<<GetNode()->GetId()<<"   Check ");
+	for (uint32_t i=0; i<index.size(); i++)
+    {
+			 std::string Data = " Dummy Data";
+			 for (int j = 0; j < 100; j++)
+			 {
+				 Data.append(" Dummy Data");
+			 }
+			 std::string name = Content::GetContent(index[i]);
+			 std::pair<std::string, std::string> entry (name, Data);
+			 server_content.insert(entry);
+	 }
+}
+
+Ptr<Packet> OICNServer::GetContent (std::string Name)
+{
+	//NS_LOG_DEBUG ("Node "<<GetNode()->GetId()<<"   Check ");
+	boost::unordered_map <std::string, std::string>::const_iterator it = server_content.find(Name);
+	//NS_LOG_DEBUG (" The Server on node "<< GetNode()->GetId()<<" has been queried"<< std::endl);
+	boost::unordered_map <std::string, std::string>::const_iterator iter;
+	//NS_LOG_INFO (" The Contents of this Server are "<<std::endl);
+	/*for(iter = server_content.begin(); iter != server_content.end(); iter++ )
+    {
+		std::cout <<"   "<<iter->first << "-->" << iter->second << std::endl;
+  	}*/
+	std::string data = /*" dummy data ";*/it->second;
+	//Ptr<Packet> packet = Create<Packet> (data);
+        char buffer[data.size()+1];
+        memset (buffer, 0, data.size()+1);
+        Ptr<Packet> packet = Create<Packet> ((uint8_t*)buffer, data.size());
+	return(packet);
+}
+
+void OICNServer::ICNManagerRequest (uint32_t ClientAddress, uint16_t ClientPort, std::string Name)
+{
+	//NS_LOG_DEBUG ("Node "<<GetNode()->GetId()<<"   Check ");
+	Ipv4Address m_clientaddress;
+	m_clientaddress.Set(ClientAddress);
+	NS_LOG_DEBUG (" The Client Address is "<<m_clientaddress);
+	Ptr<Packet> packet = ConstructSublayer (GetContent(Name), Name)->Copy();
+	m_socket->Connect(InetSocketAddress(m_clientaddress, ClientPort));
+	//m_socket->SendTo(packet, 0, m_clientaddress);
+	m_socket->Send(packet);
+	NS_LOG_INFO(" check time "<<Simulator::Now().GetSeconds());
+
+}
+
+Ptr<Packet> OICNServer::ConstructSublayer (Ptr<Packet> packet, std::string Name)
+{
+	NS_LOG_DEBUG ("Node "<<GetNode()->GetId()<<"   Check ");
+	OICNHeader oicnheader;
+	oicnheader.SetName (Name);
+	oicnheader.SetCachable();
+	packet->AddHeader(oicnheader);
+	return (packet);
+}
+//}
+}

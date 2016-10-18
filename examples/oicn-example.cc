@@ -7,17 +7,22 @@
  * \brief This is example script of working of O-ICN  Architecture
  */
 //
-//	Topology
-//												ICN Manager(node 5)
-//													'
-//													'
-//													'
-// client1(node 0)------ICN Router1(node 1)---Normal Router(node 2)----ICN Router(node 3)----Server(Node 4)
-//							'
-//							'
-//							'
-//						client2(node 6)
-//
+// Topology
+//		    		   ICN Manager (Node-5)
+// 			     	  .	    	      .
+//				     .	     	       .
+//			    	.  	      	    	.
+//		           .   	       		     .
+//		          .    	        	      .
+//     		ICN Router1 ++++++++++++ Legacy Router ++++++++++ ICN Router2 +++++++ Server
+//			  (Node-1)	               (Node-2)	               (Node-3)	          (Node-4)
+//			  +      +
+//	         +	      +
+//	        +  	       +
+//	       +  	        +
+//	    Client1        Client2
+//	   (Node-0)	       (Node-6)
+
 #include <iostream>
 #include <fstream>
 #include <string>
@@ -77,7 +82,7 @@ main (int argc, char *argv[])
   RouterStackHelper router;
   router.SetCacheType("ns3::CacheWithLRU");
   router.ControlCachability(false);
-  router.SetCacheSize(10);
+  router.SetCacheSize(3);
   router.Install (icn_routers);
 
   PointToPointHelper p2p;
@@ -152,7 +157,7 @@ main (int argc, char *argv[])
   Time interPacketInterval = MilliSeconds (120);
 
   //it is range of name indices that client will ask for
-  std::pair<int, int> range = std::make_pair(1, 10);
+  std::pair<int, int> range = std::make_pair(1, 5);
   OicnZipfClientHelper zipfclient(icnManagerAddress, icnManagerPort);
 
   zipfclient.SetAttribute ("MaxPackets", UintegerValue (maxPacketCount));
@@ -174,7 +179,7 @@ main (int argc, char *argv[])
   }
 
   //indices of content
-  for (int i=0; i<50; i++)
+  for (int i=0; i<5; i++)
    {
  	  index1[i]=i;
    }

@@ -1,0 +1,394 @@
+\hypertarget{classns3_1_1SublayerProtocol}{\section{ns3\-:\-:Sublayer\-Protocol Class Reference}
+\label{classns3_1_1SublayerProtocol}\index{ns3\-::\-Sublayer\-Protocol@{ns3\-::\-Sublayer\-Protocol}}
+}
+
+
+Implements the O\-I\-C\-N Sublayer.  
+
+
+
+
+{\ttfamily \#include $<$sublayer-\/protocol.\-h$>$}
+
+Inheritance diagram for ns3\-:\-:Sublayer\-Protocol\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classns3_1_1SublayerProtocol}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classns3_1_1SublayerProtocol_aad21195a67f44c4b4baa72cff040c253}{Sublayer\-Protocol} ()
+\item 
+virtual \hyperlink{classns3_1_1SublayerProtocol_a0e26c084de2a7c809d8d583c28231215}{$\sim$\-Sublayer\-Protocol} ()
+\item 
+void \hyperlink{classns3_1_1SublayerProtocol_ae0c35330ed5b9f0c7b109b6ef58b37e6}{Set\-Node} (Ptr$<$ Node $>$ n)
+\begin{DoxyCompactList}\small\item\em Set node associated with this stack. \end{DoxyCompactList}\item 
+Ptr$<$ Node $>$ \hyperlink{classns3_1_1SublayerProtocol_a6fe8316415eb6ac5d2f41238cba179b2}{Get\-Node} (void)
+\begin{DoxyCompactList}\small\item\em Get node associated with this stack. \end{DoxyCompactList}\item 
+Ptr$<$ Packet $>$ \hyperlink{classns3_1_1SublayerProtocol_a32f7f8db439df22d32e645249c188de1}{O\-I\-C\-N\-Sublayer\-Check} (Ptr$<$ Packet $>$ packet, Ipv4\-Header ipheader)
+\begin{DoxyCompactList}\small\item\em Check for the existence of O\-I\-C\-N Sublayer in the packet, i.\-e. check whether the parameter packet is O\-I\-C\-N Packet or not. This A\-P\-I is called by the \hyperlink{classns3_1_1Ipv4RouterL3Protocol}{Ipv4\-Router\-L3\-Protocol} class whenever it receives a packet. \end{DoxyCompactList}\item 
+bool \hyperlink{classns3_1_1SublayerProtocol_adc7c2b22a960eabf0f6a39651b2702f3}{Has\-Sublayer} (Ptr$<$ Packet $>$ packet, Ipv4\-Header ipheader)
+\begin{DoxyCompactList}\small\item\em Check whether O\-I\-C\-N Sublayer exists in the I\-P packet. \end{DoxyCompactList}\item 
+bool \hyperlink{classns3_1_1SublayerProtocol_ad32d482504ca8f25fa6a710ef8b232f2}{is\-Udp} (Ipv4\-Header ipheader)
+\begin{DoxyCompactList}\small\item\em Check whether the Packet is U\-D\-P or not. \end{DoxyCompactList}\item 
+bool \hyperlink{classns3_1_1SublayerProtocol_ab20bc8c1fc3159d107d5a3bd41947cdf}{Check\-Cache} (Ptr$<$ Packet $>$ packet1, std\-::string name, Ipv4\-Header ipheader)
+\begin{DoxyCompactList}\small\item\em Cache the Application Layer (data) of the Packet after it has been recognized as an O\-I\-C\-N Packet. If the Cache is not full, the data is automatically cached. If the Cache is full, the index (proirity) of the data will determine if some other Cache entry has to be evicted or not. \end{DoxyCompactList}\item 
+void \hyperlink{classns3_1_1SublayerProtocol_a5093c7a024d789cab4243e15853cb0db}{Construct\-Packet} (Ptr$<$ Packet $>$ packet, std\-::string Name, uint32\-\_\-t Destination\-Address, uint32\-\_\-t Port\-Number)
+\begin{DoxyCompactList}\small\item\em Construct an O\-I\-C\-N Packet for the data retrieved from Cache. This A\-P\-I is required when I\-C\-N Manager requests for data cached in an O\-I\-C\-N Router to be sent to an O\-I\-C\-N Client querying for that content. \end{DoxyCompactList}\item 
+void \hyperlink{classns3_1_1SublayerProtocol_a0ad1a28cff0ceeca6086251b4ef26b12}{Construct\-Sublayer} (Ptr$<$ Packet $>$ packet, std\-::string Name)
+\begin{DoxyCompactList}\small\item\em Construct the O\-I\-C\-N Sublayer for the O\-I\-C\-N Packet created in Construct\-Packet A\-P\-I, by appending the O\-I\-C\-N Header. \end{DoxyCompactList}\item 
+void \hyperlink{classns3_1_1SublayerProtocol_a31827df98334d1c401ad68feaca4105a}{Set\-Udp\-Header} (Udp\-Header header)
+\begin{DoxyCompactList}\small\item\em Store the U\-D\-P header of the received packet as a Private Variable 'udp\-\_\-header' in the \hyperlink{classns3_1_1SublayerProtocol}{Sublayer\-Protocol} Object. \end{DoxyCompactList}\item 
+void \hyperlink{classns3_1_1SublayerProtocol_a7416f03d29385e56d5b42ed136b7db91}{Set\-O\-I\-C\-N\-Header} (\hyperlink{classns3_1_1OicnHeader}{Oicn\-Header} header)
+\begin{DoxyCompactList}\small\item\em Store the O\-I\-C\-N header of the received packet as a Private Variable 'oicn\-\_\-header' in the \hyperlink{classns3_1_1SublayerProtocol}{Sublayer\-Protocol} Object. \end{DoxyCompactList}\item 
+void \hyperlink{classns3_1_1SublayerProtocol_ad875af270446269baf99bcaebad48139}{Set\-Cachable} (bool non\-\_\-cachable)
+\begin{DoxyCompactList}\small\item\em Set the cachability of the content. \end{DoxyCompactList}\item 
+Udp\-Header \hyperlink{classns3_1_1SublayerProtocol_a8fd400667ad5ebdbdfd5d36bf7e592ab}{Get\-Udp\-Header} ()
+\begin{DoxyCompactList}\small\item\em Get the U\-D\-P header stored in udp\-\_\-header Private Variable. \end{DoxyCompactList}\item 
+\hyperlink{classns3_1_1OicnHeader}{Oicn\-Header} \hyperlink{classns3_1_1SublayerProtocol_a8499790a430e0db48c3117e25f8d42f2}{Get\-O\-I\-C\-N\-Header} ()
+\begin{DoxyCompactList}\small\item\em Get the O\-I\-C\-N header stored in oicn\-\_\-header Private Variable. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static Type\-Id \hyperlink{classns3_1_1SublayerProtocol_a98232c65e445399926f5f0cf7b566944}{Get\-Type\-Id} (void)
+\begin{DoxyCompactList}\small\item\em Get the type I\-D. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Ptr$<$ Node $>$ \hyperlink{classns3_1_1SublayerProtocol_a4993887dad842a577bdfdfa10cecb7d7}{m\-\_\-node}
+\begin{DoxyCompactList}\small\item\em node pointer of current stack \end{DoxyCompactList}\item 
+Udp\-Header \hyperlink{classns3_1_1SublayerProtocol_a95b083926386de937c4e9b0a235a4ab8}{udp\-\_\-header}
+\begin{DoxyCompactList}\small\item\em U\-D\-P header of the received packet. \end{DoxyCompactList}\item 
+\hyperlink{classns3_1_1OicnHeader}{Oicn\-Header} \hyperlink{classns3_1_1SublayerProtocol_a9ceec600a64150a12295c82f01bb8e3c}{oicn\-\_\-header}
+\begin{DoxyCompactList}\small\item\em O\-I\-C\-N header of the received packet. \end{DoxyCompactList}\item 
+Ptr$<$ Socket $>$ \hyperlink{classns3_1_1SublayerProtocol_a6fb3c36f156ba315448ef4fe95a3c4f6}{m\-\_\-socket}
+\begin{DoxyCompactList}\small\item\em socket pointer for the process of sending data queried by O\-I\-C\-N Client \end{DoxyCompactList}\item 
+bool \hyperlink{classns3_1_1SublayerProtocol_a829d9ef293fd6c38367143c338850cb7}{m\-\_\-set\-\_\-non\-\_\-cachable}
+\begin{DoxyCompactList}\small\item\em indicates whether content is cachable or not \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Implements the O\-I\-C\-N Sublayer. 
+
+This class implements the functions that ensures overlay of O\-I\-C\-N Architecture with Current Internet Architecture. It has A\-P\-Is that help in distinguishing O\-I\-C\-N Packets from regular Packets. It also has A\-P\-Is that construct an O\-I\-C\-N Packet and append the O\-I\-C\-N Sublayer to the Packet, whenever data is retrieved from the in the O\-I\-C\-N Router.
+
+This class is instantiated and aggregated to all O\-I\-C\-N Routers in the network, and is not required in any other components of O\-I\-C\-N Architecture.
+
+Note\-: The word Cache here refers to the Named \hyperlink{classns3_1_1Content}{Content} Cache of the I\-C\-N Router. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classns3_1_1SublayerProtocol_aad21195a67f44c4b4baa72cff040c253}{\index{ns3\-::\-Sublayer\-Protocol@{ns3\-::\-Sublayer\-Protocol}!Sublayer\-Protocol@{Sublayer\-Protocol}}
+\index{Sublayer\-Protocol@{Sublayer\-Protocol}!ns3::SublayerProtocol@{ns3\-::\-Sublayer\-Protocol}}
+\subsubsection[{Sublayer\-Protocol}]{\setlength{\rightskip}{0pt plus 5cm}ns3\-::\-Sublayer\-Protocol\-::\-Sublayer\-Protocol (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classns3_1_1SublayerProtocol_aad21195a67f44c4b4baa72cff040c253}
+\hypertarget{classns3_1_1SublayerProtocol_a0e26c084de2a7c809d8d583c28231215}{\index{ns3\-::\-Sublayer\-Protocol@{ns3\-::\-Sublayer\-Protocol}!$\sim$\-Sublayer\-Protocol@{$\sim$\-Sublayer\-Protocol}}
+\index{$\sim$\-Sublayer\-Protocol@{$\sim$\-Sublayer\-Protocol}!ns3::SublayerProtocol@{ns3\-::\-Sublayer\-Protocol}}
+\subsubsection[{$\sim$\-Sublayer\-Protocol}]{\setlength{\rightskip}{0pt plus 5cm}ns3\-::\-Sublayer\-Protocol\-::$\sim$\-Sublayer\-Protocol (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classns3_1_1SublayerProtocol_a0e26c084de2a7c809d8d583c28231215}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classns3_1_1SublayerProtocol_ab20bc8c1fc3159d107d5a3bd41947cdf}{\index{ns3\-::\-Sublayer\-Protocol@{ns3\-::\-Sublayer\-Protocol}!Check\-Cache@{Check\-Cache}}
+\index{Check\-Cache@{Check\-Cache}!ns3::SublayerProtocol@{ns3\-::\-Sublayer\-Protocol}}
+\subsubsection[{Check\-Cache}]{\setlength{\rightskip}{0pt plus 5cm}bool ns3\-::\-Sublayer\-Protocol\-::\-Check\-Cache (
+\begin{DoxyParamCaption}
+\item[{Ptr$<$ Packet $>$}]{packet1, }
+\item[{std\-::string}]{name, }
+\item[{Ipv4\-Header}]{ipheader}
+\end{DoxyParamCaption}
+)}}\label{classns3_1_1SublayerProtocol_ab20bc8c1fc3159d107d5a3bd41947cdf}
+
+
+Cache the Application Layer (data) of the Packet after it has been recognized as an O\-I\-C\-N Packet. If the Cache is not full, the data is automatically cached. If the Cache is full, the index (proirity) of the data will determine if some other Cache entry has to be evicted or not. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em packet1} & packet received by O\-I\-C\-N Router with its Transport Header removed \\
+\hline
+{\em name} & name of the corresponding data (or content) of the packet, stored in O\-I\-C\-N Header of the packet. \\
+\hline
+{\em ipheader} & ip header of the packet \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the data has been cached 
+\end{DoxyReturn}
+\hypertarget{classns3_1_1SublayerProtocol_a5093c7a024d789cab4243e15853cb0db}{\index{ns3\-::\-Sublayer\-Protocol@{ns3\-::\-Sublayer\-Protocol}!Construct\-Packet@{Construct\-Packet}}
+\index{Construct\-Packet@{Construct\-Packet}!ns3::SublayerProtocol@{ns3\-::\-Sublayer\-Protocol}}
+\subsubsection[{Construct\-Packet}]{\setlength{\rightskip}{0pt plus 5cm}void ns3\-::\-Sublayer\-Protocol\-::\-Construct\-Packet (
+\begin{DoxyParamCaption}
+\item[{Ptr$<$ Packet $>$}]{packet, }
+\item[{std\-::string}]{Name, }
+\item[{uint32\-\_\-t}]{Destination\-Address, }
+\item[{uint32\-\_\-t}]{Port\-Number}
+\end{DoxyParamCaption}
+)}}\label{classns3_1_1SublayerProtocol_a5093c7a024d789cab4243e15853cb0db}
+
+
+Construct an O\-I\-C\-N Packet for the data retrieved from Cache. This A\-P\-I is required when I\-C\-N Manager requests for data cached in an O\-I\-C\-N Router to be sent to an O\-I\-C\-N Client querying for that content. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em packet} & packet consisting of only the Transport Layer Data. This packet is created after the queried content is searched and found in the Cache by the Cache Manager. \\
+\hline
+{\em Name} & name of the data retrieved from the Cache. \\
+\hline
+{\em Destination\-Address} & I\-P address of the O\-I\-C\-N Client querying for that content \\
+\hline
+{\em Port\-Number} & Port Number of the O\-I\-C\-N Client querying for that content \\
+\hline
+\end{DoxyParams}
+\hypertarget{classns3_1_1SublayerProtocol_a0ad1a28cff0ceeca6086251b4ef26b12}{\index{ns3\-::\-Sublayer\-Protocol@{ns3\-::\-Sublayer\-Protocol}!Construct\-Sublayer@{Construct\-Sublayer}}
+\index{Construct\-Sublayer@{Construct\-Sublayer}!ns3::SublayerProtocol@{ns3\-::\-Sublayer\-Protocol}}
+\subsubsection[{Construct\-Sublayer}]{\setlength{\rightskip}{0pt plus 5cm}void ns3\-::\-Sublayer\-Protocol\-::\-Construct\-Sublayer (
+\begin{DoxyParamCaption}
+\item[{Ptr$<$ Packet $>$}]{packet, }
+\item[{std\-::string}]{Name}
+\end{DoxyParamCaption}
+)}}\label{classns3_1_1SublayerProtocol_a0ad1a28cff0ceeca6086251b4ef26b12}
+
+
+Construct the O\-I\-C\-N Sublayer for the O\-I\-C\-N Packet created in Construct\-Packet A\-P\-I, by appending the O\-I\-C\-N Header. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em packet} & O\-I\-C\-N Packet to which O\-I\-C\-N Header has to be appended. \\
+\hline
+{\em Name} & name of the content in the O\-I\-C\-N Packet. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classns3_1_1SublayerProtocol_a6fe8316415eb6ac5d2f41238cba179b2}{\index{ns3\-::\-Sublayer\-Protocol@{ns3\-::\-Sublayer\-Protocol}!Get\-Node@{Get\-Node}}
+\index{Get\-Node@{Get\-Node}!ns3::SublayerProtocol@{ns3\-::\-Sublayer\-Protocol}}
+\subsubsection[{Get\-Node}]{\setlength{\rightskip}{0pt plus 5cm}Ptr$<$ Node $>$ ns3\-::\-Sublayer\-Protocol\-::\-Get\-Node (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{classns3_1_1SublayerProtocol_a6fe8316415eb6ac5d2f41238cba179b2}
+
+
+Get node associated with this stack. 
+
+\begin{DoxyReturn}{Returns}
+node of the stack 
+\end{DoxyReturn}
+\hypertarget{classns3_1_1SublayerProtocol_a8499790a430e0db48c3117e25f8d42f2}{\index{ns3\-::\-Sublayer\-Protocol@{ns3\-::\-Sublayer\-Protocol}!Get\-O\-I\-C\-N\-Header@{Get\-O\-I\-C\-N\-Header}}
+\index{Get\-O\-I\-C\-N\-Header@{Get\-O\-I\-C\-N\-Header}!ns3::SublayerProtocol@{ns3\-::\-Sublayer\-Protocol}}
+\subsubsection[{Get\-O\-I\-C\-N\-Header}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Oicn\-Header} ns3\-::\-Sublayer\-Protocol\-::\-Get\-O\-I\-C\-N\-Header (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classns3_1_1SublayerProtocol_a8499790a430e0db48c3117e25f8d42f2}
+
+
+Get the O\-I\-C\-N header stored in oicn\-\_\-header Private Variable. 
+
+\begin{DoxyReturn}{Returns}
+O\-I\-C\-N\-Header O\-I\-C\-N header stored in oicn\-\_\-header Private Variable 
+\end{DoxyReturn}
+\hypertarget{classns3_1_1SublayerProtocol_a98232c65e445399926f5f0cf7b566944}{\index{ns3\-::\-Sublayer\-Protocol@{ns3\-::\-Sublayer\-Protocol}!Get\-Type\-Id@{Get\-Type\-Id}}
+\index{Get\-Type\-Id@{Get\-Type\-Id}!ns3::SublayerProtocol@{ns3\-::\-Sublayer\-Protocol}}
+\subsubsection[{Get\-Type\-Id}]{\setlength{\rightskip}{0pt plus 5cm}Type\-Id ns3\-::\-Sublayer\-Protocol\-::\-Get\-Type\-Id (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classns3_1_1SublayerProtocol_a98232c65e445399926f5f0cf7b566944}
+
+
+Get the type I\-D. 
+
+\begin{DoxyReturn}{Returns}
+the object Type\-Id 
+\end{DoxyReturn}
+\hypertarget{classns3_1_1SublayerProtocol_a8fd400667ad5ebdbdfd5d36bf7e592ab}{\index{ns3\-::\-Sublayer\-Protocol@{ns3\-::\-Sublayer\-Protocol}!Get\-Udp\-Header@{Get\-Udp\-Header}}
+\index{Get\-Udp\-Header@{Get\-Udp\-Header}!ns3::SublayerProtocol@{ns3\-::\-Sublayer\-Protocol}}
+\subsubsection[{Get\-Udp\-Header}]{\setlength{\rightskip}{0pt plus 5cm}Udp\-Header ns3\-::\-Sublayer\-Protocol\-::\-Get\-Udp\-Header (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classns3_1_1SublayerProtocol_a8fd400667ad5ebdbdfd5d36bf7e592ab}
+
+
+Get the U\-D\-P header stored in udp\-\_\-header Private Variable. 
+
+\begin{DoxyReturn}{Returns}
+Udp\-Header U\-D\-P header stored in udp\-\_\-header Private Variable 
+\end{DoxyReturn}
+\hypertarget{classns3_1_1SublayerProtocol_adc7c2b22a960eabf0f6a39651b2702f3}{\index{ns3\-::\-Sublayer\-Protocol@{ns3\-::\-Sublayer\-Protocol}!Has\-Sublayer@{Has\-Sublayer}}
+\index{Has\-Sublayer@{Has\-Sublayer}!ns3::SublayerProtocol@{ns3\-::\-Sublayer\-Protocol}}
+\subsubsection[{Has\-Sublayer}]{\setlength{\rightskip}{0pt plus 5cm}bool ns3\-::\-Sublayer\-Protocol\-::\-Has\-Sublayer (
+\begin{DoxyParamCaption}
+\item[{Ptr$<$ Packet $>$}]{packet, }
+\item[{Ipv4\-Header}]{ipheader}
+\end{DoxyParamCaption}
+)}}\label{classns3_1_1SublayerProtocol_adc7c2b22a960eabf0f6a39651b2702f3}
+
+
+Check whether O\-I\-C\-N Sublayer exists in the I\-P packet. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em packet} & packet received by O\-I\-C\-N Router \\
+\hline
+{\em ipheader} & I\-P Header of the packet \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if O\-I\-C\-N Sublayer exists 
+\end{DoxyReturn}
+\hypertarget{classns3_1_1SublayerProtocol_ad32d482504ca8f25fa6a710ef8b232f2}{\index{ns3\-::\-Sublayer\-Protocol@{ns3\-::\-Sublayer\-Protocol}!is\-Udp@{is\-Udp}}
+\index{is\-Udp@{is\-Udp}!ns3::SublayerProtocol@{ns3\-::\-Sublayer\-Protocol}}
+\subsubsection[{is\-Udp}]{\setlength{\rightskip}{0pt plus 5cm}bool ns3\-::\-Sublayer\-Protocol\-::is\-Udp (
+\begin{DoxyParamCaption}
+\item[{Ipv4\-Header}]{ipheader}
+\end{DoxyParamCaption}
+)}}\label{classns3_1_1SublayerProtocol_ad32d482504ca8f25fa6a710ef8b232f2}
+
+
+Check whether the Packet is U\-D\-P or not. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ipheader} & I\-P Header of the packet \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the Transport Layer used is U\-D\-P 
+\end{DoxyReturn}
+\hypertarget{classns3_1_1SublayerProtocol_a32f7f8db439df22d32e645249c188de1}{\index{ns3\-::\-Sublayer\-Protocol@{ns3\-::\-Sublayer\-Protocol}!O\-I\-C\-N\-Sublayer\-Check@{O\-I\-C\-N\-Sublayer\-Check}}
+\index{O\-I\-C\-N\-Sublayer\-Check@{O\-I\-C\-N\-Sublayer\-Check}!ns3::SublayerProtocol@{ns3\-::\-Sublayer\-Protocol}}
+\subsubsection[{O\-I\-C\-N\-Sublayer\-Check}]{\setlength{\rightskip}{0pt plus 5cm}Ptr$<$ Packet $>$ ns3\-::\-Sublayer\-Protocol\-::\-O\-I\-C\-N\-Sublayer\-Check (
+\begin{DoxyParamCaption}
+\item[{Ptr$<$ Packet $>$}]{packet, }
+\item[{Ipv4\-Header}]{ipheader}
+\end{DoxyParamCaption}
+)}}\label{classns3_1_1SublayerProtocol_a32f7f8db439df22d32e645249c188de1}
+
+
+Check for the existence of O\-I\-C\-N Sublayer in the packet, i.\-e. check whether the parameter packet is O\-I\-C\-N Packet or not. This A\-P\-I is called by the \hyperlink{classns3_1_1Ipv4RouterL3Protocol}{Ipv4\-Router\-L3\-Protocol} class whenever it receives a packet. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em packet} & packet received by O\-I\-C\-N Router \\
+\hline
+{\em ipheader} & I\-P Header of the packet \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the packet after processing 
+\end{DoxyReturn}
+\hypertarget{classns3_1_1SublayerProtocol_ad875af270446269baf99bcaebad48139}{\index{ns3\-::\-Sublayer\-Protocol@{ns3\-::\-Sublayer\-Protocol}!Set\-Cachable@{Set\-Cachable}}
+\index{Set\-Cachable@{Set\-Cachable}!ns3::SublayerProtocol@{ns3\-::\-Sublayer\-Protocol}}
+\subsubsection[{Set\-Cachable}]{\setlength{\rightskip}{0pt plus 5cm}void ns3\-::\-Sublayer\-Protocol\-::\-Set\-Cachable (
+\begin{DoxyParamCaption}
+\item[{bool}]{non\-\_\-cachable}
+\end{DoxyParamCaption}
+)}}\label{classns3_1_1SublayerProtocol_ad875af270446269baf99bcaebad48139}
+
+
+Set the cachability of the content. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em non\-\_\-cachable} & indicating whether content is cachable or not \\
+\hline
+\end{DoxyParams}
+\hypertarget{classns3_1_1SublayerProtocol_ae0c35330ed5b9f0c7b109b6ef58b37e6}{\index{ns3\-::\-Sublayer\-Protocol@{ns3\-::\-Sublayer\-Protocol}!Set\-Node@{Set\-Node}}
+\index{Set\-Node@{Set\-Node}!ns3::SublayerProtocol@{ns3\-::\-Sublayer\-Protocol}}
+\subsubsection[{Set\-Node}]{\setlength{\rightskip}{0pt plus 5cm}void ns3\-::\-Sublayer\-Protocol\-::\-Set\-Node (
+\begin{DoxyParamCaption}
+\item[{Ptr$<$ Node $>$}]{n}
+\end{DoxyParamCaption}
+)}}\label{classns3_1_1SublayerProtocol_ae0c35330ed5b9f0c7b109b6ef58b37e6}
+
+
+Set node associated with this stack. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em node} & node to set \\
+\hline
+\end{DoxyParams}
+\hypertarget{classns3_1_1SublayerProtocol_a7416f03d29385e56d5b42ed136b7db91}{\index{ns3\-::\-Sublayer\-Protocol@{ns3\-::\-Sublayer\-Protocol}!Set\-O\-I\-C\-N\-Header@{Set\-O\-I\-C\-N\-Header}}
+\index{Set\-O\-I\-C\-N\-Header@{Set\-O\-I\-C\-N\-Header}!ns3::SublayerProtocol@{ns3\-::\-Sublayer\-Protocol}}
+\subsubsection[{Set\-O\-I\-C\-N\-Header}]{\setlength{\rightskip}{0pt plus 5cm}void ns3\-::\-Sublayer\-Protocol\-::\-Set\-O\-I\-C\-N\-Header (
+\begin{DoxyParamCaption}
+\item[{{\bf Oicn\-Header}}]{header}
+\end{DoxyParamCaption}
+)}}\label{classns3_1_1SublayerProtocol_a7416f03d29385e56d5b42ed136b7db91}
+
+
+Store the O\-I\-C\-N header of the received packet as a Private Variable 'oicn\-\_\-header' in the \hyperlink{classns3_1_1SublayerProtocol}{Sublayer\-Protocol} Object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em header} & O\-I\-C\-N header removed from the received packet \\
+\hline
+\end{DoxyParams}
+\hypertarget{classns3_1_1SublayerProtocol_a31827df98334d1c401ad68feaca4105a}{\index{ns3\-::\-Sublayer\-Protocol@{ns3\-::\-Sublayer\-Protocol}!Set\-Udp\-Header@{Set\-Udp\-Header}}
+\index{Set\-Udp\-Header@{Set\-Udp\-Header}!ns3::SublayerProtocol@{ns3\-::\-Sublayer\-Protocol}}
+\subsubsection[{Set\-Udp\-Header}]{\setlength{\rightskip}{0pt plus 5cm}void ns3\-::\-Sublayer\-Protocol\-::\-Set\-Udp\-Header (
+\begin{DoxyParamCaption}
+\item[{Udp\-Header}]{header}
+\end{DoxyParamCaption}
+)}}\label{classns3_1_1SublayerProtocol_a31827df98334d1c401ad68feaca4105a}
+
+
+Store the U\-D\-P header of the received packet as a Private Variable 'udp\-\_\-header' in the \hyperlink{classns3_1_1SublayerProtocol}{Sublayer\-Protocol} Object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em header} & U\-D\-P header removed from the received packet \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classns3_1_1SublayerProtocol_a4993887dad842a577bdfdfa10cecb7d7}{\index{ns3\-::\-Sublayer\-Protocol@{ns3\-::\-Sublayer\-Protocol}!m\-\_\-node@{m\-\_\-node}}
+\index{m\-\_\-node@{m\-\_\-node}!ns3::SublayerProtocol@{ns3\-::\-Sublayer\-Protocol}}
+\subsubsection[{m\-\_\-node}]{\setlength{\rightskip}{0pt plus 5cm}Ptr$<$Node$>$ ns3\-::\-Sublayer\-Protocol\-::m\-\_\-node\hspace{0.3cm}{\ttfamily [private]}}}\label{classns3_1_1SublayerProtocol_a4993887dad842a577bdfdfa10cecb7d7}
+
+
+node pointer of current stack 
+
+\hypertarget{classns3_1_1SublayerProtocol_a829d9ef293fd6c38367143c338850cb7}{\index{ns3\-::\-Sublayer\-Protocol@{ns3\-::\-Sublayer\-Protocol}!m\-\_\-set\-\_\-non\-\_\-cachable@{m\-\_\-set\-\_\-non\-\_\-cachable}}
+\index{m\-\_\-set\-\_\-non\-\_\-cachable@{m\-\_\-set\-\_\-non\-\_\-cachable}!ns3::SublayerProtocol@{ns3\-::\-Sublayer\-Protocol}}
+\subsubsection[{m\-\_\-set\-\_\-non\-\_\-cachable}]{\setlength{\rightskip}{0pt plus 5cm}bool ns3\-::\-Sublayer\-Protocol\-::m\-\_\-set\-\_\-non\-\_\-cachable\hspace{0.3cm}{\ttfamily [private]}}}\label{classns3_1_1SublayerProtocol_a829d9ef293fd6c38367143c338850cb7}
+
+
+indicates whether content is cachable or not 
+
+\hypertarget{classns3_1_1SublayerProtocol_a6fb3c36f156ba315448ef4fe95a3c4f6}{\index{ns3\-::\-Sublayer\-Protocol@{ns3\-::\-Sublayer\-Protocol}!m\-\_\-socket@{m\-\_\-socket}}
+\index{m\-\_\-socket@{m\-\_\-socket}!ns3::SublayerProtocol@{ns3\-::\-Sublayer\-Protocol}}
+\subsubsection[{m\-\_\-socket}]{\setlength{\rightskip}{0pt plus 5cm}Ptr$<$Socket$>$ ns3\-::\-Sublayer\-Protocol\-::m\-\_\-socket\hspace{0.3cm}{\ttfamily [private]}}}\label{classns3_1_1SublayerProtocol_a6fb3c36f156ba315448ef4fe95a3c4f6}
+
+
+socket pointer for the process of sending data queried by O\-I\-C\-N Client 
+
+\hypertarget{classns3_1_1SublayerProtocol_a9ceec600a64150a12295c82f01bb8e3c}{\index{ns3\-::\-Sublayer\-Protocol@{ns3\-::\-Sublayer\-Protocol}!oicn\-\_\-header@{oicn\-\_\-header}}
+\index{oicn\-\_\-header@{oicn\-\_\-header}!ns3::SublayerProtocol@{ns3\-::\-Sublayer\-Protocol}}
+\subsubsection[{oicn\-\_\-header}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Oicn\-Header} ns3\-::\-Sublayer\-Protocol\-::oicn\-\_\-header\hspace{0.3cm}{\ttfamily [private]}}}\label{classns3_1_1SublayerProtocol_a9ceec600a64150a12295c82f01bb8e3c}
+
+
+O\-I\-C\-N header of the received packet. 
+
+\hypertarget{classns3_1_1SublayerProtocol_a95b083926386de937c4e9b0a235a4ab8}{\index{ns3\-::\-Sublayer\-Protocol@{ns3\-::\-Sublayer\-Protocol}!udp\-\_\-header@{udp\-\_\-header}}
+\index{udp\-\_\-header@{udp\-\_\-header}!ns3::SublayerProtocol@{ns3\-::\-Sublayer\-Protocol}}
+\subsubsection[{udp\-\_\-header}]{\setlength{\rightskip}{0pt plus 5cm}Udp\-Header ns3\-::\-Sublayer\-Protocol\-::udp\-\_\-header\hspace{0.3cm}{\ttfamily [private]}}}\label{classns3_1_1SublayerProtocol_a95b083926386de937c4e9b0a235a4ab8}
+
+
+U\-D\-P header of the received packet. 
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+model/\hyperlink{sublayer-protocol_8h}{sublayer-\/protocol.\-h}\item 
+model/\hyperlink{sublayer-protocol_8cc}{sublayer-\/protocol.\-cc}\end{DoxyCompactItemize}

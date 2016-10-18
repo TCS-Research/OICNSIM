@@ -1,0 +1,455 @@
+\hypertarget{classns3_1_1SimpleUniversalCaching}{\section{ns3\-:\-:Simple\-Universal\-Caching Class Reference}
+\label{classns3_1_1SimpleUniversalCaching}\index{ns3\-::\-Simple\-Universal\-Caching@{ns3\-::\-Simple\-Universal\-Caching}}
+}
+
+
+This class implements the Universal caching policy.  
+
+
+
+
+{\ttfamily \#include $<$simple-\/universal-\/caching.\-h$>$}
+
+Inheritance diagram for ns3\-:\-:Simple\-Universal\-Caching\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classns3_1_1SimpleUniversalCaching}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classns3_1_1SimpleUniversalCaching_a818bfd8d8077eef52cc33156373e00b5}{Simple\-Universal\-Caching} ()
+\item 
+virtual \hyperlink{classns3_1_1SimpleUniversalCaching_ac7a548d505befd6a65108bc043ab0715}{$\sim$\-Simple\-Universal\-Caching} ()
+\item 
+virtual void \hyperlink{classns3_1_1SimpleUniversalCaching_aa6123b2df8e357e30b84edf190d874c8}{Set\-Cache\-Size} (uint32\-\_\-t size)
+\begin{DoxyCompactList}\small\item\em Set the cache size of the Cache. \end{DoxyCompactList}\item 
+virtual uint32\-\_\-t \hyperlink{classns3_1_1SimpleUniversalCaching_a923d1d730c8d0171e2366773b950d165}{Get\-Cache\-Size} (void)
+\begin{DoxyCompactList}\small\item\em Get the cache size of the Cache. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classns3_1_1SimpleUniversalCaching_a356fd57c44d67a96db68c5dbd0d8471c}{Set\-Freshness\-Time} (uint64\-\_\-t time)
+\begin{DoxyCompactList}\small\item\em Set the freshness time for the contents of Cache. \end{DoxyCompactList}\item 
+virtual uint64\-\_\-t \hyperlink{classns3_1_1SimpleUniversalCaching_a164cda8301046d0123443419528c6b3e}{Get\-Freshness\-Time} (void)
+\begin{DoxyCompactList}\small\item\em Get the freshness time set for the contents of Cache. \end{DoxyCompactList}\item 
+virtual \hyperlink{classns3_1_1NamedContentCacheEntry}{Named\-Content\-Cache\-Entry} \hyperlink{classns3_1_1SimpleUniversalCaching_a95d289d9580f5af31885b8deb9738451}{Create\-Entry} (std\-::string Name, Ptr$<$ Packet $>$ packet, Ipv4\-Header ipheader)
+\begin{DoxyCompactList}\small\item\em Create the Cache entry, which is an object of \hyperlink{classns3_1_1NamedContentCacheEntry}{Named\-Content\-Cache\-Entry} class. The subclasses will define this function to create an entry that has the requisite parameters of the content, for the purpose of indexing content according to caching policy the subclass represents. \end{DoxyCompactList}\item 
+virtual uint32\-\_\-t \hyperlink{classns3_1_1SimpleUniversalCaching_aeec1f45196ce8ffe82baf2439e4ee064}{Create\-Index} (\hyperlink{classns3_1_1NamedContentCacheEntry}{Named\-Content\-Cache\-Entry} entry)
+\begin{DoxyCompactList}\small\item\em Create the index of the corresponding entry, by using the parameters of the content present in the entry class. The subclasses will define this function to create an index which, when put in order, will arrange the contents according to the caching policy the subclass represents. If some subclasses need decimal indexes, they have to multiply the obtained index with a factor to ensure unique integer indexes are obtained. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classns3_1_1SimpleUniversalCaching_a18713ba18ecbf1ef06b0efdf2ef3d83b}{Insert\-To\-Cache} (std\-::string Name, \hyperlink{classns3_1_1NamedContentCacheEntry}{Named\-Content\-Cache\-Entry} entry)
+\begin{DoxyCompactList}\small\item\em Insert the Name of the content and its corresponding entry object to the Cache. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classns3_1_1SimpleUniversalCaching_aaeed7c05fc53f6bcb667057b72bfd718}{Insert\-To\-Policy\-Index} (uint32\-\_\-t index, std\-::string Name)
+\begin{DoxyCompactList}\small\item\em Insert the index of the content and its corresponding name to the Policy\-Index. \end{DoxyCompactList}\item 
+virtual bool \hyperlink{classns3_1_1SimpleUniversalCaching_ab28cafb9e7ea79d7a318d7cafa7293f7}{Is\-Full} (void)
+\begin{DoxyCompactList}\small\item\em Check if the Cache is full, i.\-e. if the number of contents is equal the cache size. \end{DoxyCompactList}\item 
+virtual bool \hyperlink{classns3_1_1SimpleUniversalCaching_a3f334cfd08d2a1dbbee280cde3d7fe22}{Is\-Unique} (std\-::string Name)
+\begin{DoxyCompactList}\small\item\em it check whether content is present in the cache or not \end{DoxyCompactList}\item 
+virtual bool \hyperlink{classns3_1_1SimpleUniversalCaching_a2aaf1a6027c2c635a1c74a7ca279970f}{Is\-Evictable} (uint32\-\_\-t index)
+\begin{DoxyCompactList}\small\item\em Check if the content with the given index can be inserted with the eviction of some other content when the is full. The new content can be inserted if its index is lesser than (or greater than, when arranged in descending order) the first content, or if any content's freshness has expired. Some caching policies, like F\-I\-F\-O, keep on inserting new content, irrespective of its index. Subclasses representing such policies need not define and use this function. \end{DoxyCompactList}\item 
+virtual std\-::string \hyperlink{classns3_1_1SimpleUniversalCaching_a2055b9586523ae15979da923dfac65fc}{Evict\-Entry} (void)
+\begin{DoxyCompactList}\small\item\em Evict the first content in Policy\-Index and also the corresponding entry in the Cache. This is the main eviction function of \hyperlink{classns3_1_1NamedContentCache}{Named\-Content\-Cache}. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classns3_1_1SimpleUniversalCaching_a1913c0525f12b726eb04567bb3254551}{Evict\-Entry} (std\-::string Name)
+\begin{DoxyCompactList}\small\item\em Evict the content with corresponding name from both Policy\-Index and Cache. This has to be done when a packet having a content that already exists in the Cache has been received the I\-C\-N Router. This operation basically evicts the older entry of the same content so that the newer entry can be inserted. This function has to be defined by all subclasses because every content name in Cache and Policy\-Index has to be unique. \end{DoxyCompactList}\item 
+virtual Ptr$<$ Packet $>$ \hyperlink{classns3_1_1SimpleUniversalCaching_a492b9405dff0ced8bae565bc98f5361c}{Find} (std\-::string Name)
+\begin{DoxyCompactList}\small\item\em Find the content with given name in the Cache. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classns3_1_1SimpleUniversalCaching_a65bbd90a7f126b3f69bbb400a37ef9d0}{Update\-Index} (std\-::string Name)
+\begin{DoxyCompactList}\small\item\em Update the index of the content with the given name. This has to be done when the content is retrieved from Cache to be sent to a querying O\-I\-C\-N Client. The subclasses will define this function based on the requirements of the caching policies they represent. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static Type\-Id \hyperlink{classns3_1_1SimpleUniversalCaching_a6141f83cd1ca033d3664758fe135a483}{Get\-Type\-Id} (void)
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+uint32\-\_\-t \hyperlink{classns3_1_1SimpleUniversalCaching_a7bad9b82148c85412f776cd8581dda51}{cache\-\_\-size}
+\begin{DoxyCompactList}\small\item\em size of the Cache \end{DoxyCompactList}\item 
+\hyperlink{classns3_1_1NamedContentCache_a9aa35d883b9f4153d97b6e7dc74f9307}{Cache} \hyperlink{classns3_1_1SimpleUniversalCaching_aa6d19b19f2e287526b965cbb52c9f9e6}{cache}
+\begin{DoxyCompactList}\small\item\em the main cache container which stores the name and corresponding content \end{DoxyCompactList}\item 
+\hyperlink{classns3_1_1NamedContentCache_a0b728ea2d4e0acbe431897b2374cfc8e}{Policy\-Index} \hyperlink{classns3_1_1SimpleUniversalCaching_a500ad999484b695f8e7acaf07b6baf96}{policyindex}
+\begin{DoxyCompactList}\small\item\em policy indexed container, containing index and content name \end{DoxyCompactList}\item 
+uint64\-\_\-t \hyperlink{classns3_1_1SimpleUniversalCaching_ab7a35c71985c4567f09db5e21decc14b}{freshness\-\_\-time}
+\begin{DoxyCompactList}\small\item\em time after which the cache should be evicted \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+This class implements the Universal caching policy. 
+
+For more details of universal caching please refer \-: B. Panigrahi, S. Shailendra, H. K. Rath, and A. Simha, “\-Universal Caching Model and Markov-\/based Cache Analysis for Information Centric Networks,” Springer Photonic Network Communication Journal (P\-N\-E\-T-\/2015) 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classns3_1_1SimpleUniversalCaching_a818bfd8d8077eef52cc33156373e00b5}{\index{ns3\-::\-Simple\-Universal\-Caching@{ns3\-::\-Simple\-Universal\-Caching}!Simple\-Universal\-Caching@{Simple\-Universal\-Caching}}
+\index{Simple\-Universal\-Caching@{Simple\-Universal\-Caching}!ns3::SimpleUniversalCaching@{ns3\-::\-Simple\-Universal\-Caching}}
+\subsubsection[{Simple\-Universal\-Caching}]{\setlength{\rightskip}{0pt plus 5cm}ns3\-::\-Simple\-Universal\-Caching\-::\-Simple\-Universal\-Caching (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classns3_1_1SimpleUniversalCaching_a818bfd8d8077eef52cc33156373e00b5}
+\hypertarget{classns3_1_1SimpleUniversalCaching_ac7a548d505befd6a65108bc043ab0715}{\index{ns3\-::\-Simple\-Universal\-Caching@{ns3\-::\-Simple\-Universal\-Caching}!$\sim$\-Simple\-Universal\-Caching@{$\sim$\-Simple\-Universal\-Caching}}
+\index{$\sim$\-Simple\-Universal\-Caching@{$\sim$\-Simple\-Universal\-Caching}!ns3::SimpleUniversalCaching@{ns3\-::\-Simple\-Universal\-Caching}}
+\subsubsection[{$\sim$\-Simple\-Universal\-Caching}]{\setlength{\rightskip}{0pt plus 5cm}ns3\-::\-Simple\-Universal\-Caching\-::$\sim$\-Simple\-Universal\-Caching (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classns3_1_1SimpleUniversalCaching_ac7a548d505befd6a65108bc043ab0715}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classns3_1_1SimpleUniversalCaching_a95d289d9580f5af31885b8deb9738451}{\index{ns3\-::\-Simple\-Universal\-Caching@{ns3\-::\-Simple\-Universal\-Caching}!Create\-Entry@{Create\-Entry}}
+\index{Create\-Entry@{Create\-Entry}!ns3::SimpleUniversalCaching@{ns3\-::\-Simple\-Universal\-Caching}}
+\subsubsection[{Create\-Entry}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Named\-Content\-Cache\-Entry} ns3\-::\-Simple\-Universal\-Caching\-::\-Create\-Entry (
+\begin{DoxyParamCaption}
+\item[{std\-::string}]{Name, }
+\item[{Ptr$<$ Packet $>$}]{packet, }
+\item[{Ipv4\-Header}]{ipheader}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classns3_1_1SimpleUniversalCaching_a95d289d9580f5af31885b8deb9738451}
+
+
+Create the Cache entry, which is an object of \hyperlink{classns3_1_1NamedContentCacheEntry}{Named\-Content\-Cache\-Entry} class. The subclasses will define this function to create an entry that has the requisite parameters of the content, for the purpose of indexing content according to caching policy the subclass represents. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Name} & name of the content \\
+\hline
+{\em packet} & packet received by I\-C\-N Router, with its I\-P, Transport and O\-I\-C\-N headers removed \\
+\hline
+{\em ipheader} & I\-P Header of the packet, from which the required parameters of the content (present in packet) can retrieved. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the newly created cache entry 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classns3_1_1NamedContentCache_a154317526b3883db729c365ab342074a}{ns3\-::\-Named\-Content\-Cache}.
+
+\hypertarget{classns3_1_1SimpleUniversalCaching_aeec1f45196ce8ffe82baf2439e4ee064}{\index{ns3\-::\-Simple\-Universal\-Caching@{ns3\-::\-Simple\-Universal\-Caching}!Create\-Index@{Create\-Index}}
+\index{Create\-Index@{Create\-Index}!ns3::SimpleUniversalCaching@{ns3\-::\-Simple\-Universal\-Caching}}
+\subsubsection[{Create\-Index}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t ns3\-::\-Simple\-Universal\-Caching\-::\-Create\-Index (
+\begin{DoxyParamCaption}
+\item[{{\bf Named\-Content\-Cache\-Entry}}]{entry}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classns3_1_1SimpleUniversalCaching_aeec1f45196ce8ffe82baf2439e4ee064}
+
+
+Create the index of the corresponding entry, by using the parameters of the content present in the entry class. The subclasses will define this function to create an index which, when put in order, will arrange the contents according to the caching policy the subclass represents. If some subclasses need decimal indexes, they have to multiply the obtained index with a factor to ensure unique integer indexes are obtained. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em entry} & the cache entry corresponding to the content \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the newly created integer index for the content 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classns3_1_1NamedContentCache_a75be49c2ad5db93bdf8aaed813dcf304}{ns3\-::\-Named\-Content\-Cache}.
+
+\hypertarget{classns3_1_1SimpleUniversalCaching_a2055b9586523ae15979da923dfac65fc}{\index{ns3\-::\-Simple\-Universal\-Caching@{ns3\-::\-Simple\-Universal\-Caching}!Evict\-Entry@{Evict\-Entry}}
+\index{Evict\-Entry@{Evict\-Entry}!ns3::SimpleUniversalCaching@{ns3\-::\-Simple\-Universal\-Caching}}
+\subsubsection[{Evict\-Entry}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string ns3\-::\-Simple\-Universal\-Caching\-::\-Evict\-Entry (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classns3_1_1SimpleUniversalCaching_a2055b9586523ae15979da923dfac65fc}
+
+
+Evict the first content in Policy\-Index and also the corresponding entry in the Cache. This is the main eviction function of \hyperlink{classns3_1_1NamedContentCache}{Named\-Content\-Cache}. 
+
+\begin{DoxyReturn}{Returns}
+the name of the evicted content 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classns3_1_1NamedContentCache_a87850f01fc632ede64af75d7c20f7a7e}{ns3\-::\-Named\-Content\-Cache}.
+
+\hypertarget{classns3_1_1SimpleUniversalCaching_a1913c0525f12b726eb04567bb3254551}{\index{ns3\-::\-Simple\-Universal\-Caching@{ns3\-::\-Simple\-Universal\-Caching}!Evict\-Entry@{Evict\-Entry}}
+\index{Evict\-Entry@{Evict\-Entry}!ns3::SimpleUniversalCaching@{ns3\-::\-Simple\-Universal\-Caching}}
+\subsubsection[{Evict\-Entry}]{\setlength{\rightskip}{0pt plus 5cm}void ns3\-::\-Simple\-Universal\-Caching\-::\-Evict\-Entry (
+\begin{DoxyParamCaption}
+\item[{std\-::string}]{Name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classns3_1_1SimpleUniversalCaching_a1913c0525f12b726eb04567bb3254551}
+
+
+Evict the content with corresponding name from both Policy\-Index and Cache. This has to be done when a packet having a content that already exists in the Cache has been received the I\-C\-N Router. This operation basically evicts the older entry of the same content so that the newer entry can be inserted. This function has to be defined by all subclasses because every content name in Cache and Policy\-Index has to be unique. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & name of the non-\/unique content \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classns3_1_1NamedContentCache_a254f3c74475e104a615739fc7577296f}{ns3\-::\-Named\-Content\-Cache}.
+
+\hypertarget{classns3_1_1SimpleUniversalCaching_a492b9405dff0ced8bae565bc98f5361c}{\index{ns3\-::\-Simple\-Universal\-Caching@{ns3\-::\-Simple\-Universal\-Caching}!Find@{Find}}
+\index{Find@{Find}!ns3::SimpleUniversalCaching@{ns3\-::\-Simple\-Universal\-Caching}}
+\subsubsection[{Find}]{\setlength{\rightskip}{0pt plus 5cm}Ptr$<$ Packet $>$ ns3\-::\-Simple\-Universal\-Caching\-::\-Find (
+\begin{DoxyParamCaption}
+\item[{std\-::string}]{Name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classns3_1_1SimpleUniversalCaching_a492b9405dff0ced8bae565bc98f5361c}
+
+
+Find the content with given name in the Cache. 
+
+\begin{DoxyReturn}{Returns}
+the content in the form of an Application Layer packet 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classns3_1_1NamedContentCache_a081439cd96d09e2f9f158f3aebe9fd7c}{ns3\-::\-Named\-Content\-Cache}.
+
+\hypertarget{classns3_1_1SimpleUniversalCaching_a923d1d730c8d0171e2366773b950d165}{\index{ns3\-::\-Simple\-Universal\-Caching@{ns3\-::\-Simple\-Universal\-Caching}!Get\-Cache\-Size@{Get\-Cache\-Size}}
+\index{Get\-Cache\-Size@{Get\-Cache\-Size}!ns3::SimpleUniversalCaching@{ns3\-::\-Simple\-Universal\-Caching}}
+\subsubsection[{Get\-Cache\-Size}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t ns3\-::\-Simple\-Universal\-Caching\-::\-Get\-Cache\-Size (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classns3_1_1SimpleUniversalCaching_a923d1d730c8d0171e2366773b950d165}
+
+
+Get the cache size of the Cache. 
+
+\begin{DoxyReturn}{Returns}
+the cache size of the Cache 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classns3_1_1NamedContentCache_afd9ade17d87082a46cbb745fd0196ab4}{ns3\-::\-Named\-Content\-Cache}.
+
+\hypertarget{classns3_1_1SimpleUniversalCaching_a164cda8301046d0123443419528c6b3e}{\index{ns3\-::\-Simple\-Universal\-Caching@{ns3\-::\-Simple\-Universal\-Caching}!Get\-Freshness\-Time@{Get\-Freshness\-Time}}
+\index{Get\-Freshness\-Time@{Get\-Freshness\-Time}!ns3::SimpleUniversalCaching@{ns3\-::\-Simple\-Universal\-Caching}}
+\subsubsection[{Get\-Freshness\-Time}]{\setlength{\rightskip}{0pt plus 5cm}uint64\-\_\-t ns3\-::\-Simple\-Universal\-Caching\-::\-Get\-Freshness\-Time (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classns3_1_1SimpleUniversalCaching_a164cda8301046d0123443419528c6b3e}
+
+
+Get the freshness time set for the contents of Cache. 
+
+\begin{DoxyReturn}{Returns}
+the freshness time in milliseconds 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classns3_1_1NamedContentCache_ac2b0e616d4e866cb2328e986f2ef69e1}{ns3\-::\-Named\-Content\-Cache}.
+
+\hypertarget{classns3_1_1SimpleUniversalCaching_a6141f83cd1ca033d3664758fe135a483}{\index{ns3\-::\-Simple\-Universal\-Caching@{ns3\-::\-Simple\-Universal\-Caching}!Get\-Type\-Id@{Get\-Type\-Id}}
+\index{Get\-Type\-Id@{Get\-Type\-Id}!ns3::SimpleUniversalCaching@{ns3\-::\-Simple\-Universal\-Caching}}
+\subsubsection[{Get\-Type\-Id}]{\setlength{\rightskip}{0pt plus 5cm}Type\-Id ns3\-::\-Simple\-Universal\-Caching\-::\-Get\-Type\-Id (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classns3_1_1SimpleUniversalCaching_a6141f83cd1ca033d3664758fe135a483}
+\hypertarget{classns3_1_1SimpleUniversalCaching_a18713ba18ecbf1ef06b0efdf2ef3d83b}{\index{ns3\-::\-Simple\-Universal\-Caching@{ns3\-::\-Simple\-Universal\-Caching}!Insert\-To\-Cache@{Insert\-To\-Cache}}
+\index{Insert\-To\-Cache@{Insert\-To\-Cache}!ns3::SimpleUniversalCaching@{ns3\-::\-Simple\-Universal\-Caching}}
+\subsubsection[{Insert\-To\-Cache}]{\setlength{\rightskip}{0pt plus 5cm}void ns3\-::\-Simple\-Universal\-Caching\-::\-Insert\-To\-Cache (
+\begin{DoxyParamCaption}
+\item[{std\-::string}]{Name, }
+\item[{{\bf Named\-Content\-Cache\-Entry}}]{entry}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classns3_1_1SimpleUniversalCaching_a18713ba18ecbf1ef06b0efdf2ef3d83b}
+
+
+Insert the Name of the content and its corresponding entry object to the Cache. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Name} & name of the content \\
+\hline
+{\em entry} & the cache entry corresponding to the content \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classns3_1_1NamedContentCache_a56a23add9b5bc03908793cf261ccb5f8}{ns3\-::\-Named\-Content\-Cache}.
+
+\hypertarget{classns3_1_1SimpleUniversalCaching_aaeed7c05fc53f6bcb667057b72bfd718}{\index{ns3\-::\-Simple\-Universal\-Caching@{ns3\-::\-Simple\-Universal\-Caching}!Insert\-To\-Policy\-Index@{Insert\-To\-Policy\-Index}}
+\index{Insert\-To\-Policy\-Index@{Insert\-To\-Policy\-Index}!ns3::SimpleUniversalCaching@{ns3\-::\-Simple\-Universal\-Caching}}
+\subsubsection[{Insert\-To\-Policy\-Index}]{\setlength{\rightskip}{0pt plus 5cm}void ns3\-::\-Simple\-Universal\-Caching\-::\-Insert\-To\-Policy\-Index (
+\begin{DoxyParamCaption}
+\item[{uint32\-\_\-t}]{index, }
+\item[{std\-::string}]{Name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classns3_1_1SimpleUniversalCaching_aaeed7c05fc53f6bcb667057b72bfd718}
+
+
+Insert the index of the content and its corresponding name to the Policy\-Index. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & the unique integer index of the content \\
+\hline
+{\em Name} & name of the content \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classns3_1_1NamedContentCache_ac248e647f56a6fef10285b1c654b8180}{ns3\-::\-Named\-Content\-Cache}.
+
+\hypertarget{classns3_1_1SimpleUniversalCaching_a2aaf1a6027c2c635a1c74a7ca279970f}{\index{ns3\-::\-Simple\-Universal\-Caching@{ns3\-::\-Simple\-Universal\-Caching}!Is\-Evictable@{Is\-Evictable}}
+\index{Is\-Evictable@{Is\-Evictable}!ns3::SimpleUniversalCaching@{ns3\-::\-Simple\-Universal\-Caching}}
+\subsubsection[{Is\-Evictable}]{\setlength{\rightskip}{0pt plus 5cm}bool ns3\-::\-Simple\-Universal\-Caching\-::\-Is\-Evictable (
+\begin{DoxyParamCaption}
+\item[{uint32\-\_\-t}]{index}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classns3_1_1SimpleUniversalCaching_a2aaf1a6027c2c635a1c74a7ca279970f}
+
+
+Check if the content with the given index can be inserted with the eviction of some other content when the is full. The new content can be inserted if its index is lesser than (or greater than, when arranged in descending order) the first content, or if any content's freshness has expired. Some caching policies, like F\-I\-F\-O, keep on inserting new content, irrespective of its index. Subclasses representing such policies need not define and use this function. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & the unique integer index of the content \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if any existing content can be evicted so that the new content with the given index can be inserted. 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classns3_1_1NamedContentCache_a281ad340f9771fa2ed898a1ad569d0da}{ns3\-::\-Named\-Content\-Cache}.
+
+\hypertarget{classns3_1_1SimpleUniversalCaching_ab28cafb9e7ea79d7a318d7cafa7293f7}{\index{ns3\-::\-Simple\-Universal\-Caching@{ns3\-::\-Simple\-Universal\-Caching}!Is\-Full@{Is\-Full}}
+\index{Is\-Full@{Is\-Full}!ns3::SimpleUniversalCaching@{ns3\-::\-Simple\-Universal\-Caching}}
+\subsubsection[{Is\-Full}]{\setlength{\rightskip}{0pt plus 5cm}bool ns3\-::\-Simple\-Universal\-Caching\-::\-Is\-Full (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classns3_1_1SimpleUniversalCaching_ab28cafb9e7ea79d7a318d7cafa7293f7}
+
+
+Check if the Cache is full, i.\-e. if the number of contents is equal the cache size. 
+
+\begin{DoxyReturn}{Returns}
+true if the Cache is full 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classns3_1_1NamedContentCache_a1ceeaf5b85d3571225adfe2d48caf126}{ns3\-::\-Named\-Content\-Cache}.
+
+\hypertarget{classns3_1_1SimpleUniversalCaching_a3f334cfd08d2a1dbbee280cde3d7fe22}{\index{ns3\-::\-Simple\-Universal\-Caching@{ns3\-::\-Simple\-Universal\-Caching}!Is\-Unique@{Is\-Unique}}
+\index{Is\-Unique@{Is\-Unique}!ns3::SimpleUniversalCaching@{ns3\-::\-Simple\-Universal\-Caching}}
+\subsubsection[{Is\-Unique}]{\setlength{\rightskip}{0pt plus 5cm}bool ns3\-::\-Simple\-Universal\-Caching\-::\-Is\-Unique (
+\begin{DoxyParamCaption}
+\item[{std\-::string}]{name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classns3_1_1SimpleUniversalCaching_a3f334cfd08d2a1dbbee280cde3d7fe22}
+
+
+it check whether content is present in the cache or not 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & name of the content \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if content is not present, false when content is present in the cache 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classns3_1_1NamedContentCache_a4c4a79310c99f9c8ad6227d3b380dc20}{ns3\-::\-Named\-Content\-Cache}.
+
+\hypertarget{classns3_1_1SimpleUniversalCaching_aa6123b2df8e357e30b84edf190d874c8}{\index{ns3\-::\-Simple\-Universal\-Caching@{ns3\-::\-Simple\-Universal\-Caching}!Set\-Cache\-Size@{Set\-Cache\-Size}}
+\index{Set\-Cache\-Size@{Set\-Cache\-Size}!ns3::SimpleUniversalCaching@{ns3\-::\-Simple\-Universal\-Caching}}
+\subsubsection[{Set\-Cache\-Size}]{\setlength{\rightskip}{0pt plus 5cm}void ns3\-::\-Simple\-Universal\-Caching\-::\-Set\-Cache\-Size (
+\begin{DoxyParamCaption}
+\item[{uint32\-\_\-t}]{size}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classns3_1_1SimpleUniversalCaching_aa6123b2df8e357e30b84edf190d874c8}
+
+
+Set the cache size of the Cache. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em size} & the size to which the cache has to be set \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classns3_1_1NamedContentCache_ae28605a03a5a4d8b9a3494b4068f44e2}{ns3\-::\-Named\-Content\-Cache}.
+
+\hypertarget{classns3_1_1SimpleUniversalCaching_a356fd57c44d67a96db68c5dbd0d8471c}{\index{ns3\-::\-Simple\-Universal\-Caching@{ns3\-::\-Simple\-Universal\-Caching}!Set\-Freshness\-Time@{Set\-Freshness\-Time}}
+\index{Set\-Freshness\-Time@{Set\-Freshness\-Time}!ns3::SimpleUniversalCaching@{ns3\-::\-Simple\-Universal\-Caching}}
+\subsubsection[{Set\-Freshness\-Time}]{\setlength{\rightskip}{0pt plus 5cm}void ns3\-::\-Simple\-Universal\-Caching\-::\-Set\-Freshness\-Time (
+\begin{DoxyParamCaption}
+\item[{uint64\-\_\-t}]{time}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classns3_1_1SimpleUniversalCaching_a356fd57c44d67a96db68c5dbd0d8471c}
+
+
+Set the freshness time for the contents of Cache. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em time} & the freshness time in milliseconds \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classns3_1_1NamedContentCache_a92a5e2e641a11d15300f621aa77275ab}{ns3\-::\-Named\-Content\-Cache}.
+
+\hypertarget{classns3_1_1SimpleUniversalCaching_a65bbd90a7f126b3f69bbb400a37ef9d0}{\index{ns3\-::\-Simple\-Universal\-Caching@{ns3\-::\-Simple\-Universal\-Caching}!Update\-Index@{Update\-Index}}
+\index{Update\-Index@{Update\-Index}!ns3::SimpleUniversalCaching@{ns3\-::\-Simple\-Universal\-Caching}}
+\subsubsection[{Update\-Index}]{\setlength{\rightskip}{0pt plus 5cm}void ns3\-::\-Simple\-Universal\-Caching\-::\-Update\-Index (
+\begin{DoxyParamCaption}
+\item[{std\-::string}]{Name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classns3_1_1SimpleUniversalCaching_a65bbd90a7f126b3f69bbb400a37ef9d0}
+
+
+Update the index of the content with the given name. This has to be done when the content is retrieved from Cache to be sent to a querying O\-I\-C\-N Client. The subclasses will define this function based on the requirements of the caching policies they represent. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em the} & name of the content whose index has to be updated \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classns3_1_1NamedContentCache_aeabf8afacd89cbc46b78b382c8a487e8}{ns3\-::\-Named\-Content\-Cache}.
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classns3_1_1SimpleUniversalCaching_aa6d19b19f2e287526b965cbb52c9f9e6}{\index{ns3\-::\-Simple\-Universal\-Caching@{ns3\-::\-Simple\-Universal\-Caching}!cache@{cache}}
+\index{cache@{cache}!ns3::SimpleUniversalCaching@{ns3\-::\-Simple\-Universal\-Caching}}
+\subsubsection[{cache}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Cache} ns3\-::\-Simple\-Universal\-Caching\-::cache\hspace{0.3cm}{\ttfamily [private]}}}\label{classns3_1_1SimpleUniversalCaching_aa6d19b19f2e287526b965cbb52c9f9e6}
+
+
+the main cache container which stores the name and corresponding content 
+
+\hypertarget{classns3_1_1SimpleUniversalCaching_a7bad9b82148c85412f776cd8581dda51}{\index{ns3\-::\-Simple\-Universal\-Caching@{ns3\-::\-Simple\-Universal\-Caching}!cache\-\_\-size@{cache\-\_\-size}}
+\index{cache\-\_\-size@{cache\-\_\-size}!ns3::SimpleUniversalCaching@{ns3\-::\-Simple\-Universal\-Caching}}
+\subsubsection[{cache\-\_\-size}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t ns3\-::\-Simple\-Universal\-Caching\-::cache\-\_\-size\hspace{0.3cm}{\ttfamily [private]}}}\label{classns3_1_1SimpleUniversalCaching_a7bad9b82148c85412f776cd8581dda51}
+
+
+size of the Cache 
+
+\hypertarget{classns3_1_1SimpleUniversalCaching_ab7a35c71985c4567f09db5e21decc14b}{\index{ns3\-::\-Simple\-Universal\-Caching@{ns3\-::\-Simple\-Universal\-Caching}!freshness\-\_\-time@{freshness\-\_\-time}}
+\index{freshness\-\_\-time@{freshness\-\_\-time}!ns3::SimpleUniversalCaching@{ns3\-::\-Simple\-Universal\-Caching}}
+\subsubsection[{freshness\-\_\-time}]{\setlength{\rightskip}{0pt plus 5cm}uint64\-\_\-t ns3\-::\-Simple\-Universal\-Caching\-::freshness\-\_\-time\hspace{0.3cm}{\ttfamily [private]}}}\label{classns3_1_1SimpleUniversalCaching_ab7a35c71985c4567f09db5e21decc14b}
+
+
+time after which the cache should be evicted 
+
+\hypertarget{classns3_1_1SimpleUniversalCaching_a500ad999484b695f8e7acaf07b6baf96}{\index{ns3\-::\-Simple\-Universal\-Caching@{ns3\-::\-Simple\-Universal\-Caching}!policyindex@{policyindex}}
+\index{policyindex@{policyindex}!ns3::SimpleUniversalCaching@{ns3\-::\-Simple\-Universal\-Caching}}
+\subsubsection[{policyindex}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Policy\-Index} ns3\-::\-Simple\-Universal\-Caching\-::policyindex\hspace{0.3cm}{\ttfamily [private]}}}\label{classns3_1_1SimpleUniversalCaching_a500ad999484b695f8e7acaf07b6baf96}
+
+
+policy indexed container, containing index and content name 
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+model/\hyperlink{simple-universal-caching_8h}{simple-\/universal-\/caching.\-h}\item 
+model/\hyperlink{simple-universal-caching_8cc}{simple-\/universal-\/caching.\-cc}\end{DoxyCompactItemize}

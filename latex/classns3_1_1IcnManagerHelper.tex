@@ -1,0 +1,111 @@
+\hypertarget{classns3_1_1IcnManagerHelper}{\section{ns3\-:\-:Icn\-Manager\-Helper Class Reference}
+\label{classns3_1_1IcnManagerHelper}\index{ns3\-::\-Icn\-Manager\-Helper@{ns3\-::\-Icn\-Manager\-Helper}}
+}
+
+
+Create an application which resolve the name request (check whether content present at I\-C\-N router or server) and forward request to source of content (I\-C\-N router or server).  
+
+
+
+
+{\ttfamily \#include $<$oicn-\/application-\/helper.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classns3_1_1IcnManagerHelper_aced7f869e1ffd8da9cf65716d541a6eb}{Icn\-Manager\-Helper} ()
+\item 
+Application\-Container \hyperlink{classns3_1_1IcnManagerHelper_a3f9d4acc58e378899bd8a760821f21eb}{Install} (Ptr$<$ Node $>$ node, std\-::vector$<$ std\-::vector$<$ int $>$$>$ name\-Index, std\-::vector$<$ Ipv4\-Address $>$ server\-Address) const 
+\begin{DoxyCompactList}\small\item\em Create a I\-C\-N Manager on the specified Node. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+Application\-Container \hyperlink{classns3_1_1IcnManagerHelper_abecb59da0de92a0424967dbbdf946b07}{Install\-Priv} (Ptr$<$ Node $>$ node, std\-::vector$<$ std\-::vector$<$ int $>$$>$ Name\-Index, std\-::vector$<$ Ipv4\-Address $>$ Server\-Address) const 
+\begin{DoxyCompactList}\small\item\em Install I\-C\-N Manager on the node. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Object\-Factory \hyperlink{classns3_1_1IcnManagerHelper_a7199e133b9aa43c754486726a80c199b}{m\-\_\-factory}
+\begin{DoxyCompactList}\small\item\em Object factory. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Create an application which resolve the name request (check whether content present at I\-C\-N router or server) and forward request to source of content (I\-C\-N router or server). 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classns3_1_1IcnManagerHelper_aced7f869e1ffd8da9cf65716d541a6eb}{\index{ns3\-::\-Icn\-Manager\-Helper@{ns3\-::\-Icn\-Manager\-Helper}!Icn\-Manager\-Helper@{Icn\-Manager\-Helper}}
+\index{Icn\-Manager\-Helper@{Icn\-Manager\-Helper}!ns3::IcnManagerHelper@{ns3\-::\-Icn\-Manager\-Helper}}
+\subsubsection[{Icn\-Manager\-Helper}]{\setlength{\rightskip}{0pt plus 5cm}ns3\-::\-Icn\-Manager\-Helper\-::\-Icn\-Manager\-Helper (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classns3_1_1IcnManagerHelper_aced7f869e1ffd8da9cf65716d541a6eb}
+\hyperlink{classns3_1_1IcnManagerHelper}{Icn\-Manager\-Helper} 
+
+\subsection{Member Function Documentation}
+\hypertarget{classns3_1_1IcnManagerHelper_a3f9d4acc58e378899bd8a760821f21eb}{\index{ns3\-::\-Icn\-Manager\-Helper@{ns3\-::\-Icn\-Manager\-Helper}!Install@{Install}}
+\index{Install@{Install}!ns3::IcnManagerHelper@{ns3\-::\-Icn\-Manager\-Helper}}
+\subsubsection[{Install}]{\setlength{\rightskip}{0pt plus 5cm}Application\-Container ns3\-::\-Icn\-Manager\-Helper\-::\-Install (
+\begin{DoxyParamCaption}
+\item[{Ptr$<$ Node $>$}]{node, }
+\item[{std\-::vector$<$ std\-::vector$<$ int $>$$>$}]{name\-Index, }
+\item[{std\-::vector$<$ Ipv4\-Address $>$}]{server\-Address}
+\end{DoxyParamCaption}
+) const}}\label{classns3_1_1IcnManagerHelper_a3f9d4acc58e378899bd8a760821f21eb}
+
+
+Create a I\-C\-N Manager on the specified Node. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em node} & node on which to create the Application. The node is specified by a Ptr$<$\-Node$>$. \\
+\hline
+{\em name\-Index} & it is the vector of all the name indices that present at corresponding server address specified in parameter server\-Address. \\
+\hline
+{\em server\-Address} & it is vector of server Ipv4 address containing the content corresponding to name indices specified in parameter name\-Index. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+an Application\-Container holding the Application created 
+\end{DoxyReturn}
+\hypertarget{classns3_1_1IcnManagerHelper_abecb59da0de92a0424967dbbdf946b07}{\index{ns3\-::\-Icn\-Manager\-Helper@{ns3\-::\-Icn\-Manager\-Helper}!Install\-Priv@{Install\-Priv}}
+\index{Install\-Priv@{Install\-Priv}!ns3::IcnManagerHelper@{ns3\-::\-Icn\-Manager\-Helper}}
+\subsubsection[{Install\-Priv}]{\setlength{\rightskip}{0pt plus 5cm}Application\-Container ns3\-::\-Icn\-Manager\-Helper\-::\-Install\-Priv (
+\begin{DoxyParamCaption}
+\item[{Ptr$<$ Node $>$}]{node, }
+\item[{std\-::vector$<$ std\-::vector$<$ int $>$$>$}]{Name\-Index, }
+\item[{std\-::vector$<$ Ipv4\-Address $>$}]{Server\-Address}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [private]}}}\label{classns3_1_1IcnManagerHelper_abecb59da0de92a0424967dbbdf946b07}
+
+
+Install I\-C\-N Manager on the node. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em node} & node on which an I\-C\-N\-Manager will be installed. \\
+\hline
+{\em name\-Index} & it is the vector of all the name indices that present at corresponding server address specified in parameter server\-Address. \\
+\hline
+{\em server\-Address} & it is vector of server Ipv4 address containing the content corresponding to name indices specified in parameter name\-Index. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+an Application\-Container to the application installed. 
+\end{DoxyReturn}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classns3_1_1IcnManagerHelper_a7199e133b9aa43c754486726a80c199b}{\index{ns3\-::\-Icn\-Manager\-Helper@{ns3\-::\-Icn\-Manager\-Helper}!m\-\_\-factory@{m\-\_\-factory}}
+\index{m\-\_\-factory@{m\-\_\-factory}!ns3::IcnManagerHelper@{ns3\-::\-Icn\-Manager\-Helper}}
+\subsubsection[{m\-\_\-factory}]{\setlength{\rightskip}{0pt plus 5cm}Object\-Factory ns3\-::\-Icn\-Manager\-Helper\-::m\-\_\-factory\hspace{0.3cm}{\ttfamily [private]}}}\label{classns3_1_1IcnManagerHelper_a7199e133b9aa43c754486726a80c199b}
+
+
+Object factory. 
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+helper/\hyperlink{oicn-application-helper_8h}{oicn-\/application-\/helper.\-h}\item 
+helper/\hyperlink{oicn-application-helper_8cc}{oicn-\/application-\/helper.\-cc}\end{DoxyCompactItemize}

@@ -1,0 +1,142 @@
+#include "oicn-client-application.h"
+#include <stdint.h>
+#include <string>
+#include <vector>
+#include <unordered_map>
+#include "ns3/ipv4-address.h"
+#include "ns3/callback.h"
+#include "ns3/uinteger.h"
+#include "ns3/event-id.h"
+#include "ns3/inet-socket-address.h"
+#include "ns3/address.h"
+#include "ns3/node.h"
+#include "ns3/node-list.h"
+#include "ns3/ptr.h"
+#include "ns3/packet.h"
+#include "ns3/type-id.h"
+#include "icn-manager.h"
+#include "oicn-header.h"
+#include "ns3/simulator.h"
+#include "ns3/log.h"
+//#include "ns3/time.h"
+#include "content.h"
+#include "ns3/ipv4.h"
+#include "ns3/ipv4-l3-protocol.h"
+#include "ns3/ipv4-interface-address.h"
+#include "ns3/node.h"
+#include "ns3/socket.h"
+#include "ns3/type-name.h"
+
+NS_LOG_COMPONENT_DEFINE ("OICNClient");
+
+namespace ns3{
+//namespace oicn{
+
+NS_OBJECT_ENSURE_REGISTERED (OICNClient);
+
+TypeId
+OICNClient::GetTypeId (void)
+{
+	//NS_LOG_INFO (" Check ");
+  static TypeId tid = TypeId ("ns3::OICNClient")
+    .SetParent<Application> ()
+    .AddConstructor<OICNClient> ()
+	/*.AddAttribute ("NodeId", "The ID of the node of this Client.",
+		            UintegerValue (0),
+		            MakeUintegerAccessor (&OICNClient::m_nodeid),
+		            MakeUintegerChecker<uint32_t> ())*/
+  ;
+  return tid;
+}
+
+OICNClient::OICNClient ()
+      : m_interval()
+{
+	//NS_LOG_INFO (" Check ");
+	m_port = 49153;
+	m_count = 100;
+    m_sent = 0;
+	i = 0;
+	m_index = {0};
+	m_sendEvent = EventId();
+}
+
+OICNClient::~OICNClient ()
+{
+ 
+}
+
+void OICNClient::DoDispose (void)
+{
+	Application::DoDispose ();
+}
+
+void OICNClient::ContentQuery ()
+{
+	//NS_LOG_INFO (" Check ");
+	//NS_LOG_DEBUG (" Index is "<<m_index[i]<<" and i is "<<i);
+    std::string Name = Content::GetContent (m_index[i]);
+	i++;
+	Ptr<Ipv4> ipv4 = GetNode()->GetObject<Ipv4> ();
+	uint32_t host_address = ipv4->GetAddress(1, 0).GetLocal().Get();
+	//NS_LOG_DEBUG (" The Client on node "<<GetNode()->GetId()<<" has queried for content with name "<<Name);
+    ICNManager::GetContent(Name, host_address, m_port);
+	m_sent++;
+	NS_LOG_DEBUG (" Node, Packet Number Sent and Time is : "<<GetNode()->GetId()<<" "<<m_sent<<" "<<Simulator::Now ().GetMilliSeconds ());
+	if (m_sent < m_index.size())
+	{
+		m_sendEvent = Simulator::Schedule (MilliSeconds (120), &OICNClient::ContentQuery, this);
+	}
+}
+
+void OICNClient::StartApplication (void)
+{
+	//NS_LOG_INFO (" Check ");
+	if (m_socket == 0)
+    {
+		TypeId tid = TypeId::LookupByName ("ns3::UdpSocketFactory");
+        m_socket = Socket::CreateSocket (GetNode (), tid);
+        m_socket->Bind ();
+    }
+	m_socket->SetRecvCallback (MakeCallback (&OICNClient::HandleRead, this));
+    m_sendEvent = Simulator::Schedule (Seconds (0.0), &OICNClient::ContentQuery, this);
+}
+
+void OICNClient::SetContentIndex (std::vector<int> index)
+{
+	//NS_LOG_INFO (" Check ");
+	m_index = index;
+	//NS_LOG_DEBUG (" m_index is "<<index[0]<<", "<<index[1]<<" and "<<index[2]);
+}
+
+void OICNClient::HandleRead (Ptr<Socket> socket)
+{
+	//NS_LOG_INFO (" Check ");
+	Ptr<Packet> packet;
+	Address from;
+	while ((packet = socket->RecvFrom (from)))
+	{
+		if (InetSocketAddress::IsMatchingType (from))
+		{
+			/*NS_LOG_INFO ("At time " << Simulator::Now ().GetSeconds () << "s Client received " << packet->GetSize () <<" bytes from "<<
+	                      InetSocketAddress::ConvertFrom (from).GetIpv4 ()<<" port "<< InetSocketAddress::ConvertFrom (from).GetPort ());*/
+			NS_LOG_DEBUG (" Node, Packet Number Received and Time is : "<<GetNode()->GetId()<<" "<<m_sent<<" "<<Simulator::Now ().GetMilliSeconds ());
+	    }
+	}
+}
+
+void OICNClient::StopApplication ()
+{
+	//NS_LOG_INFO (" Check ");
+	if (m_socket != 0)
+    {
+      m_socket->Close ();
+      m_socket->SetRecvCallback (MakeNullCallback<void, Ptr<Socket> > ());
+      m_socket = 0;
+    }
+
+  Simulator::Cancel (m_sendEvent);
+}
+
+//}
+}

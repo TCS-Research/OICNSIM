@@ -16,46 +16,46 @@ NS_LOG_COMPONENT_DEFINE ("OICNHeader");
 
 namespace ns3{
 
-NS_OBJECT_ENSURE_REGISTERED (OICNHeader);
+NS_OBJECT_ENSURE_REGISTERED (OicnHeader);
 
-TypeId OICNHeader::GetTypeId (void)
+TypeId OicnHeader::GetTypeId (void)
 {
 	static TypeId tid = TypeId ("ns3::OICNHeader")
     		.SetParent<Header> ()
-			.AddConstructor<OICNHeader> ();
+			.AddConstructor<OicnHeader> ();
 
 	return tid;
 }
 
-OICNHeader::OICNHeader ()
+OicnHeader::OicnHeader ()
 : m_name(),
   header_length(0),
   first4bytes(0)
 {
 }
 
-OICNHeader::~OICNHeader ()
+OicnHeader::~OicnHeader ()
 {
 }
 
 TypeId
-OICNHeader::GetInstanceTypeId (void) const
+OicnHeader::GetInstanceTypeId (void) const
 {
 	return GetTypeId ();
 }
 
-void OICNHeader::SetName(std::string name)
+void OicnHeader::SetName(std::string name)
 {
 	m_name = name;
 	header_length = name.size() + 4; //4 bytes
 }
 
-std::string OICNHeader::GetName()
+std::string OicnHeader::GetName()
 {
 	return(m_name);
 }
 
-void OICNHeader::SetFirst4Bytes(uint32_t HeaderLength, bool reply, bool cachable)
+void OicnHeader::SetFirst4Bytes(uint32_t HeaderLength, bool reply, bool cachable)
 {
 	if (reply)
 	{
@@ -65,27 +65,27 @@ void OICNHeader::SetFirst4Bytes(uint32_t HeaderLength, bool reply, bool cachable
 	else first4bytes = request_start + HeaderLength;
 }
 
-uint32_t OICNHeader::GetFirst4Bytes()
+uint32_t OicnHeader::GetFirst4Bytes()
 {
 	return(first4bytes);
 }
 
-void OICNHeader::SetRequest()
+void OicnHeader::SetRequest()
 {
 	SetFirst4Bytes(header_length, false, false);
 }
 
-void OICNHeader::SetCachable()
+void OicnHeader::SetCachable()
 {
 	SetFirst4Bytes(header_length, true, true);
 }
 
-void OICNHeader::SetNonCachable()
+void OicnHeader::SetNonCachable()
 {
 	SetFirst4Bytes(header_length, true, false);
 }
 
-void OICNHeader::Serialize (Buffer::Iterator start) const
+void OicnHeader::Serialize (Buffer::Iterator start) const
 {
 	Buffer::Iterator i = start;
 	i.WriteHtonU32(first4bytes);
@@ -95,7 +95,7 @@ void OICNHeader::Serialize (Buffer::Iterator start) const
 	i.Write ((uint8_t*)name, m_name.size());
 }
 
-uint32_t OICNHeader::Deserialize (Buffer::Iterator start)
+uint32_t OicnHeader::Deserialize (Buffer::Iterator start)
 {
 	Buffer::Iterator i = start;
 	first4bytes = i.ReadNtohU32();
@@ -109,12 +109,12 @@ uint32_t OICNHeader::Deserialize (Buffer::Iterator start)
 	return GetSerializedSize ();
 }
 
-uint32_t OICNHeader::GetSerializedSize (void) const
+uint32_t OicnHeader::GetSerializedSize (void) const
 {
 	return(header_length);
 }
 
-void OICNHeader::Print (std::ostream &os) const
+void OicnHeader::Print (std::ostream &os) const
 {
 }
 }

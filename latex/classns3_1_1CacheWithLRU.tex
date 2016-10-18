@@ -1,0 +1,444 @@
+\hypertarget{classns3_1_1CacheWithLRU}{\section{ns3\-:\-:Cache\-With\-L\-R\-U Class Reference}
+\label{classns3_1_1CacheWithLRU}\index{ns3\-::\-Cache\-With\-L\-R\-U@{ns3\-::\-Cache\-With\-L\-R\-U}}
+}
+
+
+This class implements the Least Recently Used caching policy.  
+
+
+
+
+{\ttfamily \#include $<$cache-\/with-\/lru.\-h$>$}
+
+Inheritance diagram for ns3\-:\-:Cache\-With\-L\-R\-U\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classns3_1_1CacheWithLRU}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classns3_1_1CacheWithLRU_ad16e5fd5c30972ad02742b2b60d6f108}{Cache\-With\-L\-R\-U} ()
+\item 
+virtual \hyperlink{classns3_1_1CacheWithLRU_a7d21d57b377db88ba971fd324194e150}{$\sim$\-Cache\-With\-L\-R\-U} ()
+\item 
+virtual void \hyperlink{classns3_1_1CacheWithLRU_a75323b8c1d45dbaa19e07bf6fdf9b9a3}{Set\-Cache\-Size} (uint32\-\_\-t size)
+\begin{DoxyCompactList}\small\item\em Set the cache size of the Cache. \end{DoxyCompactList}\item 
+virtual uint32\-\_\-t \hyperlink{classns3_1_1CacheWithLRU_a7011075202d46dc23358058ed8037125}{Get\-Cache\-Size} (void)
+\begin{DoxyCompactList}\small\item\em Get the cache size of the Cache. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classns3_1_1CacheWithLRU_a0f9e4e62cf6dee79d05774b25ee398c5}{Set\-Freshness\-Time} (uint64\-\_\-t time)
+\begin{DoxyCompactList}\small\item\em Set the freshness time for the contents of Cache. \end{DoxyCompactList}\item 
+virtual uint64\-\_\-t \hyperlink{classns3_1_1CacheWithLRU_ad3f0a3b34a506792f30310761242a86c}{Get\-Freshness\-Time} (void)
+\begin{DoxyCompactList}\small\item\em Get the freshness time set for the contents of Cache. \end{DoxyCompactList}\item 
+virtual \hyperlink{classns3_1_1NamedContentCacheEntry}{Named\-Content\-Cache\-Entry} \hyperlink{classns3_1_1CacheWithLRU_a8dc721b8593047e5246b3ffa21c83ba2}{Create\-Entry} (std\-::string Name, Ptr$<$ Packet $>$ packet, Ipv4\-Header ipheader)
+\begin{DoxyCompactList}\small\item\em Create the Cache entry, which is an object of \hyperlink{classns3_1_1NamedContentCacheEntry}{Named\-Content\-Cache\-Entry} class. The subclasses will define this function to create an entry that has the requisite parameters of the content, for the purpose of indexing content according to caching policy the subclass represents. \end{DoxyCompactList}\item 
+virtual uint32\-\_\-t \hyperlink{classns3_1_1CacheWithLRU_a5129171c03d524afe292aec079397d40}{Create\-Index} (\hyperlink{classns3_1_1NamedContentCacheEntry}{Named\-Content\-Cache\-Entry} entry)
+\begin{DoxyCompactList}\small\item\em Create the index of the corresponding entry, by using the parameters of the content present in the entry class. The subclasses will define this function to create an index which, when put in order, will arrange the contents according to the caching policy the subclass represents. If some subclasses need decimal indexes, they have to multiply the obtained index with a factor to ensure unique integer indexes are obtained. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classns3_1_1CacheWithLRU_adfce286e921a3f3d4cbf9e1008cae632}{Insert\-To\-Cache} (std\-::string Name, \hyperlink{classns3_1_1NamedContentCacheEntry}{Named\-Content\-Cache\-Entry} entry)
+\begin{DoxyCompactList}\small\item\em Insert the Name of the content and its corresponding entry object to the Cache. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classns3_1_1CacheWithLRU_a8b5e0eb51220cba226f913ddc1ef304f}{Insert\-To\-Policy\-Index} (uint32\-\_\-t index, std\-::string Name)
+\begin{DoxyCompactList}\small\item\em Insert the index of the content and its corresponding name to the Policy\-Index. \end{DoxyCompactList}\item 
+virtual bool \hyperlink{classns3_1_1CacheWithLRU_ac8cea24f840cdfb15abb1f09638b0fb1}{Is\-Full} (void)
+\begin{DoxyCompactList}\small\item\em Check if the Cache is full, i.\-e. if the number of contents is equal the cache size. \end{DoxyCompactList}\item 
+virtual bool \hyperlink{classns3_1_1CacheWithLRU_a8c69352212c41da32499d84add8dd42d}{Is\-Unique} (std\-::string Name)
+\begin{DoxyCompactList}\small\item\em it check whether content is present in the cache or not \end{DoxyCompactList}\item 
+virtual bool \hyperlink{classns3_1_1CacheWithLRU_a29fae4efb96e97023459866634488a28}{Is\-Evictable} (uint32\-\_\-t index)
+\begin{DoxyCompactList}\small\item\em Check if the content with the given index can be inserted with the eviction of some other content when the is full. The new content can be inserted if its index is lesser than (or greater than, when arranged in descending order) the first content, or if any content's freshness has expired. Some caching policies, like F\-I\-F\-O, keep on inserting new content, irrespective of its index. Subclasses representing such policies need not define and use this function. \end{DoxyCompactList}\item 
+virtual std\-::string \hyperlink{classns3_1_1CacheWithLRU_a657627f6ab6b395086c44bf7e51063fc}{Evict\-Entry} (void)
+\begin{DoxyCompactList}\small\item\em Evict the first content in Policy\-Index and also the corresponding entry in the Cache. This is the main eviction function of \hyperlink{classns3_1_1NamedContentCache}{Named\-Content\-Cache}. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classns3_1_1CacheWithLRU_abd2898e58b7eeb214153a29379e05404}{Evict\-Entry} (std\-::string Name)
+\begin{DoxyCompactList}\small\item\em Evict the content with corresponding name from both Policy\-Index and Cache. This has to be done when a packet having a content that already exists in the Cache has been received the I\-C\-N Router. This operation basically evicts the older entry of the same content so that the newer entry can be inserted. This function has to be defined by all subclasses because every content name in Cache and Policy\-Index has to be unique. \end{DoxyCompactList}\item 
+virtual Ptr$<$ Packet $>$ \hyperlink{classns3_1_1CacheWithLRU_a2948736630124fd3a5efcdc69ac04126}{Find} (std\-::string Name)
+\begin{DoxyCompactList}\small\item\em Find the content with given name in the Cache. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classns3_1_1CacheWithLRU_ad4a24104ec617f5e4fb163a0f7416352}{Update\-Index} (std\-::string Name)
+\begin{DoxyCompactList}\small\item\em Update the index of the content with the given name. This has to be done when the content is retrieved from Cache to be sent to a querying O\-I\-C\-N Client. The subclasses will define this function based on the requirements of the caching policies they represent. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static Type\-Id \hyperlink{classns3_1_1CacheWithLRU_aa84deadfb0a84e5c63abe3a0f59c06d8}{Get\-Type\-Id} (void)
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+uint32\-\_\-t \hyperlink{classns3_1_1CacheWithLRU_a9bd4ccdfb85587489ed2832695e0da62}{cache\-\_\-size}
+\begin{DoxyCompactList}\small\item\em size of the Cache \end{DoxyCompactList}\item 
+\hyperlink{classns3_1_1NamedContentCache_a9aa35d883b9f4153d97b6e7dc74f9307}{Cache} \hyperlink{classns3_1_1CacheWithLRU_ae7ffb4f0cbe5e8e6d769b71dc26d61d4}{cache}
+\begin{DoxyCompactList}\small\item\em main cache container which stores the name and corresponding content \end{DoxyCompactList}\item 
+\hyperlink{classns3_1_1NamedContentCache_a0b728ea2d4e0acbe431897b2374cfc8e}{Policy\-Index} \hyperlink{classns3_1_1CacheWithLRU_ada6a1db505251a0b7d96a18cf5cf0f1b}{policyindex}
+\begin{DoxyCompactList}\small\item\em policy indexed container, containing index and content name \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+This class implements the Least Recently Used caching policy. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classns3_1_1CacheWithLRU_ad16e5fd5c30972ad02742b2b60d6f108}{\index{ns3\-::\-Cache\-With\-L\-R\-U@{ns3\-::\-Cache\-With\-L\-R\-U}!Cache\-With\-L\-R\-U@{Cache\-With\-L\-R\-U}}
+\index{Cache\-With\-L\-R\-U@{Cache\-With\-L\-R\-U}!ns3::CacheWithLRU@{ns3\-::\-Cache\-With\-L\-R\-U}}
+\subsubsection[{Cache\-With\-L\-R\-U}]{\setlength{\rightskip}{0pt plus 5cm}ns3\-::\-Cache\-With\-L\-R\-U\-::\-Cache\-With\-L\-R\-U (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classns3_1_1CacheWithLRU_ad16e5fd5c30972ad02742b2b60d6f108}
+\hypertarget{classns3_1_1CacheWithLRU_a7d21d57b377db88ba971fd324194e150}{\index{ns3\-::\-Cache\-With\-L\-R\-U@{ns3\-::\-Cache\-With\-L\-R\-U}!$\sim$\-Cache\-With\-L\-R\-U@{$\sim$\-Cache\-With\-L\-R\-U}}
+\index{$\sim$\-Cache\-With\-L\-R\-U@{$\sim$\-Cache\-With\-L\-R\-U}!ns3::CacheWithLRU@{ns3\-::\-Cache\-With\-L\-R\-U}}
+\subsubsection[{$\sim$\-Cache\-With\-L\-R\-U}]{\setlength{\rightskip}{0pt plus 5cm}ns3\-::\-Cache\-With\-L\-R\-U\-::$\sim$\-Cache\-With\-L\-R\-U (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classns3_1_1CacheWithLRU_a7d21d57b377db88ba971fd324194e150}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classns3_1_1CacheWithLRU_a8dc721b8593047e5246b3ffa21c83ba2}{\index{ns3\-::\-Cache\-With\-L\-R\-U@{ns3\-::\-Cache\-With\-L\-R\-U}!Create\-Entry@{Create\-Entry}}
+\index{Create\-Entry@{Create\-Entry}!ns3::CacheWithLRU@{ns3\-::\-Cache\-With\-L\-R\-U}}
+\subsubsection[{Create\-Entry}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Named\-Content\-Cache\-Entry} ns3\-::\-Cache\-With\-L\-R\-U\-::\-Create\-Entry (
+\begin{DoxyParamCaption}
+\item[{std\-::string}]{Name, }
+\item[{Ptr$<$ Packet $>$}]{packet, }
+\item[{Ipv4\-Header}]{ipheader}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classns3_1_1CacheWithLRU_a8dc721b8593047e5246b3ffa21c83ba2}
+
+
+Create the Cache entry, which is an object of \hyperlink{classns3_1_1NamedContentCacheEntry}{Named\-Content\-Cache\-Entry} class. The subclasses will define this function to create an entry that has the requisite parameters of the content, for the purpose of indexing content according to caching policy the subclass represents. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Name} & name of the content \\
+\hline
+{\em packet} & packet received by I\-C\-N Router, with its I\-P, Transport and O\-I\-C\-N headers removed \\
+\hline
+{\em ipheader} & I\-P Header of the packet, from which the required parameters of the content (present in packet) can retrieved. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the newly created cache entry 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classns3_1_1NamedContentCache_a154317526b3883db729c365ab342074a}{ns3\-::\-Named\-Content\-Cache}.
+
+\hypertarget{classns3_1_1CacheWithLRU_a5129171c03d524afe292aec079397d40}{\index{ns3\-::\-Cache\-With\-L\-R\-U@{ns3\-::\-Cache\-With\-L\-R\-U}!Create\-Index@{Create\-Index}}
+\index{Create\-Index@{Create\-Index}!ns3::CacheWithLRU@{ns3\-::\-Cache\-With\-L\-R\-U}}
+\subsubsection[{Create\-Index}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t ns3\-::\-Cache\-With\-L\-R\-U\-::\-Create\-Index (
+\begin{DoxyParamCaption}
+\item[{{\bf Named\-Content\-Cache\-Entry}}]{entry}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classns3_1_1CacheWithLRU_a5129171c03d524afe292aec079397d40}
+
+
+Create the index of the corresponding entry, by using the parameters of the content present in the entry class. The subclasses will define this function to create an index which, when put in order, will arrange the contents according to the caching policy the subclass represents. If some subclasses need decimal indexes, they have to multiply the obtained index with a factor to ensure unique integer indexes are obtained. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em entry} & the cache entry corresponding to the content \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the newly created integer index for the content 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classns3_1_1NamedContentCache_a75be49c2ad5db93bdf8aaed813dcf304}{ns3\-::\-Named\-Content\-Cache}.
+
+\hypertarget{classns3_1_1CacheWithLRU_a657627f6ab6b395086c44bf7e51063fc}{\index{ns3\-::\-Cache\-With\-L\-R\-U@{ns3\-::\-Cache\-With\-L\-R\-U}!Evict\-Entry@{Evict\-Entry}}
+\index{Evict\-Entry@{Evict\-Entry}!ns3::CacheWithLRU@{ns3\-::\-Cache\-With\-L\-R\-U}}
+\subsubsection[{Evict\-Entry}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string ns3\-::\-Cache\-With\-L\-R\-U\-::\-Evict\-Entry (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classns3_1_1CacheWithLRU_a657627f6ab6b395086c44bf7e51063fc}
+
+
+Evict the first content in Policy\-Index and also the corresponding entry in the Cache. This is the main eviction function of \hyperlink{classns3_1_1NamedContentCache}{Named\-Content\-Cache}. 
+
+\begin{DoxyReturn}{Returns}
+the name of the evicted content 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classns3_1_1NamedContentCache_a87850f01fc632ede64af75d7c20f7a7e}{ns3\-::\-Named\-Content\-Cache}.
+
+\hypertarget{classns3_1_1CacheWithLRU_abd2898e58b7eeb214153a29379e05404}{\index{ns3\-::\-Cache\-With\-L\-R\-U@{ns3\-::\-Cache\-With\-L\-R\-U}!Evict\-Entry@{Evict\-Entry}}
+\index{Evict\-Entry@{Evict\-Entry}!ns3::CacheWithLRU@{ns3\-::\-Cache\-With\-L\-R\-U}}
+\subsubsection[{Evict\-Entry}]{\setlength{\rightskip}{0pt plus 5cm}void ns3\-::\-Cache\-With\-L\-R\-U\-::\-Evict\-Entry (
+\begin{DoxyParamCaption}
+\item[{std\-::string}]{Name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classns3_1_1CacheWithLRU_abd2898e58b7eeb214153a29379e05404}
+
+
+Evict the content with corresponding name from both Policy\-Index and Cache. This has to be done when a packet having a content that already exists in the Cache has been received the I\-C\-N Router. This operation basically evicts the older entry of the same content so that the newer entry can be inserted. This function has to be defined by all subclasses because every content name in Cache and Policy\-Index has to be unique. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & name of the non-\/unique content \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classns3_1_1NamedContentCache_a254f3c74475e104a615739fc7577296f}{ns3\-::\-Named\-Content\-Cache}.
+
+\hypertarget{classns3_1_1CacheWithLRU_a2948736630124fd3a5efcdc69ac04126}{\index{ns3\-::\-Cache\-With\-L\-R\-U@{ns3\-::\-Cache\-With\-L\-R\-U}!Find@{Find}}
+\index{Find@{Find}!ns3::CacheWithLRU@{ns3\-::\-Cache\-With\-L\-R\-U}}
+\subsubsection[{Find}]{\setlength{\rightskip}{0pt plus 5cm}Ptr$<$ Packet $>$ ns3\-::\-Cache\-With\-L\-R\-U\-::\-Find (
+\begin{DoxyParamCaption}
+\item[{std\-::string}]{Name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classns3_1_1CacheWithLRU_a2948736630124fd3a5efcdc69ac04126}
+
+
+Find the content with given name in the Cache. 
+
+\begin{DoxyReturn}{Returns}
+the content in the form of an Application Layer packet 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classns3_1_1NamedContentCache_a081439cd96d09e2f9f158f3aebe9fd7c}{ns3\-::\-Named\-Content\-Cache}.
+
+\hypertarget{classns3_1_1CacheWithLRU_a7011075202d46dc23358058ed8037125}{\index{ns3\-::\-Cache\-With\-L\-R\-U@{ns3\-::\-Cache\-With\-L\-R\-U}!Get\-Cache\-Size@{Get\-Cache\-Size}}
+\index{Get\-Cache\-Size@{Get\-Cache\-Size}!ns3::CacheWithLRU@{ns3\-::\-Cache\-With\-L\-R\-U}}
+\subsubsection[{Get\-Cache\-Size}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t ns3\-::\-Cache\-With\-L\-R\-U\-::\-Get\-Cache\-Size (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classns3_1_1CacheWithLRU_a7011075202d46dc23358058ed8037125}
+
+
+Get the cache size of the Cache. 
+
+\begin{DoxyReturn}{Returns}
+the cache size of the Cache 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classns3_1_1NamedContentCache_afd9ade17d87082a46cbb745fd0196ab4}{ns3\-::\-Named\-Content\-Cache}.
+
+\hypertarget{classns3_1_1CacheWithLRU_ad3f0a3b34a506792f30310761242a86c}{\index{ns3\-::\-Cache\-With\-L\-R\-U@{ns3\-::\-Cache\-With\-L\-R\-U}!Get\-Freshness\-Time@{Get\-Freshness\-Time}}
+\index{Get\-Freshness\-Time@{Get\-Freshness\-Time}!ns3::CacheWithLRU@{ns3\-::\-Cache\-With\-L\-R\-U}}
+\subsubsection[{Get\-Freshness\-Time}]{\setlength{\rightskip}{0pt plus 5cm}uint64\-\_\-t ns3\-::\-Cache\-With\-L\-R\-U\-::\-Get\-Freshness\-Time (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classns3_1_1CacheWithLRU_ad3f0a3b34a506792f30310761242a86c}
+
+
+Get the freshness time set for the contents of Cache. 
+
+\begin{DoxyReturn}{Returns}
+the freshness time in milliseconds 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classns3_1_1NamedContentCache_ac2b0e616d4e866cb2328e986f2ef69e1}{ns3\-::\-Named\-Content\-Cache}.
+
+\hypertarget{classns3_1_1CacheWithLRU_aa84deadfb0a84e5c63abe3a0f59c06d8}{\index{ns3\-::\-Cache\-With\-L\-R\-U@{ns3\-::\-Cache\-With\-L\-R\-U}!Get\-Type\-Id@{Get\-Type\-Id}}
+\index{Get\-Type\-Id@{Get\-Type\-Id}!ns3::CacheWithLRU@{ns3\-::\-Cache\-With\-L\-R\-U}}
+\subsubsection[{Get\-Type\-Id}]{\setlength{\rightskip}{0pt plus 5cm}Type\-Id ns3\-::\-Cache\-With\-L\-R\-U\-::\-Get\-Type\-Id (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classns3_1_1CacheWithLRU_aa84deadfb0a84e5c63abe3a0f59c06d8}
+\hypertarget{classns3_1_1CacheWithLRU_adfce286e921a3f3d4cbf9e1008cae632}{\index{ns3\-::\-Cache\-With\-L\-R\-U@{ns3\-::\-Cache\-With\-L\-R\-U}!Insert\-To\-Cache@{Insert\-To\-Cache}}
+\index{Insert\-To\-Cache@{Insert\-To\-Cache}!ns3::CacheWithLRU@{ns3\-::\-Cache\-With\-L\-R\-U}}
+\subsubsection[{Insert\-To\-Cache}]{\setlength{\rightskip}{0pt plus 5cm}void ns3\-::\-Cache\-With\-L\-R\-U\-::\-Insert\-To\-Cache (
+\begin{DoxyParamCaption}
+\item[{std\-::string}]{Name, }
+\item[{{\bf Named\-Content\-Cache\-Entry}}]{entry}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classns3_1_1CacheWithLRU_adfce286e921a3f3d4cbf9e1008cae632}
+
+
+Insert the Name of the content and its corresponding entry object to the Cache. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Name} & name of the content \\
+\hline
+{\em entry} & the cache entry corresponding to the content \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classns3_1_1NamedContentCache_a56a23add9b5bc03908793cf261ccb5f8}{ns3\-::\-Named\-Content\-Cache}.
+
+\hypertarget{classns3_1_1CacheWithLRU_a8b5e0eb51220cba226f913ddc1ef304f}{\index{ns3\-::\-Cache\-With\-L\-R\-U@{ns3\-::\-Cache\-With\-L\-R\-U}!Insert\-To\-Policy\-Index@{Insert\-To\-Policy\-Index}}
+\index{Insert\-To\-Policy\-Index@{Insert\-To\-Policy\-Index}!ns3::CacheWithLRU@{ns3\-::\-Cache\-With\-L\-R\-U}}
+\subsubsection[{Insert\-To\-Policy\-Index}]{\setlength{\rightskip}{0pt plus 5cm}void ns3\-::\-Cache\-With\-L\-R\-U\-::\-Insert\-To\-Policy\-Index (
+\begin{DoxyParamCaption}
+\item[{uint32\-\_\-t}]{index, }
+\item[{std\-::string}]{Name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classns3_1_1CacheWithLRU_a8b5e0eb51220cba226f913ddc1ef304f}
+
+
+Insert the index of the content and its corresponding name to the Policy\-Index. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & the unique integer index of the content \\
+\hline
+{\em Name} & name of the content \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classns3_1_1NamedContentCache_ac248e647f56a6fef10285b1c654b8180}{ns3\-::\-Named\-Content\-Cache}.
+
+\hypertarget{classns3_1_1CacheWithLRU_a29fae4efb96e97023459866634488a28}{\index{ns3\-::\-Cache\-With\-L\-R\-U@{ns3\-::\-Cache\-With\-L\-R\-U}!Is\-Evictable@{Is\-Evictable}}
+\index{Is\-Evictable@{Is\-Evictable}!ns3::CacheWithLRU@{ns3\-::\-Cache\-With\-L\-R\-U}}
+\subsubsection[{Is\-Evictable}]{\setlength{\rightskip}{0pt plus 5cm}bool ns3\-::\-Cache\-With\-L\-R\-U\-::\-Is\-Evictable (
+\begin{DoxyParamCaption}
+\item[{uint32\-\_\-t}]{index}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classns3_1_1CacheWithLRU_a29fae4efb96e97023459866634488a28}
+
+
+Check if the content with the given index can be inserted with the eviction of some other content when the is full. The new content can be inserted if its index is lesser than (or greater than, when arranged in descending order) the first content, or if any content's freshness has expired. Some caching policies, like F\-I\-F\-O, keep on inserting new content, irrespective of its index. Subclasses representing such policies need not define and use this function. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & the unique integer index of the content \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if any existing content can be evicted so that the new content with the given index can be inserted. 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classns3_1_1NamedContentCache_a281ad340f9771fa2ed898a1ad569d0da}{ns3\-::\-Named\-Content\-Cache}.
+
+\hypertarget{classns3_1_1CacheWithLRU_ac8cea24f840cdfb15abb1f09638b0fb1}{\index{ns3\-::\-Cache\-With\-L\-R\-U@{ns3\-::\-Cache\-With\-L\-R\-U}!Is\-Full@{Is\-Full}}
+\index{Is\-Full@{Is\-Full}!ns3::CacheWithLRU@{ns3\-::\-Cache\-With\-L\-R\-U}}
+\subsubsection[{Is\-Full}]{\setlength{\rightskip}{0pt plus 5cm}bool ns3\-::\-Cache\-With\-L\-R\-U\-::\-Is\-Full (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classns3_1_1CacheWithLRU_ac8cea24f840cdfb15abb1f09638b0fb1}
+
+
+Check if the Cache is full, i.\-e. if the number of contents is equal the cache size. 
+
+\begin{DoxyReturn}{Returns}
+true if the Cache is full 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classns3_1_1NamedContentCache_a1ceeaf5b85d3571225adfe2d48caf126}{ns3\-::\-Named\-Content\-Cache}.
+
+\hypertarget{classns3_1_1CacheWithLRU_a8c69352212c41da32499d84add8dd42d}{\index{ns3\-::\-Cache\-With\-L\-R\-U@{ns3\-::\-Cache\-With\-L\-R\-U}!Is\-Unique@{Is\-Unique}}
+\index{Is\-Unique@{Is\-Unique}!ns3::CacheWithLRU@{ns3\-::\-Cache\-With\-L\-R\-U}}
+\subsubsection[{Is\-Unique}]{\setlength{\rightskip}{0pt plus 5cm}bool ns3\-::\-Cache\-With\-L\-R\-U\-::\-Is\-Unique (
+\begin{DoxyParamCaption}
+\item[{std\-::string}]{name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classns3_1_1CacheWithLRU_a8c69352212c41da32499d84add8dd42d}
+
+
+it check whether content is present in the cache or not 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & name of the content \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if content is not present, false when content is present in the cache 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classns3_1_1NamedContentCache_a4c4a79310c99f9c8ad6227d3b380dc20}{ns3\-::\-Named\-Content\-Cache}.
+
+\hypertarget{classns3_1_1CacheWithLRU_a75323b8c1d45dbaa19e07bf6fdf9b9a3}{\index{ns3\-::\-Cache\-With\-L\-R\-U@{ns3\-::\-Cache\-With\-L\-R\-U}!Set\-Cache\-Size@{Set\-Cache\-Size}}
+\index{Set\-Cache\-Size@{Set\-Cache\-Size}!ns3::CacheWithLRU@{ns3\-::\-Cache\-With\-L\-R\-U}}
+\subsubsection[{Set\-Cache\-Size}]{\setlength{\rightskip}{0pt plus 5cm}void ns3\-::\-Cache\-With\-L\-R\-U\-::\-Set\-Cache\-Size (
+\begin{DoxyParamCaption}
+\item[{uint32\-\_\-t}]{size}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classns3_1_1CacheWithLRU_a75323b8c1d45dbaa19e07bf6fdf9b9a3}
+
+
+Set the cache size of the Cache. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em size} & the size to which the cache has to be set \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classns3_1_1NamedContentCache_ae28605a03a5a4d8b9a3494b4068f44e2}{ns3\-::\-Named\-Content\-Cache}.
+
+\hypertarget{classns3_1_1CacheWithLRU_a0f9e4e62cf6dee79d05774b25ee398c5}{\index{ns3\-::\-Cache\-With\-L\-R\-U@{ns3\-::\-Cache\-With\-L\-R\-U}!Set\-Freshness\-Time@{Set\-Freshness\-Time}}
+\index{Set\-Freshness\-Time@{Set\-Freshness\-Time}!ns3::CacheWithLRU@{ns3\-::\-Cache\-With\-L\-R\-U}}
+\subsubsection[{Set\-Freshness\-Time}]{\setlength{\rightskip}{0pt plus 5cm}void ns3\-::\-Cache\-With\-L\-R\-U\-::\-Set\-Freshness\-Time (
+\begin{DoxyParamCaption}
+\item[{uint64\-\_\-t}]{time}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classns3_1_1CacheWithLRU_a0f9e4e62cf6dee79d05774b25ee398c5}
+
+
+Set the freshness time for the contents of Cache. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em time} & the freshness time in milliseconds \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classns3_1_1NamedContentCache_a92a5e2e641a11d15300f621aa77275ab}{ns3\-::\-Named\-Content\-Cache}.
+
+\hypertarget{classns3_1_1CacheWithLRU_ad4a24104ec617f5e4fb163a0f7416352}{\index{ns3\-::\-Cache\-With\-L\-R\-U@{ns3\-::\-Cache\-With\-L\-R\-U}!Update\-Index@{Update\-Index}}
+\index{Update\-Index@{Update\-Index}!ns3::CacheWithLRU@{ns3\-::\-Cache\-With\-L\-R\-U}}
+\subsubsection[{Update\-Index}]{\setlength{\rightskip}{0pt plus 5cm}void ns3\-::\-Cache\-With\-L\-R\-U\-::\-Update\-Index (
+\begin{DoxyParamCaption}
+\item[{std\-::string}]{Name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classns3_1_1CacheWithLRU_ad4a24104ec617f5e4fb163a0f7416352}
+
+
+Update the index of the content with the given name. This has to be done when the content is retrieved from Cache to be sent to a querying O\-I\-C\-N Client. The subclasses will define this function based on the requirements of the caching policies they represent. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em the} & name of the content whose index has to be updated \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classns3_1_1NamedContentCache_aeabf8afacd89cbc46b78b382c8a487e8}{ns3\-::\-Named\-Content\-Cache}.
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classns3_1_1CacheWithLRU_ae7ffb4f0cbe5e8e6d769b71dc26d61d4}{\index{ns3\-::\-Cache\-With\-L\-R\-U@{ns3\-::\-Cache\-With\-L\-R\-U}!cache@{cache}}
+\index{cache@{cache}!ns3::CacheWithLRU@{ns3\-::\-Cache\-With\-L\-R\-U}}
+\subsubsection[{cache}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Cache} ns3\-::\-Cache\-With\-L\-R\-U\-::cache\hspace{0.3cm}{\ttfamily [private]}}}\label{classns3_1_1CacheWithLRU_ae7ffb4f0cbe5e8e6d769b71dc26d61d4}
+
+
+main cache container which stores the name and corresponding content 
+
+\hypertarget{classns3_1_1CacheWithLRU_a9bd4ccdfb85587489ed2832695e0da62}{\index{ns3\-::\-Cache\-With\-L\-R\-U@{ns3\-::\-Cache\-With\-L\-R\-U}!cache\-\_\-size@{cache\-\_\-size}}
+\index{cache\-\_\-size@{cache\-\_\-size}!ns3::CacheWithLRU@{ns3\-::\-Cache\-With\-L\-R\-U}}
+\subsubsection[{cache\-\_\-size}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t ns3\-::\-Cache\-With\-L\-R\-U\-::cache\-\_\-size\hspace{0.3cm}{\ttfamily [private]}}}\label{classns3_1_1CacheWithLRU_a9bd4ccdfb85587489ed2832695e0da62}
+
+
+size of the Cache 
+
+\hypertarget{classns3_1_1CacheWithLRU_ada6a1db505251a0b7d96a18cf5cf0f1b}{\index{ns3\-::\-Cache\-With\-L\-R\-U@{ns3\-::\-Cache\-With\-L\-R\-U}!policyindex@{policyindex}}
+\index{policyindex@{policyindex}!ns3::CacheWithLRU@{ns3\-::\-Cache\-With\-L\-R\-U}}
+\subsubsection[{policyindex}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Policy\-Index} ns3\-::\-Cache\-With\-L\-R\-U\-::policyindex\hspace{0.3cm}{\ttfamily [private]}}}\label{classns3_1_1CacheWithLRU_ada6a1db505251a0b7d96a18cf5cf0f1b}
+
+
+policy indexed container, containing index and content name 
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+model/\hyperlink{cache-with-lru_8h}{cache-\/with-\/lru.\-h}\item 
+model/\hyperlink{cache-with-lru_8cc}{cache-\/with-\/lru.\-cc}\end{DoxyCompactItemize}

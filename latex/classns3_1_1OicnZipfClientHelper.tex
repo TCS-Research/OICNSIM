@@ -1,0 +1,193 @@
+\hypertarget{classns3_1_1OicnZipfClientHelper}{\section{ns3\-:\-:Oicn\-Zipf\-Client\-Helper Class Reference}
+\label{classns3_1_1OicnZipfClientHelper}\index{ns3\-::\-Oicn\-Zipf\-Client\-Helper@{ns3\-::\-Oicn\-Zipf\-Client\-Helper}}
+}
+
+
+Create O\-I\-C\-N Zipf Client, it generates request for the contents following Zipf-\/\-Mandelbrot Distribution. Here is the explanation of Zipf-\/\-Mandelbrot Distribution\-: \href{http://en.wikipedia.org/wiki/Zipf%E2%80%93Mandelbrot_law}{\tt http\-://en.\-wikipedia.\-org/wiki/\-Zipf\%\-E2\%80\%93\-Mandelbrot\-\_\-law}. Client application send name resolution to I\-C\-N Manager. I\-C\-N Manager do the name resolution and direct source (I\-C\-N router or server) to send the content to the O\-I\-C\-N Zipf Client.  
+
+
+
+
+{\ttfamily \#include $<$oicn-\/application-\/helper.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classns3_1_1OicnZipfClientHelper_a27bd450f6cb2b16174211d9d5a2903a4}{Oicn\-Zipf\-Client\-Helper} (Address ip, uint16\-\_\-t port)
+\item 
+\hyperlink{classns3_1_1OicnZipfClientHelper_a2228e966e0cd82a5603f556258271ae2}{Oicn\-Zipf\-Client\-Helper} (Ipv4\-Address ip, uint16\-\_\-t port)
+\item 
+void \hyperlink{classns3_1_1OicnZipfClientHelper_a9908ce9cd685c341451e3d05fef9e285}{Set\-Attribute} (std\-::string name, const Attribute\-Value \&value)
+\item 
+Application\-Container \hyperlink{classns3_1_1OicnZipfClientHelper_a47e27c095b091e4643b03e94f5fccc00}{Install} (Ptr$<$ Node $>$ node, std\-::pair$<$ int, int $>$ range) const 
+\item 
+Application\-Container \hyperlink{classns3_1_1OicnZipfClientHelper_a3a3875e8c846e07fd31b36f53b90d350}{Install} (std\-::string node\-Name, std\-::pair$<$ int, int $>$ range) const 
+\item 
+Application\-Container \hyperlink{classns3_1_1OicnZipfClientHelper_a9557b8ad953de1aaa31a9477c8ebf432}{Install} (Node\-Container c, std\-::pair$<$ int, int $>$ range) const 
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+Application\-Container \hyperlink{classns3_1_1OicnZipfClientHelper_ac426f0fbc56d74d184436859b5235300}{Install\-Priv} (Ptr$<$ Node $>$ node, std\-::pair$<$ int, int $>$ range) const 
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Object\-Factory \hyperlink{classns3_1_1OicnZipfClientHelper_ae708feab022b48c941fc4c7d70a2357f}{m\-\_\-factory}
+\begin{DoxyCompactList}\small\item\em Object factory. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Create O\-I\-C\-N Zipf Client, it generates request for the contents following Zipf-\/\-Mandelbrot Distribution. Here is the explanation of Zipf-\/\-Mandelbrot Distribution\-: \href{http://en.wikipedia.org/wiki/Zipf%E2%80%93Mandelbrot_law}{\tt http\-://en.\-wikipedia.\-org/wiki/\-Zipf\%\-E2\%80\%93\-Mandelbrot\-\_\-law}. Client application send name resolution to I\-C\-N Manager. I\-C\-N Manager do the name resolution and direct source (I\-C\-N router or server) to send the content to the O\-I\-C\-N Zipf Client. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classns3_1_1OicnZipfClientHelper_a27bd450f6cb2b16174211d9d5a2903a4}{\index{ns3\-::\-Oicn\-Zipf\-Client\-Helper@{ns3\-::\-Oicn\-Zipf\-Client\-Helper}!Oicn\-Zipf\-Client\-Helper@{Oicn\-Zipf\-Client\-Helper}}
+\index{Oicn\-Zipf\-Client\-Helper@{Oicn\-Zipf\-Client\-Helper}!ns3::OicnZipfClientHelper@{ns3\-::\-Oicn\-Zipf\-Client\-Helper}}
+\subsubsection[{Oicn\-Zipf\-Client\-Helper}]{\setlength{\rightskip}{0pt plus 5cm}ns3\-::\-Oicn\-Zipf\-Client\-Helper\-::\-Oicn\-Zipf\-Client\-Helper (
+\begin{DoxyParamCaption}
+\item[{Address}]{ip, }
+\item[{uint16\-\_\-t}]{port}
+\end{DoxyParamCaption}
+)}}\label{classns3_1_1OicnZipfClientHelper_a27bd450f6cb2b16174211d9d5a2903a4}
+Create Oicn\-Zipf\-Client\-Helpher configured with I\-C\-N Manager I\-P address and port number
+
+
+\begin{DoxyParams}{Parameters}
+{\em ip} & the I\-P address of the I\-C\-N Manager \\
+\hline
+{\em port} & the port number of the I\-C\-N Manager \\
+\hline
+\end{DoxyParams}
+\hypertarget{classns3_1_1OicnZipfClientHelper_a2228e966e0cd82a5603f556258271ae2}{\index{ns3\-::\-Oicn\-Zipf\-Client\-Helper@{ns3\-::\-Oicn\-Zipf\-Client\-Helper}!Oicn\-Zipf\-Client\-Helper@{Oicn\-Zipf\-Client\-Helper}}
+\index{Oicn\-Zipf\-Client\-Helper@{Oicn\-Zipf\-Client\-Helper}!ns3::OicnZipfClientHelper@{ns3\-::\-Oicn\-Zipf\-Client\-Helper}}
+\subsubsection[{Oicn\-Zipf\-Client\-Helper}]{\setlength{\rightskip}{0pt plus 5cm}ns3\-::\-Oicn\-Zipf\-Client\-Helper\-::\-Oicn\-Zipf\-Client\-Helper (
+\begin{DoxyParamCaption}
+\item[{Ipv4\-Address}]{ip, }
+\item[{uint16\-\_\-t}]{port}
+\end{DoxyParamCaption}
+)}}\label{classns3_1_1OicnZipfClientHelper_a2228e966e0cd82a5603f556258271ae2}
+Create Oicn\-Zipf\-Client\-Helpher configured with I\-C\-N Manager I\-P address and port number
+
+
+\begin{DoxyParams}{Parameters}
+{\em ip} & the I\-Pv4 address of the I\-C\-N Manager \\
+\hline
+{\em port} & the port number of the I\-C\-N Manager \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classns3_1_1OicnZipfClientHelper_a47e27c095b091e4643b03e94f5fccc00}{\index{ns3\-::\-Oicn\-Zipf\-Client\-Helper@{ns3\-::\-Oicn\-Zipf\-Client\-Helper}!Install@{Install}}
+\index{Install@{Install}!ns3::OicnZipfClientHelper@{ns3\-::\-Oicn\-Zipf\-Client\-Helper}}
+\subsubsection[{Install}]{\setlength{\rightskip}{0pt plus 5cm}Application\-Container ns3\-::\-Oicn\-Zipf\-Client\-Helper\-::\-Install (
+\begin{DoxyParamCaption}
+\item[{Ptr$<$ Node $>$}]{node, }
+\item[{std\-::pair$<$ int, int $>$}]{range}
+\end{DoxyParamCaption}
+) const}}\label{classns3_1_1OicnZipfClientHelper_a47e27c095b091e4643b03e94f5fccc00}
+Create an Oicn\-Zipf\-Client Application querying the content specified by indices on the specified Node.
+
+
+\begin{DoxyParams}{Parameters}
+{\em node} & the node on which to create the Application. The node is specified by a Ptr$<$\-Node$>$. \\
+\hline
+{\em range} & range of the indices of the content to be queried \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+an Application\-Container holding the Application created 
+\end{DoxyReturn}
+\hypertarget{classns3_1_1OicnZipfClientHelper_a3a3875e8c846e07fd31b36f53b90d350}{\index{ns3\-::\-Oicn\-Zipf\-Client\-Helper@{ns3\-::\-Oicn\-Zipf\-Client\-Helper}!Install@{Install}}
+\index{Install@{Install}!ns3::OicnZipfClientHelper@{ns3\-::\-Oicn\-Zipf\-Client\-Helper}}
+\subsubsection[{Install}]{\setlength{\rightskip}{0pt plus 5cm}Application\-Container ns3\-::\-Oicn\-Zipf\-Client\-Helper\-::\-Install (
+\begin{DoxyParamCaption}
+\item[{std\-::string}]{node\-Name, }
+\item[{std\-::pair$<$ int, int $>$}]{range}
+\end{DoxyParamCaption}
+) const}}\label{classns3_1_1OicnZipfClientHelper_a3a3875e8c846e07fd31b36f53b90d350}
+Create an Oicn\-Zipf\-Client Application querying the content specified by indices on the specified Node.
+
+
+\begin{DoxyParams}{Parameters}
+{\em node\-Name} & the name of the node on which to create the application \\
+\hline
+{\em range} & range of the indices of the content to be queried \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+an Application\-Container holding the Application created 
+\end{DoxyReturn}
+\hypertarget{classns3_1_1OicnZipfClientHelper_a9557b8ad953de1aaa31a9477c8ebf432}{\index{ns3\-::\-Oicn\-Zipf\-Client\-Helper@{ns3\-::\-Oicn\-Zipf\-Client\-Helper}!Install@{Install}}
+\index{Install@{Install}!ns3::OicnZipfClientHelper@{ns3\-::\-Oicn\-Zipf\-Client\-Helper}}
+\subsubsection[{Install}]{\setlength{\rightskip}{0pt plus 5cm}Application\-Container ns3\-::\-Oicn\-Zipf\-Client\-Helper\-::\-Install (
+\begin{DoxyParamCaption}
+\item[{Node\-Container}]{c, }
+\item[{std\-::pair$<$ int, int $>$}]{range}
+\end{DoxyParamCaption}
+) const}}\label{classns3_1_1OicnZipfClientHelper_a9557b8ad953de1aaa31a9477c8ebf432}
+Create an Oicn\-Zipf\-Client Application querying the content specified by indices on the specified Node.
+
+
+\begin{DoxyParams}{Parameters}
+{\em c} & the nodes on which to create the Applications. The nodes are specified by a Node\-Container. \\
+\hline
+{\em range} & range of the indices of the content to be queried \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+an Application\-Container holding the Application created 
+\end{DoxyReturn}
+\hypertarget{classns3_1_1OicnZipfClientHelper_ac426f0fbc56d74d184436859b5235300}{\index{ns3\-::\-Oicn\-Zipf\-Client\-Helper@{ns3\-::\-Oicn\-Zipf\-Client\-Helper}!Install\-Priv@{Install\-Priv}}
+\index{Install\-Priv@{Install\-Priv}!ns3::OicnZipfClientHelper@{ns3\-::\-Oicn\-Zipf\-Client\-Helper}}
+\subsubsection[{Install\-Priv}]{\setlength{\rightskip}{0pt plus 5cm}Application\-Container ns3\-::\-Oicn\-Zipf\-Client\-Helper\-::\-Install\-Priv (
+\begin{DoxyParamCaption}
+\item[{Ptr$<$ Node $>$}]{node, }
+\item[{std\-::pair$<$ int, int $>$}]{range}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [private]}}}\label{classns3_1_1OicnZipfClientHelper_ac426f0fbc56d74d184436859b5235300}
+Install an O\-I\-C\-N Zipf Client on the node configured with all the attributes set with Set\-Attribute.
+
+
+\begin{DoxyParams}{Parameters}
+{\em node} & the node on which an O\-I\-C\-N\-Client will be installed. \\
+\hline
+{\em range} & range of the indices of the content to be queried \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+an Application\-Container holding the Application created 
+\end{DoxyReturn}
+\hypertarget{classns3_1_1OicnZipfClientHelper_a9908ce9cd685c341451e3d05fef9e285}{\index{ns3\-::\-Oicn\-Zipf\-Client\-Helper@{ns3\-::\-Oicn\-Zipf\-Client\-Helper}!Set\-Attribute@{Set\-Attribute}}
+\index{Set\-Attribute@{Set\-Attribute}!ns3::OicnZipfClientHelper@{ns3\-::\-Oicn\-Zipf\-Client\-Helper}}
+\subsubsection[{Set\-Attribute}]{\setlength{\rightskip}{0pt plus 5cm}void ns3\-::\-Oicn\-Zipf\-Client\-Helper\-::\-Set\-Attribute (
+\begin{DoxyParamCaption}
+\item[{std\-::string}]{name, }
+\item[{const Attribute\-Value \&}]{value}
+\end{DoxyParamCaption}
+)}}\label{classns3_1_1OicnZipfClientHelper_a9908ce9cd685c341451e3d05fef9e285}
+Record an attribute to be set in each Application after it is is created.
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & the name of the attribute to set \\
+\hline
+{\em value} & the value of the attribute to set \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classns3_1_1OicnZipfClientHelper_ae708feab022b48c941fc4c7d70a2357f}{\index{ns3\-::\-Oicn\-Zipf\-Client\-Helper@{ns3\-::\-Oicn\-Zipf\-Client\-Helper}!m\-\_\-factory@{m\-\_\-factory}}
+\index{m\-\_\-factory@{m\-\_\-factory}!ns3::OicnZipfClientHelper@{ns3\-::\-Oicn\-Zipf\-Client\-Helper}}
+\subsubsection[{m\-\_\-factory}]{\setlength{\rightskip}{0pt plus 5cm}Object\-Factory ns3\-::\-Oicn\-Zipf\-Client\-Helper\-::m\-\_\-factory\hspace{0.3cm}{\ttfamily [private]}}}\label{classns3_1_1OicnZipfClientHelper_ae708feab022b48c941fc4c7d70a2357f}
+
+
+Object factory. 
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+helper/\hyperlink{oicn-application-helper_8h}{oicn-\/application-\/helper.\-h}\item 
+helper/\hyperlink{oicn-application-helper_8cc}{oicn-\/application-\/helper.\-cc}\end{DoxyCompactItemize}
