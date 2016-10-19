@@ -47,7 +47,7 @@ Table of Contents:
 		./waf --run oicn-example 
 
 
-Supported by: TCS Research & Innovation
+Devloped by: TCS Research & Innovation
 -----------------------------------------------------------------
 Please do remember to cite us !
 
