@@ -1,27 +1,49 @@
-/* -*- Mode:C++; c-file-style:"gnu"; indent-tabs-mode:nil; -*- */
+/* -*- Mode:C++; c-file-style; indent-tabs-mode:nil; -*- */
 /*
- * Copyright (c) 2016 TCS (Tata Consultancy Services) Research
+ * Copyright (c) 2016, TCS Research & Innovation
  *
+ * This program is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License version 2 as
+ * published by the Free Software Foundation;
  *
- * Author: Suvrat Agrawal <suv.agr@gmail.com>
- * \brief This is example script of working of O-ICN  Architecture
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program; if not, write to the Free Software
+ * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+ *
+ * Authors: Suvrat Agrawal <suvrat.a@tcs.com>
+ *          Samar Shailendra <s.samar@tcs.com>          
+ *
  */
-//
-// Topology
-//		    		   ICN Manager (Node-5)
-// 			     	  .	    	      .
-//				     .	     	       .
-//			    	.  	      	    	.
-//		           .   	       		     .
-//		          .    	        	      .
-//     		ICN Router1 ++++++++++++ Legacy Router ++++++++++ ICN Router2 +++++++ Server
-//			  (Node-1)	               (Node-2)	               (Node-3)	          (Node-4)
-//			  +      +
-//	         +	      +
-//	        +  	       +
-//	       +  	        +
-//	    Client1        Client2
-//	   (Node-0)	       (Node-6)
+ 
+/* brief This is example script of working of O-ICN  Architecture */
+
+
+
+/*     Example  Topology
+
+
+	    		   ICN Manager (Node-5)
+ 		     	  .	    	      .
+		        .	     	        .
+		      .  	      	    	  .
+	            .   	       	            .
+	          .    	        	              .
+     	ICN Router1 +++++++++ Legacy Router +++++++ ICN Router2 +++++++ Server
+	 (Node-1)	         (Node-2)	     (Node-3)	       (Node-4)
+	  +      +
+         +        +
+        +  	   +
+       +  	    +
+    Client1        Client2
+   (Node-0)	   (Node-6)
+
+
+*/
 
 #include <iostream>
 #include <fstream>
