@@ -1,4 +1,7 @@
 # OICNSIM
+
+	This is the active development branch. All latest updates (may be not very stable) are released in this branch.
+
 Overlay ICN (O-ICN) Simulator
 -------------------------------
 
