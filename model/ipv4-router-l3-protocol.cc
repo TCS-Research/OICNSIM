@@ -500,8 +500,7 @@ Ipv4RouterL3Protocol::Receive ( Ptr<NetDevice> device, Ptr<const Packet> p, uint
     }
 
 
-/* Our Ipv4RouterL3Protocol will include a call for SublayerCheck here. //a
-*  This is the only difference
+/* Our Ipv4RouterL3Protocol will include a call for SublayerCheck here. 
 *
 */
 
@@ -894,7 +893,6 @@ Ipv4RouterL3Protocol::IpForward (Ptr<Ipv4Route> rtentry, Ptr<const Packet> p, co
 {
 	NS_LOG_INFO(" Check ");//a
   NS_LOG_FUNCTION (this << rtentry << p << header);
-  //NS_LOG_DEBUG ("Forwarding logic for node: " << m_node->GetId ());
   // Forwarding
   Ipv4Header ipHeader = header;
   Ptr<Packet> packet = p->Copy ();
@@ -916,7 +914,6 @@ Ipv4RouterL3Protocol::IpForward (Ptr<Ipv4Route> rtentry, Ptr<const Packet> p, co
     }
   m_unicastForwardTrace (ipHeader, packet, interface);
   SendRealOut (rtentry, packet, ipHeader);
-  //NS_LOG_DEBUG ("Forwarding to " << rtentry->GetDestination().Get());
 }
 
 void
@@ -995,14 +992,7 @@ Ipv4RouterL3Protocol::AddAddress (uint32_t i, Ipv4InterfaceAddress address)
       m_routingProtocol->NotifyAddAddress (i, address);
     }
   NS_LOG_DEBUG(" The Address being added to node "<<m_node->GetId()<<" is "<<address.GetLocal().Get());
-  /*uint32_t m_hostaddress = address.GetLocal().Get();
-  Ptr<SublayerProtocol> sublayerprotocol = m_node->GetObject<SublayerProtocol> ();
-  Ptr<CacheManager> cachemanager = m_node->GetObject<CacheManager> ();
-  sublayerprotocol->SetHostAddress (m_hostaddress);
-  cachemanager->SetHostAddress (m_hostaddress);
-  Ptr<NamedContentCache> namedcontentcache = m_node->GetObject<NamedContentCache> ();
-  namedcontentcache->SetHostAddress (m_hostaddress);
-  ICNManager::SetNodeTableEntry (m_hostaddress, m_node->GetId());*/
+  
   return retVal;
 }
 
