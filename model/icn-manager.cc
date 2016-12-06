@@ -56,7 +56,7 @@ NS_OBJECT_ENSURE_REGISTERED (IcnManager);
 TypeId
 IcnManager::GetTypeId (void)
 {
-	//NS_LOG_DEBUG ("Node "<<GetNode()->GetId()<<"   Check ");
+	
   static TypeId tid = TypeId ("ns3::IcnManager")
     .SetParent<Application> ()
     .AddConstructor<IcnManager> ();
@@ -84,12 +84,10 @@ void IcnManager::NameRegisteration(std::vector<std::vector<int>> nameIndex, std:
 		{
 
 			std::string name = Content::GetContent(temp1[j]);
-			//NS_LOG_DEBUG("Name is "<<name<<"index"<<temp1[j]);
 			std::pair<std::string,Ipv4Address> entry (name, serverAddress[i]);
 			nameServerTable.insert(entry);
 		}
 	}
-	//print_map(nameServerTable);
 }
 
 
@@ -97,7 +95,6 @@ void IcnManager::SetCachedRouterEntry (Ipv4Address routerIpv4Address, std::strin
 {
 	std::pair<std::string, Ipv4Address> entry (name, routerIpv4Address);
 	cachedRouterTable.insert(entry);
-	//print_map(cachedRouterTable);
 }
 
 void IcnManager::EvictCachedRouterEntry (Ipv4Address routerIpv4Address, std::string name)
@@ -119,7 +116,6 @@ void IcnManager::EvictCachedRouterEntry (Ipv4Address routerIpv4Address, std::str
 void
 IcnManager::StartApplication (void)
 {
-  //NS_LOG_FUNCTION (this);
   if (m_socketClient == 0)
     {
       TypeId tid = TypeId::LookupByName ("ns3::UdpSocketFactory");
@@ -143,16 +139,13 @@ IcnManager::StartApplication (void)
 void
 IcnManager::DoDispose (void)
 {
-  //NS_LOG_FUNCTION (this);
   Application::DoDispose ();
 }
 
 void
 IcnManager::StopApplication ()
 {
-  //NS_LOG_FUNCTION (this);
-
-  if (m_socketClient != 0)
+    if (m_socketClient != 0)
     {
       m_socketClient->Close ();
       m_socketClient->SetRecvCallback (MakeNullCallback<void, Ptr<Socket> > ());
@@ -174,16 +167,11 @@ IcnManager::HandleReadClient (Ptr<Socket> socket)
 	{
 		if (InetSocketAddress::IsMatchingType (from))
 		{
-			//NS_LOG_INFO ("At time " << Simulator::Now ().GetSeconds () << "s ICN-Manager received " << packet->GetSize () <<" bytes from "<<
-				//	InetSocketAddress::ConvertFrom (from).GetIpv4 ()<<" port "<< InetSocketAddress::ConvertFrom (from).GetPort ());
-			//NS_LOG_DEBUG (" Node, Packet Number Received and Time is : "<<GetNode()->GetId()<<" "<<m_count<<" "<<Simulator::Now ().GetMicroSeconds ());
-			NS_LOG_INFO ("At time " << Simulator::Now ().GetSeconds () << "s ICN-Manager received request from client with ip address " <<
+		        NS_LOG_INFO ("At time " << Simulator::Now ().GetSeconds () << "s ICN-Manager received request from client with ip address " <<
 								InetSocketAddress::ConvertFrom (from).GetIpv4 ()<<" and port "<< InetSocketAddress::ConvertFrom (from).GetPort ());
-
 			Ipv4Address clientIpv4Address= InetSocketAddress::ConvertFrom (from).GetIpv4 ();
 			uint16_t clientPort=InetSocketAddress::ConvertFrom (from).GetPort ();
 			uint32_t clientAddress= clientIpv4Address.Get();
-			//NS_LOG_DEBUG("Client ipv4"<<clientIpv4Address<<" "<<clientAddress);
 			ReadPacket(packet,clientIpv4Address,clientPort);
 			m_count++;
 		}
@@ -199,9 +187,6 @@ IcnManager::HandleReadSource (Ptr<Socket> socket)
     {
       if (InetSocketAddress::IsMatchingType (from))
         {
-			//NS_LOG_INFO ("At time " << Simulator::Now ().GetSeconds () << "s ICN-Manager received " << packet->GetSize () <<" bytes from "<<
-	         //             InetSocketAddress::ConvertFrom (from).GetIpv4 ()<<" port "<< InetSocketAddress::ConvertFrom (from).GetPort ());
-
 			OicnHeader oicnheader;
 			packet->RemoveHeader(oicnheader);
 
@@ -328,7 +313,7 @@ Ipv4Address const * IcnManager::NameResolution (std::string name, bool &flag)
 
 	crIterator crIt=cachedRouterTable.find(name);
 	//NS_LOG_INFO (" Router Table is ");
-    //print_map(cachedRouterTable);
+        //print_map(cachedRouterTable);
 	if (crIt != cachedRouterTable.end())
 	{
 
@@ -345,8 +330,6 @@ Ipv4Address const * IcnManager::NameResolution (std::string name, bool &flag)
 		//if there more than 1 server for same name then taking only one server i.e. only 1 ipaddress
 		if(nsi!= nameServerTable.end())
 		{
-			//NS_LOG_DEBUG("Taking from Server");
-			//NS_LOG_DEBUG(" Ip address of server "<<nsi->second);
 			NS_LOG_DEBUG("ICN Manager found the name at Server ");
 			flag=true;
 			return (&(nsi->second));
@@ -384,7 +367,6 @@ void IcnManager::SendAckToClient(Ipv4Address  clientIpv4Address, uint16_t client
 	dnsPlusHeader1.SetNSCount(dnsPlusHeader.GetNSCount());
 	dnsPlusHeader1.SetARCount(dnsPlusHeader.GetARCount());
 
-	//NS_LOG_DEBUG("QR Value "<<(uint16_t)dnsPlusHeader.GetQR());
 	packet->AddHeader(dnsPlusHeader1);
 	packet->AddHeader(oicnHeader);
 
