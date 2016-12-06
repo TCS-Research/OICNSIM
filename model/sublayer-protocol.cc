@@ -106,17 +106,17 @@ bool SublayerProtocol::HasSublayer (Ptr<Packet> packet1, Ipv4Header ipheader)   
 	UdpHeader udpheader;
 	if (isUdp(ipheader))
 	{
-		NS_LOG_INFO (" Has UDP Header ");
+		NS_LOG_INFO (" This packet has UDP Header ");
 		packet1->RemoveHeader(udpheader);
 		if (udpheader.GetSourcePort() == 89)
 		{
-			NS_LOG_INFO (" Is from OICN Server Port");
+			NS_LOG_INFO (" This packet is from OICN Source (OICN Server or ICN Router) ");
 			OicnHeader oicnheader;
 			packet1->RemoveHeader(oicnheader);
 			uint32_t First4Bytes = oicnheader.GetFirst4Bytes()-oicnheader.GetSerializedSize();
 			if (First4Bytes == 4026531840)
 			{
-				NS_LOG_INFO (" Is a Cachable Reply Packet");
+				NS_LOG_INFO (" This packet is a Cachable Reply Packet ");
 				SetUdpHeader(udpheader);
 				SetOICNHeader(oicnheader);
 				return true;
