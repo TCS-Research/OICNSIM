@@ -330,13 +330,13 @@ Ipv4Address const * IcnManager::NameResolution (std::string name, bool &flag)
 		//if there more than 1 server for same name then taking only one server i.e. only 1 ipaddress
 		if(nsi!= nameServerTable.end())
 		{
-			NS_LOG_DEBUG("ICN Manager has found the content name at Server ");
+			NS_LOG_INFO("ICN Manager has found the content name at Server ");
 			flag=true;
 			return (&(nsi->second));
 		}
 		else
 		{
-			NS_LOG_DEBUG("ICN Manager is not able to find the content name");
+			NS_LOG_INFO("ICN Manager is not able to find the content name");
 			flag=false;
 			return nullptr;
 		}
