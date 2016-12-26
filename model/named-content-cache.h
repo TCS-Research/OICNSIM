@@ -206,7 +206,7 @@ public:
 
    /**
     * \brief Check if the content with the given index can be inserted with the
-    *        eviction of some other content when the is full. The new content can be
+    *        eviction of some other content when the cache is full. The new content can be
     *        inserted if its index is lesser than (or greater than, when arranged in
     *        descending order) the first content, or if any content's freshness has
     *        expired. Some caching policies, like FIFO, keep on inserting new content,
